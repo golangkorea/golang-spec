@@ -4,5 +4,5 @@
 * [Introduction](introduction.md)
 * [Notation](notation.md)
 * [Source code representation](Source code representation/README.md)
-   * Characters
+   * [Characters](Source code representation/characters.md)
 
