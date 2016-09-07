@@ -6,4 +6,5 @@
 * [Source code representation](Source code representation/README.md)
    * [Characters](Source code representation/characters.md)
    * [Letters and digits](Source code representation/letters_and_digits.md)
+* Lexical elements
 
