@@ -1,5 +1,5 @@
 # Summary
 
 * [Introduction](introduction.md)
-* Notation
+* [Notation](notation.md)
 
