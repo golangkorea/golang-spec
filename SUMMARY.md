@@ -71,6 +71,6 @@
    * [Address operators](Expressions/address_operators.md)
    * [Receive operator](Expressions/receive_operator.md)
    * [Conversions](Expressions/conversions.md)
-   * Constant expressions
+   * [Constant expressions](Expressions/constant_expressions.md)
    * Order of evaluation
 
