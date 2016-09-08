@@ -67,4 +67,5 @@
    * Operators
    * Arithmetic operators
    * Comparison operators
+   * Logical operators
 
