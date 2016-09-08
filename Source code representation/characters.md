@@ -3,7 +3,7 @@
 The following terms are used to denote specific Unicode character classes:
 
 ```
-<a id="newline">newline</a>        = /* the Unicode code point U+000A */ .
+newline        = /* the Unicode code point U+000A */ .
 unicode_char   = /* an arbitrary Unicode code point except newline */ .
 unicode_letter = /* a Unicode code point classified as "Letter" */ .
 unicode_digit  = /* a Unicode code point classified as "Number, decimal digit" */ .
