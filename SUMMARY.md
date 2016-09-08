@@ -41,4 +41,5 @@
    * Label scopes
    * Blank identifier
    * Predeclared identifiers
+   * Exported identifiers
 
