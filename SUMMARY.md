@@ -24,7 +24,7 @@
    * [Method sets](Types/method_sets.md)
    * [Boolean types](Types/boolean_types.md)
    * [Numeric types](Types/numeric_types.md)
-   * String types
+   * [String types](Types/string_types.md)
    * Array types
    * Slice types
    * Struct types
