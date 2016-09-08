@@ -25,4 +25,5 @@
    * Boolean types
    * Numeric types
    * String types
+   * Array types
 
