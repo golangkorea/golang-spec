@@ -17,4 +17,5 @@
    * Floating-point literals
    * Imaginary literals
    * Rune literals
+   * String literals
 
