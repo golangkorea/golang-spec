@@ -93,4 +93,5 @@
    * [Fallthrough statements](Statements/fallthrough_statements.md)
    * [Defer statements](Statements/defer_statements.md)
 * [Built-in functions](Built-in functions/README.md)
+   * Close
 
