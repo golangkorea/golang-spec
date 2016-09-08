@@ -41,7 +41,7 @@
    * [Label scopes](Declarations and scope/label_scopes.md)
    * [Blank identifier](Declarations and scope/blank_identifier.md)
    * [Predeclared identifiers](Declarations and scope/predeclared_identifiers.md)
-   * Exported identifiers
+   * [Exported identifiers](Declarations and scope/exported_identifiers.md)
    * Uniqueness of identifiers
    * Constant declarations
    * Iota
