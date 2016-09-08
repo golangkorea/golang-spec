@@ -105,6 +105,6 @@
 * [Packages](Packages/README.md)
    * [Source file organization](Packages/source_file_organization.md)
    * [Package clause](Packages/package_clause.md)
-   * Import declarations
+   * [Import declarations](Packages/import_declarations.md)
    * An example package
 
