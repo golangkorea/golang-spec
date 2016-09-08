@@ -77,4 +77,5 @@
    * Terminating statements
    * Empty statements
    * Labeled statements
+   * Expression statements
 
