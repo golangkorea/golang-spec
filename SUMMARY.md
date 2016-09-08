@@ -88,4 +88,5 @@
    * Select statements
    * Return statements
    * Break statements
+   * Continue statements
 
