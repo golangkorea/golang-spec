@@ -61,4 +61,5 @@
    * Method values
    * Index expressions
    * Slice expressions
+   * Type assertions
 
