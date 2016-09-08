@@ -76,7 +76,7 @@
 * [Statements](Statements/README.md)
    * [Terminating statements](Statements/terminating_statements.md)
    * [Empty statements](Statements/empty_statements.md)
-   * Labeled statements
+   * [Labeled statements](Statements/labeled_statements.md)
    * Expression statements
    * Send statements
    * IncDec statements
