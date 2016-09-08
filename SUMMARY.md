@@ -100,6 +100,6 @@
    * [Appending to and copying slices](Built-in functions/appending_to_and_copying_slices.md)
    * [Deletion of map elements](Built-in functions/deletion_of_map_elements.md)
    * [Manipulating complex numbers](Built-in functions/manipulating_complex_numbers.md)
-   * Handling panics
+   * [Handling panics](Built-in functions/handling_panics.md)
    * Bootstrapping
 
