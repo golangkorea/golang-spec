@@ -64,4 +64,5 @@
    * Type assertions
    * Calls
    * Passing arguments to ... parameters
+   * Operators
 
