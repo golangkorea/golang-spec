@@ -26,4 +26,5 @@
    * Numeric types
    * String types
    * Array types
+   * Slice types
 
