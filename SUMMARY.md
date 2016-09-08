@@ -28,4 +28,5 @@
    * Array types
    * Slice types
    * Struct types
+   * Pointer types
 
