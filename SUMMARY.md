@@ -77,7 +77,7 @@
    * [Terminating statements](Statements/terminating_statements.md)
    * [Empty statements](Statements/empty_statements.md)
    * [Labeled statements](Statements/labeled_statements.md)
-   * Expression statements
+   * [Expression statements](Statements/expression_statements.md)
    * Send statements
    * IncDec statements
    * Assignments
