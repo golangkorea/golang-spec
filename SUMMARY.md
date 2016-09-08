@@ -11,4 +11,5 @@
    * [Tokens](Lexical elements/tokens.md)
    * [Semicolons](Lexical elements/semicolons.md)
    * Identifiers
+   * Keywords
 
