@@ -53,7 +53,7 @@
 * [Expressions](Expressions/README.md)
    * [Operands](Expressions/operands.md)
    * [Qualified identifiers](Expressions/qualified_identifiers.md)
-   * Composite literals
+   * [Composite literals](Expressions/composite_literals.md)
    * Function literals
    * Primary expressions
    * Selectors
