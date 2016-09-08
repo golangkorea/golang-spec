@@ -23,7 +23,7 @@
 * [Types](Types/README.md)
    * [Method sets](Types/method_sets.md)
    * [Boolean types](Types/boolean_types.md)
-   * Numeric types
+   * [Numeric types](Types/numeric_types.md)
    * String types
    * Array types
    * Slice types
