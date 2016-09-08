@@ -15,4 +15,5 @@
    * Operators and Delimiters
    * Integer literals
    * Floating-point literals
+   * Imaginary literals
 
