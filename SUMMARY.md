@@ -51,4 +51,5 @@
    * [Function declarations](Declarations and scope/function_declarations.md)
    * [Method declarations](Declarations and scope/method_declarations.md)
 * [Expressions](Expressions/README.md)
+   * Operands
 
