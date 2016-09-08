@@ -46,7 +46,7 @@
    * [Constant declarations](Declarations and scope/constant_declarations.md)
    * [Iota](Declarations and scope/iota.md)
    * [Type declarations](Declarations and scope/type_declarations.md)
-   * Variable declarations
+   * [Variable declarations](Declarations and scope/variable_declarations.md)
    * Short variable declarations
    * Function declarations
    * Method declarations
