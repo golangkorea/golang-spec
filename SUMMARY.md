@@ -58,7 +58,7 @@
    * [Primary expressions](Expressions/primary_expressions.md)
    * [Selectors](Expressions/selectors.md)
    * [Method expressions](Expressions/method_expressions.md)
-   * Method values
+   * [Method values](Expressions/method_values.md)
    * Index expressions
    * Slice expressions
    * Type assertions
