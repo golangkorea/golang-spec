@@ -52,4 +52,5 @@
    * [Method declarations](Declarations and scope/method_declarations.md)
 * [Expressions](Expressions/README.md)
    * Operands
+   * Qualified identifiers
 
