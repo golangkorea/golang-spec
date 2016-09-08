@@ -19,5 +19,5 @@
    * [Rune literals](Lexical elements/rune_literals.md)
    * [String literals](Lexical elements/string_literals.md)
 * [Constants](Constatns/README.md)
-* Variables
+* [Variables](Variables/README.md)
 
