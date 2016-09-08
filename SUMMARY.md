@@ -35,5 +35,5 @@
    * [Channel types](Types/channel_types.md)
 * [Properties of types and values](Properties of types and values/README.md)
    * [Type identity](Properties of types and values/type_identity.md)
-   * Assignability
+   * [Assignability](Properties of types and values/assignability.md)
 
