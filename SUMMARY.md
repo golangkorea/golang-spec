@@ -115,5 +115,5 @@
 * [Run-time panics](Run-time panics/README.md)
 * [System considerations](System considerations/README.md)
    * [Package unsafe](System considerations/package_unsafe.md)
-   * Size and alignment guarantees
+   * [Size and alignment guarantees](System considerations/size_and_alignment_guarantees.md)
 
