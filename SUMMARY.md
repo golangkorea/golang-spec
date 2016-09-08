@@ -52,7 +52,7 @@
    * [Method declarations](Declarations and scope/method_declarations.md)
 * [Expressions](Expressions/README.md)
    * [Operands](Expressions/operands.md)
-   * Qualified identifiers
+   * [Qualified identifiers](Expressions/qualified_identifiers.md)
    * Composite literals
    * Function literals
    * Primary expressions
