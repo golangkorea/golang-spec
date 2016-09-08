@@ -94,7 +94,7 @@
    * [Defer statements](Statements/defer_statements.md)
 * [Built-in functions](Built-in functions/README.md)
    * [Close](Built-in functions/close.md)
-   * Length and capacity
+   * [Length and capacity](Built-in functions/length_and_capacity.md)
    * Allocation
    * Making slices, maps and channels
    * Appending to and copying slices
