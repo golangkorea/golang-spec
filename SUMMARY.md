@@ -8,5 +8,5 @@
    * [Letters and digits](Source code representation/letters_and_digits.md)
 * [Lexical elements](Lexical elements/README.md)
    * [Comments](Lexical elements/comments.md)
-   * Tokens
+   * [Tokens](Lexical elements/tokens.md)
 
