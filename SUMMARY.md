@@ -56,4 +56,5 @@
    * Composite literals
    * Function literals
    * Primary expressions
+   * Selectors
 
