@@ -48,6 +48,6 @@
    * [Type declarations](Declarations and scope/type_declarations.md)
    * [Variable declarations](Declarations and scope/variable_declarations.md)
    * [Short variable declarations](Declarations and scope/short_variable_declarations.md)
-   * Function declarations
+   * [Function declarations](Declarations and scope/function_declarations.md)
    * Method declarations
 
