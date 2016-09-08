@@ -43,7 +43,7 @@
    * [Predeclared identifiers](Declarations and scope/predeclared_identifiers.md)
    * [Exported identifiers](Declarations and scope/exported_identifiers.md)
    * [Uniqueness of identifiers](Declarations and scope/uniqueness_of_identifiers.md)
-   * Constant declarations
+   * [Constant declarations](Declarations and scope/constant_declarations.md)
    * Iota
    * Type declarations
    * Variable declarations
