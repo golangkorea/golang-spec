@@ -97,4 +97,5 @@
    * Length and capacity
    * Allocation
    * Making slices, maps and channels
+   * Appending to and copying slices
 
