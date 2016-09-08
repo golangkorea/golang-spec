@@ -42,7 +42,7 @@
    * [Blank identifier](Declarations and scope/blank_identifier.md)
    * [Predeclared identifiers](Declarations and scope/predeclared_identifiers.md)
    * [Exported identifiers](Declarations and scope/exported_identifiers.md)
-   * Uniqueness of identifiers
+   * [Uniqueness of identifiers](Declarations and scope/uniqueness_of_identifiers.md)
    * Constant declarations
    * Iota
    * Type declarations
