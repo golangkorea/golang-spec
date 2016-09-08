@@ -85,7 +85,7 @@
    * [Switch statements](Statements/switch_statements.md)
    * [For statements](Statements/for_statements.md)
    * [Go statements](Statements/go_statements.md)
-   * Select statements
+   * [Select statements](Statements/select_statements.md)
    * Return statements
    * Break statements
    * Continue statements
