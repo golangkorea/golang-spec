@@ -98,7 +98,7 @@
    * [Allocation](Built-in functions/allocation.md)
    * [Making slices, maps and channels](Built-in functions/making_slices,_maps_and_channels.md)
    * [Appending to and copying slices](Built-in functions/appending_to_and_copying_slices.md)
-   * Deletion of map elements
+   * [Deletion of map elements](Built-in functions/deletion_of_map_elements.md)
    * Manipulating complex numbers
    * Handling panics
    * Bootstrapping
