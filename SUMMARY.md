@@ -14,4 +14,5 @@
    * Keywords
    * Operators and Delimiters
    * Integer literals
+   * Floating-point literals
 
