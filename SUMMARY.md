@@ -13,4 +13,5 @@
    * Identifiers
    * Keywords
    * Operators and Delimiters
+   * Integer literals
 
