@@ -1,0 +1,2 @@
+# Deletion of map elements
+
