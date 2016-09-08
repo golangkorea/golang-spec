@@ -27,4 +27,5 @@
    * String types
    * Array types
    * Slice types
+   * Struct types
 
