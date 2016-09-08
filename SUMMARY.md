@@ -29,4 +29,5 @@
    * Slice types
    * Struct types
    * Pointer types
+   * Function types
 
