@@ -1,7 +1,7 @@
 # Summary
 
 * [README](README.md)
-* [Introduction](introduction.md)
+* [Introduction](Introduction/README.md)
 * [Notation](notation.md)
 * [Source code representation](Source code representation/README.md)
    * [Characters](Source code representation/characters.md)
