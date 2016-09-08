@@ -62,7 +62,7 @@
    * [Index expressions](Expressions/index_expressions.md)
    * [Slice expressions](Expressions/slice_expressions.md)
    * [Type assertions](Expressions/type_assertions.md)
-   * Calls
+   * [Calls](Expressions/calls.md)
    * Passing arguments to ... parameters
    * Operators
    * Arithmetic operators
