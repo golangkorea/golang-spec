@@ -60,4 +60,5 @@
    * Method expressions
    * Method values
    * Index expressions
+   * Slice expressions
 
