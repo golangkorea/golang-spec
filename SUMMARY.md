@@ -84,4 +84,5 @@
    * If statements
    * Switch statements
    * For statements
+   * Go statements
 
