@@ -30,7 +30,7 @@
    * [Struct types](Types/struct_types.md)
    * [Pointer types](Types/pointer_types.md)
    * [Function types](Types/function_types.md)
-   * Interface types
+   * [Interface types](Types/interface_types.md)
    * Map types
    * Channel types
 
