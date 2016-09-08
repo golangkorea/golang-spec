@@ -104,7 +104,7 @@
    * [Bootstrapping](Built-in functions/bootstrapping.md)
 * [Packages](Packages/README.md)
    * [Source file organization](Packages/source_file_organization.md)
-   * Package clause
+   * [Package clause](Packages/package_clause.md)
    * Import declarations
    * An example package
 
