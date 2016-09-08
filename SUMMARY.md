@@ -20,5 +20,5 @@
    * [String literals](Lexical elements/string_literals.md)
 * [Constants](Constatns/README.md)
 * [Variables](Variables/README.md)
-* Types
+* [Types](Types/README.md)
 
