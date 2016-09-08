@@ -32,5 +32,5 @@
    * [Function types](Types/function_types.md)
    * [Interface types](Types/interface_types.md)
    * [Map types](Types/map_types.md)
-   * Channel types
+   * [Channel types](Types/channel_types.md)
 
