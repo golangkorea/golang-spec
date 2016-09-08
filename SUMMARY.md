@@ -78,7 +78,7 @@
    * [Empty statements](Statements/empty_statements.md)
    * [Labeled statements](Statements/labeled_statements.md)
    * [Expression statements](Statements/expression_statements.md)
-   * Send statements
+   * [Send statements](Statements/send_statements.md)
    * IncDec statements
    * Assignments
    * If statements
