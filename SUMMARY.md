@@ -65,7 +65,7 @@
    * [Calls](Expressions/calls.md)
    * [Passing arguments to ... parameters](Expressions/passing_arguments_to__parameters.md)
    * [Operators](Expressions/operators.md)
-   * Arithmetic operators
+   * [Arithmetic operators](Expressions/arithmetic_operators.md)
    * Comparison operators
    * Logical operators
    * Address operators
