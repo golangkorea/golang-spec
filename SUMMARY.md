@@ -83,7 +83,7 @@
    * [Assignments](Statements/assignments.md)
    * [If statements](Statements/if_statements.md)
    * [Switch statements](Statements/switch_statements.md)
-   * For statements
+   * [For statements](Statements/for_statements.md)
    * Go statements
    * Select statements
    * Return statements
