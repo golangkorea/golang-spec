@@ -31,6 +31,6 @@
    * [Pointer types](Types/pointer_types.md)
    * [Function types](Types/function_types.md)
    * [Interface types](Types/interface_types.md)
-   * Map types
+   * [Map types](Types/map_types.md)
    * Channel types
 
