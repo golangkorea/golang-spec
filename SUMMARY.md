@@ -57,4 +57,5 @@
    * Function literals
    * Primary expressions
    * Selectors
+   * Method expressions
 
