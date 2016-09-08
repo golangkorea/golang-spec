@@ -42,4 +42,5 @@
    * Blank identifier
    * Predeclared identifiers
    * Exported identifiers
+   * Uniqueness of identifiers
 
