@@ -21,5 +21,5 @@
 * [Constants](Constatns/README.md)
 * [Variables](Variables/README.md)
 * [Types](Types/README.md)
-   * Method sets
+   * [Method sets](Types/method_sets.md)
 
