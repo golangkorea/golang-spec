@@ -67,7 +67,7 @@
    * [Operators](Expressions/operators.md)
    * [Arithmetic operators](Expressions/arithmetic_operators.md)
    * [Comparison operators](Expressions/comparison_operators.md)
-   * Logical operators
+   * [Logical operators](Expressions/logical_operators.md)
    * Address operators
    * Receive operator
    * Conversions
