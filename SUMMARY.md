@@ -37,4 +37,5 @@
    * [Type identity](Properties of types and values/type_identity.md)
    * [Assignability](Properties of types and values/assignability.md)
 * [Blocks](Blocks/README.md)
+* Declarations and scope
 
