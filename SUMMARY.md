@@ -101,4 +101,5 @@
    * Deletion of map elements
    * Manipulating complex numbers
    * Handling panics
+   * Bootstrapping
 
