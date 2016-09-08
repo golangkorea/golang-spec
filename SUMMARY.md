@@ -80,7 +80,7 @@
    * [Expression statements](Statements/expression_statements.md)
    * [Send statements](Statements/send_statements.md)
    * [IncDec statements](Statements/incdec_statements.md)
-   * Assignments
+   * [Assignments](Statements/assignments.md)
    * If statements
    * Switch statements
    * For statements
