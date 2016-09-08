@@ -43,4 +43,5 @@
    * Predeclared identifiers
    * Exported identifiers
    * Uniqueness of identifiers
+   * Constant declarations
 
