@@ -74,7 +74,7 @@
    * [Constant expressions](Expressions/constant_expressions.md)
    * [Order of evaluation](Expressions/order_of_evaluation.md)
 * [Statements](Statements/README.md)
-   * Terminating statements
+   * [Terminating statements](Statements/terminating_statements.md)
    * Empty statements
    * Labeled statements
    * Expression statements
