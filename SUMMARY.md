@@ -34,4 +34,5 @@
    * [Map types](Types/map_types.md)
    * [Channel types](Types/channel_types.md)
 * [Properties of types and values](Properties of types and values/README.md)
+   * Type identity
 
