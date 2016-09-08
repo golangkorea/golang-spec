@@ -82,7 +82,7 @@
    * [IncDec statements](Statements/incdec_statements.md)
    * [Assignments](Statements/assignments.md)
    * [If statements](Statements/if_statements.md)
-   * Switch statements
+   * [Switch statements](Statements/switch_statements.md)
    * For statements
    * Go statements
    * Select statements
