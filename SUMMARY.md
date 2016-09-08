@@ -33,4 +33,5 @@
    * [Interface types](Types/interface_types.md)
    * [Map types](Types/map_types.md)
    * [Channel types](Types/channel_types.md)
+* Properties of types and values
 
