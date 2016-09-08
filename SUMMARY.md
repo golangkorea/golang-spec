@@ -91,4 +91,5 @@
    * Continue statements
    * Goto statements
    * Fallthrough statements
+   * Defer statements
 
