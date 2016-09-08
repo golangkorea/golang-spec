@@ -106,5 +106,5 @@
    * [Source file organization](Packages/source_file_organization.md)
    * [Package clause](Packages/package_clause.md)
    * [Import declarations](Packages/import_declarations.md)
-   * An example package
+   * [An example package](Packages/an_example_package.md)
 
