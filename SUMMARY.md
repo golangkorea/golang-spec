@@ -79,4 +79,5 @@
    * Labeled statements
    * Expression statements
    * Send statements
+   * IncDec statements
 
