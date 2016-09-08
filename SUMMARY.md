@@ -81,7 +81,7 @@
    * [Send statements](Statements/send_statements.md)
    * [IncDec statements](Statements/incdec_statements.md)
    * [Assignments](Statements/assignments.md)
-   * If statements
+   * [If statements](Statements/if_statements.md)
    * Switch statements
    * For statements
    * Go statements
