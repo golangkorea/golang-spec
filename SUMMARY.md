@@ -82,4 +82,5 @@
    * IncDec statements
    * Assignments
    * If statements
+   * Switch statements
 
