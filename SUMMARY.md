@@ -95,4 +95,5 @@
 * [Built-in functions](Built-in functions/README.md)
    * Close
    * Length and capacity
+   * Allocation
 
