@@ -40,4 +40,5 @@
 * [Declarations and scope](Declarations and scope/README.md)
    * Label scopes
    * Blank identifier
+   * Predeclared identifiers
 
