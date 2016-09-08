@@ -30,4 +30,5 @@
    * Struct types
    * Pointer types
    * Function types
+   * Interface types
 
