@@ -96,7 +96,7 @@
    * [Close](Built-in functions/close.md)
    * [Length and capacity](Built-in functions/length_and_capacity.md)
    * [Allocation](Built-in functions/allocation.md)
-   * Making slices, maps and channels
+   * [Making slices, maps and channels](Built-in functions/making_slices,_maps_and_channels.md)
    * Appending to and copying slices
    * Deletion of map elements
    * Manipulating complex numbers
