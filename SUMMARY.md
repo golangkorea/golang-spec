@@ -49,4 +49,5 @@
    * Variable declarations
    * Short variable declarations
    * Function declarations
+   * Method declarations
 
