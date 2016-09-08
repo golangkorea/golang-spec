@@ -28,7 +28,7 @@
    * [Array types](Types/array_types.md)
    * [Slice types](Types/slice_types.md)
    * [Struct types](Types/struct_types.md)
-   * Pointer types
+   * [Pointer types](Types/pointer_types.md)
    * Function types
    * Interface types
    * Map types
