@@ -98,4 +98,5 @@
    * Allocation
    * Making slices, maps and channels
    * Appending to and copying slices
+   * Deletion of map elements
 
