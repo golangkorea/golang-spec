@@ -69,4 +69,5 @@
    * Comparison operators
    * Logical operators
    * Address operators
+   * Receive operator
 
