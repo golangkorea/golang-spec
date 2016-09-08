@@ -57,7 +57,7 @@
    * [Function literals](Expressions/function_literals.md)
    * [Primary expressions](Expressions/primary_expressions.md)
    * [Selectors](Expressions/selectors.md)
-   * Method expressions
+   * [Method expressions](Expressions/method_expressions.md)
    * Method values
    * Index expressions
    * Slice expressions
