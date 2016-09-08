@@ -87,7 +87,7 @@
    * [Go statements](Statements/go_statements.md)
    * [Select statements](Statements/select_statements.md)
    * [Return statements](Statements/return_statements.md)
-   * Break statements
+   * [Break statements](Statements/break_statements.md)
    * Continue statements
    * Goto statements
    * Fallthrough statements
