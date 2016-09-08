@@ -103,7 +103,7 @@
    * [Handling panics](Built-in functions/handling_panics.md)
    * [Bootstrapping](Built-in functions/bootstrapping.md)
 * [Packages](Packages/README.md)
-   * Source file organization
+   * [Source file organization](Packages/source_file_organization.md)
    * Package clause
    * Import declarations
    * An example package
