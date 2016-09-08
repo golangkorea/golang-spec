@@ -56,7 +56,7 @@
    * [Composite literals](Expressions/composite_literals.md)
    * [Function literals](Expressions/function_literals.md)
    * [Primary expressions](Expressions/primary_expressions.md)
-   * Selectors
+   * [Selectors](Expressions/selectors.md)
    * Method expressions
    * Method values
    * Index expressions
