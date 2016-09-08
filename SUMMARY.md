@@ -14,7 +14,7 @@
    * [Keywords](Lexical elements/keywords.md)
    * [Operators and Delimiters](Lexical elements/operators_and_delimiters.md)
    * [Integer literals](Lexical elements/integer_literals.md)
-   * Floating-point literals
+   * [Floating-point literals](Lexical elements/floating-point_literals.md)
    * Imaginary literals
    * Rune literals
    * String literals
