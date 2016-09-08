@@ -70,4 +70,5 @@
    * Logical operators
    * Address operators
    * Receive operator
+   * Conversions
 
