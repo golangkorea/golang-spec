@@ -11,7 +11,7 @@
    * [Tokens](Lexical elements/tokens.md)
    * [Semicolons](Lexical elements/semicolons.md)
    * [Identifiers](Lexical elements/identifiers.md)
-   * Keywords
+   * [Keywords](Lexical elements/keywords.md)
    * Operators and Delimiters
    * Integer literals
    * Floating-point literals
