@@ -93,7 +93,7 @@
    * [Fallthrough statements](Statements/fallthrough_statements.md)
    * [Defer statements](Statements/defer_statements.md)
 * [Built-in functions](Built-in functions/README.md)
-   * Close
+   * [Close](Built-in functions/close.md)
    * Length and capacity
    * Allocation
    * Making slices, maps and channels
