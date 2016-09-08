@@ -22,7 +22,7 @@
 * [Variables](Variables/README.md)
 * [Types](Types/README.md)
    * [Method sets](Types/method_sets.md)
-   * Boolean types
+   * [Boolean types](Types/boolean_types.md)
    * Numeric types
    * String types
    * Array types
