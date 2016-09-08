@@ -25,7 +25,7 @@
    * [Boolean types](Types/boolean_types.md)
    * [Numeric types](Types/numeric_types.md)
    * [String types](Types/string_types.md)
-   * Array types
+   * [Array types](Types/array_types.md)
    * Slice types
    * Struct types
    * Pointer types
