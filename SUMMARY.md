@@ -13,7 +13,7 @@
    * [Identifiers](Lexical elements/identifiers.md)
    * [Keywords](Lexical elements/keywords.md)
    * [Operators and Delimiters](Lexical elements/operators_and_delimiters.md)
-   * Integer literals
+   * [Integer literals](Lexical elements/integer_literals.md)
    * Floating-point literals
    * Imaginary literals
    * Rune literals
