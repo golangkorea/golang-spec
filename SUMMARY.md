@@ -40,7 +40,7 @@
 * [Declarations and scope](Declarations and scope/README.md)
    * [Label scopes](Declarations and scope/label_scopes.md)
    * [Blank identifier](Declarations and scope/blank_identifier.md)
-   * Predeclared identifiers
+   * [Predeclared identifiers](Declarations and scope/predeclared_identifiers.md)
    * Exported identifiers
    * Uniqueness of identifiers
    * Constant declarations
