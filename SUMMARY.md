@@ -106,4 +106,5 @@
    * Source file organization
    * Package clause
    * Import declarations
+   * An example package
 
