@@ -78,4 +78,5 @@
    * Empty statements
    * Labeled statements
    * Expression statements
+   * Send statements
 
