@@ -89,4 +89,5 @@
    * Return statements
    * Break statements
    * Continue statements
+   * Goto statements
 
