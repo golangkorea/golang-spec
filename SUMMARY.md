@@ -32,4 +32,5 @@
    * Function types
    * Interface types
    * Map types
+   * Channel types
 
