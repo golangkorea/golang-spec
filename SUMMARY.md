@@ -17,5 +17,5 @@
    * [Floating-point literals](Lexical elements/floating-point_literals.md)
    * [Imaginary literals](Lexical elements/imaginary_literals.md)
    * [Rune literals](Lexical elements/rune_literals.md)
-   * String literals
+   * [String literals](Lexical elements/string_literals.md)
 
