@@ -79,7 +79,7 @@
    * [Labeled statements](Statements/labeled_statements.md)
    * [Expression statements](Statements/expression_statements.md)
    * [Send statements](Statements/send_statements.md)
-   * IncDec statements
+   * [IncDec statements](Statements/incdec_statements.md)
    * Assignments
    * If statements
    * Switch statements
