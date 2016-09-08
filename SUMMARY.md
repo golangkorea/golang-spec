@@ -39,7 +39,7 @@
 * [Blocks](Blocks/README.md)
 * [Declarations and scope](Declarations and scope/README.md)
    * [Label scopes](Declarations and scope/label_scopes.md)
-   * Blank identifier
+   * [Blank identifier](Declarations and scope/blank_identifier.md)
    * Predeclared identifiers
    * Exported identifiers
    * Uniqueness of identifiers
