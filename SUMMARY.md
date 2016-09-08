@@ -64,7 +64,7 @@
    * [Type assertions](Expressions/type_assertions.md)
    * [Calls](Expressions/calls.md)
    * [Passing arguments to ... parameters](Expressions/passing_arguments_to__parameters.md)
-   * Operators
+   * [Operators](Expressions/operators.md)
    * Arithmetic operators
    * Comparison operators
    * Logical operators
