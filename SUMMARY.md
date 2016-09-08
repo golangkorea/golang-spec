@@ -87,4 +87,5 @@
    * Go statements
    * Select statements
    * Return statements
+   * Break statements
 
