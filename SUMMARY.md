@@ -51,7 +51,7 @@
    * [Function declarations](Declarations and scope/function_declarations.md)
    * [Method declarations](Declarations and scope/method_declarations.md)
 * [Expressions](Expressions/README.md)
-   * Operands
+   * [Operands](Expressions/operands.md)
    * Qualified identifiers
    * Composite literals
    * Function literals
