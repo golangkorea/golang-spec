@@ -38,7 +38,7 @@
    * [Assignability](Properties of types and values/assignability.md)
 * [Blocks](Blocks/README.md)
 * [Declarations and scope](Declarations and scope/README.md)
-   * Label scopes
+   * [Label scopes](Declarations and scope/label_scopes.md)
    * Blank identifier
    * Predeclared identifiers
    * Exported identifiers
