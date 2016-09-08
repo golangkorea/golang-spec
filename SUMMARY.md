@@ -24,4 +24,5 @@
    * [Method sets](Types/method_sets.md)
    * Boolean types
    * Numeric types
+   * String types
 
