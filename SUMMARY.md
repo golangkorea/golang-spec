@@ -62,4 +62,5 @@
    * Index expressions
    * Slice expressions
    * Type assertions
+   * Calls
 
