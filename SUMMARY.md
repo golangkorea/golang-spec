@@ -9,5 +9,5 @@
 * [Lexical elements](Lexical elements/README.md)
    * [Comments](Lexical elements/comments.md)
    * [Tokens](Lexical elements/tokens.md)
-   * Semicolons
+   * [Semicolons](Lexical elements/semicolons.md)
 
