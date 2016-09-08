@@ -53,4 +53,5 @@
 * [Expressions](Expressions/README.md)
    * Operands
    * Qualified identifiers
+   * Composite literals
 
