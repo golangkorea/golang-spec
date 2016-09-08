@@ -100,4 +100,5 @@
    * Appending to and copying slices
    * Deletion of map elements
    * Manipulating complex numbers
+   * Handling panics
 
