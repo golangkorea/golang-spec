@@ -75,7 +75,7 @@
    * [Order of evaluation](Expressions/order_of_evaluation.md)
 * [Statements](Statements/README.md)
    * [Terminating statements](Statements/terminating_statements.md)
-   * Empty statements
+   * [Empty statements](Statements/empty_statements.md)
    * Labeled statements
    * Expression statements
    * Send statements
