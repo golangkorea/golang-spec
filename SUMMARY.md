@@ -86,4 +86,5 @@
    * For statements
    * Go statements
    * Select statements
+   * Return statements
 
