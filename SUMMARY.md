@@ -61,7 +61,7 @@
    * [Method values](Expressions/method_values.md)
    * [Index expressions](Expressions/index_expressions.md)
    * [Slice expressions](Expressions/slice_expressions.md)
-   * Type assertions
+   * [Type assertions](Expressions/type_assertions.md)
    * Calls
    * Passing arguments to ... parameters
    * Operators
