@@ -80,4 +80,5 @@
    * Expression statements
    * Send statements
    * IncDec statements
+   * Assignments
 
