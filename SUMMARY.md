@@ -91,5 +91,5 @@
    * [Continue statements](Statements/continue_statements.md)
    * [Goto statements](Statements/goto_statements.md)
    * [Fallthrough statements](Statements/fallthrough_statements.md)
-   * Defer statements
+   * [Defer statements](Statements/defer_statements.md)
 
