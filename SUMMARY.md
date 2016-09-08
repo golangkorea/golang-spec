@@ -102,5 +102,5 @@
    * [Manipulating complex numbers](Built-in functions/manipulating_complex_numbers.md)
    * [Handling panics](Built-in functions/handling_panics.md)
    * [Bootstrapping](Built-in functions/bootstrapping.md)
-* Packages
+* [Packages](Packages/README.md)
 
