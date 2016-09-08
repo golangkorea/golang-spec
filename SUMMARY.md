@@ -39,4 +39,5 @@
 * [Blocks](Blocks/README.md)
 * [Declarations and scope](Declarations and scope/README.md)
    * Label scopes
+   * Blank identifier
 
