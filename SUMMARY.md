@@ -103,4 +103,5 @@
    * [Handling panics](Built-in functions/handling_panics.md)
    * [Bootstrapping](Built-in functions/bootstrapping.md)
 * [Packages](Packages/README.md)
+   * Source file organization
 
