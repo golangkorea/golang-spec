@@ -66,4 +66,5 @@
    * Passing arguments to ... parameters
    * Operators
    * Arithmetic operators
+   * Comparison operators
 
