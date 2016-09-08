@@ -22,4 +22,5 @@
 * [Variables](Variables/README.md)
 * [Types](Types/README.md)
    * [Method sets](Types/method_sets.md)
+   * Boolean types
 
