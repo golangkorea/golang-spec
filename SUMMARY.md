@@ -54,4 +54,5 @@
    * Operands
    * Qualified identifiers
    * Composite literals
+   * Function literals
 
