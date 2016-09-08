@@ -2,7 +2,7 @@
 
 * [README](README.md)
 * [Introduction](Introduction/README.md)
-* [Notation](notation.md)
+* [Notation](Notation/README.md)
 * [Source code representation](Source code representation/README.md)
    * [Characters](Source code representation/characters.md)
    * [Letters and digits](Source code representation/letters_and_digits.md)
