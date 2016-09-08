@@ -12,4 +12,5 @@
    * [Semicolons](Lexical elements/semicolons.md)
    * Identifiers
    * Keywords
+   * Operators and Delimiters
 
