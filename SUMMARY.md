@@ -69,7 +69,7 @@
    * [Comparison operators](Expressions/comparison_operators.md)
    * [Logical operators](Expressions/logical_operators.md)
    * [Address operators](Expressions/address_operators.md)
-   * Receive operator
+   * [Receive operator](Expressions/receive_operator.md)
    * Conversions
    * Constant expressions
    * Order of evaluation
