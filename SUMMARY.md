@@ -31,4 +31,5 @@
    * Pointer types
    * Function types
    * Interface types
+   * Map types
 
