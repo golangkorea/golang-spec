@@ -101,5 +101,5 @@
    * [Deletion of map elements](Built-in functions/deletion_of_map_elements.md)
    * [Manipulating complex numbers](Built-in functions/manipulating_complex_numbers.md)
    * [Handling panics](Built-in functions/handling_panics.md)
-   * Bootstrapping
+   * [Bootstrapping](Built-in functions/bootstrapping.md)
 
