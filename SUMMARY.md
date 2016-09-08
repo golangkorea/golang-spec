@@ -111,4 +111,5 @@
    * [The zero value](Program initialization and execution/the_zero_value.md)
    * [Package initialization](Program initialization and execution/package_initialization.md)
    * [Program execution](Program initialization and execution/program_execution.md)
+* Errors
 
