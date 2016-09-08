@@ -104,4 +104,5 @@
    * [Bootstrapping](Built-in functions/bootstrapping.md)
 * [Packages](Packages/README.md)
    * Source file organization
+   * Package clause
 
