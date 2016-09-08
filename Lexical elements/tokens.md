@@ -1,2 +1,3 @@
 # Tokens
 
+Tokens form the vocabulary of the Go language. There are four classes: *identifiers*, *keywords*, *operators* and *delimiters*, and *literals*. *White space*, formed from spaces (U+0020), horizontal tabs (U+0009), carriage returns (U+000D), and newlines (U+000A), is ignored except as it separates tokens that would otherwise combine into a single token. Also, a newline or end of file may trigger the insertion of a [semicolon](/Lexical elements/semicolons.html). While breaking the input into tokens, the next token is the longest sequence of characters that form a valid token.
