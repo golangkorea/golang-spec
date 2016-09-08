@@ -94,4 +94,5 @@
    * [Defer statements](Statements/defer_statements.md)
 * [Built-in functions](Built-in functions/README.md)
    * Close
+   * Length and capacity
 
