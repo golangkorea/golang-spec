@@ -109,4 +109,5 @@
    * [An example package](Packages/an_example_package.md)
 * [Program initialization and execution](Program initialization and execution/README.md)
    * The zero value
+   * Package initialization
 
