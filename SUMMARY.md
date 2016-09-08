@@ -59,4 +59,5 @@
    * Selectors
    * Method expressions
    * Method values
+   * Index expressions
 
