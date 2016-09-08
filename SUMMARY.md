@@ -16,4 +16,5 @@
    * Integer literals
    * Floating-point literals
    * Imaginary literals
+   * Rune literals
 
