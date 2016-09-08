@@ -54,7 +54,7 @@
    * [Operands](Expressions/operands.md)
    * [Qualified identifiers](Expressions/qualified_identifiers.md)
    * [Composite literals](Expressions/composite_literals.md)
-   * Function literals
+   * [Function literals](Expressions/function_literals.md)
    * Primary expressions
    * Selectors
    * Method expressions
