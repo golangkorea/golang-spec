@@ -60,7 +60,7 @@
    * [Method expressions](Expressions/method_expressions.md)
    * [Method values](Expressions/method_values.md)
    * [Index expressions](Expressions/index_expressions.md)
-   * Slice expressions
+   * [Slice expressions](Expressions/slice_expressions.md)
    * Type assertions
    * Calls
    * Passing arguments to ... parameters
