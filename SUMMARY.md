@@ -10,7 +10,7 @@
    * [Comments](Lexical elements/comments.md)
    * [Tokens](Lexical elements/tokens.md)
    * [Semicolons](Lexical elements/semicolons.md)
-   * Identifiers
+   * [Identifiers](Lexical elements/identifiers.md)
    * Keywords
    * Operators and Delimiters
    * Integer literals
