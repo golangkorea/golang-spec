@@ -18,4 +18,5 @@
    * [Imaginary literals](Lexical elements/imaginary_literals.md)
    * [Rune literals](Lexical elements/rune_literals.md)
    * [String literals](Lexical elements/string_literals.md)
+* Constants
 
