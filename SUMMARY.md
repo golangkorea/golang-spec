@@ -45,4 +45,5 @@
    * Uniqueness of identifiers
    * Constant declarations
    * Iota
+   * Type declarations
 
