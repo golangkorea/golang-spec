@@ -47,4 +47,5 @@
    * Iota
    * Type declarations
    * Variable declarations
+   * Short variable declarations
 
