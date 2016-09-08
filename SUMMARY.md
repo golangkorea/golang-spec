@@ -45,7 +45,7 @@
    * [Uniqueness of identifiers](Declarations and scope/uniqueness_of_identifiers.md)
    * [Constant declarations](Declarations and scope/constant_declarations.md)
    * [Iota](Declarations and scope/iota.md)
-   * Type declarations
+   * [Type declarations](Declarations and scope/type_declarations.md)
    * Variable declarations
    * Short variable declarations
    * Function declarations
