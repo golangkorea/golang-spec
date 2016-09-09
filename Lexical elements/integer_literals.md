@@ -1,6 +1,6 @@
 # Integer literals
 
-An integer literal is a sequence of digits representing an integer [constant](/Constatns/). An optional prefix sets a non-decimal base: 0 for octal, 0x or 0X for hexadecimal. In hexadecimal literals, letters a-f and A-F represent values 10 through 15.
+An integer literal is a sequence of digits representing an integer [constant](/Constants/). An optional prefix sets a non-decimal base: 0 for octal, 0x or 0X for hexadecimal. In hexadecimal literals, letters a-f and A-F represent values 10 through 15.
 
 <pre>
 <a id="int_lit">int_lit</a>     = <a href="#decimal_lit">decimal_lit</a> | <a href="#octal_lit">octal_lit</a> | <a href="#hex_lit">hex_lit</a> .
