@@ -3,11 +3,11 @@
 A floating-point literal is a decimal representation of a [floating-point constant](/Constatns/). It has an integer part, a decimal point, a fractional part, and an exponent part. The integer and fractional part comprise decimal digits; the exponent part is an e or E followed by an optionally signed decimal exponent. One of the integer part or the fractional part may be elided; one of the decimal point or the exponent may be elided.
 
 <pre>
-<a id="float_lit">float_lit</a> = decimals "." [ decimals ] [ exponent ] |
-            decimals exponent |
-            "." decimals [ exponent ] .
-<a id="decimals">decimals</a>  = decimal_digit { decimal_digit } .
-<a id="exponent">exponent</a>  = ( "e" | "E" ) [ "+" | "-" ] decimals .
+<a id="float_lit">float_lit</a> = <a href="#decimals">decimals</a> "." [ <a href="#decimals">decimals</a> ] [ <a href="#exponent">exponent</a> ] |
+            <a href="#decimals">decimals</a> <a href="#exponent">exponent</a> |
+            "." <a href="#decimals">decimals</a> [ <a href="#exponent">exponent</a> ] .
+<a id="decimals">decimals</a>  = <a href="/Source%20code%20representation/letters_and_digits.html#decimal_digit">decimal_digit</a> { <a href="/Source%20code%20representation/letters_and_digits.html#decimal_digit">decimal_digit</a> } .
+<a id="exponent">exponent</a>  = ( "e" | "E" ) [ "+" | "-" ] <a href="#decimals">decimals</a> .
 </pre>
 
 ```
