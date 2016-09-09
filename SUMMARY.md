@@ -18,7 +18,7 @@
    * [Imaginary literals](Lexical elements/imaginary_literals.md)
    * [Rune literals](Lexical elements/rune_literals.md)
    * [String literals](Lexical elements/string_literals.md)
-* [Constants](Constatns/README.md)
+* [Constants](Constants/README.md)
 * [Variables](Variables/README.md)
 * [Types](Types/README.md)
    * [Method sets](Types/method_sets.md)
