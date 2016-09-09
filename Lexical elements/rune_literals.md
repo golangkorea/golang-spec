@@ -26,14 +26,14 @@ After a backslash, certain single-character escapes represent special values:
 All other sequences starting with a backslash are illegal inside rune literals.
 
 <pre>
-<a id="rune_lit">rune_lit</a>         = "'" ( unicode_value | byte_value ) "'" .
-<a id="unicode_value">unicode_value</a>    = unicode_char | little_u_value | big_u_value | escaped_char .
-<a id="byte_value">byte_value</a>       = octal_byte_value | hex_byte_value .
-<a id="octal_byte_value">octal_byte_value</a> = `\` octal_digit octal_digit octal_digit .
-<a id="hex_byte_value">hex_byte_value</a>   = `\` "x" hex_digit hex_digit .
-<a id="little_u_value">little_u_value</a>   = `\` "u" hex_digit hex_digit hex_digit hex_digit .
-<a id="big_u_value">big_u_value</a>      = `\` "U" hex_digit hex_digit hex_digit hex_digit
-                           hex_digit hex_digit hex_digit hex_digit .
+<a id="rune_lit">rune_lit</a>         = "'" ( <a href="#unicode_value">unicode_value</a> | <a href="#byte_value">byte_value</a> ) "'" .
+<a id="unicode_value">unicode_value</a>    = <a href="/Source%20code%20representation/characters.html#unicode_char">unicode_char</a> | <a href="#little_u_value">little_u_value</a> | <a href="#big_u_value">big_u_value</a> | <a href="#escaped_char">escaped_char</a> .
+<a id="byte_value">byte_value</a>       = <a href="#octal_byte_value">octal_byte_value</a> | <a href="#hex_byte_value">hex_byte_value</a> .
+<a id="octal_byte_value">octal_byte_value</a> = `\` <a href="/Source%20code%20representation/letters_and_digits.html#octal_digit">octal_digit</a> <a href="/Source%20code%20representation/letters_and_digits.html#octal_digit">octal_digit</a> <a href="/Source%20code%20representation/letters_and_digits.html#octal_digit">octal_digit</a> .
+<a id="hex_byte_value">hex_byte_value</a>   = `\` "x" <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a> <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a> .
+<a id="little_u_value">little_u_value</a>   = `\` "u" <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a> <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a> <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a> <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a> .
+<a id="big_u_value">big_u_value</a>      = `\` "U" <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a> <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a> <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a> <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a>
+                           <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a> <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a> <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a> <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a> .
 <a id="escaped_char">escaped_char</a>     = `\` ( "a" | "b" | "f" | "n" | "r" | "t" | "v" | `\` | "'" | `"` ) .
 </pre>
 
