@@ -1,6 +1,6 @@
 # Floating-point literals
 
-A floating-point literal is a decimal representation of a floating-point constant. It has an integer part, a decimal point, a fractional part, and an exponent part. The integer and fractional part comprise decimal digits; the exponent part is an e or E followed by an optionally signed decimal exponent. One of the integer part or the fractional part may be elided; one of the decimal point or the exponent may be elided.
+A floating-point literal is a decimal representation of a [floating-point constant](/Constatns/). It has an integer part, a decimal point, a fractional part, and an exponent part. The integer and fractional part comprise decimal digits; the exponent part is an e or E followed by an optionally signed decimal exponent. One of the integer part or the fractional part may be elided; one of the decimal point or the exponent may be elided.
 
 <pre>
 <a id="float_lit">float_lit</a> = decimals "." [ decimals ] [ exponent ] |
