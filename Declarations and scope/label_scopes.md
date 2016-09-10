@@ -1,2 +1,3 @@
 # Label scopes
 
+Labels are declared by [labeled statements](/Statements/labeled_statements.html) and are used in the "[break](/Statements/break_statements.html)", "[continue](/Statements/continue_statements.html)", and "[goto](/Statements/goto_statements.html)" statements. It is illegal to define a label that is never used. In contrast to other identifiers, labels are not block scoped and do not conflict with identifiers that are not labels. The scope of a label is the body of the function in which it is declared and excludes the body of any nested function.
