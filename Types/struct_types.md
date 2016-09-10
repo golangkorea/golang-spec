@@ -3,10 +3,10 @@
 A struct is a sequence of named elements, called fields, each of which has a name and a type. Field names may be specified explicitly (IdentifierList) or implicitly (AnonymousField). Within a struct, non-[blank](/Declarations%20and%20scope/blank_identifier.html) field names must be [unique](/Declarations%20and%20scope/uniqueness_of_identifiers.html).
 
 <pre>
-StructType     = "struct" "{" { FieldDecl ";" } "}" .
-FieldDecl      = (IdentifierList Type | AnonymousField) [ Tag ] .
-AnonymousField = [ "*" ] TypeName .
-Tag            = string_lit .
+<a id="StructType">StructType</a>     = "struct" "{" { <a href="#FieldDecl">FieldDecl</a> ";" } "}" .
+<a id="FieldDecl">FieldDecl</a>      = (<a href="/Declarations%20and%20scope/constant_declarations.html#IdentifierList">IdentifierList</a> Type | AnonymousField) [ Tag ] .
+<a id="AnonymousField">AnonymousField</a> = [ "*" ] TypeName .
+<a id="Tag">Tag</a>            = string_lit .
 </pre>
 
 ```
