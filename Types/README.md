@@ -5,8 +5,7 @@ A type determines the set of values and operations specific to values of that ty
 <pre>
 <a id="Type">Type</a>      = <a href="#TypeName">TypeName</a> | <a href="#TypeLit">TypeLit</a> | "(" <a href="#Type">Type</a> ")" .
 <a id="TypeName">TypeName</a>  = <a href="/Lexical%20elements/identifiers.html#identifier">identifier</a> | <a href="/Expressions/qualified_identifiers.html#QualifiedIdent">QualifiedIdent</a> .
-<a id="TypeLit">TypeLit</a>   = <a href="/Types/array_types.html#ArrayType">ArrayType</a> | <a href="/Types/struct_types.html#StructType">StructType</a> | <a href="/Types/pointer_types.html#PointerType">PointerType</a> | <a href="/Types/function_types.html#FunctionType">FunctionType</a> | <a href="/Types/interface_types.html#InterfaceType">InterfaceType</a> |
-	    <a href="/Types/slice_types.html#SliceType">SliceType</a> | <a href="/Types/map_types.html#MapType">MapType</a> | <a href="/Types/channel_types.html#ChannelType">ChannelType</a> .
+<a id="TypeLit">TypeLit</a>   = <a href="/Types/array_types.html#ArrayType">ArrayType</a> | <a href="/Types/struct_types.html#StructType">StructType</a> | <a href="/Types/pointer_types.html#PointerType">PointerType</a> | <a href="/Types/function_types.html#FunctionType">FunctionType</a> | <a href="/Types/interface_types.html#InterfaceType">InterfaceType</a> | <a href="/Types/slice_types.html#SliceType">SliceType</a> | <a href="/Types/map_types.html#MapType">MapType</a> | <a href="/Types/channel_types.html#ChannelType">ChannelType</a> .
 </pre>
 
 Named instances of the boolean, numeric, and string types are [predeclared](/Declarations%20and%20scope/predeclared_identifiers.html). *Composite types*—array, struct, pointer, function, interface, slice, map, and channel types—may be constructed using type literals.
