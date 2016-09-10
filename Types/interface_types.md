@@ -1,15 +1,15 @@
 # Interface types
 
-An interface type specifies a method set called its interface. A variable of interface type can store a value of any type with a method set that is any superset of the interface. Such a type is said to implement the interface. The value of an uninitialized variable of interface type is nil.
+An interface type specifies a [method set](/Types/method_sets.html) called its *interface*. A variable of interface type can store a value of any type with a method set that is any superset of the interface. Such a type is said to *implement the interface*. The value of an uninitialized variable of interface type is `nil`.
 
 <pre>
-InterfaceType      = "interface" "{" { MethodSpec ";" } "}" .
-MethodSpec         = MethodName Signature | InterfaceTypeName .
-MethodName         = identifier .
-InterfaceTypeName  = TypeName .
+<a id="InterfaceType">InterfaceType</a>      = "interface" "{" { <a href="#MethodSpec">MethodSpec</a> ";" } "}" .
+<a id="MethodSpec">MethodSpec</a>         = <a href="#MethodName">MethodName</a> <a href="/Types/function_types.html#Signature">Signature</a> | <a href="#InterfaceTypeName">InterfaceTypeName</a> .
+<a id="MethodName">MethodName</a>         = <a href="/Lexical%20elements/identifiers.html">identifier</a> .
+<a id="InterfaceTypeName">InterfaceTypeName</a>  = <a href="/Types/#TypeName">TypeName</a> .
 </pre>
 
-As with all method sets, in an interface type, each method must have a unique non-blank name.
+As with all method sets, in an interface type, each method must have a [unique](/Declarations%20and%20scope/uniqueness_of_identifiers.html) non-[blank](/Declarations%20and%20scope/blank_identifier.html) name.
 
 // A simple File interface
 interface {
@@ -27,13 +27,13 @@ func (p T) Close() { … }
 
 (where T stands for either S1 or S2) then the File interface is implemented by both S1 and S2, regardless of what other methods S1 and S2 may have or share.
 
-A type implements any interface comprising any subset of its methods and may therefore implement several distinct interfaces. For instance, all types implement the empty interface:
+A type implements any interface comprising any subset of its methods and may therefore implement several distinct interfaces. For instance, all types implement the *empty interface*:
 
 ```
 interface{}
 ```
 
-Similarly, consider this interface specification, which appears within a type declaration to define an interface called Locker:
+Similarly, consider this interface specification, which appears within a [type declaration](/Declarations%20and%20scope/type_declarations.html) to define an interface called Locker:
 
 ```
 type Locker interface {
@@ -49,9 +49,9 @@ func (p T) Lock() { … }
 func (p T) Unlock() { … }
 ```
 
-they implement the Locker interface as well as the File interface.
+they implement the Locker interface as well as the `File` interface.
 
-An interface T may use a (possibly qualified) interface type name E in place of a method specification. This is called embedding interface E in T; it adds all (exported and non-exported) methods of E to the interface T.
+An interface T may use a (possibly qualified) interface type name E in place of a method specification. This is called *embedding* interface E in T; it adds all (exported and non-exported) methods of E to the interface T.
 
 ```
 type ReadWriter interface {
