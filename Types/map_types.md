@@ -1,6 +1,6 @@
 # Map types
 
-A map is an unordered group of elements of one type, called the element type, indexed by a set of unique keys of another type, called the key type. The value of an uninitialized map is nil.
+A map is an unordered group of elements of one type, called the element type, indexed by a set of unique keys of another type, called the key type. The value of an uninitialized map is `nil`.
 
 <pre>
 <a id="MapType">MapType</a>     = "map" "[" <a href="#KeyType">KeyType</a> "]" <a href="/Types/array_types.html#ElementType">ElementType</a> .
