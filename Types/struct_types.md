@@ -23,7 +23,7 @@ struct {
 }
 ```
 
-A field declared with a type but no explicit field name is an anonymous field, also called an embedded field or an embedding of the type in the struct. An embedded type must be specified as a type name T or as a pointer to a non-interface type name *T, and T itself may not be a pointer type. The unqualified type name acts as the field name.
+A field declared with a type but no explicit field name is an *anonymous field*, also called an *embedded* field or an embedding of the type in the struct. An embedded type must be specified as a type name T or as a pointer to a non-interface type name *T, and T itself may not be a pointer type. The unqualified type name acts as the field name.
 
 ```
 // A struct with four anonymous fields of type T1, *T2, P.T3 and *P.T4
@@ -46,15 +46,16 @@ struct {
 }
 ```
 
-A field or method f of an anonymous field in a struct x is called promoted if x.f is a legal selector that denotes that field or method f.
+A field or [method](/Declarations%20and%20scope/method_declarations.html) f of an anonymous field in a struct x is called promoted if x.f is a legal [selector](/Expressions/selectors.html) that denotes that field or method f.
 
-Promoted fields act like ordinary fields of a struct except that they cannot be used as field names in composite literals of the struct.
+Promoted fields act like ordinary fields of a struct except that they cannot be used as field names in [composite literals](/Expressions/composite_literals.html) of the struct.
 
 Given a struct type S and a type named T, promoted methods are included in the method set of the struct as follows:
 
-If S contains an anonymous field T, the method sets of S and *S both include promoted methods with receiver T. The method set of *S also includes promoted methods with receiver *T.
-If S contains an anonymous field *T, the method sets of S and *S both include promoted methods with receiver T or *T.
-A field declaration may be followed by an optional string literal tag, which becomes an attribute for all the fields in the corresponding field declaration. An empty tag string is equivalent to an absent tag. The tags are made visible through a reflection interface and take part in type identity for structs but are otherwise ignored.
+  * If S contains an anonymous field T, the [method sets](/Types/method_sets.html) of S and *S both include promoted methods with receiver T. The method set of *S also includes promoted methods with receiver *T.
+  * If S contains an anonymous field *T, the method sets of S and *S both include promoted methods with receiver T or *T.
+
+A field declaration may be followed by an optional string literal tag, which becomes an attribute for all the fields in the corresponding field declaration. An empty tag string is equivalent to an absent tag. The tags are made visible through a [reflection interface](https://golang.org/pkg/reflect/#StructTag) and take part in [type identity](/Properties%20of%20types%20and%20values/type_identity.html) for structs but are otherwise ignored.
 
 ```
 struct {
