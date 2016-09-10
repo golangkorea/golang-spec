@@ -4,9 +4,9 @@ A struct is a sequence of named elements, called fields, each of which has a nam
 
 <pre>
 <a id="StructType">StructType</a>     = "struct" "{" { <a href="#FieldDecl">FieldDecl</a> ";" } "}" .
-<a id="FieldDecl">FieldDecl</a>      = (<a href="/Declarations%20and%20scope/constant_declarations.html#IdentifierList">IdentifierList</a> Type | AnonymousField) [ Tag ] .
-<a id="AnonymousField">AnonymousField</a> = [ "*" ] TypeName .
-<a id="Tag">Tag</a>            = string_lit .
+<a id="FieldDecl">FieldDecl</a>      = (<a href="/Declarations%20and%20scope/constant_declarations.html#IdentifierList">IdentifierList</a> <a href="/Types/#Type">Type</a> | <a href="#AnonymousField">AnonymousField</a>) [ <a href="#Tag">Tag</a> ] .
+<a id="AnonymousField">AnonymousField</a> = [ "*" ] <a href="/Types/#TypeName">TypeName</a> .
+<a id="Tag">Tag</a>            = <a href="/Lexical%20elements/string_literals.html#string_lit">string_lit</a> .
 </pre>
 
 ```
