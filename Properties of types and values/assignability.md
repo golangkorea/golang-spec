@@ -1,6 +1,5 @@
 # Assignability
 
-Assignability
 
 A value x is assignable to a [variable](/Variables/) of type T ("x is assignable to T") in any of these cases:
 
