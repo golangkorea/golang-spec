@@ -7,11 +7,9 @@ Operators combine operands into expressions.
 <a id="UnaryExpr">UnaryExpr</a>  = <a href="/Expressions/primary_expressions.html#PrimaryExpr">PrimaryExpr</a> | <a href="#unary_op">unary_op</a> <a href="#UnaryExpr">UnaryExpr</a> .
 
 <a id="binary_op">binary_op</a>  = "||" | "&&" | <a href="#rel_op">rel_op</a> | <a href="#add_op">add_op</a> | <a href="#mul_op">mul_op</a> .
-<a id="rel_op">rel_op</a>     = "==" | "!=" | "<" | "<=" | ">" | ">=" .
-<a id="add_op">add_op</a>     = "+" | "-" | "|" | "^" .
-<a id="mul_op">mul_op</a>     = "*" | "/" | "%" | "<<" | ">>" | "&" | "&^" .
-
-<a id="unary_op">unary_op</a>   = "+" | "-" | "!" | "^" | "*" | "&" | "<-" .
+<a id="rel_op">rel_op</a>     = <code>"==" | "!=" | "<" | "<=" | ">" | ">="</code> .
+<a id="add_op">add_op</a>     = <code>"+" | "-" | "|" | "^"</code>
+<a id="unary_op">unary_op</a>   = <code>"+" | "-" | "!" | "^" | "*" | "&" | "<-"</code> .
 </pre>
 
 Comparisons are discussed [elsewhere](/Expressions/comparison_operators.html). For other binary operators, the operand types must be [identical](/Properties%20of%20types%20and%20values/type_identity.html) unless the operation involves shifts or untyped [constants](/Constants/). For operations involving constants only, see the section on [constant expressions](/Expressions/constant_expressions.html).
