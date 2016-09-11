@@ -23,7 +23,7 @@ A [constant](/Constants/) value x can be converted to type T in any of these cas
 
   * x is representable by a value of type T.
   * x is a floating-point constant, T is a floating-point type, and x is representable by a value of type T after rounding using IEEE 754 round-to-even rules, but with an IEEE -0.0 further rounded to an unsigned 0.0. The constant T(x) is the rounded value.
-  * x is an integer constant and T is a [string type](/Types/string_types.html). The same rule as for non-constant x applies in this case.
+  * x is an integer constant and T is a [string type](/Types/string_types.html). The [same rule](#conversions-to-and-from-a-string-type) as for non-constant x applies in this case.
 
 Converting a constant yields a typed constant as result.
 
