@@ -3,7 +3,7 @@
 Primary expressions are the operands for unary and binary expressions.
 
 <pre>
-PrimaryExpr =
+<a id="PrimaryExpr">PrimaryExpr</a> =
 	Operand |
 	Conversion |
 	PrimaryExpr Selector |
@@ -12,12 +12,12 @@ PrimaryExpr =
 	PrimaryExpr TypeAssertion |
 	PrimaryExpr Arguments .
 
-Selector       = "." identifier .
-Index          = "[" Expression "]" .
-Slice          = "[" [ Expression ] ":" [ Expression ] "]" |
+<a id="Selector">Selector</a>       = "." identifier .
+<a id="Index">Index</a>          = "[" Expression "]" .
+<a id="Slice">Slice</a>          = "[" [ Expression ] ":" [ Expression ] "]" |
                  "[" [ Expression ] ":" Expression ":" Expression "]" .
-TypeAssertion  = "." "(" Type ")" .
-Arguments      = "(" [ ( ExpressionList | Type [ "," ExpressionList ] ) [ "..." ] [ "," ] ] ")" .
+<a id="TypeAssertion">TypeAssertion</a>  = "." "(" Type ")" .
+<a id="Arguments">Arguments</a>      = "(" [ ( ExpressionList | Type [ "," ExpressionList ] ) [ "..." ] [ "," ] ] ")" .
 </pre>
 
 ```
