@@ -44,8 +44,8 @@ string(65.0)             // illegal: 65.0 is not an integer constant
 
 A non-constant value x can be converted to type T in any of these cases:
 
-  * x is assignable to T.
-  * x's type and T have identical underlying types.
+  * x is [assignable](/Properties%20of%20types%20and%20values/assignability.html) to T.
+  * x's type and T have identical [underlying types](/Types/).
   * x's type and T are unnamed pointer types and their pointer base types have identical underlying types.
   * x's type and T are both integer or floating point types.
   * x's type and T are both complex types.
@@ -54,7 +54,7 @@ A non-constant value x can be converted to type T in any of these cases:
 
 Specific rules apply to (non-constant) conversions between numeric types or to and from a string type. These conversions may change the representation of x and incur a run-time cost. All other conversions only change the type but not the representation of x.
 
-There is no linguistic mechanism to convert between pointers and integers. The package unsafe implements this functionality under restricted circumstances.
+There is no linguistic mechanism to convert between pointers and integers. The package [unsafe](/System%20considerations/package_unsafe.html) implements this functionality under restricted circumstances.
 
 ## Conversions between numeric types
 
