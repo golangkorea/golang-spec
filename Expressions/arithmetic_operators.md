@@ -67,7 +67,7 @@ For integer operands, the unary operators +, -, and ^ are defined as follows:
 
 ## Integer overflow
 
-For unsigned integer values, the operations +, -, *, and << are computed modulo 2<sup>n</sup>, where n is the bit width of the [unsigned integer](/Types/numeric_types.html)'s type. Loosely speaking, these unsigned integer operations discard high bits upon overflow, and programs may rely on ``wrap around''.
+For unsigned integer values, the operations +, -, *, and << are computed modulo 2<sup>n</sup>, where n is the bit width of the [unsigned integer](/Types/numeric_types.html)'s type. Loosely speaking, these unsigned integer operations discard high bits upon overflow, and programs may rely on "wrap around".
 
 For signed integers, the operations +, -, *, and << may legally overflow and the resulting value exists and is deterministically defined by the signed integer representation, the operation, and its operands. No exception is raised as a result of overflow. A compiler may not optimize code under the assumption that overflow does not occur. For instance, it may not assume that x < x + 1 is always true.
 
