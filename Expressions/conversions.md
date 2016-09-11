@@ -82,9 +82,9 @@ MyString(0x65e5)  // "\u65e5" == "日" == "\xe6\x97\xa5"
 <pre>
   <code>
 string([]byte{'h', 'e', 'l', 'l', '\xc3', '\xb8'})   // "hellø"
-string([]byte{})                                     // \"\"
-string([]byte(nil))                                  // \"\"
-
+string([]byte{})                                     // ""
+string([]byte(nil))                                  // ""
+&nbsp;
 type MyBytes []byte
 string(MyBytes{'h', 'e', 'l', 'l', '\xc3', '\xb8'})  // "hellø"
   </code>
