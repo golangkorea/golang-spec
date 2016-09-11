@@ -4,8 +4,8 @@ Primary expressions are the operands for unary and binary expressions.
 
 <pre>
 <a id="PrimaryExpr">PrimaryExpr</a> =
-	Operand |
-	Conversion |
+	<a href="/Expressions/operands.html#Operand">Operand</a> |
+	<a href="/Expressions/conversions.html#Conversion">Conversion</a> |
 	PrimaryExpr Selector |
 	PrimaryExpr Index |
 	PrimaryExpr Slice |
