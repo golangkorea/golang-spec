@@ -69,13 +69,13 @@ In all non-constant conversions involving floating-point or complex values, if t
 ## Conversions to and from a string type
 
   1. Converting a signed or unsigned integer value to a string type yields a string containing the UTF-8 representation of the integer. Values outside the range of valid Unicode code points are converted to "\uFFFD".
-    ```
+```
 string('a')       // "a"
 string(-1)        // "\ufffd" == "\xef\xbf\xbd"
 string(0xf8)      // "\u00f8" == "ø" == "\xc3\xb8"
 type MyString string
 MyString(0x65e5)  // "\u65e5" == "日" == "\xe6\x97\xa5"
-    ```
+```
   2. Converting a slice of bytes to a string type yields a string whose successive bytes are the elements of the slice.
 ```
 string([]byte{'h', 'e', 'l', 'l', '\xc3', '\xb8'})   // "hellø"
