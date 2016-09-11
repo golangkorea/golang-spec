@@ -69,42 +69,42 @@ In all non-constant conversions involving floating-point or complex values, if t
 ## Conversions to and from a string type
 
   1. Converting a signed or unsigned integer value to a string type yields a string containing the UTF-8 representation of the integer. Values outside the range of valid Unicode code points are converted to "\uFFFD".
-```
+<pre>
 string('a')       // "a"
 string(-1)        // "\ufffd" == "\xef\xbf\xbd"
 string(0xf8)      // "\u00f8" == "ø" == "\xc3\xb8"
 type MyString string
 MyString(0x65e5)  // "\u65e5" == "日" == "\xe6\x97\xa5"
-```
+</pre>
   2. Converting a slice of bytes to a string type yields a string whose successive bytes are the elements of the slice.
-```
+<pre>
 string([]byte{'h', 'e', 'l', 'l', '\xc3', '\xb8'})   // "hellø"
 string([]byte{})                                     // ""
 string([]byte(nil))                                  // ""
 &nbsp;
 type MyBytes []byte
 string(MyBytes{'h', 'e', 'l', 'l', '\xc3', '\xb8'})  // "hellø"
-```
+</pre>
   3. Converting a slice of runes to a string type yields a string that is the concatenation of the individual rune values converted to strings.
-```
+<pre>
 string([]rune{0x767d, 0x9d6c, 0x7fd4})   // "\u767d\u9d6c\u7fd4" == "白鵬翔"
 string([]rune{})                         // ""
 string([]rune(nil))                      // ""
 &nbsp;
 type MyRunes []rune
 string(MyRunes{0x767d, 0x9d6c, 0x7fd4})  // "\u767d\u9d6c\u7fd4" == "白鵬翔"
-```  
+</pre>
   4. Converting a value of a string type to a slice of bytes type yields a slice whose successive elements are the bytes of the string.
-```
+<pre>
 []byte("hellø")   // []byte{'h', 'e', 'l', 'l', '\xc3', '\xb8'}
 []byte("")        // []byte{}
 &nbsp;
 MyBytes("hellø")  // []byte{'h', 'e', 'l', 'l', '\xc3', '\xb8'}
-```
+</pre>
   5. Converting a value of a string type to a slice of runes type yields a slice containing the individual Unicode code points of the string.
-```
+<pre>
 []rune(MyString("白鵬翔"))  // []rune{0x767d, 0x9d6c, 0x7fd4}
 []rune("")                 // []rune{}
 &nbsp;
 MyRunes("白鵬翔")           // []rune{0x767d, 0x9d6c, 0x7fd4}
-```
+</pre>
