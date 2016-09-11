@@ -86,25 +86,25 @@ type MyBytes []byte
 string(MyBytes{'h', 'e', 'l', 'l', '\xc3', '\xb8'})  // "hellø"
 ```
   3. Converting a slice of runes to a string type yields a string that is the concatenation of the individual rune values converted to strings.
-    ```
+```
 string([]rune{0x767d, 0x9d6c, 0x7fd4})   // "\u767d\u9d6c\u7fd4" == "白鵬翔"
 string([]rune{})                         // ""
 string([]rune(nil))                      // ""
 
 type MyRunes []rune
 string(MyRunes{0x767d, 0x9d6c, 0x7fd4})  // "\u767d\u9d6c\u7fd4" == "白鵬翔"
-    ```
+```
   4. Converting a value of a string type to a slice of bytes type yields a slice whose successive elements are the bytes of the string.
-    ```
+```
 []byte("hellø")   // []byte{'h', 'e', 'l', 'l', '\xc3', '\xb8'}
 []byte("")        // []byte{}
 
 MyBytes("hellø")  // []byte{'h', 'e', 'l', 'l', '\xc3', '\xb8'}
-    ```
+```
   5. Converting a value of a string type to a slice of runes type yields a slice containing the individual Unicode code points of the string.
-    ```
+```
 []rune(MyString("白鵬翔"))  // []rune{0x767d, 0x9d6c, 0x7fd4}
 []rune("")                 // []rune{}
 
 MyRunes("白鵬翔")           // []rune{0x767d, 0x9d6c, 0x7fd4}
-    ```
+```
