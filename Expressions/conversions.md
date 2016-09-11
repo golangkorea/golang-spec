@@ -77,14 +77,14 @@ type MyString string
 MyString(0x65e5)  // "\u65e5" == "日" == "\xe6\x97\xa5"
     ```
   2. Converting a slice of bytes to a string type yields a string whose successive bytes are the elements of the slice.
-    ```
+```
 string([]byte{'h', 'e', 'l', 'l', '\xc3', '\xb8'})   // "hellø"
 string([]byte{})                                     // ""
 string([]byte(nil))                                  // ""
 
 type MyBytes []byte
 string(MyBytes{'h', 'e', 'l', 'l', '\xc3', '\xb8'})  // "hellø"
-    ```
+```
   3. Converting a slice of runes to a string type yields a string that is the concatenation of the individual rune values converted to strings.
     ```
 string([]rune{0x767d, 0x9d6c, 0x7fd4})   // "\u767d\u9d6c\u7fd4" == "白鵬翔"
