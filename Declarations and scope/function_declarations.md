@@ -3,13 +3,13 @@
 A function declaration binds an identifier, the function name, to a function.
 
 <pre>
-FunctionDecl = "func" FunctionName ( Function | Signature ) .
-FunctionName = identifier .
-Function     = Signature FunctionBody .
-FunctionBody = Block .
+<a id="FunctionDecl">FunctionDecl</a> = "func" <a href="#FunctionName">FunctionName</a> ( <a href="#Function">Function</a> | <a href="/Types/function_types.html#Signature">Signature</a> ) .
+<a id="FunctionName">FunctionName</a> = <a href="/Lexical%20elements/identifiers.html#identifier">identifier</a> .
+<a id="Function">Function</a>     = <a href="/Types/function_types.html#Signature">Signature</a> <a href="#FunctionBody">FunctionBody</a> .
+<a id="FunctionBody">FunctionBody</a> = <a href="/Blocks/#Block">Block</a> .
 </pre>
 
-If the function's signature declares result parameters, the function body's statement list must end in a terminating statement.
+If the function's [signature](/Types/function_types.html) declares result parameters, the function body's statement list must end in a [terminating statement](/Statements/terminating_statements.html).
 
 ```
 func IndexRune(s string, r rune) int {
