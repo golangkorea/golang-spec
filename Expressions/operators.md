@@ -14,9 +14,9 @@ Operators combine operands into expressions.
 <a id="unary_op">unary_op</a>   = "+" | "-" | "!" | "^" | "*" | "&" | "<-" .
 </pre>
 
-Comparisons are discussed elsewhere. For other binary operators, the operand types must be identical unless the operation involves shifts or untyped constants. For operations involving constants only, see the section on constant expressions.
+Comparisons are discussed [elsewhere](/Expressions/comparison_operators.html). For other binary operators, the operand types must be [identical](/Properties%20of%20types%20and%20values/type_identity.html) unless the operation involves shifts or untyped [constants](/Constants/). For operations involving constants only, see the section on [constant expressions](/Expressions/constant_expressions.html).
 
-Except for shift operations, if one operand is an untyped constant and the other operand is not, the constant is converted to the type of the other operand.
+Except for shift operations, if one operand is an untyped [constant](/Constants/) and the other operand is not, the constant is [converted](/Expressions/conversions.html) to the type of the other operand.
 
 The right operand in a shift expression must have unsigned integer type or be an untyped constant that can be converted to unsigned integer type. If the left operand of a non-constant shift expression is an untyped constant, it is first converted to the type it would assume if the shift expression were replaced by its left operand alone.
 
