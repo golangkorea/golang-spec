@@ -3,15 +3,14 @@
 Composite literals construct values for structs, arrays, slices, and maps and create a new value each time they are evaluated. They consist of the type of the literal followed by a brace-bound list of elements. Each element may optionally be preceded by a corresponding key.
 
 <pre>
-CompositeLit  = LiteralType LiteralValue .
-LiteralType   = StructType | ArrayType | "[" "..." "]" ElementType |
-                SliceType | MapType | TypeName .
-LiteralValue  = "{" [ ElementList [ "," ] ] "}" .
-ElementList   = KeyedElement { "," KeyedElement } .
-KeyedElement  = [ Key ":" ] Element .
-Key           = FieldName | Expression | LiteralValue .
-FieldName     = identifier .
-Element       = Expression | LiteralValue .
+<a id="CompositeLit">CompositeLit</a>  = <a href="#LiteralType">LiteralType</a> <a href="#LiteralValue">LiteralValue</a> .
+<a id="LiteralType">LiteralType</a>   = <a href="/Types/struct_types.html#StructType">StructType</a> | <a href="/Types/array_types.html#ArrayType">ArrayType</a> | "[" "..." "]" <a href="/Types/array_types.html#ElementType">ElementType</a> | <a href="/Types/slice_types.html#SliceType">SliceType</a> | <a href="/Types/map_types.html#MapType">MapType</a> | <a href="/Types/#TypeName">TypeName</a> .
+<a id="LiteralValue">LiteralValue</a>  = "{" [ <a href="#ElementList">ElementList</a> [ "," ] ] "}" .
+<a id="ElementList">ElementList</a>   = <a href="#KeyedElement">KeyedElement</a> { "," <a href="#KeyedElement">KeyedElement</a> } .
+<a id="KeyedElement">KeyedElement</a>  = [ <a href="#Key">Key</a> ":" ] <a href="#Element">Element</a> .
+<a id="Key">Key</a>           = <a href="#FieldName">FieldName</a> | <a href="/Expressions/operators.html#Expression">Expression</a> | <a href="#LiteralValue">LiteralValue</a> .
+<a id="FieldName">FieldName</a>     = <a href="/Lexical%20elements/identifiers.html#identifier">identifier</a> .
+<a id="Element">Element</a>       = <a href="/Expressions/operators.html#Expression">Expression</a> | <a href="#LiteralValue">LiteralValue</a> .
 </pre>
 
 The LiteralType's underlying type must be a struct, array, slice, or map type (the grammar enforces this constraint except when the type is given as a TypeName). The types of the elements and keys must be [assignable](/Properties%20of%20types%20and%20values/assignability.html) to the respective field, element, and key types of the literal type; there is no additional conversion. The key is interpreted as a field name for struct literals, an index for array and slice literals, and a key for map literals. For map literals, all elements must have a key. It is an error to specify multiple elements with the same field name or constant key value.
