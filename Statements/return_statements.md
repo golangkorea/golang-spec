@@ -27,13 +27,13 @@ func complexF1() (re float64, im float64) {
 }
     ```
   2. The expression list in the "return" statement may be a single call to a multi-valued function. The effect is as if each value returned from that function were assigned to a temporary variable with the type of the respective value, followed by a "return" statement listing these variables, at which point the rules of the previous case apply.
-```
+    ```
 func complexF2() (re float64, im float64) {
 	return complexF1()
 }
-```
+    ```
   3. The expression list may be empty if the function's result type specifies names for its result parameters. The result parameters act as ordinary local variables and the function may assign values to them as necessary. The "return" statement returns the values of these variables.
-```
+    ```
 func complexF3() (re float64, im float64) {
 	re = 7.0
 	im = 4.0
@@ -44,7 +44,7 @@ func (devnull) Write(p []byte) (n int, _ error) {
 	n = len(p)
 	return
 }
-```
+    ```
 
 Regardless of how they are declared, all the result values are initialized to the zero values for their type upon entry to the function. A "return" statement that specifies results sets the result parameters before any deferred functions are executed.
 
