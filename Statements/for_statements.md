@@ -54,7 +54,7 @@ Range expression                          1st value          2nd value
 array or slice  a  [n]E, *[n]E, or []E    index    i  int    a[i]       E
 string          s  string type            index    i  int    see below  rune
 map             m  map[K]V                key      k  K      m[k]       V
-channel         c  chan E, <-chan E       element  e  E
+channel         c  chan E, &lt;-chan E       element  e  E
 </pre>
 
   1. For an array, pointer to array, or slice value a, the index iteration values are produced in increasing order, starting at element index 0. If at most one iteration variable is present, the range loop produces iteration values from 0 up to len(a)-1 and does not index into the array or slice itself. For a nil slice, the number of iterations is 0.
