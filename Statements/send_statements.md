@@ -3,7 +3,7 @@
 A send statement sends a value on a channel. The channel expression must be of [channel type](/Types/channel_types.html), the channel direction must permit send operations, and the type of the value to be sent must be [assignable](/Properties%20of%20types%20and%20values/assignability.html) to the channel's element type.
 
 <pre>
-<a id="SendStmt">SendStmt</a> = <a href="#Channel">Channel</a> <code>"<-"</code> <a href="/Expressions/operators.html#Expression">Expression</a> .
+<a id="SendStmt">SendStmt</a> = <a href="#Channel">Channel</a> "<-" <a href="/Expressions/operators.html#Expression">Expression</a> .
 <a id="Channel">Channel</a>  = <a href="/Expressions/operators.html#Expression">Expression</a> .
 </pre>
 
