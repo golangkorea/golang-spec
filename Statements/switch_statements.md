@@ -16,7 +16,7 @@ In an expression switch, the switch expression is evaluated and the case express
 <a id="ExprSwitchStmt">ExprSwitchStmt</a> = "switch" [ <a href="/Statements/#SimpleStmt">SimpleStmt</a> ";" ] [ <a href="/Expressions/operators.html#Expression">Expression</a> ] "{" { <a href="#ExprCaseClause">ExprCaseClause</a> } "}" .
 <a id="ExprCaseClause">ExprCaseClause</a> = <a href="#ExprSwitchCase">ExprSwitchCase</a> ":" <a href="/Blocks/#StatementList">StatementList</a> .
 <a id="ExprSwitchCase">ExprSwitchCase</a> = "case" <a href="/Declarations%20and%20scope/constant_declarations.html#ExpressionList">ExpressionList</a> | "default" .
-</pre>ExprSwitchCase</a>
+</pre>
 
 If the switch expression evaluates to an untyped constant, it is first [converted](/Expressions/conversions.html) to its [default type](/Constants/); if it is an untyped boolean value, it is first converted to type `bool`. The predeclared untyped value `nil` cannot be used as a switch expression.
 
