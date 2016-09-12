@@ -62,19 +62,20 @@ switch x.(type) {
 Cases then match actual types T against the dynamic type of the expression x. As with type assertions, x must be of [interface type](/Types/interface_types.html), and each non-interface type T listed in a case must implement the type of x. The types listed in the cases of a type switch must all be [different](/Properties%20of%20types%20and%20values/type_identity.html).
 
 <pre>
-TypeSwitchStmt  = "switch" [ SimpleStmt ";" ] TypeSwitchGuard "{" { TypeCaseClause } "}" .
-TypeSwitchGuard = [ identifier ":=" ] PrimaryExpr "." "(" "type" ")" .
-TypeCaseClause  = TypeSwitchCase ":" StatementList .
-TypeSwitchCase  = "case" TypeList | "default" .
-TypeList        = Type { "," Type } .
+<a id="TypeSwitchStmt">TypeSwitchStmt</a>  = "switch" [ <a href="/Statements/#SimpleStmt">SimpleStmt</a> ";" ] <a href="#TypeSwitchGuard">TypeSwitchGuard</a> "{" { <a href="#TypeCaseClause">TypeCaseClause</a> } "}" .
+<a id="TypeSwitchGuard">TypeSwitchGuard</a> = [ <a href="/Lexical%20elements/identifiers.html#identifier">identifier</a> ":=" ] <a href="/Expressions/primary_expressions.html#PrimaryExpr">PrimaryExpr</a> "." "(" "type" ")" .
+<a id="TypeCaseClause">TypeCaseClause</a>  = <a href="#TypeSwitchCase">TypeSwitchCase</a> ":" <a href="/Blocks/#StatementList">StatementList</a> .
+<a id="TypeSwitchCase">TypeSwitchCase</a>  = "case" <a href="#TypeList">TypeList</a> | "default" .
+<a id="TypeList">TypeList</a>        = <a href="/Types/#Type">Type</a> { "," <a href="/Types/#Type">Type</a> } .
 </pre>
 
-The TypeSwitchGuard may include a short variable declaration. When that form is used, the variable is declared at the beginning of the implicit block in each clause. In clauses with a case listing exactly one type, the variable has that type; otherwise, the variable has the type of the expression in the TypeSwitchGuard.
+The TypeSwitchGuard may include a [short variable declaration](/Declarations%20and%20scope/short_variable_declarations.html). When that form is used, the variable is declared at the beginning of the [implicit block](/Blocks/) in each clause. In clauses with a case listing exactly one type, the variable has that type; otherwise, the variable has the type of the expression in the TypeSwitchGuard.
 
-The type in a case may be nil; that case is used when the expression in the TypeSwitchGuard is a nil interface value. There may be at most one nil case.
+The type in a case may be [nil](/Declarations%20and%20scope/predeclared_identifiers.html); that case is used when the expression in the TypeSwitchGuard is a nil interface value. There may be at most one nil case.
 
 Given an expression x of type interface{}, the following type switch:
 
+```
 switch i := x.(type) {
 case nil:
 	printString("x is nil")                // type of i is type of x (interface{})
@@ -89,8 +90,11 @@ case bool, string:
 default:
 	printString("don't know the type")     // type of i is type of x (interface{})
 }
+```
+
 could be rewritten:
 
+```
 v := x  // x is evaluated exactly once
 if v == nil {
 	i := v                                 // type of i is type of x (interface{})
@@ -112,6 +116,8 @@ if v == nil {
 		printString("don't know the type")
 	}
 }
+```
+
 The type switch guard may be preceded by a simple statement, which executes before the guard is evaluated.
 
 The "fallthrough" statement is not permitted in a type switch.
