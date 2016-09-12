@@ -8,7 +8,7 @@ real(complexT) floatT
 imag(complexT) floatT
 ```
 
-The type of the arguments and return value correspond. For complex, the two arguments must be of the same floating-point type and the return type is the complex type with the corresponding floating-point constituents: complex64 for float32 arguments, and complex128 for float64 arguments. If one of the arguments evaluates to an untyped constant, it is first converted to the type of the other argument. If both arguments evaluate to untyped constants, they must be non-complex numbers or their imaginary parts must be zero, and the return value of the function is an untyped complex constant.
+The type of the arguments and return value correspond. For complex, the two arguments must be of the same floating-point type and the return type is the complex type with the corresponding floating-point constituents: complex64 for float32 arguments, and complex128 for float64 arguments. If one of the arguments evaluates to an untyped constant, it is first [converted](/Expressions/conversions.html) to the type of the other argument. If both arguments evaluate to untyped constants, they must be non-complex numbers or their imaginary parts must be zero, and the return value of the function is an untyped complex constant.
 
 For real and imag, the argument must be of complex type, and the return type is the corresponding floating-point type: float32 for a complex64 argument, and float64 for a complex128 argument. If the argument evaluates to an untyped constant, it must be a number, and the return value of the function is an untyped floating-point constant.
 
