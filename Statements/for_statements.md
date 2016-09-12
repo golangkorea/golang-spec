@@ -42,9 +42,9 @@ A "for" statement with a "range" clause iterates through all entries of an array
 <a id="RangeClause">RangeClause</a> = [ <a href="/Declarations%20and%20scope/constant_declarations.html#ExpressionList">ExpressionList</a> "=" | <a href="/Declarations%20and%20scope/constant_declarations.html#IdentifierList">IdentifierList</a> ":=" ] "range" <a href="/Expressions/operators.html#Expression">Expression</a> .
 </pre>
 
-The expression on the right in the "range" clause is called the range expression, which may be an array, pointer to an array, slice, string, map, or channel permitting receive operations. As with an assignment, if present the operands on the left must be addressable or map index expressions; they denote the iteration variables. If the range expression is a channel, at most one iteration variable is permitted, otherwise there may be up to two. If the last iteration variable is the blank identifier, the range clause is equivalent to the same clause without that identifier.
+The expression on the right in the "range" clause is called the range expression, which may be an array, pointer to an array, slice, string, map, or channel permitting [receive operations](/Expressions/receive_operator.html). As with an assignment, if present the operands on the left must be [addressable](/Expressions/address_operators.html) or map index expressions; they denote the iteration variables. If the range expression is a channel, at most one iteration variable is permitted, otherwise there may be up to two. If the last iteration variable is the [blank identifier](/Declarations%20and%20scope/blank_identifier.html), the range clause is equivalent to the same clause without that identifier.
 
-The range expression is evaluated once before beginning the loop, with one exception: if the range expression is an array or a pointer to an array and at most one iteration variable is present, only the range expression's length is evaluated; if that length is constant, by definition the range expression itself will not be evaluated.
+The range expression is evaluated once before beginning the loop, with one exception: if the range expression is an array or a pointer to an array and at most one iteration variable is present, only the range expression's length is evaluated; if that length is constant, [by definition](/Built-in%20functions/length_and_capacity.html) the range expression itself will not be evaluated.
 
 Function calls on the left are evaluated once per iteration. For each iteration, iteration values are produced as follows if the respective iteration variables are present:
 
@@ -62,9 +62,9 @@ channel         c  chan E, &lt;-chan E       element  e  E
   3. The iteration order over maps is not specified and is not guaranteed to be the same from one iteration to the next. If map entries that have not yet been reached are removed during iteration, the corresponding iteration values will not be produced. If map entries are created during iteration, that entry may be produced during the iteration or may be skipped. The choice may vary for each entry created and from one iteration to the next. If the map is nil, the number of iterations is 0.
   4. For channels, the iteration values produced are the successive values sent on the channel until the channel is closed. If the channel is nil, the range expression blocks forever.
 
-The iteration values are assigned to the respective iteration variables as in an assignment statement.
+The iteration values are assigned to the respective iteration variables as in an [assignment statement](/Statements/assignments.html).
 
-The iteration variables may be declared by the "range" clause using a form of short variable declaration (:=). In this case their types are set to the types of the respective iteration values and their scope is the block of the "for" statement; they are re-used in each iteration. If the iteration variables are declared outside the "for" statement, after execution their values will be those of the last iteration.
+The iteration variables may be declared by the "range" clause using a form of [short variable declaration](/Declarations%20and%20scope/short_variable_declarations.html) (:=). In this case their types are set to the types of the respective iteration values and their [scope](/Declarations%20and%20scope/) is the block of the "for" statement; they are re-used in each iteration. If the iteration variables are declared outside the "for" statement, after execution their values will be those of the last iteration.
 
 ```
 var testdata *struct {
