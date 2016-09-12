@@ -3,9 +3,9 @@
 An import declaration states that the source file containing the declaration depends on functionality of the *imported* package ([§Program initialization and execution](/Program initialization and execution/)) and enables access to [exported](/Declarations and scope/exported_identifiers.html) identifiers of that package. The import names an identifier (PackageName) to be used for access and an ImportPath that specifies the package to be imported.
 
 <pre>
-ImportDecl       = "import" ( ImportSpec | "(" { ImportSpec ";" } ")" ) .
-ImportSpec       = [ "." | PackageName ] ImportPath .
-ImportPath       = string_lit .
+<a id="ImportDecl">ImportDecl</a>       = "import" ( <a href="#ImportSpec">ImportSpec</a> | "(" { <a href="#ImportSpec">ImportSpec</a> ";" } ")" ) .
+<a id="ImportSpec">ImportSpec</a>       = [ "." | <a href="/Packages/package_clause.html#PackageName">PackageName</a> ] <a href="#ImportPath">ImportPath</a> .
+<a id="ImportPath">ImportPath</a>       = <a href="/Lexical elements/string_literals.html#string_lit">string_lit</a> .
 </pre>
 
 The PackageName is used in qualified identifiers to access exported identifiers of the package within the importing source file. It is declared in the file block. If the PackageName is omitted, it defaults to the identifier specified in the package clause of the imported package. If an explicit period (.) appears instead of a name, all the package's exported identifiers declared in that package's package block will be declared in the importing source file's file block and must be accessed without a qualifier.
