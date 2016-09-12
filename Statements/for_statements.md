@@ -29,7 +29,7 @@ for i := 0; i < 10; i++ {
 }
 ```
 
-If non-empty, the init statement is executed once before evaluating the condition for the first iteration; the post statement is executed after each execution of the block (and only if the block was executed). Any element of the ForClause may be empty but the semicolons are required unless there is only a condition. If the condition is absent, it is equivalent to the boolean value true.
+If non-empty, the init statement is executed once before evaluating the condition for the first iteration; the post statement is executed after each execution of the block (and only if the block was executed). Any element of the ForClause may be empty but the [semicolons](/Lexical%20elements/semicolons.html) are required unless there is only a condition. If the condition is absent, it is equivalent to the boolean value true.
 
 ```
 for cond { S() }    is the same as    for ; cond ; { S() }
