@@ -39,7 +39,7 @@ for      { S() }    is the same as    for true     { S() }
 A "for" statement with a "range" clause iterates through all entries of an array, slice, string or map, or values received on a channel. For each entry it assigns iteration values to corresponding iteration variables if present and then executes the block.
 
 <pre>
-RangeClause = [ ExpressionList "=" | IdentifierList ":=" ] "range" Expression .
+<a id="RangeClause">RangeClause</a> = [ <a href="/Declarations%20and%20scope/constant_declarations.html#ExpressionList">ExpressionList</a> "=" | <a href="/Declarations%20and%20scope/constant_declarations.html#IdentifierList">IdentifierList</a> ":=" ] "range" <a href="/Expressions/operators.html#Expression">Expression</a> .
 </pre>
 
 The expression on the right in the "range" clause is called the range expression, which may be an array, pointer to an array, slice, string, map, or channel permitting receive operations. As with an assignment, if present the operands on the left must be addressable or map index expressions; they denote the iteration variables. If the range expression is a channel, at most one iteration variable is permitted, otherwise there may be up to two. If the last iteration variable is the blank identifier, the range clause is equivalent to the same clause without that identifier.
