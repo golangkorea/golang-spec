@@ -15,12 +15,12 @@ for a < b {
 }
 ```
 
-A "for" statement with a ForClause is also controlled by its condition, but additionally it may specify an init and a post statement, such as an assignment, an increment or decrement statement. The init statement may be a short variable declaration, but the post statement must not. Variables declared by the init statement are re-used in each iteration.
+A "for" statement with a ForClause is also controlled by its condition, but additionally it may specify an init and a post statement, such as an assignment, an increment or decrement statement. The init statement may be a [short variable declaration](/Declarations%20and%20scope/short_variable_declarations.html), but the post statement must not. Variables declared by the init statement are re-used in each iteration.
 
 <pre>
-ForClause = [ InitStmt ] ";" [ Condition ] ";" [ PostStmt ] .
-InitStmt = SimpleStmt .
-PostStmt = SimpleStmt .
+<a id="ForClause">ForClause</a> = [ <a href="#InitStmt">InitStmt</a> ] ";" [ <a href="#Condition">Condition</a> ] ";" [ <a href="#PostStmt">PostStmt</a> ] .
+<a id="InitStmt">InitStmt</a> = <a href="/Statements/#SimpleStmt">SimpleStmt</a> .
+<a id="PostStmt">PostStmt</a> = <a href="/Statements/#SimpleStmt">SimpleStmt</a> .
 </pre>
 
 ```
