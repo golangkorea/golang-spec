@@ -17,15 +17,15 @@ func noResult() {
 There are three ways to return values from a function with a result type:
 
   1. The return value or values may be explicitly listed in the "return" statement. Each expression must be single-valued and [assignable](/Properties%20of%20types%20and%20values/assignability.html) to the corresponding element of the function's result type.
-    ```
+    <pre>
 func simpleF() int {
 	return 2
 }
-
+&nbsp;
 func complexF1() (re float64, im float64) {
 	return -7.0, -4.0
 }
-    ```
+    </pre>
   2. The expression list in the "return" statement may be a single call to a multi-valued function. The effect is as if each value returned from that function were assigned to a temporary variable with the type of the respective value, followed by a "return" statement listing these variables, at which point the rules of the previous case apply.
     ```
 func complexF2() (re float64, im float64) {
