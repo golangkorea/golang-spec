@@ -3,8 +3,8 @@
 A "for" statement specifies repeated execution of a block. The iteration is controlled by a condition, a "for" clause, or a "range" clause.
 
 <pre>
-ForStmt = "for" [ Condition | ForClause | RangeClause ] Block .
-Condition = Expression .
+<a id="ForStmt">ForStmt</a> = "for" [ <a href="#Condition">Condition</a> | <a href="#ForClause">ForClause</a> | <a href="#RangeClause">RangeClause</a> ] <a href="/Blocks/#Block">Block</a> .
+<a id="Condition">Condition</a> = <a href="/Expressions/operators.html#Expression">Expression</a> .
 </pre>
 
 In its simplest form, a "for" statement specifies the repeated execution of a block as long as a boolean condition evaluates to true. The condition is evaluated before each iteration. If the condition is absent, it is equivalent to the boolean value true.
