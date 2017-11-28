@@ -1,8 +1,14 @@
 # Package initialization
 
+# 패키지 초기화
+
 Within a package, package-level variables are initialized in *declaration order* but after any of the variables they *depend* on.
 
+패키지내 패키지 레벨의 변수들은 *의존하고* 있는 모든 변수들이 초기화되고 난 후 *선언된 순서*에 따라 초기화된다.
+
 More precisely, a package-level variable is considered *ready for initialization* if it is not yet initialized and either has no [initialization expression](/Declarations and scope/variable_declarations.html) or its initialization expression has no dependencies on uninitialized variables. Initialization proceeds by repeatedly initializing the next package-level variable that is earliest in declaration order and ready for initialization, until there are no variables ready for initialization.
+
+더 정확하게 설명하자면, 패키지 레벨의 변수는 아직 초기화가 되지 않은 상태에서 만약 [초기화 표현식](/Declarations and scope/variable_declarations.html)이 없거나, 있다해도 미초기화 변수에 대한 의존도가 없다면 *초기화될 준비가 된 상태*로 간주한다. 
 
 If any variables are still uninitialized when this process ends, those variables are part of one or more initialization cycles, and the program is not valid.
 
