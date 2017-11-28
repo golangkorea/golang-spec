@@ -1,6 +1,7 @@
-# Package initialization
+# 패키지 초기화(Package initialization)
 
-# 패키지 초기화
+ * 원문: [Package initialization](https://golang.org/ref/spec#Package_initialization)
+ * 번역자: Jhonghee Park (@jhonghee)
 
 Within a package, package-level variables are initialized in *declaration order* but after any of the variables they *depend* on.
 
@@ -8,17 +9,23 @@ Within a package, package-level variables are initialized in *declaration order*
 
 More precisely, a package-level variable is considered *ready for initialization* if it is not yet initialized and either has no [initialization expression](/Declarations and scope/variable_declarations.html) or its initialization expression has no dependencies on uninitialized variables. Initialization proceeds by repeatedly initializing the next package-level variable that is earliest in declaration order and ready for initialization, until there are no variables ready for initialization.
 
-더 정확하게 설명하자면, 패키지 레벨의 변수는 아직 초기화가 되지 않은 상태에서 만약 [초기화 표현식](/Declarations and scope/variable_declarations.html)이 없거나, 있다해도 미초기화 변수에 대한 의존도가 없다면 *초기화될 준비가 된 상태*로 간주한다. 
+더 정확하게 설명하자면, 패키지 레벨의 변수는 아직 초기화가 되지 않은 상태에서 만약 [초기화 표현식](/Declarations and scope/variable_declarations.html)이 없거나, 있다해도 다른 초기화되지 않은 변수에 대한 의존도가 없다면 *초기화 준비가 된 상태*로 간주한다. 패키지 레벨 변수의 초기화는 더이상 초기화할 준비가 된 변수가 존재하지 않을 때까지, 선언문에 일찍 나타나는 순서대로 반복해서 진행된다.
 
 If any variables are still uninitialized when this process ends, those variables are part of one or more initialization cycles, and the program is not valid.
 
+만약 이 과정이 종료되었음에도 여전히 초기화되지 못한 변수가 남아 있다면, 그런 변수들은 이후 발생할 한번 이상의 추가적인 초기화 사이클에 속하며, 프로그램은 유효하지 않다.
+
 The declaration order of variables declared in multiple files is determined by the order in which the files are presented to the compiler: Variables declared in the first file are declared before any of the variables declared in the second file, and so on.
+
+다수의 파일에 선언된 변수들의 선언순서는 파일들이 컴파일러에 제출된 순서에 따라 정해 진다: 첫번째 파일에 선언된 변수들이 두번째 파일에 선언된 변수보다 먼저 선언되는 등등.
 
 Dependency analysis does not rely on the actual values of the variables, only on lexical *references* to them in the source, analyzed transitively. For instance, if a variable x's initialization expression refers to a function whose body refers to variable y then x depends on y. Specifically:
 
   * A reference to a variable or function is an identifier denoting that variable or function.
   * A reference to a method `m` is a [method value](/Expressions/method_values.html) or [method expression](/Expressions/method_expressions.html) of the form `t.m`, where the (static) type of `t` is not an interface type, and the method `m` is in the [method set](/Types/method_sets.html) of `t`. It is immaterial whether the resulting function value `t.m` is invoked.
   * A variable, function, or method `x` depends on a variable `y` if `x`'s initialization expression or body (for functions and methods) contains a reference to `y` or to a function or method that depends on `y`.
+
+
 
 Dependency analysis is performed per package; only references referring to variables, functions, and methods declared in the current package are considered.
 
