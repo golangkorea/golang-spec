@@ -17,7 +17,7 @@ If any variables are still uninitialized when this process ends, those variables
 
 The declaration order of variables declared in multiple files is determined by the order in which the files are presented to the compiler: Variables declared in the first file are declared before any of the variables declared in the second file, and so on.
 
-다수의 파일에 선언된 변수들의 선언순서는 파일들이 컴파일러에 제출된 순서에 따라 정해 진다: 첫번째 파일에 선언된 변수들이 두번째 파일에 선언된 변수보다 먼저 선언되는 등등.
+다수의 파일에 선언된 변수들의 선언순서는 파일들이 컴파일러에 제출된 순서에 따라 정해 진다: 첫번째 파일에 선언된 변수들이 두번째 파일에 선언된 변수보다 먼저 선언되는 식이다.
 
 Dependency analysis does not rely on the actual values of the variables, only on lexical *references* to them in the source, analyzed transitively. For instance, if a variable x's initialization expression refers to a function whose body refers to variable y then x depends on y. Specifically:
 
@@ -25,11 +25,19 @@ Dependency analysis does not rely on the actual values of the variables, only on
   * A reference to a method `m` is a [method value](/Expressions/method_values.html) or [method expression](/Expressions/method_expressions.html) of the form `t.m`, where the (static) type of `t` is not an interface type, and the method `m` is in the [method set](/Types/method_sets.html) of `t`. It is immaterial whether the resulting function value `t.m` is invoked.
   * A variable, function, or method `x` depends on a variable `y` if `x`'s initialization expression or body (for functions and methods) contains a reference to `y` or to a function or method that depends on `y`.
 
+의존성에 대한 분석은 변수들의 실제값들에 의지하지 않고, 단지 소스내 변수들을 언급하는 어휘적 *레퍼런스*(lexical *references*)에 의해 전이적으로 (transitively) 분석된다. 예를 들어, 만약에 변수 x의 초기화 표현식이 함수를 언급하고 함수의 몸통이 변수 y를 언급한다면, x는 y에 의존하는 것이다. 구체적으로:
 
+ * 변수나 함수에 대한 레퍼런스는 변수나 함수를 표시하는 식별자이다.
+ * 메소드 `m`에 대한 레퍼런스는 [메소드 값](/Expressions/method_values.html)이거나 `t.m` 형태의 [메소드 표현](/Expressions/method_expressions.html)으로, `t`의 (정적) 타입은 인터페이스 타입이 아니고, 메소드 `m`은 `t`의 [메소드 집합](/Types/method_sets.html)에 존재한다. 결과적인 함수 값 `t.m`이 호출되었는지 여부는 중요하지 않다.
+ * 변수, 함수, 혹은 메소드 `x`가 변수 `y`에 의존적이라 함은 `x`의 초기화 표현식이나 (함수들이나 메소드들의) 몸통이 `y`에 대해 레퍼런스를 가지고 있던지 `y`에 의존적인 함수나 메소드에 레퍼런스를 가지고 있는 경우다.
 
 Dependency analysis is performed per package; only references referring to variables, functions, and methods declared in the current package are considered.
 
+의존성 분석은 패키지 단위로 이행되며; 현재의 패키지내 선언되어 있는 변수들, 함수들, 그리고 메소드들을 언급하는 레퍼런스들만 고려된다.
+
 For example, given the declarations
+
+예를 들어, 다음과 같이 주어진 선언문에서
 
 ```
 var (
@@ -47,7 +55,11 @@ func f() int {
 
 the initialization order is d, b, c, a.
 
+초기화 순서는 d, b, c, a이다.
+
 Variables may also be initialized using functions named init declared in the package block, with no arguments and no result parameters.
+
+
 
 ```
 func init() { … }
