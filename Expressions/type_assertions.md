@@ -13,13 +13,16 @@ More precisely, if T is not an interface type, x.(T) asserts that the dynamic ty
 If the type assertion holds, the value of the expression is the value stored in x and its type is T. If the type assertion is false, a [run-time panic](/Run-time%20panics/) occurs. In other words, even though the dynamic type of x is known only at run time, the type of x.(T) is known to be T in a correct program.
 
 ```
-var x interface{} = 7  // x has dynamic type int and value 7
-i := x.(int)           // i has type int and value 7
+var x interface{} = 7          // x has dynamic type int and value 7
+i := x.(int)                   // i has type int and value 7
 
 type I interface { m() }
-var y I
-s := y.(string)        // illegal: string does not implement I (missing method m)
-r := y.(io.Reader)     // r has type io.Reader and y must implement both I and io.Reader
+
+func f(y I) {
+	s := y.(string)        // illegal: string does not implement I (missing method m)
+	r := y.(io.Reader)     // r has type io.Reader and the dynamic type of y must implement both I and io.Reader
+	…
+}
 ```
 
 A type assertion used in an [assignment](/Statements/assignments.html) or initialization of the special form
