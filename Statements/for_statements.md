@@ -1,11 +1,13 @@
 # For statements
 
-A "for" statement specifies repeated execution of a block. The iteration is controlled by a condition, a "for" clause, or a "range" clause.
+A "for" statement specifies repeated execution of a block. There are three forms: The iteration may be controlled by a single condition, a "for" clause, or a "range" clause.
 
 <pre>
 <a id="ForStmt">ForStmt</a> = "for" [ <a href="#Condition">Condition</a> | <a href="#ForClause">ForClause</a> | <a href="#RangeClause">RangeClause</a> ] <a href="/Blocks/#Block">Block</a> .
 <a id="Condition">Condition</a> = <a href="/Expressions/operators.html#Expression">Expression</a> .
 </pre>
+
+## For statements with single condition
 
 In its simplest form, a "for" statement specifies the repeated execution of a block as long as a boolean condition evaluates to true. The condition is evaluated before each iteration. If the condition is absent, it is equivalent to the boolean value true.
 
@@ -14,6 +16,8 @@ for a < b {
 	a *= 2
 }
 ```
+
+## For statements with `for` clause
 
 A "for" statement with a ForClause is also controlled by its condition, but additionally it may specify an init and a post statement, such as an assignment, an increment or decrement statement. The init statement may be a [short variable declaration](/Declarations%20and%20scope/short_variable_declarations.html), but the post statement must not. Variables declared by the init statement are re-used in each iteration.
 
@@ -35,6 +39,8 @@ If non-empty, the init statement is executed once before evaluating the conditio
 for cond { S() }    is the same as    for ; cond ; { S() }
 for      { S() }    is the same as    for true     { S() }
 ```
+
+## For statements with `range` clause
 
 A "for" statement with a "range" clause iterates through all entries of an array, slice, string or map, or values received on a channel. For each entry it assigns iteration values to corresponding iteration variables if present and then executes the block.
 
