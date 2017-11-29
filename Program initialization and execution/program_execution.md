@@ -13,4 +13,5 @@ func main() { … }
 
 Program execution begins by initializing the main package and then invoking the function `main`. When that function invocation returns, the program exits. It does not wait for other (non-`main`) goroutines to complete.
 
-프로그램의 실행은 main 패키지를 초기화한 후 `main` 함수를 실행함으로 시작된다. main 함수가 리턴되면 실행은 종료된다. 실행의 종료를 위해 다른 (`main`이 아닌) 고루틴을 기다리지 않는다.
+프로그램 실행은 main 패키지를 초기화하고, `main` 함수를 호출하면서 시작된다.
+main 함수 호출이 반환되면 프로그램이 종료되며, `main` 이외의 고루틴 작업이 완료되지 않더라도 프로그램은 종료된다.
