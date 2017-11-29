@@ -52,8 +52,12 @@ Comments serve as program documentation. There are two forms:
 2. *일반 주석*은 /\*로 시작해서 \*/을 처음 만났을 때 끝난다. 
 
 //GOOD
+Comments serve as program documentation. There are two forms:
+
 1. *Line comments* start with the character sequence // and stop at the end of the line.
 2. *General comments* start with the character sequence /\* and stop with the first subsequent character sequence \*/.
+
+주석을 이용해 프로그램 문서화를 할 수 있다. 주석은 2가지 형태가 있다:
 
 1. *라인 주석*은 //로 시작하며 라인 끝에서 끝난다.
 2. *일반 주석*은 /\*로 시작해서 \*/을 처음 만났을 때 끝난다. 
