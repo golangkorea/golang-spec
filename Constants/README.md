@@ -17,7 +17,7 @@ An untyped constant has a *default type* which is the type to which the constant
 Implementation restriction: Although numeric constants have arbitrary precision in the language, a compiler may implement them using an internal representation with limited precision. That said, every implementation must:
 
 Represent integer constants with at least 256 bits.
-Represent floating-point constants, including the parts of a complex constant, with a mantissa of at least 256 bits and a signed exponent of at least 32 bits.
+Represent floating-point constants, including the parts of a complex constant, with a mantissa of at least 256 bits and a signed binary exponent of at least 16 bits.
 Give an error if unable to represent an integer constant precisely.
 Give an error if unable to represent a floating-point or complex constant due to overflow.
 Round to the nearest representable constant if unable to represent a floating-point or complex constant due to limits on precision.
