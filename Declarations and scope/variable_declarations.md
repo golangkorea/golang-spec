@@ -2,10 +2,8 @@
 
 A variable declaration creates one or more variables, binds corresponding identifiers to them, and gives each a type and an initial value.
 
-For variable _aliases_ , see the section on [alias declarations](/Alias_declarations/).
-
 <pre>
-<a id="VarDecl">VarDecl</a>     = "var" ( <a href="#VarSpec">VarSpec</a> | <a href="#AliasSpec">AliasSpec</a> | "(" { ( <a href="#VarSpec">VarSpec</a> | <a href="#AliasSpec">AliasSpec</a> ) ";" } ")" ) .
+<a id="VarDecl">VarDecl</a>     = "var" ( <a href="#VarSpec">VarSpec</a> | "(" { <a href="#VarSpec">VarSpec</a> ";" } ")" ) .
 <a id="VarSpec">VarSpec</a>     = <a href="/Declarations%20and%20scope/constant_declarations.html#IdentifierList">IdentifierList</a> ( <a href="/Types/#Type">Type</a> [ "=" <a href="/Declarations%20and%20scope/constant_declarations.html#ExpressionList">ExpressionList</a> ] | "=" <a href="/Declarations%20and%20scope/constant_declarations.html#ExpressionList">ExpressionList</a> ) .
 </pre>
 
