@@ -2,8 +2,10 @@
 
 A function declaration binds an identifier, the function name, to a function.
 
+For function _aliases_ , see the section on [alias declarations](/Alias_declarations/).
+
 <pre>
-<a id="FunctionDecl">FunctionDecl</a> = "func" <a href="#FunctionName">FunctionName</a> ( <a href="#Function">Function</a> | <a href="/Types/function_types.html#Signature">Signature</a> ) .
+<a id="FunctionDecl">FunctionDecl</a> = "func" ( <a href="#FunctionName">FunctionName</a> ( <a href="#Function">Function</a> | <a href="/Types/function_types.html#Signature">Signature</a> ) ) | <a href="#AliasSpec">AliasSpec</a> .
 <a id="FunctionName">FunctionName</a> = <a href="/Lexical%20elements/identifiers.html#identifier">identifier</a> .
 <a id="Function">Function</a>     = <a href="/Types/function_types.html#Signature">Signature</a> <a href="#FunctionBody">FunctionBody</a> .
 <a id="FunctionBody">FunctionBody</a> = <a href="/Blocks/#Block">Block</a> .
