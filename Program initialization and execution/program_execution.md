@@ -5,7 +5,7 @@
 
 A complete program is created by linking a single, unimported package called the *main package* with all the packages it imports, transitively. The main package must have package name `main` and declare a function `main` that takes no arguments and returns no value.
 
-Go 프로그램은 임포트되지 않은 단일의 `main` 패키지에 main이 임포트한 모든 패키지를 연결(link)함으로 써 완성되는데, 이러한 연결은 임포트되는 패키지내부에서도 일어난다. main 패키지는 `main`이라는 패키지  이름을 사용하여야만 하며 인자값과 반환값이 없는 `main` 함수를 선언해야 한다.
+Go 프로그램은 임포트되지 않은 단일의 `main` 패키지에 main이 임포트한 모든 패키지를 연결(link)함으로 써 완성되는데, 이러한 연결은 임포트되는 패키지내부에서도 일어난다. main 패키지는 `main`이라는 패키지 이름을 사용하여야만 하며 인자값과 반환값이 없는 `main` 함수를 선언해야 한다.
 
 ```
 func main() { … }
