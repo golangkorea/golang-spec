@@ -41,7 +41,7 @@ line := Line{origin, Point3D{y: -4, z: 12.3}}  // zero value for line.q.x
 For array and slice literals the following rules apply:
 
   * Each element has an associated integer index marking its position in the array.
-  * An element with a key uses the key as its index; the key must be a constant integer expression.
+  * An element with a key uses the key as its index. The key must be a non-negative constant representable by a value of type <code>int</code>; and if it is typed it must be of integer type.
   * An element without a key uses the previous element's index plus one. If the first element has no key, its index is zero.
 
 [Taking the address](/Expressions/address_operators.html) of a composite literal generates a pointer to a unique [variable](/Variables/) initialized with the literal's value.
