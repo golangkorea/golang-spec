@@ -35,3 +35,28 @@ func(p *Point, factor float64)
 ```
 
 However, a function declared this way is not a method.
+
+# Alias declarations
+
+An alias declaration binds an identifier, the _alias_ , to a [constant](#Constant_declarations), [type](#Type_declarations), [variable](#Variable_declarations), or [function](#Function_declarations) denoted by a [qualified identifier](#Qualified_identifiers) and declared in a different package.
+
+<pre>
+<a id="AliasSpec">AliasSpec</a> = identifier "=>" <a href="#QualifiedIdent">QualifiedIdent</a> .
+</pre>
+
+The effect of referring to a constant, type, variable, or function by an alias is indistinguishable from referring to it by its original name. For example, the type denoted by a type alias and the aliased type are [identical](#Type_identity).
+
+An alias declaration may appear only as a form of constant, type, variable, or function declaration at the package level, and the aliased entity must be a constant, type, variable, or function respectively. Alias declarations inside functions are not permitted.
+
+```
+const (
+	G  =  6.67408e-11      // regular and alias declarations may be grouped
+	Pi => math.Pi          // same effect as: Pi = math.Pi
+)
+
+type Struct => types.Struct    // re-export of types.Struct
+
+func sin => math.Sin           // non-exported shortcut for frequently used function
+```
+
+An alias declaration may not refer to package [unsafe](#Package_unsafe).

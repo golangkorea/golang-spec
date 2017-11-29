@@ -2,8 +2,10 @@
 
 A constant declaration binds a list of identifiers (the names of the constants) to the values of a list of [constant expressions](/Expressions/constant_expressions.html). The number of identifiers must be equal to the number of expressions, and the nth identifier on the left is bound to the value of the nth expression on the right.
 
+For constant _aliases_ , see the section on [alias declarations](/Alias_declarations/).
+
 <pre>
-<a id="ConstDecl">ConstDecl</a>      = "const" ( <a href="#ConstSpec">ConstSpec</a> | "(" { <a href="#ConstSpec">ConstSpec</a> ";" } ")" ) .
+<a id="ConstDecl">ConstDecl</a>      = "const" ( <a href="#ConstSpec">ConstSpec</a> | <a href="#AliasSpec">AliasSpec</a> | "(" { ( <a href="#ConstSpec">ConstSpec</a> | <a href="#AliasSpec">AliasSpec</a> ) ";" } ")" ) .
 <a id="ConstSpec">ConstSpec</a>      = <a href="#IdentifierList">IdentifierList</a> [ [ <a href="/Types/#Type">Type</a> ] "=" <a href="#ExpressionList">ExpressionList</a> ] .
 
 <a id="IdentifierList">IdentifierList</a> = <a href="/Lexical%20elements/identifiers.html#identifier">identifier</a> { "," <a href="/Lexical%20elements/identifiers.html#identifier">identifier</a> } .
