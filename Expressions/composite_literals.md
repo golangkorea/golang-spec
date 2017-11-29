@@ -41,7 +41,7 @@ line := Line{origin, Point3D{y: -4, z: 12.3}}  // zero value for line.q.x
 For array and slice literals the following rules apply:
 
   * Each element has an associated integer index marking its position in the array.
-  * An element with a key uses the key as its index; the key must be a constant integer expression.
+  * An element with a key uses the key as its index. The key must be a non-negative constant representable by a value of type <code>int</code>; and if it is typed it must be of integer type.
   * An element without a key uses the previous element's index plus one. If the first element has no key, its index is zero.
 
 [Taking the address](/Expressions/address_operators.html) of a composite literal generates a pointer to a unique [variable](/Variables/) initialized with the literal's value.
@@ -78,10 +78,11 @@ Within a composite literal of array, slice, or map type T, elements or map keys 
 [][]int{{1, 2, 3}, {4, 5}}          // same as [][]int{[]int{1, 2, 3}, []int{4, 5}}
 [][]Point{{{0, 1}, {1, 2}}}         // same as [][]Point{[]Point{Point{0, 1}, Point{1, 2}}}
 map[string]Point{"orig": {0, 0}}    // same as map[string]Point{"orig": Point{0, 0}}
-
-[...]*Point{{1.5, -3.5}, {0, 0}}    // same as [...]*Point{&Point{1.5, -3.5}, &Point{0, 0}}
-
 map[Point]string{{0, 0}: "orig"}    // same as map[Point]string{Point{0, 0}: "orig"}
+
+type PPoint *Point
+[2]*Point{{1.5, -3.5}, {}}          // same as [2]*Point{&Point{1.5, -3.5}, &Point{}}
+[2]PPoint{{1.5, -3.5}, {}}          // same as [2]PPoint{PPoint(&Point{1.5, -3.5}), PPoint(&Point{})}
 ```
 
 A parsing ambiguity arises when a composite literal using the TypeName form of the LiteralType appears as an operand between the [keyword](/Lexical%20elements/keywords.html) and the opening brace of the block of an "if", "for", or "switch" statement, and the composite literal is not enclosed in parentheses, square brackets, or curly braces. In this rare case, the opening brace of the literal is erroneously parsed as the one introducing the block of statements. To resolve the ambiguity, the composite literal must appear within parentheses.

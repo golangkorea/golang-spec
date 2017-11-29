@@ -34,6 +34,7 @@ An untyped constant has a *default type* which is the type to which the constant
 
 Implementation restriction: Although numeric constants have arbitrary precision in the language, a compiler may implement them using an internal representation with limited precision. That said, every implementation must:
 
+<<<<<<< HEAD
 * Represent integer constants with at least 256 bits.
 * Represent floating-point constants, including the parts of a complex constant, with a mantissa of at least 256 bits and a signed exponent of at least 32 bits.
 * Give an error if unable to represent an integer constant precisely.
@@ -50,3 +51,11 @@ Implementation restriction: Although numeric constants have arbitrary precision 
 
 These requirements apply both to literal constants and to the result of evaluating constant expressions.
 이 요구사항들은 리터럴 상수와 상수 표현식의 평사 결과 모두에게 적용된다.
+=======
+Represent integer constants with at least 256 bits.
+Represent floating-point constants, including the parts of a complex constant, with a mantissa of at least 256 bits and a signed binary exponent of at least 16 bits.
+Give an error if unable to represent an integer constant precisely.
+Give an error if unable to represent a floating-point or complex constant due to overflow.
+Round to the nearest representable constant if unable to represent a floating-point or complex constant due to limits on precision.
+These requirements apply both to literal constants and to the result of evaluating constant expressions.
+>>>>>>> golangkorea/master
