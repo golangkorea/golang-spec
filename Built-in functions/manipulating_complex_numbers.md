@@ -21,10 +21,10 @@ var a = complex(2, -2)             // complex128
 const b = complex(1.0, -1.4)       // untyped complex constant 1 - 1.4i
 x := float32(math.Cos(math.Pi/2))  // float32
 var c64 = complex(5, -x)           // complex64
-const s uint = complex(1, 0)       // untyped complex constant 1 + 0i can be converted to uint
-_ = complex(1, 2<<s)               // illegal: 2 has floating-point type, cannot shift
+var s uint = complex(1, 0)       // untyped complex constant 1 + 0i can be converted to uint
+_ = complex(1, 2<<s)               // illegal: 2 assumes floating-point type, cannot shift
 var rl = real(c64)                 // float32
 var im = imag(a)                   // float64
 const c = imag(b)                  // untyped constant -1.4
-_ = imag(3 << s)                   // illegal: 3 has complex type, cannot shift
+_ = imag(3 << s)                   // illegal: 3 assumes complex type, cannot shift
 ```
