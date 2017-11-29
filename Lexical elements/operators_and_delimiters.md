@@ -8,5 +8,5 @@ The following character sequences represent [operators](/Expressions/operators.h
 *    ^     *=    ^=     <-    >     >=    {    }
 /    <<    /=    <<=    ++    =     :=    ,    ;
 %    >>    %=    >>=    --    !     ...   .    :
-     &^          &^=
+     &^          &^=    =
 ```
