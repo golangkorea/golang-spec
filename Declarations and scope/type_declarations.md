@@ -2,10 +2,8 @@
 
 A type declaration binds an identifier, the *type name*, to a new type that has the same [underlying type](/Types/) as an existing type, and operations defined for the existing type are also defined for the new type. The new type is [different](/Properties%20of%20types%20and%20values/type_identity.html) from the existing type.
 
-For type _aliases_ , see the section on [alias declarations](/Alias_declarations/).
-
 <pre>
-<a id="TypeDecl">TypeDecl</a>     = "type" ( <a href="#TypeSpec">TypeSpec</a> | <a href="#AliasSpec">AliasSpec</a> | "(" { (<a href="#TypeSpec">TypeSpec</a> | <a href="#AliasSpec">AliasSpec</a> )";" } ")" ) .
+<a id="TypeDecl">TypeDecl</a>     = "type" ( <a href="#TypeSpec">TypeSpec</a> | "(" { (<a href="#TypeSpec">TypeSpec</a> ";" } ")" ) .
 <a id="TypeSpec">TypeSpec</a>     = <a href="/Lexical%20elements/identifiers.html#identifier">identifier</a> <a href="/Types/#Type">Type</a> .
 </pre>
 
