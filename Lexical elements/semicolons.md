@@ -2,11 +2,9 @@
 
 # 세미콜론
 
-spec 버전: of June 28, 2017
-
-원문 : [Semicolons](https://golang.org/ref/spec#Semicolons)
-
-번역자 : [조석규](@ezaurum)
+* spec 버전: of June 28, 2017 
+* 원문 : [Semicolons](https://golang.org/ref/spec#Semicolons) 
+* 번역자 : [조석규](@ezaurum)
 
 
 The formal grammar uses semicolons ";" as terminators in a number of productions. Go programs may omit most of these semicolons using the following two rules:
