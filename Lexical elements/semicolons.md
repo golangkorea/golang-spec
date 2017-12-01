@@ -21,6 +21,8 @@ The formal grammar uses semicolons ";" as terminators in a number of productions
 1. 입력이 여러 언어요소로 분리될 때, 언어요소 줄의 마지막 토큰이 다음 두 경우에 해당한다면, 세미콜론은 자동적으로 줄의 가장 끝 바로 뒤에 붙는다.
   + [식별자](/Lexical elements/identifiers.html)
   + [정수](/Lexical elements/integer_literals.html), [부동소수](/Lexical elements/floating-point_literals.html), [허수](/Lexical elements/imaginary_literals.html), [룬](/Lexical elements/rune_literals.html), [문자열](/Lexical elements/string_literals.html) 고정값
+  + [예약어](/Lexical elements/keywords.html) break, continue, fallthrough, return
+  + [연산자와 구분자](/Lexical elements/operators_and_delimiters.html) ++, --, ), ], }
 2. 복합문이 한 줄만 차지할 수 있도록, 닫는 ")" 나 "}" 앞에서는 세미콜론이 생략될 수 있다.
 
 To reflect idiomatic use, code examples in this document elide semicolons using these rules.
