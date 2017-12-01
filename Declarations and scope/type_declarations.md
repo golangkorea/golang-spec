@@ -43,7 +43,7 @@ type NewMutex Mutex
 type PtrMutex *Mutex
 
 // The method set of *PrintableMutex contains the methods
-// Lock and Unlock bound to its anonymous field Mutex.
+// Lock and Unlock bound to its embedded field Mutex.
 type PrintableMutex struct {
 	Mutex
 }
