@@ -2,6 +2,9 @@
 
 # 에러
 
+ * 원문: [Errors](https://golang.org/ref/spec#Errors)
+ * 번역자: Jhonghee Park (@jhonghee)
+
 The predeclared type `error` is defined as
 
 미리 선언된 타입 `error`은 다음과 같이 정의된다.
