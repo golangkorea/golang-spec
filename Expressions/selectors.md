@@ -8,7 +8,7 @@ x.f
 
 denotes the field or method f of the value x (or sometimes \*x; see below). The identifier f is called the (field or method) *selector*; it must not be the [blank identifier](/Declarations%20and%20scope/blank_identifier.html). The type of the selector expression is the type of f. If x is a package name, see the section on [qualified identifiers](/Expressions/qualified_identifiers.html).
 
-A selector f may denote a field or method f of a type T, or it may refer to a field or method f of a nested [anonymous field](/Types/struct_types.html) of T. The number of anonymous fields traversed to reach f is called its *depth* in T. The depth of a field or method f declared in T is zero. The depth of a field or method f declared in an anonymous field A in T is the depth of f in A plus one.
+A selector f may denote a field or method f of a type T, or it may refer to a field or method f of a nested [embedded field](/Types/struct_types.html) of T. The number of embedded fields traversed to reach f is called its *depth* in T. The depth of a field or method f declared in T is zero. The depth of a field or method f declared in an embedded field A in T is the depth of f in A plus one.
 
 The following rules apply to selectors:
 
