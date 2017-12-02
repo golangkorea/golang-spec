@@ -1,10 +1,10 @@
- * spec 버전: June 28, 2017
- * 원문 : [Operators and punctuation](https://golang.org/ref/spec#Operators_and_punctuation)
- * 번역자 : [조석규](@ezaurum)
-
 # Operators and punctuation
 
 # 연산자와 구두점
+
+ * spec 버전: June 28, 2017
+ * 원문 : [Operators and punctuation](https://golang.org/ref/spec#Operators_and_punctuation)
+ * 번역자 : [조석규](@ezaurum)
 
 The following character sequences represent operators (including assignment operators) and punctuation:
 
