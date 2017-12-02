@@ -1,10 +1,10 @@
- * spec 버전: June 28, 2017
- * 원문 : [Integer literals](https://golang.org/ref/spec#Integer_literals)
- * 번역자 : [조석규](@ezaurum)
-
 # Integer literals
 
 # 정수 고정값
+
+ * spec 버전: June 28, 2017
+ * 원문 : [Integer literals](https://golang.org/ref/spec#Integer_literals)
+ * 번역자 : [조석규](@ezaurum)
 
 An integer literal is a sequence of digits representing an integer [constant](/Constants/). An optional prefix sets a non-decimal base: 0 for octal, 0x or 0X for hexadecimal. In hexadecimal literals, letters a-f and A-F represent values 10 through 15.
 
