@@ -22,7 +22,7 @@ The formal grammar uses semicolons ";" as terminators in a number of productions
   + [식별자](/Lexical elements/identifiers.html)
   + [정수](/Lexical elements/integer_literals.html), [부동소수](/Lexical elements/floating-point_literals.html), [허수](/Lexical elements/imaginary_literals.html), [룬](/Lexical elements/rune_literals.html), [문자열](/Lexical elements/string_literals.html) 고정값
   + [예약어](/Lexical elements/keywords.html) break, continue, fallthrough, return
-  + [연산자와 구분자](/Lexical elements/operators_and_delimiters.html) ++, --, ), ], }
+  + [연산자와 구두점](/Lexical elements/operators_and_punctuation.html) ++, --, ), ], }
 2. 복합문이 한 줄에 표시될 수 있도록, ")" 나 "}" 앞에서는 세미콜론이 생략될 수 있다.
 
 To reflect idiomatic use, code examples in this document elide semicolons using these rules.
