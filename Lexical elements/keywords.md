@@ -1,10 +1,10 @@
- * spec 버전: June 28, 2017
- * 원문 : [Keywords](https://golang.org/ref/spec#Keywords)
- * 번역자 : [조석규](@ezaurum)
-
 # Keywords
 
 # 예약어
+
+ * spec 버전: June 28, 2017
+ * 원문 : [Keywords](https://golang.org/ref/spec#Keywords)
+ * 번역자 : [조석규](@ezaurum)
 
 The following keywords are reserved and may not be used as identifiers.
 
