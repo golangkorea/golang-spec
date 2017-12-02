@@ -1,10 +1,10 @@
-* spec 버전: June 28, 2017
-* 원문: [Identifiers](https://golang.org/ref/spec#Identifiers)
-* 번역자: [조석규](@ezaurum)
-
 # Identifiers
 
 # 식별자
+
+* spec 버전: June 28, 2017
+* 원문: [Identifiers](https://golang.org/ref/spec#Identifiers)
+* 번역자: [조석규](@ezaurum)
 
 Identifiers name program entities such as variables and types. An identifier is a sequence of one or more letters and digits. The first character in an identifier must be a letter.
 
