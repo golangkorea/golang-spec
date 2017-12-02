@@ -1,6 +1,4 @@
-# Errors
-
-# 에러
+# 에러(Errors)
 
  * 원문: [Errors](https://golang.org/ref/spec#Errors)
  * 번역자: Jhonghee Park (@jhonghee)
