@@ -1,10 +1,10 @@
- * spec 버전: June 28, 2017
- * 원문 : [Floating-point literals](https://golang.org/ref/spec#Floating-point_literals)
- * 번역자 : [조석규](@ezaurum)
-
 # Floating-point literals
 
 # 부동소수점 고정값
+
+ * spec 버전: June 28, 2017
+ * 원문 : [Floating-point literals](https://golang.org/ref/spec#Floating-point_literals)
+ * 번역자 : [조석규](@ezaurum)
 
 A floating-point literal is a decimal representation of a [floating-point constant](/Constants/). It has an integer part, a decimal point, a fractional part, and an exponent part. The integer and fractional part comprise decimal digits; the exponent part is an e or E followed by an optionally signed decimal exponent. One of the integer part or the fractional part may be elided; one of the decimal point or the exponent may be elided.
 
