@@ -6,10 +6,10 @@ Two [named types](/Types/) are identical if their type names originate in the sa
 
   * Two array types are identical if they have identical element types and the same array length.
   * Two slice types are identical if they have identical element types.
-  * Two struct types are identical if they have the same sequence of fields, and if corresponding fields have the same names, and identical types, and identical tags. Two anonymous fields are considered to have the same name. Lower-case field names from different packages are always different.
+  * Two struct types are identical if they have the same sequence of fields, and if corresponding fields have the same names, and identical types, and identical tags. [Non-exported](/Declarations%20and%20scope/exported_identifiers.html) field names from different packages are always different.
   * Two pointer types are identical if they have identical base types.
   * Two function types are identical if they have the same number of parameters and result values, corresponding parameter and result types are identical, and either both functions are variadic or neither is. Parameter and result names are not required to match.
-  * Two interface types are identical if they have the same set of methods with the same names and identical function types. Lower-case method names from different packages are always different. The order of the methods is irrelevant.
+  * Two interface types are identical if they have the same set of methods with the same names and identical function types. [Non-exported](/Declarations%20and%20scope/exported_identifiers.html) method names from different packages are always different. The order of the methods is irrelevant.
   * Two map types are identical if they have identical key and value types.
   * Two channel types are identical if they have identical value types and the same direction.
 
