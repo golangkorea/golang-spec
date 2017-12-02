@@ -2,7 +2,7 @@
 
 # 언어요소
 
-* spec 버전: of June 28, 2017
+* spec 버전: June 28, 2017
 * 원문 : [Tokens](https://golang.org/ref/spec#Tokens)
 * 번역자 : [조석규](@ezaurum)
 
