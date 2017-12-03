@@ -54,4 +54,4 @@ struct{ a, b *T5 } and struct{ a, b *T5 }
 func(x int, y float64) *[]string, func(int, float64) (result *[]string), and A5
 ```
 
-B0 and B1 are different because they are new types new types created by distinct <a href="#Type_definitions">type definitions</a>; `func(int, float64) *B0` and `func(x int, y float64) *[]string` are different because B0 is different from `[]string`.
+`B0` and `B1` are different because they are new types new types created by distinct <a href="#Type_definitions">type definitions</a>; `func(int, float64) *B0` and `func(x int, y float64) *[]string` are different because `B0` is different from `[]string`.
