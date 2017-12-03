@@ -18,6 +18,13 @@ An alias declaration binds an identifier to the given type.
 
 Within the [scope](/Declarations%20and%20scope/) of the identifier, it serves as an *alias* for the type.
 
+```
+type (
+	nodeList = []*Node  // nodeList and []*Node are identical types
+	Polar    = polar    // Polar and polar denote identical types
+)
+```
+
 ## Type definitions
 
 A type definition binds an identifier to a newly created type with the same [underlying type](/Types/) and operations as the given type.
