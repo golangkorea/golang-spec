@@ -27,4 +27,4 @@ The formal grammar uses semicolons ";" as terminators in a number of productions
 
 To reflect idiomatic use, code examples in this document elide semicolons using these rules.
 
-관습적으로 사용될 수 있도록, 이 문서의 코드 예제는 이 규칙에 의거해 세미콜론을 생략했다.
+Go 코드 작성 관례를 반영해서, 이 문서의 코드 예제는 위 규칙에 따라 세미콜론을 생략했다.
