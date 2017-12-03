@@ -1,7 +1,7 @@
 # Type declarations
 
 A type declaration binds an identifier, the *type name*, to a <a href="#Types">type</a>.
-Type declarations come in two forms: Alias declarations and type definitions.
+Type declarations come in two forms: alias declarations and type definitions.
 
 <pre>
 <a id="TypeDecl">TypeDecl</a> = "type" ( <a href="#TypeSpec">TypeSpec</a> | "(" { (<a href="#TypeSpec">TypeSpec</a> ";" } ")" ) .
@@ -27,7 +27,7 @@ type (
 
 ## Type definitions
 
-A type definition binds an identifier to a newly created type with the same [underlying type](/Types/) and operations as the given type.
+A type definition creates a new, distinct type with the same [underlying type](/Types/) and operations as the given type, and binds an identifier to it.
 
 <pre>
 <a id="TypeDef">TypeDef</a> = <a href="/Lexical%20elements/identifiers.html#identifier">identifier</a> <a href="/Types/#Type">Type</a> .
