@@ -1,18 +1,40 @@
 # Type declarations
 
-A type declaration binds an identifier, the *type name*, to a new type that has the same [underlying type](/Types/) as an existing type, and operations defined for the existing type are also defined for the new type. The new type is [different](/Properties%20of%20types%20and%20values/type_identity.html) from the existing type.
+A type declaration binds an identifier, the *type name*, to a <a href="#Types">type</a>.
+Type declarations come in two forms: Alias declarations and type definitions.
 
 <pre>
-<a id="TypeDecl">TypeDecl</a>     = "type" ( <a href="#TypeSpec">TypeSpec</a> | "(" { (<a href="#TypeSpec">TypeSpec</a> ";" } ")" ) .
-<a id="TypeSpec">TypeSpec</a>     = <a href="/Lexical%20elements/identifiers.html#identifier">identifier</a> <a href="/Types/#Type">Type</a> .
+<a id="TypeDecl">TypeDecl</a> = "type" ( <a href="#TypeSpec">TypeSpec</a> | "(" { (<a href="#TypeSpec">TypeSpec</a> ";" } ")" ) .
+<a id="TypeSpec">TypeSpec</a> = <a href="#AliasDecl">AliasDecl</a> | <a href="#TypeDef">TypeDef</a> .
 </pre>
+
+## Alias declarations
+
+An alias declaration binds an identifier to the given type.
+
+<pre>
+<a id="AliasDecl">AliasDecl</a> = <a href="/Lexical%20elements/identifiers.html#identifier">identifier</a> "=" <a href="#Type">Type</a> .
+</pre>
+
+Within the [scope](/Declarations%20and%20scope/) of the identifier, it serves as an *alias* for the type.
+
+## Type definitions
+
+A type definition binds an identifier to a newly created type with the same [underlying type](/Types/) and operations as the given type.
+
+<pre>
+<a id="TypeDef">TypeDef</a> = <a href="/Lexical%20elements/identifiers.html#identifier">identifier</a> <a href="/Types/#Type">Type</a> .
+</pre>
+
+The new type is called a *defined type*.
+It is [different](Properties%20of%20types%20and%20values/type_identity.html) from any other type, including the type it is created from.
 
 ```
 type IntArray [16]int
 
 type (
-	Point struct{ x, y float64 }
-	Polar Point
+	Point struct{ x, y float64 }  // Point and struct{ x, y float64 } are different types
+	polar Point                   // polar and Point denote different types
 )
 
 type TreeNode struct {
@@ -26,8 +48,8 @@ type Block interface {
 	Decrypt(src, dst []byte)
 }
 ```
-
-The declared type does not inherit any [methods](/Declarations%20and%20scope/method_declarations.html) bound to the existing type, but the [method set](/Types/method_sets.html) of an interface type or of elements of a composite type remains unchanged:
+A defined type may have [methods](/Declarations%20and%20scope/method_declarations.html) associated with it.
+It does not inherit any methods bound to the given type, but the [method set](/Types/method_sets.html) of an interface type or of elements of a composite type remains unchanged:
 
 ```
 // A Mutex is a data type with two methods, Lock and Unlock.
@@ -52,7 +74,7 @@ type PrintableMutex struct {
 type MyBlock Block
 ```
 
-A type declaration may be used to define a different boolean, numeric, or string type and attach methods to it:
+Type definitions may be used to define different boolean, numeric, or string types and associate methods with them:
 
 ```
 type TimeZone int
