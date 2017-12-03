@@ -37,8 +37,6 @@ The new type is called a *defined type*.
 It is [different](Properties%20of%20types%20and%20values/type_identity.html) from any other type, including the type it is created from.
 
 ```
-type IntArray [16]int
-
 type (
 	Point struct{ x, y float64 }  // Point and struct{ x, y float64 } are different types
 	polar Point                   // polar and Point denote different types
