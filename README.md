@@ -65,10 +65,27 @@ Comments serve as program documentation. There are two forms:
 
 3. 맺음말은 "~하다"로 통일하겠습니다.
 4. 번역 소스는 Markdown으로 작성되어 있습니다. [Gitbook에 있는 syntax](https://toolchain.gitbook.com/syntax/markdown.html)를 준수해 주십시요.
-5. 단어의 통일을 위해 Glossary를 활용할 방침입니다. 번역에 자신이 없을 경우 [Gitter방](https://gitter.im/golang-korean-community/go-spec-in-korean?utm_source=share-link&utm_medium=link&utm_campaign=share-link)에 문의해 주시고 의견이 수렴되면 [Glossary 페이지](https://github.com/golangkorea/golang-spec/blob/master/GLOSSARY.md)에 첨가해 주십시요.
-6. 번역이 애매하거나 어색한 경우는 한글 단어 옆에 괄호로 영어 원문의 단어를 적어주십시요.
-7. 번역작업도 중요하지만 함께 작업하시는 분들의 내용을 Proof reading하는데 동참해 주십시요.
-8. PR를 한 지 좀 시간이 지나다 보면 그 사이에 golangkorea/golang-spec에 많은 변화가 있을 수 있습니다. 그때는 본인의 로컬 repo를 최신의 golangkorea/golang-spec와 싱크 시킬 필요가 생깁니다. 새로운 포스트를 시작하기 전에 우선 로컬의 repo에 golangkorea/golang-spec를 upstream remote repo로 만드시고 나머지 단계를 따라 싱크 시키십시요.
+5. 본문에서 다른 Markdown 문서의 section을 참조하는 경우 아래 규칙을 참고해서 작성해주세요.
+* 본문에서 참조하는 문서의 section header에 reference id를 추가합니다.
+* reference id는 section title 과 동일한 이름으로 설정하고 section title에 공백이 포함되어 있는 경우 dash(-)를 사용합니다.
+* reference id는 소문자로만 작성합니다.
+
+```
+// https://github.com/golangkorea/golang-spec/edit/master/Declarations%20and%20scope/type_declarations.md
+## [Type definitions](#type-definitions)
+```
+
+* 본문에서 참조문서의 섹션을 참조하는 링크는 아래와 같이 구성합니다.
+
+```
+// https://github.com/golangkorea/golang-spec/blob/master/Expressions/conversions.md
+[defined types](/Declarations%20and%20scope/type_declarations.html#type-definitions)
+```
+
+6. 단어의 통일을 위해 Glossary를 활용할 방침입니다. 번역에 자신이 없을 경우 [Gitter방](https://gitter.im/golang-korean-community/go-spec-in-korean?utm_source=share-link&utm_medium=link&utm_campaign=share-link)에 문의해 주시고 의견이 수렴되면 [Glossary 페이지](https://github.com/golangkorea/golang-spec/blob/master/GLOSSARY.md)에 첨가해 주십시요.
+7. 번역이 애매하거나 어색한 경우는 한글 단어 옆에 괄호로 영어 원문의 단어를 적어주십시요.
+8. 번역작업도 중요하지만 함께 작업하시는 분들의 내용을 Proof reading하는데 동참해 주십시요.
+9. PR를 한 지 좀 시간이 지나다 보면 그 사이에 golangkorea/golang-spec에 많은 변화가 있을 수 있습니다. 그때는 본인의 로컬 repo를 최신의 golangkorea/golang-spec와 싱크 시킬 필요가 생깁니다. 새로운 포스트를 시작하기 전에 우선 로컬의 repo에 golangkorea/golang-spec를 upstream remote repo로 만드시고 나머지 단계를 따라 싱크 시키십시요.
 
 * Add the remote, call it "upstream":
 ```bash
