@@ -25,7 +25,7 @@ type (
 )
 ```
 
-## Type definitions
+## [Type definitions](#type-definitions)
 
 A type definition creates a new, distinct type with the same [underlying type](/Types/) and operations as the given type, and binds an identifier to it.
 
