@@ -8,3 +8,5 @@ Function   Behavior
 print      prints all arguments; formatting of arguments is implementation-specific
 println    like print but prints spaces between arguments and a newline at the end
 ```
+
+Implementation restriction: `print` and `println` need not accept arbitrary argument types, but printing of boolean, numeric, and string [types](/Types) must be supported.
