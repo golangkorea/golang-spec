@@ -1,12 +1,7 @@
-# [타입(Types)](#types)
-
- * 원문: [Types](https://golang.org/ref/spec#Types)
- * 번역자: Jhonghee Park (@jhonghee)
+# Types
 
 A type determines the set of values together with operations and methods specific to those values.
 A type may be denoted by a *type name*, if it has one, or specified using a *type literal*, which composes a type from existing types.
-
-타입은 값들의 집합을 그것들에 특유한 연산들과 메소드들을 가지고 결정한다. 타입은  *타입 명칭*을 가지고 있는 경우 그것으로 표시되거나, 이미 존재하는 타입들을 사용하여 다른 타입을 조립하는 *타입 리터럴*을 사용하여 명시된다.
 
 <pre>
 <a id="Type">Type</a>      = <a href="#TypeName">TypeName</a> | <a href="#TypeLit">TypeLit</a> | "(" <a href="#Type">Type</a> ")" .
@@ -18,11 +13,8 @@ Named instances of the boolean, numeric, and string types are [predeclared](/Dec
 Other named types are introduced with [type declarations](/Declarations%20and%20scope/type_declarations.html).
 *Composite types*—array, struct, pointer, function, interface, slice, map, and channel types—may be constructed using type literals.
 
-boolean,, numeric, 그리고 string 타입의 명칭이 주어진 인스턴스(instance)들은 [사전에 선언(predeclared)](/Declarations%20and%20scope/predeclared_identifiers.html)된다. 그외 명칭이 주어진 타입들은 [타입 선언(type declarations)](/Declarations%20and%20scope/type_declarations.html)을 통해 도입된다. *복합 타입(Composite types)*-정렬(array), 구조체(struct), 포인터(pointer), 함수(function), 인터페이스(interface), 슬라이스(slice), 맵(map), 그리고 채널(channel) 타입-은 타입 리터럴을 사용해 만들어 질 수 있다. 
 
 Each type T has an *underlying type*: If T is one of the predeclared boolean, numeric, or string types, or a type literal, the corresponding underlying type is T itself. Otherwise, T's underlying type is the underlying type of the type to which T refers in its [type declaration](/Declarations%20and%20scope/type_declarations.html).
-
-각각의 타입 T는 *내재 타입(underlying type)*을 가지고 있다: 만약 T가 사전에 선언된 boolean, numeric, string 타입들중 하나이던지 타입 리터럴일 경우는 T 자체가 상응하는 내재 타입이다. 그외의 경우, T의 내재 타입은 [타입 선언(type declaration)](/Declarations%20and%20scope/type_declarations.html)내에서 T가 언급하고 있는 타입의 내재 타입이다.
 
 ```
 type (
@@ -39,5 +31,3 @@ type (
 ```
 
 The underlying type of string, A1, A2, B1 and B2 is string. The underlying type of []B1, B3, and B4 is []B1.
-
-string, A1, A2, B1 그리고 B2의 내재 타입은 string이다. []B1, B3, 그리고 B4의 내재 타입은 []B1이다.
