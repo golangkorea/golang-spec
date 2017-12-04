@@ -13,7 +13,7 @@ Composite literals construct values for structs, arrays, slices, and maps and cr
 <a id="Element">Element</a>       = <a href="/Expressions/operators.html#Expression">Expression</a> | <a href="#LiteralValue">LiteralValue</a> .
 </pre>
 
-The LiteralType's underlying type must be a struct, array, slice, or map type (the grammar enforces this constraint except when the type is given as a TypeName). The types of the elements and keys must be [assignable](/Properties%20of%20types%20and%20values/assignability.html) to the respective field, element, and key types of the literal type; there is no additional conversion. The key is interpreted as a field name for struct literals, an index for array and slice literals, and a key for map literals. For map literals, all elements must have a key. It is an error to specify multiple elements with the same field name or constant key value.
+The LiteralType's underlying type must be a struct, array, slice, or map type (the grammar enforces this constraint except when the type is given as a TypeName). The types of the elements and keys must be [assignable](/Properties%20of%20types%20and%20values/assignability.html) to the respective field, element, and key types of the literal type; there is no additional conversion. The key is interpreted as a field name for struct literals, an index for array and slice literals, and a key for map literals. For map literals, all elements must have a key. It is an error to specify multiple elements with the same field name or constant key value. For non-constant map keys, see the section on [evaluation order](/Expressions/order_of_evaluation.html).
 
 For struct literals the following rules apply:
 
