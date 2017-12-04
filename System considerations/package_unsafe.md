@@ -13,7 +13,7 @@ func Offsetof(selector ArbitraryType) uintptr
 func Sizeof(variable ArbitraryType) uintptr
 ```
 
-A Pointer is a [pointer type](/Types/pointer_types.html) but a `Pointer` value may not be [dereferenced](/Expressions/address_operators.html). Any pointer or value of [underlying type](/Types/) `uintptr` can be converted to a `Pointer` type and vice versa. The effect of converting between `Pointer` and `uintptr` is implementation-defined.
+A Pointer is a [pointer type](/Types/pointer_types.html) but a `Pointer` value may not be [dereferenced](/Expressions/address_operators.html). Any pointer or value of [underlying type](/Types/) `uintptr` can be converted to a type of underlying type `Pointer` type and vice versa. The effect of converting between `Pointer` and `uintptr` is implementation-defined.
 
 ```
 var f float64
