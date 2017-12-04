@@ -46,7 +46,7 @@ A non-constant value x can be converted to type T in any of these cases:
 
   * x is [assignable](/Properties%20of%20types%20and%20values/assignability.html) to T.
   * ignoring struct tags (see below), x's type and T have [identical](#Type_identity) [underlying types](#Types).
-  * ignoring struct tags (see below), x's type and T are unnamed pointer types and their pointer base types have identical underlying types.
+  * ignoring struct tags (see below), x's type and T are pointer types that are not [defined types](/Declarations%20and%20scope/type_declarations.html#Type definitions), and their pointer base types have identical underlying types.
   * x's type and T are both integer or floating point types.
   * x's type and T are both complex types.
   * x is an integer or a slice of bytes or runes and T is a string type.
