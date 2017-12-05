@@ -10,7 +10,7 @@ An array is a numbered sequence of elements of a single type, called the element
 Array는 번호가 붙은, 요소의 타입이라고 불리는, 단일 타입의 요소의 연속이다. 요소들의 개수는 길이(length) 라고 불리며 절대로 음수가 될 수 없다.
 
 <pre>
-<a id="ArrayType">ArrayType</a>   = "[" <a href="#ArrayLength">ArrayLength</a> "]" < href="#ElementType">ElementType</a> .
+<a id="ArrayType">ArrayType</a>   = "[" <a href="#ArrayLength">ArrayLength</a> "]" <a href="#ElementType">ElementType</a> .
 <a id="ArrayLength">ArrayLength</a> = [Expression](/Expressions/) .
 <a id="ElementType">ElementType</a> = [Type](/Types/) .
 </pre>
