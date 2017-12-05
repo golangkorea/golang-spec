@@ -27,10 +27,10 @@ GitHub에서 master branch에 merge되면 자동으로 [GitBook](https://www.git
 * 원문: \[영문 섹션 이름\]\(영문 문서 주소\)
 * 번역자: \[번역자 이름\]\(@github_ID\)
 
-2. section header는 아래 예시와 같이 영문 타이틀 이름, 한글 타이틀 이름, reference id 구조로 번역해주세요. (reference id 작성방법은 아래 6번 항목을 참조하세요.)
+2. section header는 아래 예시와 같이 한글 타이틀 이름, 영문 타이틀 이름, reference id 구조로 번역해주세요. (reference id 작성방법은 아래 6번 항목을 참조하세요.)
 
 ```
-# [Array types(Array 타입)](#array-types)
+# [Array 타입(Array types)](#array-types)
 ```
 
 3. 번역글을 작성하실때 한 문단 단위로 나누어 하시길 권장합니다. Proof reading이 끝날 때까지는 원문을 그대로 남겨두시고 원문 문단 바로 밑에 번역 문단을 작성하시면 Proof Reading을 원할히 진행할 수 있습니다.
