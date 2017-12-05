@@ -1,5 +1,5 @@
 # golang-spec
-Go 언어 스펙 한글 번역
+[Go 언어 스펙](https://golang.org/ref/spec) 한글 번역
 
 Go 언어 스펙 번역에 참여하실 분들은 아래 링크를 통해 본인이 번역하고자 하는 부분에 이름을 등록하시길 바랍니다.
 
@@ -21,14 +21,19 @@ GitHub에서 master branch에 merge되면 자동으로 [GitBook](https://www.git
 
 # 번역 가이드라인
 
-1. 번역글 상단에 아래와 같이 spec 버전, 원문, 번역자를 추가해주세요.
+1. 번역글 상단에 아래와 같이 Go 버전, 원문, 번역자를 추가해주세요.
 
-* spec 버전: June 28, 2017(spec문서 상단에 표기되어 있음)
+* Go 버전: 1.9
 * 원문: \[영문 섹션 이름\]\(영문 문서 주소\)
 * 번역자: \[번역자 이름\]\(@github_ID\)
 
+2. section header는 아래 예시와 같이 영문 타이틀 이름, 한글 타이틀 이름, reference id 구조로 번역해주세요. (reference id 작성방법은 아래 6번 항목을 참조하세요.)
 
-2. 번역글을 작성하실때 한 문단 단위로 나누어 하시길 권장합니다. Proof reading이 끝날 때까지는 원문을 그대로 남겨두시고 원문 문단 바로 밑에 번역 문단을 작성하시면 Proof Reading을 원할히 진행할 수 있습니다.
+```
+# [Array types(Array 타입)](#array-types)
+```
+
+3. 번역글을 작성하실때 한 문단 단위로 나누어 하시길 권장합니다. Proof reading이 끝날 때까지는 원문을 그대로 남겨두시고 원문 문단 바로 밑에 번역 문단을 작성하시면 Proof Reading을 원할히 진행할 수 있습니다.
 
 * 원문과 번역문이 서로 분리되어 렌더링되기 위해서 이 둘 사이에는 *반드시 하나 이상의 빈줄*을 유지해 주셔야 합니다.
 * 리스트 번역을 하실 때에는 바로 밑에 번역을 하면 번역문이 영문 리스트에 포함되어 버립니다. 반드시 상위 문단과 함께 묶어 번역해 주세요.
@@ -63,11 +68,11 @@ Comments serve as program documentation. There are two forms:
 2. *일반 주석*은 /\*로 시작해서 \*/을 처음 만났을 때 끝난다. 
 ```
 
-3. 맺음말은 "~하다"로 통일하겠습니다.
-4. 번역 소스는 Markdown으로 작성되어 있습니다. [Gitbook에 있는 syntax](https://toolchain.gitbook.com/syntax/markdown.html)를 준수해 주십시요.
-5. 본문에서 다른 Markdown 문서의 section을 참조하는 경우 아래 규칙을 참고해서 작성해주세요.
-* 본문에서 참조하는 문서의 section header에 reference id를 추가합니다.
-* reference id는 section title 과 동일한 이름으로 설정하고 section title에 공백이 포함되어 있는 경우 dash(-)를 사용합니다.
+4. 맺음말은 "~하다"로 통일하겠습니다.
+5. 번역 소스는 Markdown으로 작성되어 있습니다. [Gitbook에 있는 syntax](https://toolchain.gitbook.com/syntax/markdown.html)를 준수해 주십시요.
+6. 본문에서 다른 Markdown 문서의 section을 참조하는 경우 아래 규칙을 참고해서 작성해주세요.
+* 본문에서 참조하는 문서의 section header에 reference id가 없으면, 해당 문서의 section header에 reference id를 추가합니다.
+* reference id는 section title과 동일한 이름으로 설정하고 section title에 공백이 포함되어 있는 경우 dash(-)를 사용합니다.
 * reference id는 소문자로만 작성합니다.
 
 ```
@@ -82,10 +87,10 @@ Comments serve as program documentation. There are two forms:
 [defined types](/Declarations%20and%20scope/type_declarations.html#type-definitions)
 ```
 
-6. 단어의 통일을 위해 Glossary를 활용할 방침입니다. 번역에 자신이 없을 경우 [Gitter방](https://gitter.im/golang-korean-community/go-spec-in-korean?utm_source=share-link&utm_medium=link&utm_campaign=share-link)에 문의해 주시고 의견이 수렴되면 [Glossary 페이지](https://github.com/golangkorea/golang-spec/blob/master/GLOSSARY.md)에 첨가해 주십시요.
-7. 번역이 애매하거나 어색한 경우는 한글 단어 옆에 괄호로 영어 원문의 단어를 적어주십시요.
-8. 번역작업도 중요하지만 함께 작업하시는 분들의 내용을 Proof reading하는데 동참해 주십시요.
-9. PR를 한 지 좀 시간이 지나다 보면 그 사이에 golangkorea/golang-spec에 많은 변화가 있을 수 있습니다. 그때는 본인의 로컬 repo를 최신의 golangkorea/golang-spec와 싱크 시킬 필요가 생깁니다. 새로운 포스트를 시작하기 전에 우선 로컬의 repo에 golangkorea/golang-spec를 upstream remote repo로 만드시고 나머지 단계를 따라 싱크 시키십시요.
+7. 단어의 통일을 위해 Glossary를 활용할 방침입니다. 번역에 자신이 없을 경우 [Gitter방](https://gitter.im/golang-korean-community/go-spec-in-korean?utm_source=share-link&utm_medium=link&utm_campaign=share-link)에 문의해 주시고 의견이 수렴되면 [Glossary 페이지](https://github.com/golangkorea/golang-spec/blob/master/GLOSSARY.md)에 첨가해 주십시요.
+8. 번역이 애매하거나 어색한 경우는 한글 단어 옆에 괄호로 영어 원문의 단어를 적어주십시요.
+9. 번역작업도 중요하지만 함께 작업하시는 분들의 내용을 Proof reading하는데 동참해 주십시요.
+10. PR를 한 지 좀 시간이 지나다 보면 그 사이에 golangkorea/golang-spec에 많은 변화가 있을 수 있습니다. 그때는 본인의 로컬 repo를 최신의 golangkorea/golang-spec와 싱크 시킬 필요가 생깁니다. 새로운 포스트를 시작하기 전에 우선 로컬의 repo에 golangkorea/golang-spec를 upstream remote repo로 만드시고 나머지 단계를 따라 싱크 시키십시요.
 
 * Add the remote, call it "upstream":
 ```bash
