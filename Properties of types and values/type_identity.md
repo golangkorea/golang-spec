@@ -1,4 +1,4 @@
-# [타입 아이텐티티(Type identity)](#type-identity)
+# [타입 아이덴티티(Type identity)](#type-identity)
 
  * 원문: [Type identity](https://golang.org/ref/spec#Type_identity)
  * 번역자: Jhonghee Park (@jhonghee)
