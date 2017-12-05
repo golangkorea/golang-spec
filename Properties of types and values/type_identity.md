@@ -21,7 +21,7 @@ components have identical types. In detail:
   * Two map types are identical if they have identical key and value types.
   * Two channel types are identical if they have identical value types and the same direction.
 
-[정의된 타입(defined type)](/type_declarations.html#type-definitions)은 항상 다른 타입들과 다르다. 그렇지 않을 경우, 만약 타입 사이에서 [내재하는(underlying)](/Types/) 타입 리터럴이 구조적으로 동일하다면; 즉, 동일한 리터럴 구조와 상응하는 구성요소가 동일한 타입을 가지고 있다면 그 타입들은 동일하다. 자세하게 설명하자면:
+[정의된 타입(defined type)](/Declarations%20and%20scope/type_declarations.html#type-definitions)은 항상 다른 타입들과 다르다. 그렇지 않을 경우, 만약 타입 사이에서 [내재하는(underlying)](/Types/) 타입 리터럴이 구조적으로 동일하다면; 즉, 동일한 리터럴 구조와 상응하는 구성요소가 동일한 타입을 가지고 있다면 그 타입들은 동일하다. 자세하게 설명하자면:
 
  * 두개의 정렬(array) 타입은 만약 동일한 요소 타입과 동일한 길이를 가지고 있다면 동일한다.
  * 두개의 슬라이스(slice) 타입은 먄약 동일한 요소 타입을 가지고 있다면 동일하다.
@@ -76,4 +76,4 @@ func(x int, y float64) *[]string, func(int, float64) (result *[]string), and A5
 
 `B0` and `B1` are different because they are new types created by distinct <a href="#Type_definitions">type definitions</a>; `func(int, float64) *B0` and `func(x int, y float64) *[]string` are different because `B0` is different from `[]string`.
 
-`B0`와 `B1`은 서로 다른 이유는 독특한 [타입 정의(type definitions)](/type_identity.html#Type_definitions)들로 만들어지 새로운 타입들이기 때문이다; `B1`이 `[]string`과 다르기 때문에 `func(int, float64) *B0`과 `func(x int, y float64) *[]string`은 서로 다르다.
+`B0`와 `B1`은 서로 다른 이유는 독특한 [타입 정의(type definitions)](/Declarations%20and%20scope/type_declarations.html#type-definitions)들로 만들어지 새로운 타입들이기 때문이다; `B1`이 `[]string`과 다르기 때문에 `func(int, float64) *B0`과 `func(x int, y float64) *[]string`은 서로 다르다.
