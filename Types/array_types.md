@@ -1,7 +1,8 @@
 # Array types
 
-# Array 타입
+# [Array 타입(Array types)](#array-types)
 
+* Go 버전: 1.9
 * 원문 : [Array types](https://golang.org/ref/spec#Array_types)
 * 번역자 : [연규민](@voidsatisfaction)
 
