@@ -68,7 +68,7 @@ A2 and struct{ a, b int }
 A3 and int
 A4, func(int, float64) *[]string, and A5
 
-B0, B0, and C0
+B0 and C0
 []int and []int
 struct{ a, b *T5 } and struct{ a, b *T5 }
 func(x int, y float64) *[]string, func(int, float64) (result *[]string), and A5
@@ -76,4 +76,4 @@ func(x int, y float64) *[]string, func(int, float64) (result *[]string), and A5
 
 `B0` and `B1` are different because they are new types created by distinct <a href="#Type_definitions">type definitions</a>; `func(int, float64) *B0` and `func(x int, y float64) *[]string` are different because `B0` is different from `[]string`.
 
-`B0`와 `B1`은 서로 다른 이유는 독특한 [타입 정의(type definitions)](/Declarations%20and%20scope/type_declarations.html#type-definitions)들로 만들어지 새로운 타입들이기 때문이다; `B1`이 `[]string`과 다르기 때문에 `func(int, float64) *B0`과 `func(x int, y float64) *[]string`은 서로 다르다.
+`B0`와 `B1`은 서로 다른 이유는 독특한 [타입 정의(type definitions)](/Declarations%20and%20scope/type_declarations.html#type-definitions)들로 만들어지 새로운 타입들이기 때문이다; `B0`이 `[]string`과 다르기 때문에 `func(int, float64) *B0`과 `func(x int, y float64) *[]string`은 서로 다르다.
