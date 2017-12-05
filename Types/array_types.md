@@ -8,7 +8,7 @@
 
 An array is a numbered sequence of elements of a single type, called the element type. The number of elements is called the length and is never negative.
 
-Array는 번호가 붙은, 요소의 타입(element type)이라고 불리는, 단일 타입 요소의 연속이다. 요소들의 개수는 길이(length) 라고 불리며 절대로 음수가 될 수 없다.
+Array는 순서가 있는, 요소의 타입(element type)이라고 불리는, 단일 타입 요소의 연속이다. 요소들의 개수는 길이(length) 라고 불리며 절대로 음수가 될 수 없다.
 
 <pre>
 <a id="ArrayType">ArrayType</a>   = "[" <a href="#ArrayLength">ArrayLength</a> "]" <a href="#ElementType">ElementType</a> .
