@@ -1,8 +1,8 @@
 # String types
 
-# String 타입
+# [String 타입(String types)](#string-types)
 
-* spec 버전: of June 28, 2017
+* Go 버전: 1.9
 * 원문 : [String types](https://golang.org/ref/spec#String_types)
 * 번역자 : [연규민](@voidsatisfaction)
 
