@@ -12,7 +12,7 @@
    * [Semicolons](Lexical elements/semicolons.md)
    * [Identifiers](Lexical elements/identifiers.md)
    * [Keywords](Lexical elements/keywords.md)
-   * [Operators and Delimiters](Lexical elements/operators_and_delimiters.md)
+   * [Operators and Punctuation](Lexical elements/operators_and_punctuation.md)
    * [Integer literals](Lexical elements/integer_literals.md)
    * [Floating-point literals](Lexical elements/floating-point_literals.md)
    * [Imaginary literals](Lexical elements/imaginary_literals.md)

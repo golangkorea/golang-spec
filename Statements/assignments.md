@@ -15,7 +15,7 @@ a[i] = 23
 (k) = <-ch  // same as: k = <-ch
 ```
 
-An assignment operation x op= y where op is a binary arithmetic operation is equivalent to x = x op (y) but evaluates x only once. The op= construct is a single token. In assignment operations, both the left- and right-hand expression lists must contain exactly one single-valued expression, and the left-hand expression must not be the blank identifier.
+An assignment operation x op= y where op is a binary [arithmetic operation](/Expressions/arithmetic_operators.html) is equivalent to x = x op (y) but evaluates x only once. The op= construct is a single token. In assignment operations, both the left- and right-hand expression lists must contain exactly one single-valued expression, and the left-hand expression must not be the blank identifier.
 
 ```
 a[i] <<= 2

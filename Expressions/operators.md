@@ -16,7 +16,7 @@ Comparisons are discussed [elsewhere](/Expressions/comparison_operators.html). F
 
 Except for shift operations, if one operand is an untyped [constant](/Constants/) and the other operand is not, the constant is [converted](/Expressions/conversions.html) to the type of the other operand.
 
-The right operand in a shift expression must have unsigned integer type or be an untyped constant that can be converted to unsigned integer type. If the left operand of a non-constant shift expression is an untyped constant, it is first converted to the type it would assume if the shift expression were replaced by its left operand alone.
+The right operand in a shift expression must have unsigned integer type or be an untyped constant representable by a value of type `unit`. If the left operand of a non-constant shift expression is an untyped constant, it is first converted to the type it would assume if the shift expression were replaced by its left operand alone.
 
 ```
 var s uint = 33

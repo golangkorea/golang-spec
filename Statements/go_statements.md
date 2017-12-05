@@ -12,5 +12,5 @@ The function value and parameters are [evaluated as usual](/Expressions/calls.ht
 
 ```
 go Server()
-go func(ch chan<- bool) { for { sleep(10); ch <- true; }} (c)
+go func(ch chan<- bool) { for { sleep(10); ch <- true }} (c)
 ```
