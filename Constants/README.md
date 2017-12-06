@@ -1,6 +1,6 @@
-# Constants
+# [상수 (Constants)](#Constants)
 
-* Spec 버전: June 28, 2017
+* Go 버전: 1.9
 * 원문: [Constants](https://golang.org/ref/spec#Constants)
 * 번역자: Dong-Woo, Jeon(@a2600riz)
 
@@ -8,9 +8,9 @@ There are *boolean constants*, *rune constants*, *integer constants*, *floating-
 
 상수 타입으로는 *boolean 상수*, *룬 문자 상수*, *정수형 상수*, *부동소수점 상수*, *복소수 상수*, *문자열 상수*들이 있다. 룬 문자, 정수, 부동소수점, 복소수 상수들을 통칭해서 *수치 상수*라 칭한다.
 
-A constant value is represented by a [rune](/Lexical%20elements/rune_literals.html), [integer](/Lexical%20elements/integer_literals.html), [floating-point](/Lexical%20elements/floating-point_literals.html), [imaginary](/Lexical%20elements/imaginary_literals.html), or [string literal](/Lexical%20elements/string_literals.html), an identifier denoting a constant, a [constant expression](/Expressions/constant_expressions.html), a [conversion](/Expressions/conversions.html) with a result that is a constant, or the result value of some built-in functions such as `unsafe.Sizeof` applied to any value, `cap` or `len` applied to [some expressions](/Built-in%20functions/length_and_capacity.html), ```real``` and `imag` applied to a complex constant and `complex` applied to numeric constants. The boolean truth values are represented by the predeclared constants `true` and `false`. The predeclared identifier [iota](/Declarations%20and%20scope/iota.html) denotes an integer constant.
+A constant value is represented by a [rune](/Lexical%20elements/rune_literals.html), [integer](/Lexical%20elements/integer_literals.html), [floating-point](/Lexical%20elements/floating-point_literals.html), [imaginary](/Lexical%20elements/imaginary_literals.html), or [string literal](/Lexical%20elements/string_literals.html), an identifier denoting a constant, a [constant expression](/Expressions/constant_expressions.html), a [conversion](/Expressions/conversions.html) with a result that is a constant, or the result value of some built-in functions such as `unsafe.Sizeof` applied to any value, `cap` or `len` applied to [some expressions](/Built-in%20functions/length_and_capacity.html), `real` and `imag` applied to a complex constant and `complex` applied to numeric constants. The boolean truth values are represented by the predeclared constants `true` and `false`. The predeclared identifier [iota](/Declarations%20and%20scope/iota.html) denotes an integer constant.
 
-상수 값은 [룬 문자](/Lexical%20elements/rune_literals.html), [정수](/Lexical%20elements/integer_literals.html), [부동소수점]((/Lexical%20elements/floating-point_literals.html)), [허수](/Lexical%20elements/imaginary_literals.html), [문자열 리터럴](/Lexical%20elements/string_literals.html), 상수 식별자, [상수 표현식](/Expressions/constant_expressions.html), [변환된 상수](/Expressions/conversions.html) 결과값 또는 `unsafe.Sizeof` 같은 몇몇 내장 함수들의 결과값이 적용된 값, `cap` 또는 `len`이 적용된 몇몇 표현식들, ```실수(real)```와 ```허수(imag)```가 적용된 복소수 상수와 `complex`가 적용된 수치 상수로 표현된다. boolean 값은 미리 선언되어 있는 `true` 와 `false` 값으로 표현된다. 미리 선언된 식별자 [iota](/Declarations%20and%20scope/iota.html)는 정수형 상수값을 의미한다.
+상수 값은 [룬 문자](/Lexical%20elements/rune_literals.html), [정수](/Lexical%20elements/integer_literals.html), [부동소수점]((/Lexical%20elements/floating-point_literals.html)), [허수](/Lexical%20elements/imaginary_literals.html), [문자열 리터럴](/Lexical%20elements/string_literals.html), 상수 식별자, [상수 표현식](/Expressions/constant_expressions.html), [변환된 상수](/Expressions/conversions.html) 결과값 또는 `unsafe.Sizeof` 같은 몇몇 내장 함수들의 결과값이 적용된 값, `cap` 또는 `len`이 적용된 몇몇 표현식들, `real`와 `imag`가 적용된 복소수 상수와 `complex`가 적용된 수치 상수로 표현된다. boolean 값은 미리 선언되어 있는 `true` 와 `false` 값으로 표현된다. 미리 선언된 식별자 [iota](/Declarations%20and%20scope/iota.html)는 정수형 상수값을 의미한다.
 
 In general, complex constants are a form of [constant expression](/Expressions/constant_expressions.html) and are discussed in that section.
 
@@ -22,7 +22,7 @@ Numeric constants represent exact values of arbitrary precision and do not overf
 
 Constants may be [typed](/Types/) or *untyped*. Literal constants, `true`, `false`, `iota`, and certain [constant expressions](/Expressions/constant_expressions.html) containing only untyped constant operands are untyped.
 
-상수는 [지정된 타입](/Types/)이거나 *비지정된 타입*일수 있다. 상수 리터럴, `true`, `false`, `iota` 들과 오직 비지정 타입 피연산자 상수들만 포함하는 특정 [상수 표현식](/Expressions/constant_expressions.html)들은 비지정 타입이다.
+상수는 [지정된 타입(typed)](/Types/)이거나 *비지정된 타입(untyped)*일수 있다. 상수 리터럴, `true`, `false`, `iota` 들과 오직 비지정 타입 피연산자 상수들만 포함하는 특정 [상수 표현식](/Expressions/constant_expressions.html)들은 비지정 타입이다.
 
 A constant may be given a type explicitly by a [constant declaration](/Declarations%20and%20scope/constant_declarations.html) or [conversion](/Expressions/conversions.html), or implicitly when used in a [variable declaration](/Declarations%20and%20scope/variable_declarations.html) or an [assignment](/Statements/assignments.html) or as an operand in an [expression](/Expressions/). It is an error if the constant value cannot be represented as a value of the respective type. For instance, 3.0 can be given any integer or any floating-point type, while 2147483648.0 (equal to 1<<31) can be given the types `float32`, `float64`, or `uint32` but not `int32` or `string`.
 
@@ -50,4 +50,4 @@ Implementation restriction: Although numeric constants have arbitrary precision 
 
 These requirements apply both to literal constants and to the result of evaluating constant expressions.
 
-이 요구사항들은 리터럴 상수와 상수 표현식의 평사 결과 모두에게 적용된다.
+이 요구사항들은 리터럴 상수와 상수 표현식의 평가 결과 모두에게 적용된다.
