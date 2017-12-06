@@ -27,7 +27,7 @@ GitHub에서 master branch에 merge되면 자동으로 [GitBook](https://www.git
 * 원문: \[영문 섹션 이름\]\(영문 문서 주소\)
 * 번역자: \[번역자 이름\]\(@github_ID\)
 
-2. section header는 아래 예시와 같이 한글 타이틀 이름, 영문 타이틀 이름, reference id 구조로 번역해주세요. (reference id 작성방법은 아래 6번 항목을 참조하세요.)
+2. header title은 아래 예시와 같이 한글 타이틀 이름, 영문 타이틀 이름, reference id 구조로 번역해주세요. (reference id 작성방법은 아래 6번 항목을 참조하세요.)
 
 ```
 # [Array 타입(Array types)](#array-types)
