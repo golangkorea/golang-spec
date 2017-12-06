@@ -1,4 +1,4 @@
-# [상수 (Constants)](#Constants)
+# [상수 (Constants)](#constants)
 
 * Go 버전: 1.9
 * 원문: [Constants](https://golang.org/ref/spec#Constants)
