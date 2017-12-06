@@ -30,7 +30,7 @@ GitHub에서 master branch에 merge되면 자동으로 [GitBook](https://www.git
 2. header title은 아래 예시와 같이 한글 타이틀 이름, 영문 타이틀 이름, reference id 구조로 번역해주세요. (reference id 작성방법은 아래 6번 항목을 참조하세요.)
 
 ```
-# [Array 타입(Array types)](#array-types)
+# [array 타입(Array types)](#array-types)
 ```
 
 3. 번역글을 작성하실때 한 문단 단위로 나누어 하시길 권장합니다. Proof reading이 끝날 때까지는 원문을 그대로 남겨두시고 원문 문단 바로 밑에 번역 문단을 작성하시면 Proof Reading을 원할히 진행할 수 있습니다.
@@ -68,7 +68,19 @@ Comments serve as program documentation. There are two forms:
 2. *일반 주석*은 /\*로 시작해서 \*/을 처음 만났을 때 끝난다. 
 ```
 
-4. EBNF에 따라 작성된 Go 문법은 번역하지 않는 것을 원칙으로 합니다.(주석은 번역 가능) 예를 들면,  [Characters 섹션](https://golang.org/ref/spec#Characters)에 나오는 문법 표현은 아래와 같습니다.
+4. 문장에서 [타입](https://gosudaweb.gitbooks.io/go-language-specification-in-korean/content/Types/) 자체를 의미하는 경우, 다음과 같이 번역합니다. 
+
+> boolean 타입, numeric 타입, string 타입, array 타입, slice 타입, struct 타입, pointer 타입, function 타입, interface 타입, map 타입, channel 타입
+
+따라서, [string 타입](https://gosudaweb.gitbooks.io/go-language-specification-in-korean/content/Types/string_types.html) 섹션의 경우, 다음과 같이 번역할 수 있습니다. 
+
+```
+A string type represents the set of string values
+
+string 타입은 문자열 값들의 집합을 표현한다.
+```
+
+5. EBNF에 따라 작성된 Go 문법은 번역하지 않는 것을 원칙으로 합니다.(주석은 번역 가능) 예를 들면,  [Characters 섹션](https://golang.org/ref/spec#Characters)에 나오는 문법 표현은 아래와 같습니다.
 
 ```
 newline        = /* the Unicode code point U+000A */ .
@@ -79,7 +91,7 @@ unicode_digit  = /* a Unicode code point classified as "Number, decimal digit" *
 
 Go 문법 표현은 원문 그대로 유지해주시길 바라며, `/* the Unicode code point U+000A */`과 같은 주석은 한글로 번역하셔도 괜찮습니다.
 
-5. EBNF에 따라 작성된 Go 문법에서 가장 왼쪽에 해당하는 용어가 문장에서 사용된 경우, 영어 원문을 유지하는 것을 기본으로 합니다. EBNF에 따라 작성된 Go 문법에서 가장 왼쪽에 해당하는 용어는 다음과 같습니다.
+6. EBNF에 따라 작성된 Go 문법에서 가장 왼쪽에 해당하는 용어가 문장에서 사용된 경우, 영어 원문을 유지하는 것을 기본으로 합니다. EBNF에 따라 작성된 Go 문법에서 가장 왼쪽에 해당하는 용어는 다음과 같습니다.
  
 ```
 AliasDecl
@@ -170,9 +182,9 @@ identifier = letter { letter | unicode_digit } .
 
 `어떤 identifier는 미리 선언되어있다.` 라고 번역하시면 됩니다. 한글 번역이 필요한 경우 [용어집](https://github.com/golangkorea/golang-spec/blob/master/GLOSSARY.md)에 [용어 추가 요청](https://github.com/golangkorea/golang-spec/issues/105)을 해주시기 바랍니다.
 
-6. 맺음말은 "~하다"로 통일하겠습니다.
-7. 번역 소스는 Markdown으로 작성되어 있습니다. [Gitbook에 있는 syntax](https://toolchain.gitbook.com/syntax/markdown.html)를 준수해 주십시요.
-8. 본문에서 다른 Markdown 문서의 section을 참조하는 경우 아래 규칙을 참고해서 작성해주세요.
+7. 맺음말은 "~하다"로 통일하겠습니다.
+8. 번역 소스는 Markdown으로 작성되어 있습니다. [Gitbook에 있는 syntax](https://toolchain.gitbook.com/syntax/markdown.html)를 준수해 주십시요.
+9. 본문에서 다른 Markdown 문서의 section을 참조하는 경우 아래 규칙을 참고해서 작성해주세요.
 * 본문에서 참조하는 문서의 section header에 reference id가 없으면, 해당 문서의 section header에 reference id를 추가합니다.
 * reference id는 section title과 동일한 이름으로 설정하고 section title에 공백이 포함되어 있는 경우 dash(-)를 사용합니다.
 * reference id는 소문자로만 작성합니다.
@@ -189,14 +201,14 @@ identifier = letter { letter | unicode_digit } .
 [defined types](/Declarations%20and%20scope/type_declarations.html#type-definitions)
 ```
 
-9. [용어집](https://github.com/golangkorea/golang-spec/blob/master/GLOSSARY.md)에서는 자주 사용되는 용어, 번역하기 힘들거나 애매한 용어들에 대한 추천 번역 및 설명을 제공하고 있습니다. GitBook에서는 [용어집](https://github.com/golangkorea/golang-spec/blob/master/GLOSSARY.md)에 등록된 용어가 본문에 있을 경우, 아래처럼 밑줄, 하이라이트, 팝업창 등의 기능을 제공합니다.(예제에서는 *code point*가 해당됩니다.)
+10. [용어집](https://github.com/golangkorea/golang-spec/blob/master/GLOSSARY.md)에서는 자주 사용되는 용어, 번역하기 힘들거나 애매한 용어들에 대한 추천 번역 및 설명을 제공하고 있습니다. GitBook에서는 [용어집](https://github.com/golangkorea/golang-spec/blob/master/GLOSSARY.md)에 등록된 용어가 본문에 있을 경우, 아래처럼 밑줄, 하이라이트, 팝업창 등의 기능을 제공합니다.(예제에서는 *code point*가 해당됩니다.)
 
 ![glossary](https://user-images.githubusercontent.com/8563047/33648108-b1b31814-da9b-11e7-9189-e42ba01c4137.png)
 
 [용어집](https://github.com/golangkorea/golang-spec/blob/master/GLOSSARY.md)에 추가하고 싶은 용어나 번역 용어에 대한 의견은 [용어집 이슈 게시판](https://github.com/golangkorea/golang-spec/issues/105)에 코멘트를 남겨주시기 바랍니다.
  
-10. 번역작업도 중요하지만 함께 작업하시는 분들의 내용을 Proof reading하는데 동참해 주십시요.
-11. PR를 한 지 좀 시간이 지나다 보면 그 사이에 golangkorea/golang-spec에 많은 변화가 있을 수 있습니다. 그때는 본인의 로컬 repo를 최신의 golangkorea/golang-spec와 싱크 시킬 필요가 생깁니다. 새로운 포스트를 시작하기 전에 우선 로컬의 repo에 golangkorea/golang-spec를 upstream remote repo로 만드시고 나머지 단계를 따라 싱크 시키십시요.
+11. 번역작업도 중요하지만 함께 작업하시는 분들의 내용을 Proof reading하는데 동참해 주십시요.
+12. PR를 한 지 좀 시간이 지나다 보면 그 사이에 golangkorea/golang-spec에 많은 변화가 있을 수 있습니다. 그때는 본인의 로컬 repo를 최신의 golangkorea/golang-spec와 싱크 시킬 필요가 생깁니다. 새로운 포스트를 시작하기 전에 우선 로컬의 repo에 golangkorea/golang-spec를 upstream remote repo로 만드시고 나머지 단계를 따라 싱크 시키십시요.
 
 * Add the remote, call it "upstream":
 ```bash
