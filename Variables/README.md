@@ -1,6 +1,6 @@
-# [변수 (Variables)](#Variables)
+# [변수 (Variables)](#variables)
 
-* Spec 버전: June 28, 2017
+* Go 버전: 1.9
 * 원문: [Variables](https://golang.org/ref/spec#Variables)
 * 번역자: Dong-Woo, Jeon(@a2600riz)
 
