@@ -1,6 +1,4 @@
-# String literals
-
-# [문자열 고정값 (String literals)](#string-literals)
+# [문자열 고정값(String literals)](#string-literals)
 
  * Go 버전: 1.9
  * 원문 : [String literals](https://golang.org/ref/spec#String_literals)
