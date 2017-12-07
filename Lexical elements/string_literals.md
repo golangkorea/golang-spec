@@ -1,8 +1,8 @@
 # String literals
 
-# 문자열 고정값
+# [문자열 고정값 (String literals)](#string-literals)
 
- * spec 버전: June 28, 2017
+ * Go 버전: 1.9
  * 원문 : [String literals](https://golang.org/ref/spec#String_literals)
  * 번역자 : [조석규](@ezaurum)
 
@@ -16,12 +16,12 @@ Raw string literals are character sequences between back quotes, as in `foo`. Wi
 
 Interpreted string literals are character sequences between double quotes, as in "bar". Within the quotes, any character may appear except newline and unescaped double quote. The text between the quotes forms the value of the literal, with backslash escapes interpreted as they are in [rune literals](/Lexical%20elements/rune_literals.html) (except that \' is illegal and \" is legal), with the same restrictions. The three-digit octal (\nnn) and two-digit hexadecimal (\xnn) escapes represent individual bytes of the resulting string; all other escapes represent the (possibly multi-byte) UTF-8 encoding of individual characters. Thus inside a string literal \377 and \xFF represent a single byte of value 0xFF=255, while ÿ, \u00FF, \U000000FF and \xc3\xbf represent the two bytes 0xc3 0xbf of the UTF-8 encoding of character U+00FF.
 
-가공 문자열 고정값은 `"bar"` 처럼 겹따옴표 사이에 있는 연속된 문자이다. 겹따옴표 사이에는 새 줄 문자와 예외처리 되지 않은 겹따옴표를 제외하고 어떤 문자든 올 수 있다. 따옴표 사이의 문자가 고정값이 되게 되는데, [룬 고정값](/Lexical%20elements/rune_literals.html)과 동일하게(\'는 쓸 수 없고 \" 는 쓸 수 있다) 백슬래시로 예외처리된다. 세자리 8진수(\nnn) 와 두 자리 16진수(\xnn)는 결과 문자열의 각 바이트로 번역된다. 그 이외의 모든 예외처리는 개별 문자가 (여러 바이트에 걸쳐질 수 있는) UTF-8으로 부호화된 형태를 의미한다. 그러므로 문자열 고정값에서 `\377`과 `xFF`는 한 바이트 값 `0xFF`=255 이고, `ÿ`, `\u00FF`, `\U000000FF`, `\xc3\xbf`는 문자 U+00FF가 UTF-8으로 부호화된 두 바이트를 의미한다.
+가공 문자열 고정값은 `"bar"` 처럼 겹따옴표 사이에 있는 연속된 문자이다. 겹따옴표 사이에는 새 줄 문자와 예외처리 되지 않은 겹따옴표를 제외하고 어떤 문자든 올 수 있다. 따옴표 사이의 문자가 고정값이 되게 되는데, [rune literals](/Lexical%20elements/rune_literals.html)과 동일하게(\'는 쓸 수 없고 \" 는 쓸 수 있다) 백슬래시로 예외처리된다. 세자리 8진수(\nnn) 와 두 자리 16진수(\xnn)는 결과 문자열의 각 바이트로 번역된다. 그 이외의 모든 예외처리는 개별 문자가 (여러 바이트에 걸쳐질 수 있는) UTF-8으로 부호화된 형태를 의미한다. 그러므로 문자열 고정값에서 `\377`과 `xFF`는 한 바이트 값 `0xFF`=255 이고, `ÿ`, `\u00FF`, `\U000000FF`, `\xc3\xbf`는 문자 U+00FF가 UTF-8으로 부호화된 두 바이트를 의미한다.
 
 <pre>
-<a id="string_lit">문자열 고정값</a>             = <a href="#raw_string_lit">비가공 문자열 고정값</a> | <a href="#interpreted_string_lit">가공 문자열 고정값</a> .
-<a id="raw_string_lit">비가공 문자열 고정값</a>         = "`" { <a href="/Source%20code%20representation/characters.html#unicode_char">유니코드 문자</a> | <a href="/Source%20code%20representation/characters.html#newline">새 줄 문자</a> } "`" .
-<a id="interpreted_string_lit">가공 문자열 고정값</a> = `"` { <a href="/Lexical%20elements/rune_literals.html#unicode_value">유니코드값</a> | <a href="/Lexical%20elements/rune_literals.html#byte_value">바이트값</a> } `"` .
+<a id="string_lit">string_lit</a>             = <a href="#raw_string_lit">raw_string_lit</a> | <a href="#interpreted_string_lit">interpreted_string_lit</a> .
+<a id="raw_string_lit">raw_string_lit</a>         = "`" { <a href="/Source%20code%20representation/characters.html#unicode_char">unicode_char</a> | <a href="/Source%20code%20representation/characters.html#newline">newline</a> } "`" .
+<a id="interpreted_string_lit">interpreted_string_lit</a> = `"` { <a href="/Lexical%20elements/rune_literals.html#unicode_value">unicode_value</a> | <a href="/Lexical%20elements/rune_literals.html#byte_value">byte_value</a> } `"` .
 </pre>
 
 ```
