@@ -1,7 +1,8 @@
-# 에러(Errors)
+# [에러(Errors)](#errors)
 
- * 원문: [Errors](https://golang.org/ref/spec#Errors)
- * 번역자: Jhonghee Park (@jhonghee)
+* Go 버전: 1.9
+* 원문: [Errors](https://golang.org/ref/spec#Errors)
+* 번역자: Jhonghee Park (@jhonghee)
 
 The predeclared type `error` is defined as
 

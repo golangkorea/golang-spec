@@ -1,7 +1,8 @@
 # [할당 가능한 값의 조건들(Assignability)](#assignability)
 
- * 원문: [Assignability](https://golang.org/ref/spec#Assignability)
- * 번역자: Jhonghee Park (@jhonghee)
+* Go 버전: 1.9
+* 원문: [Assignability](https://golang.org/ref/spec#Assignability)
+* 번역자: Jhonghee Park (@jhonghee)
 
 A value x is assignable to a [variable](/Variables/) of type T ("x is assignable to T") in any of these cases:
 

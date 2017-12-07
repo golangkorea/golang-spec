@@ -1,10 +1,8 @@
-# Imaginary literals
+# [허수 리터럴(Imaginary literals)](#imaginary-literals)
 
-# 허수 고정값
-
- * spec 버전: June 28, 2017
- * 원문 : [Imaginary literals](https://golang.org/ref/spec#Imaginary_literals)
- * 번역자 : [조석규](@ezaurum)
+* Go 버전: 1.9
+* 원문 : [Imaginary literals](https://golang.org/ref/spec#Imaginary_literals)
+* 번역자 : [조석규](@ezaurum)
 
 An imaginary literal is a decimal representation of the imaginary part of a [complex constant](/Constants/). It consists of a floating-point literal or decimal integer followed by the lower-case letter i.
 

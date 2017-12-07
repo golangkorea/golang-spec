@@ -1,8 +1,6 @@
-# Semicolons
+# [세미콜론(Semicolons)](#semicolons)
 
-# 세미콜론
-
-* spec 버전: June 28, 2017 
+* Go 버전: 1.9
 * 원문 : [Semicolons](https://golang.org/ref/spec#Semicolons) 
 * 번역자 : [조석규](@ezaurum)
 

@@ -1,4 +1,4 @@
-# [슬라이스 타입(Slice types)](#slice-types)
+# [slice 타입(Slice types)](#slice-types)
 
  * Go 버전: 1.9
  * 원문: [Slice types](https://golang.org/ref/spec#Slice_types)

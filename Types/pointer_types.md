@@ -1,4 +1,4 @@
-# [포인터 타입(Pointer types)](#point-types)
+# [pointer 타입(Pointer types)](#pointer-types)
 
  * Go 버전: 1.9
  * 원문: [Pointer types](https://golang.org/ref/spec#Pointer_types)

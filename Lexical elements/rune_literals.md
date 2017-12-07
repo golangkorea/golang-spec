@@ -1,10 +1,8 @@
-# Rune literals
+# [룬 리터럴(Rune literals)](#rune-literals)
 
-# 룬 고정값
-
- * spec 버전: June 28, 2017
- * 원문 : [Rune literals](https://golang.org/ref/spec#Rune_literals)
- * 번역자 : [조석규](@ezaurum)
+* Go 버전: 1.9
+* 원문 : [Rune literals](https://golang.org/ref/spec#Rune_literals)
+* 번역자 : [조석규](@ezaurum)
 
 A rune literal represents a [rune constant](/Constants/), an integer value identifying a Unicode code point. A rune literal is expressed as one or more characters enclosed in single quotes, as in 'x' or '\n'. Within the quotes, any character may appear except newline and unescaped single quote. A single quoted character represents the Unicode value of the character itself, while multi-character sequences beginning with a backslash encode values in various formats.
 

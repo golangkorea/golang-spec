@@ -1,7 +1,6 @@
-#Length and capacity
+# [길이와 용량(Length and capacity)](#length-and-capacity)
 
-# 길이와 용량
-
+* Go 버전: 1.9
 * 원문: [Length and capacity)](https://golang.org/ref/spec#Length_and_capacity)
 * 번역자: Joseph Kim (@superbmilkyway)
 

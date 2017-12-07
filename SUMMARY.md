@@ -8,7 +8,7 @@
    * [Letters and digits](Source code representation/letters_and_digits.md)
 * [Lexical elements](Lexical elements/README.md)
    * [주석](Lexical elements/comments.md)
-   * [Tokens](Lexical elements/tokens.md)
+   * [언어요소](Lexical elements/tokens.md)
    * [세미콜론](Lexical elements/semicolons.md)
    * [식별자](Lexical elements/identifiers.md)
    * [예약어](Lexical elements/keywords.md)
