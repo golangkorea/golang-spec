@@ -1,7 +1,8 @@
-# 프로그램 실행(Program execution)
+# [프로그램 실행(Program execution)](#program-execution)
 
- * 원문: [Program execution](https://golang.org/ref/spec#Program_execution)
- * 번역자: Jhonghee Park (@jhonghee)
+* Go 버전: 1.9
+* 원문: [Program execution](https://golang.org/ref/spec#Program_execution)
+* 번역자: Jhonghee Park (@jhonghee)
 
 A complete program is created by linking a single, unimported package called the *main package* with all the packages it imports, transitively. The main package must have package name `main` and declare a function `main` that takes no arguments and returns no value.
 

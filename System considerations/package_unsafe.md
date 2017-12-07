@@ -1,7 +1,8 @@
-# unsafe 패키지(Package unsafe)
+# [unsafe 패키지(Package unsafe)](#package-unsafe)
 
- * 원문: [Package unsafe](https://golang.org/ref/spec#Package_unsafe)
- * 번역자: Jhonghee Park(@jhonghee)
+* Go 버전: 1.9
+* 원문: [Package unsafe](https://golang.org/ref/spec#Package_unsafe)
+* 번역자: Jhonghee Park(@jhonghee)
 
 The built-in package `unsafe`, known to the compiler, provides facilities for low-level programming including operations that violate the type system. A package using `unsafe` must be vetted manually for type safety and may not be portable. The package provides the following interface:
 

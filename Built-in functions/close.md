@@ -1,8 +1,6 @@
-# Close
+# [Close(Close)](#close)
 
-# Close 함수
-
-* spec 버전: June 28, 2017
+* Go 버전: 1.9
 * 원문: [Close](https://golang.org/ref/spec#Built-in_functions)
 * 번역자: Joseph Kim (@superbmilkyway)
 

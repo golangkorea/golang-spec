@@ -1,8 +1,6 @@
-# Tokens
+# [언어요소(Tokens)](#tokens)
 
-# 언어요소
-
-* spec 버전: June 28, 2017
+* Go 버전: 1.9
 * 원문 : [Tokens](https://golang.org/ref/spec#Tokens)
 * 번역자 : [조석규](@ezaurum)
 

@@ -1,7 +1,8 @@
 # [타입 아이덴티티(Type identity)](#type-identity)
 
- * 원문: [Type identity](https://golang.org/ref/spec#Type_identity)
- * 번역자: Jhonghee Park (@jhonghee)
+* Go 버전: 1.9
+* 원문: [Type identity](https://golang.org/ref/spec#Type_identity)
+* 번역자: Jhonghee Park (@jhonghee)
 
 Two types are either identical or different.
 

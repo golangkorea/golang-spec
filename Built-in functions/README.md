@@ -1,7 +1,6 @@
-# 내장 함수
+# [내장 함수(Built-in functions)](#built-in-functions)
 
-# Built-in functions
-
+* Go 버전: 1.9
 * 원문: [Built-in functions](https://golang.org/ref/spec#Built-in_functions)
 * 번역자: Joseph Kim (@superbmilkyway)
 

@@ -1,7 +1,8 @@
-# 패키지 초기화(Package initialization)
+# [패키지 초기화(Package initialization)](#package-initialization)
 
- * 원문: [Package initialization](https://golang.org/ref/spec#Package_initialization)
- * 번역자: Jhonghee Park (@jhonghee)
+* Go 버전: 1.9
+* 원문: [Package initialization](https://golang.org/ref/spec#Package_initialization)
+* 번역자: Jhonghee Park (@jhonghee)
 
 Within a package, package-level variables are initialized in *declaration order* but after any of the variables they *depend* on.
 

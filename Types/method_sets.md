@@ -1,6 +1,4 @@
-# Method sets
-
-# [메소드 집합(Method sets)](#method-sets)
+# [메서드 집합(Method sets)](#method-sets)
 
 * Go 버전: 1.9
 * 원문: [Method sets](https://golang.org/ref/spec#Method_sets)

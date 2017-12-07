@@ -1,6 +1,6 @@
-# 주석(Comments)
+# [주석(Comments)](#comments)
 
-* Go 버전: 1.9.2
+* Go 버전: 1.9
 * 원문: [Comments](https://golang.org/ref/spec#Comments)
 * 번역자: Sang-joon, Moon(@dakeshi)
 

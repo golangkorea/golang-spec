@@ -1,7 +1,8 @@
 # [크기와 얼라인먼트 보증(Size and alignment guarantees)](#size-and-alignment-guarantees)
 
- * 원문: [Size and alignment guarantees](https://golang.org/ref/spec#Size_and_alignment_guarantees)
- * 번역자: Jhonghee Park(@jhonghee)
+* Go 버전: 1.9
+* 원문: [Size and alignment guarantees](https://golang.org/ref/spec#Size_and_alignment_guarantees)
+* 번역자: Jhonghee Park(@jhonghee)
 
 For the [numeric types](/Types/numeric_types.html), the following sizes are guaranteed:
 

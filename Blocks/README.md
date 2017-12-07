@@ -1,7 +1,8 @@
-# [블락(Blocks)](#blocks)
+# [블록(Blocks)](#blocks)
 
- * 원문: [Blocks](https://golang.org/ref/spec#Blocks)
- * 번역자: Jhonghee Park (@jhonghee)
+* Go 버전: 1.9
+* 원문: [Blocks](https://golang.org/ref/spec#Blocks)
+* 번역자: Jhonghee Park (@jhonghee)
 
 A *block* is a possibly empty sequence of declarations and statements within matching brace brackets.
 

@@ -1,8 +1,6 @@
-# Identifiers
+# [식별자(Identifiers)](#identifiers)
 
-# 식별자
-
-* spec 버전: June 28, 2017
+* Go 버전: 1.9
 * 원문: [Identifiers](https://golang.org/ref/spec#Identifiers)
 * 번역자: [조석규](@ezaurum)
 

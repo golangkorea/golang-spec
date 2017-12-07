@@ -1,6 +1,4 @@
-# Types
-
-# [타입(Types)](#Types)
+# [타입(Types)](#types)
 
 * Go 버전: 1.9
 * 원문: [Types](https://golang.org/ref/spec#Types)
