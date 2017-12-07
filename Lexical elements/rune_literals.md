@@ -6,7 +6,7 @@
 
 A rune literal represents a [rune constant](/Constants/), an integer value identifying a Unicode code point. A rune literal is expressed as one or more characters enclosed in single quotes, as in 'x' or '\n'. Within the quotes, any character may appear except newline and unescaped single quote. A single quoted character represents the Unicode value of the character itself, while multi-character sequences beginning with a backslash encode values in various formats.
 
-룬 리터럴은 정수로 된 유니코드 값인 [룬 상수](/Constants/)이다. 룬 리터럴은 'x'나 '\n'처럼 홑따옴표로 감싸진 한 문자 이상으로 표현된다. 따옴표 안에는 새 줄이나 예외처리되지 않은 홑따옴표 말고는 어떤 문자든 들어갈 수 있다. 홑따옴표로 감싸진 한 문자로 문자 자체의 유니코드 값을 표현할 수 있고, 역슬래시로 시작하는 문자열로 값을 부호화 하여 표현 할 수도 있다.
+룬 리터럴은 정수로 된 유니코드 값인 [룬 상수](/Constants/)이다. 룬 리터럴은 'x'나 '\n'처럼 홑따옴표로 감싸진 한 캐릭터 이상으로 표현된다. 따옴표 안에는 새 줄이나 예외처리되지 않은 홑따옴표 말고는 어떤 캐릭터든 들어갈 수 있다. 홑따옴표로 감싸진 한 캐릭터로 캐릭터 자체의 유니코드 값을 표현할 수 있고, 역슬래시로 시작하는 여러 캐릭터로 값을 부호화 하여 표현 할 수도 있다.
 
 The simplest form represents the single character within the quotes; since Go source text is Unicode characters encoded in UTF-8, multiple UTF-8-encoded bytes may represent a single integer value. For instance, the literal 'a' holds a single byte representing a literal a, Unicode U+0061, value 0x61, while 'ä' holds two bytes (0xc3 0xa4) representing a literal a-dieresis, U+00E4, value 0xe4.
 
@@ -22,7 +22,7 @@ Although these representations all result in an integer, they have different val
 
 After a backslash, certain single-character escapes represent special values:
 
-백슬래시 다음에 한 문자를 붙여 예외처리되는 특별한 값은 다음과 같다.
+백슬래시 다음에 한 캐릭터를 붙여 예외처리되는 특별한 값은 다음과 같다.
 
 ```
 \a   U+0007 alert or bell
@@ -98,8 +98,8 @@ All other sequences starting with a backslash are illegal inside rune literals.
 '\xff'
 '\u12e4'
 '\U00101234'
-'\''         // 홑따옴표 문자의 룬 리터럴
-'aa'         // 맞지않음: 문자가 너무 많음
+'\''         // 홑따옴표 캐릭터의 룬 리터럴
+'aa'         // 맞지않음: 캐릭터가 너무 많음
 '\xa'        // 맞지않음: 16진수 숫자는 2개 필요
 '\0'         // 맞지않음: 8진수 숫자는 3개 필요
 '\uDFFF'     // 맞지않음: surrogate 배정 영역
