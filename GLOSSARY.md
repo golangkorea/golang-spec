@@ -23,3 +23,33 @@ x.(T)
 
 ## built-in function
 내장 함수. 예) len, cap, append, new, make
+
+## alignment
+얼라인먼트
+
+## base type
+기본 타입
+
+## block
+블록
+
+## character
+캐릭터
+
+## declaration
+선언
+
+## identifier
+식별자
+
+## literal
+리터럴
+
+## signature
+시그니처
+
+## type
+타입
+
+## type alias
+타입 앨리어스
