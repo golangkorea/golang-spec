@@ -14,7 +14,7 @@ The formal grammar uses semicolons ";" as terminators in a number of productions
   + one of the [operators and punctuation](/Lexical elements/operators_and_punctuation.html) ++, --, ), ], or }
 2. To allow complex statements to occupy a single line, a semicolon may be omitted before a closing ")" or "}".
 
-많은 언어에서 세미콜론 ";" 을 종결자로 사용하는 것이 공식적인 문법이다. Go 프로그램에서는 아래 두 가지 규칙에 따라 세미콜론 대부분을 생략할 수 있다. 
+대부분의 Go 문법에서 공식적으로 세미콜론 ";" 을 종결자로 사용한다. Go 프로그램에서는 아래 두 가지 규칙에 따라 세미콜론 대부분을 생략할 수 있다. 
 
 1. 입력이 언어요소로 해석될 때, 줄의 마지막 언어요소가 다음과 같은 경우, 세미콜론이 자동적으로 줄의 가장 끝 바로 뒤에 붙는다.
   + [식별자](/Lexical elements/identifiers.html)
