@@ -12,12 +12,19 @@ https://github.com/golangkorea/golang-spec)를 fork하시고 번역하신 다음
 
 기본적인 번역 가이드라인에 대한 의견은 [issue](https://github.com/golangkorea/golang-spec/issues/2)를 이용해주세요. 
 
-번역에 대한 질의나 토의는 [Gitter 방](https://gitter.im/golang-korean-community/go-spec-in-korean?utm_source=share-link&utm_medium=link&utm_campaign=share-link)을 이용해 주십시요.
+번역에 대한 질의 및 토의는 [GitHub issue](https://github.com/golangkorea/golang-spec/issues/) 게시판을 이용해주시기 바랍니다.
+
+[Gitter 방](https://gitter.im/golang-korean-community/go-spec-in-korean?utm_source=share-link&utm_medium=link&utm_campaign=share-link)도 마련되어 있으니 많은 참여바랍니다.
 
 # 번역 진행 과정
-PR 생성 - Merge - GitBook 포스팅 - Proof of Reading - Discussion - Contents Update(PR)
 
-GitHub에서 master branch에 merge되면 자동으로 [GitBook](https://www.gitbook.com/book/gosudaweb/go-language-specification-in-korean/details)에 포스팅됩니다. 따라서 번역물에 대한 논의, 오탈자 보고, 의견제시는 [GitBook](https://www.gitbook.com/book/gosudaweb/go-language-specification-in-korean/details)을 이용해 주시길 바랍니다.
+PR 생성 - Review - Merge - GitBook 포스팅 - Proof of Reading - Issue 생성 - Contents Update(PR)
+
+- PR(pull request)이 생성되면 PR에 대한 review가 진행되며, 이 과정에서 오탈자 확인, 번역문 개선, 의견 교환 등이 이루어집니다. 
+- review 과정에서 논의된 수정사항들을 반영하여 PR을 업데이트하면 최종적으로 master branch에 merge됩니다.
+- GitHub에서 master branch에 merge되면 자동으로 [GitBook](https://www.gitbook.com/book/gosudaweb/go-language-specification-in-korean/details)에 포스팅됩니다. 
+- [GitBook](https://www.gitbook.com/book/gosudaweb/go-language-specification-in-korean/details)에 포스팅된 이후에 발생하는 번역문 관련 모든 이슈는 [GitHub issue](https://github.com/golangkorea/golang-spec/issues/)로 보고해주시기 바랍니다.
+- 번역 참가자(proof of reading 참가자 포함)는 GitBook에서 제공하는 disqus 댓글, discussion 기능 대신 [GitHub issue](https://github.com/golangkorea/golang-spec/issues/)를 이용해주세요.
 
 # 번역 가이드라인
 
