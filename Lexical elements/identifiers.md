@@ -19,13 +19,6 @@ ThisVariableIsExported
 αβ
 ```
 
-```
-a
-_x9
-ThisVariableIsExported
-αβ
-```
-
 Some identifiers are [predeclared](/Declarations and scope/predeclared_identifiers.html).
 
 식별자는 [미리 선언](/Declarations and scope/predeclared_identifiers.html) 될 수 있다.
