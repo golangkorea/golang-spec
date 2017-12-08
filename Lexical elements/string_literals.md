@@ -47,7 +47,7 @@ Interpreted string literals are character sequences between double quotes, as in
 "\u65e5本\U00008a9e"
 "\xff\u00FF"
 "\uD800"             // 맞지않음: surrogate 배정 영역
-"\U00110000"         // 맞지않음: 잘못된 유니코드 값
+"\U00110000"         // 맞지않음: 잘못된 유니코드 코드 포인트
 ```
 
 These examples all represent the same string:
@@ -65,11 +65,11 @@ These examples all represent the same string:
 ```
 "日本語"                                 // UTF-8 입력 문자열
 `日本語`                                 // UTF-8 비가공 문자열 리터럴
-"\u65e5\u672c\u8a9e"                    // 명시적인 유니코드값
-"\U000065e5\U0000672c\U00008a9e"        // 명시적인 유니코드값
+"\u65e5\u672c\u8a9e"                    // 명시적인 유니코드 코드 포인트
+"\U000065e5\U0000672c\U00008a9e"        // 명시적인 유니코드 코드 포인트
 "\xe6\x97\xa5\xe6\x9c\xac\xe8\xaa\x9e"  // 명시적인 유니코드 바이트값
 ```
 
 If the source code represents a character as two code points, such as a combining form involving an accent and a letter, the result will be an error if placed in a rune literal (it is not a single code point), and will appear as two code points if placed in a string literal.
 
-만일 소스코드가 강세표와 한 영문자를 포함하는 형태 같이 두 개 코드값을 하나의 문자에 넣으려고 한다면, 룬 리터럴에 넣을 때는 하나의 코드값이 아니므로 에러가 나고, 문자열 리터럴에 넣을 때는 두 개 코드값으로 나타날 것이다.
+만일 소스코드가 강세표와 한 영문자를 포함하는 형태 같이 두 개 코드 포인트를 하나의 캐릭터에 넣으려고 한다면, 룬 리터럴에 넣을 때는 하나의 코드 포인트가 아니므로 에러가 나고, 문자열 리터럴에 넣을 때는 두 개 코드값으로 나타날 것이다.
