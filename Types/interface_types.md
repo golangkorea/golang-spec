@@ -76,7 +76,7 @@ they implement the `Locker` interface as well as the `File` interface.
 
 An interface `T` may use a (possibly qualified) interface type name `E` in place of a method specification. This is called *embedding* interface `E` in `T`; it adds all (exported and non-exported) methods of `E` to the interface `T`.
 
-어떤 인터페이스 `T`는 메서드의 사양이 있어야 할 자리에 (경우에 따라서는 패키지 이름을 동반한) interface 타입 이름 `E`를 사용할 수도 있다. 이것은 인터페이스 `E`를 `T`안에 *임베딩*이라고 부른다: 임베딩은 (엑스포트 여부에 상관없이) `E`의 모든 메서드를 인터페이스 `T`에 더한다. 
+어떤 인터페이스 `T`는 메서드의 사양이 있어야 할 자리에 (경우에 따라서는 패키지 이름을 동반한) interface 타입 이름 `E`를 사용할 수도 있다. 이것은 인터페이스 `E`를 `T`안에 *임베딩*한 것이라고 부른다: 임베딩은 (엑스포트 여부에 상관없이) `E`의 모든 메서드를 인터페이스 `T`에 더한다. 
 
 ```
 type ReadWriter interface {
