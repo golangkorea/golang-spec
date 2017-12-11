@@ -37,10 +37,10 @@ PR 생성 - Review - Merge - GitBook 포스팅 - Proof of Reading - Issue 생성
 2. header title은 아래 예시와 같이 한글 타이틀 이름, 영문 타이틀 이름, reference id 구조로 번역해주세요. (reference id 작성방법은 아래 6번 항목을 참조하세요.)
 
 ```
-# [array 타입(Array types)](#array-types)
+# [배열 타입(Array types)](#array-types)
 ```
 
-3. 번역글을 작성하실때 한 문단 단위로 나누어 하시길 권장합니다. Proof reading이 끝날 때까지는 원문을 그대로 남겨두시고 원문 문단 바로 밑에 번역 문단을 작성하시면 Proof Reading을 원할히 진행할 수 있습니다.
+3. 번역글을 작성하실때 한 문단 단위로 나누어 하시길 권장합니다. Proof of Reading이 끝날 때까지는 원문을 그대로 남겨두시고 원문 문단 바로 밑에 번역 문단을 작성하시면 Proof of Reading을 원할히 진행할 수 있습니다.
 
 * 원문과 번역문이 서로 분리되어 렌더링되기 위해서 이 둘 사이에는 *반드시 하나 이상의 빈줄*을 유지해 주셔야 합니다.
 * 리스트 번역을 하실 때에는 바로 밑에 번역을 하면 번역문이 영문 리스트에 포함되어 버립니다. 반드시 상위 문단과 함께 묶어 번역해 주세요.
@@ -75,13 +75,12 @@ Comments serve as program documentation. There are two forms:
 2. *일반 주석*은 /\*로 시작해서 \*/을 처음 만났을 때 끝난다. 
 ```
 
-4. 문장에서 [타입](https://gosudaweb.gitbooks.io/go-language-specification-in-korean/content/Types/) 자체를 의미하는 경우, 다음과 같이 번역합니다. 
+4. [타입](https://gosudaweb.gitbooks.io/go-language-specification-in-korean/content/Types/) 자체가 코드에서 사용되는 경우 `string 타입`과 같은 형태로 번역하고, 그 외에는 한글 번역을 적용하는 것을 원칙으로 합니다. 이 기준에 따라 [타입](https://gosudaweb.gitbooks.io/go-language-specification-in-korean/content/Types/)은 아래와 같이 번역합니다. 
 
-> boolean 타입, numeric 타입, string 타입, array 타입, slice 타입, struct 타입, pointer 타입, function 타입, interface 타입, map 타입, channel 타입
-
-따라서, [string 타입](https://gosudaweb.gitbooks.io/go-language-specification-in-korean/content/Types/string_types.html) 섹션의 경우, 다음과 같이 번역할 수 있습니다. 
+> 불리언 타입, 숫자 타입, string 타입, 배열 타입, 슬라이스 타입, struct 타입, 포인터 타입, 함수 타입, interface 타입, map 타입, 채널 타입
 
 ```
+// 번역 예시 
 A string type represents the set of string values
 
 string 타입은 문자열 값들의 집합을 표현한다.
@@ -96,10 +95,10 @@ unicode_letter = /* a Unicode code point classified as "Letter" */ .
 unicode_digit  = /* a Unicode code point classified as "Number, decimal digit" */ .
 ```
 
-Go 문법 표현은 원문 그대로 유지해주시길 바라며, `/* the Unicode code point U+000A */`과 같은 주석은 한글로 번역하셔도 괜찮습니다.
+Go 문법 표현은 원문 그대로 유지해 주시길 바라며, `/* the Unicode code point U+000A */`과 같은 주석은 한글로 번역하셔도 괜찮습니다.
 
 6. 맺음말은 "~하다"로 통일하겠습니다.
-7. 번역 소스는 Markdown으로 작성되어 있습니다. [Gitbook에 있는 syntax](https://toolchain.gitbook.com/syntax/markdown.html)를 준수해 주십시요.
+7. 번역 소스는 Markdown으로 작성되어 있습니다. [GitBook에 있는 syntax](https://toolchain.gitbook.com/syntax/markdown.html)를 준수해 주십시요.
 8. 본문에서 다른 Markdown 문서의 section을 참조하는 경우 아래 규칙을 참고해서 작성해주세요.
 * 본문에서 참조하는 문서의 section header에 reference id가 없으면, 해당 문서의 section header에 reference id를 추가합니다.
 * reference id는 section title과 동일한 이름으로 설정하고 section title에 공백이 포함되어 있는 경우 dash(-)를 사용합니다.
