@@ -1,7 +1,7 @@
-# [Close(Close)](#close)
+# [Close 함수(Close)](#Close)
 
 * Go 버전: 1.9
-* 원문: [Close](https://golang.org/ref/spec#Built-in_functions)
+* 원문: [Close](https://golang.org/ref/spec#Close)
 * 번역자: Joseph Kim (@superbmilkyway)
 
 For a channel c, the built-in function `close(c)` records that no more values will be sent on the channel. It is an error if c is a receive-only channel. Sending to or closing a closed channel causes a [run-time panic](/Run-time panics/). Closing the nil channel also causes a [run-time panic](/Run-time panics/). After calling close, and after any previously sent values have been received, receive operations will return the zero value for the channel's type without blocking. The multi-valued [receive operation](/Expressions/receive_operator.html) returns a received value along with an indication of whether the channel is closed.

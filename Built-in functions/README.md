@@ -1,4 +1,4 @@
-# [내장 함수(Built-in functions)](#built-in-functions)
+# [내장 함수(Built-in functions)](#Built-in_functions)
 
 * Go 버전: 1.9
 * 원문: [Built-in functions](https://golang.org/ref/spec#Built-in_functions)
