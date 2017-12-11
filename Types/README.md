@@ -27,8 +27,8 @@ boolean, numeric, 그리고 string 타입의 인스턴스들은 [미리 선언�
 
 Each type T has an *underlying type*: If T is one of the predeclared boolean, numeric, or string types, or a type literal, the corresponding underlying type is T itself. Otherwise, T's underlying type is the underlying type of the type to which T refers in its [type declaration](/Declarations%20and%20scope/type_declarations.html).
 
-각각의 타입 T는 *내재 타입(underlying type)*을 가지고 있다: 만약 T가 사전에 선언(predeclared)된 boolean, numeric, 또는 string 타입 중 하나이거나 타입 리터럴이라면 T 스스로가 내재 타입이 된다.
-그 외의 경우, T의 내재 타입은 [타입 선언(type declarations)](/Declarations%20and%20scope/type_declarations.html)에서 T가 참조하는 타입의 내재 타입이다.
+각각의 타입 `T`는 *내재 타입(underlying type)*을 가지고 있다: 만약 `T`가 사전에 선언(predeclared)된 boolean, numeric, 또는 string 타입 중 하나이거나 타입 리터럴이라면 `T` 스스로가 내재 타입이 된다.
+그 외의 경우, `T`의 내재 타입은 [타입 선언(type declarations)](/Declarations%20and%20scope/type_declarations.html)에서 `T`가 참조하는 타입의 내재 타입이다.
 
 ```
 type (
@@ -46,4 +46,4 @@ type (
 
 The underlying type of string, A1, A2, B1 and B2 is string. The underlying type of []B1, B3, and B4 is []B1.
 
-string, A1, A2, B1 그리고 B2의 내재 타입은 string이다. []B1, B3, 그리고 B4의 내재 타입은 []B1이다.
+`string`, `A1`, `A2`, `B1` 그리고 `B2`의 내재 타입은 `string`이다. `[]B1`, `B3`, 그리고 `B4`의 내재 타입은 `[]B1`이다.
