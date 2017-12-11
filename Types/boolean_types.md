@@ -8,4 +8,4 @@
 
 A boolean *type* represents the set of Boolean truth values denoted by the predeclared constants `true` and `false`. The predeclared boolean type is `bool`.
 
-불리언 *타입*은 미리 선언된 상수인 `true`와 `false` 로 나타내어지는 Boolean 진리 집합을 나타낸다. 미리 선언된 불리언 타입은 `bool`로 나타낸다.
+*불리언 타입*은 미리 선언된 상수인 `true`와 `false` 로 표현되는 Boolean 진리 집합을 나타낸다. 미리 선언된 불리언 타입은 `bool`이다.
