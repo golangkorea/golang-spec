@@ -6,7 +6,7 @@
 
 An interface type specifies a [method set](/Types/method_sets.html) called its *interface*. A variable of interface type can store a value of any type with a method set that is any superset of the interface. Such a type is said to *implement the interface*. The value of an uninitialized variable of interface type is `nil`.
 
-interface 타입은 *인터페이스*라고 불리는 [메서드 집합(method set)](/Types/method_sets.html)을 열거한다. interface 타입의 변수는 주어진 인터페이스의 확대집합(superset)에 해당하는 메서드 집합을 갖고 있는 어떠한 타입의 값이든 저장할 수 있다. 그러한 타입에 대해서는 *인터페이스를 구현*했다라고 말한다. 초기화 되지 않은 interface 타입은 `nil` 값을 갖는다.
+interface 타입은 *인터페이스*라고 불리는 [메서드 집합(method set)](/Types/method_sets.html)을 명시한다. 주어진 인터페이스의 확대집합(superset)에 해당하는 메서드 집합을 갖고 있는 어떠한 타입의 값이든 interface 타입의 변수에 저장할 수 있다. 그러한 타입에 대해서는 *인터페이스를 구현*했다라고 말한다. 초기화되지 않은 interface 타입의 변수는 nil 값을 갖는다.
 
 <pre>
 <a id="InterfaceType">InterfaceType</a>      = "interface" "{" { <a href="#MethodSpec">MethodSpec</a> ";" } "}" .
@@ -40,11 +40,11 @@ func (p T) Close() { … }
 
 (where `T` stands for either `S1` or `S2`) then the `File` interface is implemented by both `S1` and `S2`, regardless of what other methods `S1` and `S2` may have or share.
 
-(위에서 `T`는 `S1`일 수도 있고 `S2`일 수도 있다) `S1`과 `S2`는 보유하고 있거나 공유하고 있는 다른 메서드들에 관계없이 `File` 인터페이스를 구현한 것이다.
+(위에서 `T`는 `S1`일 수도 있고 `S2`일 수도 있다) 이들이 가지고 있거나 공유하고 있는 다른 메서드들과는 상관없이 `S1`과 `S2`는 File 인터페이스를 구현한 것이다.
 
 A type implements any interface comprising any subset of its methods and may therefore implement several distinct interfaces. For instance, all types implement the *empty interface*:
 
-한 타입은 가지고 있는 모든 메서드중 한 부분만을 포함하는 어떤 인터페이스도 구현한다. 그러므로 별개의 여러 인터페이스들도 구현 할 수 있다. 예를 들어, 모든 타입은 *empty interface*를 구현한다:
+타입은 자신의 메서드에 인터페이스의 메서드를 포함시키는 방법을 통해 어떠한 인터페이스든지 구현할 수 있기 때문에 여러 인터페이스를 함께 구현하는 것도 가능하다. 예를 들어, 모든 타입은 empty interface를 구현하고 있다:
 
 ```
 interface{}
@@ -52,7 +52,7 @@ interface{}
 
 Similarly, consider this interface specification, which appears within a [type declaration](/Declarations%20and%20scope/type_declarations.html) to define an interface called `Locker`:
 
-유사하게, `Locker`라는 인터페이스를 정의하기 위한 [타입 선언문](/Declarations%20and%20scope/type_declarations.html)내 열거되어 있는 인터페이스 사양을 보자. 
+비슷한 경우로, `Locker`라는 인터페이스를 정의하기 위한 [타입 선언문](/Declarations%20and%20scope/type_declarations.html)내 열거되어 있는 인터페이스 사양을 보자. 
 
 ```
 type Locker interface {
@@ -63,7 +63,7 @@ type Locker interface {
 
 If `S1` and `S2` also implement
 
-만약 `S1`과 `S2`가 다음과 같은 메서드를 또 구현했다면
+만약 `S1`과 `S2`가 아래의 메서드도 구현했다면
 
 ```
 func (p T) Lock() { … }
@@ -72,11 +72,11 @@ func (p T) Unlock() { … }
 
 they implement the `Locker` interface as well as the `File` interface.
 
-이들은 `File` 인터페이스 뿐만 아니라 `Locker` 인터페이스도 구현한 것이 된다.
+이들은 `File` 인터페이스 뿐만 아니라 `Locker` 인터페이스도 구현한 것이다.
 
 An interface `T` may use a (possibly qualified) interface type name `E` in place of a method specification. This is called *embedding* interface `E` in `T`; it adds all (exported and non-exported) methods of `E` to the interface `T`.
 
-어떤 인터페이스 `T`는 메서드의 사양이 있어야 할 자리에 (경우에 따라서는 패키지 이름을 동반한) interface 타입 이름 `E`를 사용할 수도 있다. 이것은 인터페이스 `E`를 `T`안에 *임베딩*한 것이라고 부른다: 임베딩은 (엑스포트 여부에 상관없이) `E`의 모든 메서드를 인터페이스 `T`에 더한다. 
+인터페이스 `T`는 메서드의 사양이 있어야 할 자리에 (경우에 따라서는 패키지 이름을 동반한) interface 타입 이름 `E`를 사용할 수도 있다. 이것을 `T`안에 인터페이스 `E`를 임베딩했다고 부른다: 임베딩은 (엑스포트 여부에 상관없이) `E`의 모든 메서드를 인터페이스 `T`에 추가한다. 
 
 ```
 type ReadWriter interface {
@@ -104,8 +104,8 @@ type ReadWriter interface {
 }
 
 type File interface {
-	ReadWriter  // ReadWriter의 메서드를 더하는 것과 같음
-	Locker      // Locker의 메서드를 더하는 것과 같음
+	ReadWriter  // ReadWriter의 메서드를 추가한 것과 같음
+	Locker      // Locker의 메서드를 추가한 것과 같음
 	Close()
 }
 
@@ -141,7 +141,7 @@ type Bad interface {
 	Bad
 }
 
-// 불법: Bad1은 Bad2을 이용해 임베딩할 수 없음
+// 불법: Bad1은 Bad2를 이용해 임베딩할 수 없음
 type Bad1 interface {
 	Bad2
 }
