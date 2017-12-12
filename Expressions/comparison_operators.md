@@ -6,7 +6,7 @@
 
 Comparison operators compare two operands and yield an untyped boolean value.
 
-비교 연산자들은 2개의 피 연산자들을 비교한 다음 타입이 주어지지 않은(untyped) 불리언 값을 생산한다.
+비교 연산자들은 2개의 피 연산자들을 비교한 다음 미지정 타입의(untyped) 불리언 값을 생산한다.
 
 ```
 ==    equal
@@ -81,12 +81,12 @@ var (
 ```
 
 ```
-const c = 3 < 4            // c는 타입이 주어지지 않은 불리언 상수 true
+const c = 3 < 4            // c는 미지정 타입의 불리언 상수 true
 
 type MyBool bool
 var x, y int
 var (
-	// 비교연산의 결과는 타입이 주어지지 않은 불리언이다.
+	// 비교연산의 결과는 미지정 타입의 불리언이다.
 	// 보통의 할당 규칙들이 적용된다.
 	b3        = x == y // b3는 타입 bool을 갖는다
 	b4 bool   = x == y // b4는 타입 bool을 갖는다
