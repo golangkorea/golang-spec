@@ -52,7 +52,7 @@ interface{}
 
 Similarly, consider this interface specification, which appears within a [type declaration](/Declarations%20and%20scope/type_declarations.html) to define an interface called `Locker`:
 
-추가로, `Locker`라는 인터페이스를 정의하기 위한 [타입 선언문](/Declarations%20and%20scope/type_declarations.html)내 열거되어 있는 인터페이스 사양을 보자. 
+추가로, `Locker`라는 인터페이스를 정의한 [타입 선언문](/Declarations%20and%20scope/type_declarations.html)내 열거되어 있는 인터페이스 사양을 보자. 
 
 ```
 type Locker interface {
@@ -118,7 +118,7 @@ type LockedFile interface {
 
 An interface type `T` may not embed itself or any interface type that embeds `T`, recursively.
 
-인터페이스 `T`는 자신을 임베딩할 수 없거니와 `T`를 임베딩한 다른 어떤 인터페이스 타입도 재귀적으로 임베딩할 수 없다.
+인터페이스 `T`는 자신을 임베딩할 수 없고 `T`를 임베딩한 다른 어떤 인터페이스 타입도 재귀적으로 임베딩할 수 없다.
 
 ```
 // illegal: Bad cannot embed itself
