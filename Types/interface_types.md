@@ -40,7 +40,7 @@ func (p T) Close() { … }
 
 (where `T` stands for either `S1` or `S2`) then the `File` interface is implemented by both `S1` and `S2`, regardless of what other methods `S1` and `S2` may have or share.
 
-(위에서 `T`는 `S1`일 수도 있고 `S2`일 수도 있다) 이들이 가지고 있거나 공유하고 있는 다른 메서드들과는 상관없이 `S1`과 `S2`는 File 인터페이스를 구현한 것이다.
+(위에서 `T`는 `S1`일 수도 있고 `S2`일 수도 있다) 이들이 가지고 있거나 공유하고 있는 다른 메서드들과는 상관없이 `S1`과 `S2`는 `File` 인터페이스를 구현한 것이다.
 
 A type implements any interface comprising any subset of its methods and may therefore implement several distinct interfaces. For instance, all types implement the *empty interface*:
 
