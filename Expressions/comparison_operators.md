@@ -60,7 +60,7 @@ The equality operators == and != apply to operands that are *comparable*. The or
 
 A comparison of two interface values with identical dynamic types causes a [run-time panic](/Run-time%20panics/) if values of that type are not comparable. This behavior applies not only to direct interface value comparisons but also when comparing arrays of interface values or structs with interface-valued fields.
 
-동일한 동적 타입을 갖는 2개의 인터페이스 값들이 비교했을 때 만약 이 값들이 비교 가능한 값들이 아니면 [런타임 panic](/Run-time%20panics/)을 초래한다. 이러한 일들은 인터페이스간의 직접적인 비교뿐만 아니라 인터페이스 값을 지닌 배열을 비교할 때와 인터페이스 값을 갖고 있는 필드를 지닌 struct간의 비교에도 적용된다.
+동일한 동적 타입을 갖는 2개의 인터페이스 값들이 비교했을 때 만약 이 값들이 비교 가능한 값들이 아니면 [런타임 패닉](/Run-time%20panics/)을 초래한다. 이러한 일들은 인터페이스간의 직접적인 비교뿐만 아니라 인터페이스 값을 지닌 배열을 비교할 때와 인터페이스 값을 갖고 있는 필드를 지닌 struct간의 비교에도 적용된다.
 
 Slice, map, and function values are not comparable. However, as a special case, a slice, map, or function value may be compared to the predeclared identifier nil. Comparison of pointer, channel, and interface values to nil is also allowed and follows from the general rules above.
 
