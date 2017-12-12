@@ -1,4 +1,4 @@
-# [길이와 용량(Length and capacity)](#Length_and_capacity)
+# [길이와 용량(Length and capacity)](#length-and-capacity)
 
 * Go 버전: 1.9
 * 원문: [Length and capacity)](https://golang.org/ref/spec#Length_and_capacity)

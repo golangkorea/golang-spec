@@ -1,4 +1,4 @@
-# [Close 함수(Close)](#Close)
+# [Close 함수(Close)](#close)
 
 * Go 버전: 1.9
 * 원문: [Close](https://golang.org/ref/spec#Close)
