@@ -52,7 +52,7 @@ interface{}
 
 Similarly, consider this interface specification, which appears within a [type declaration](/Declarations%20and%20scope/type_declarations.html) to define an interface called `Locker`:
 
-비슷한 경우로, `Locker`라는 인터페이스를 정의하기 위한 [타입 선언문](/Declarations%20and%20scope/type_declarations.html)내 열거되어 있는 인터페이스 사양을 보자. 
+추가로, `Locker`라는 인터페이스를 정의하기 위한 [타입 선언문](/Declarations%20and%20scope/type_declarations.html)내 열거되어 있는 인터페이스 사양을 보자. 
 
 ```
 type Locker interface {
