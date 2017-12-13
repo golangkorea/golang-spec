@@ -30,7 +30,7 @@ map `m`에 대한 길이는 내장 함수인 [len](/Built-in%20functions/length_
 
 A new, empty map value is made using the built-in function [make](/Built-in%20functions/making_slices,_maps_and_channels.html), which takes the map type and an optional capacity hint as arguments:
 
-내장 함수인 [`make`](/Built-in%20functions/making_slices,_maps_and_channels.html)를 이용해 새로운 empty map을 만들 수 있다. make 함수의 인자로는 map 타입이 사용되고, 추가인자로 용량(capacity)을 사용할 수 있다.
+내장 함수인 [`make`](/Built-in%20functions/making_slices,_maps_and_channels.html)를 이용해 새로운 empty map을 만들 수 있다. make 함수의 인자로는 map 타입을 전달하고, 추가인자로 용량(capacity)을 사용할 수 있다.
 
 
 ```
