@@ -6,7 +6,7 @@
 
 A map is an unordered group of elements of one type, called the element type, indexed by a set of unique keys of another type, called the key type. The value of an uninitialized map is `nil`.
 
-map은 순서없이 구성된 단일 타입 요소들의 그룹이며, 요소의 타입은 요소 타입(element type)이라고 부른다. map에서는 키 타입(key type)의 고유한 키를 이용해 요소에 접근할 수 있다. 초기화되지 않은 map의 값은 `nil`이다.
+map은 순서없이 구성된 단일 타입 요소들의 그룹이며, 요소의 타입은 요소 타입(element type)이라고 부른다. map에서는 키 타입(key type)의 고유한 *키*를 이용해 요소에 접근할 수 있다. 초기화되지 않은 map의 값은 `nil`이다.
 
 <pre>
 <a id="MapType">MapType</a>     = "map" "[" <a href="#KeyType">KeyType</a> "]" <a href="/Types/array_types.html#ElementType">ElementType</a> .
