@@ -113,5 +113,5 @@ x.(T)
 미지정 타입.
 
 ## zero value
-제로값. 변수가 메모리에 할당되고 그 타입의 제로값이 저장되는 것  <a href="https://golang org/ref/spec#The_zero_value">https://golang org/ref/spec#The_zero_value</a>
+제로값. 변수가 메모리에 할당되고 그 타입의 제로값이 저장되는 것  https://golang.org/ref/spec#The_zero_value
 
