@@ -23,7 +23,7 @@ blank 식별자.
 캐릭터.
 
 ## code point
-코드 포인트. 유니코드에서 사용되는 개념으로 유니코드 캐릭터에서 특정 문자의 값 또는 위치를 의미한다  <a href="http://www unicode org/glossary/index html"></a><a href="http://www">http://www</a> unicode org/glossary/index html
+코드 포인트. 유니코드에서 사용되는 개념으로 유니코드 캐릭터에서 특정 문자의 값 또는 위치를 의미한다  http://www.unicode.org/glossary/index.html
 
 ## composite type
 합성 타입.
@@ -113,5 +113,5 @@ x.(T)
 미지정 타입.
 
 ## zero value
-제로값. 변수가 메모리에 할당되고 그 타입의 제로값이 저장되는 것  <a href="https://golang org/ref/spec#The_zero_value"></a><a href="https://golang">https://golang</a> org/ref/spec#The_zero_value
+제로값. 변수가 메모리에 할당되고 그 타입의 제로값이 저장되는 것  <a href="https://golang org/ref/spec#The_zero_value">https://golang org/ref/spec#The_zero_value</a>
 
