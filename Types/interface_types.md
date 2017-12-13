@@ -111,8 +111,8 @@ type File interface {
 
 type LockedFile interface {
 	Locker
-	File        // 불법: Lock, Unlock이 고유하지 않음
-	Lock()      // 불법: Lock이 고유하지 않음
+	File        // 허용안됨: Lock, Unlock이 고유하지 않음
+	Lock()      // 허용안됨: Lock이 고유하지 않음
 }
 ```
 
@@ -136,12 +136,12 @@ type Bad2 interface {
 ```
 
 ```
-// 불법: Bad는 자신을 임베딩할 수 없음
+// 허용안됨: Bad는 자신을 임베딩할 수 없음
 type Bad interface {
 	Bad
 }
 
-// 불법: Bad1은 Bad2를 이용해 임베딩할 수 없음
+// 허용안됨: Bad1은 Bad2를 이용해 임베딩할 수 없음
 type Bad1 interface {
 	Bad2
 }
