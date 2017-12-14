@@ -1,4 +1,4 @@
-# [문(Statements)](#statements)
+# [구문(Statements)](#statements)
 
 * Go 버전: 1.9
 * 원문: [Statements](https://golang.org/ref/spec#Statements)
@@ -6,7 +6,7 @@
 
 Statements control execution.
 
-문은 실행을 관리한다.
+구문은 실행을 관리한다.
 
 <pre>
 <a id="Statement">Statement</a> =
