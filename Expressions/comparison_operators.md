@@ -64,7 +64,7 @@ A comparison of two interface values with identical dynamic types causes a [run-
 
 Slice, map, and function values are not comparable. However, as a special case, a slice, map, or function value may be compared to the predeclared identifier nil. Comparison of pointer, channel, and interface values to nil is also allowed and follows from the general rules above.
 
-원칙적으로는 슬라이스, map, 함수 값들을 비교할 수 없지만, 미리 선언된 식별자 nil과는 비교할 수 있다. 포인터, 채널, 그리고 인터페이스 값을 `nil`과 비교하는 것도 허용되며 위에 명시된 일반적인 규칙을 따른다.
+원칙적으로는 슬라이스, map, 함수 값들을 비교할 수 없지만, 미리 선언된 식별자 `nil`과는 비교할 수 있다. 포인터, 채널, 그리고 인터페이스 값을 `nil`과 비교하는 것도 허용되며 위에 명시된 일반적인 규칙을 따른다.
 
 ```
 const c = 3 < 4            // c is the untyped boolean constant true
