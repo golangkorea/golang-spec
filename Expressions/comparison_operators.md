@@ -20,8 +20,8 @@ Comparison operators compare two operands and yield an untyped boolean value.
 ```
 ==    같다
 !=    같지 않다
-<     적다
-<=    적거나 같다
+<     작다
+<=    작거나 같다
 >     크다
 >=    크거나 같다
 ```
@@ -50,7 +50,7 @@ The equality operators == and != apply to operands that are *comparable*. The or
  * 정수 값들은 일반적으로 비교할 수 있으며 순서가 있다.
  * IEEE-754 표준에 따라 정의된 부동 소수점 값들은 비교할 수 있으며 순서가 있다.
  * 2개의 복소수 값 `u`와 `v`는 `real(u) == real(v)`와 `imag(u) == imag(v)`를 동시에 만족할 경우 서로 같다라고 말할 수 있다.
- * 문자열 값들은 어휘 바이트 단위로 비교할 수 있고 순서가 있다.
+ * 문자열 값들은 어휘 바이트 단위(lexically byte-wise)로 비교할 수 있고 순서가 있다.
  * 2개의 포인터 값이 모두 `nil`이거나 같은 변수를 가리킬 때 서로 같다고 말할 수 있다. 서로 다른 [zero-size](/System%20considerations/size_and_alignment_guarantees.html) 변수에 대한 포인터는 같거나 다를 수 있다.
  * 만약 2개의 채널이 모두 `nil`값을 갖거나 같은 [make](/making_slices,_maps_and_channels.html)의 호출을 통해 만들어 졌다면 같다고 말할 수 있다.
  * 2개의 인터페이스가 [같은(identical)](/Properties%20of%20types%20and%20values/type_identity.html) 동적 타입, 같은 동적 값을 가지고 있거나 둘 다 `nil`값을 갖고 있을 때 같다고 말할 수 있다.
@@ -64,7 +64,7 @@ A comparison of two interface values with identical dynamic types causes a [run-
 
 Slice, map, and function values are not comparable. However, as a special case, a slice, map, or function value may be compared to the predeclared identifier nil. Comparison of pointer, channel, and interface values to nil is also allowed and follows from the general rules above.
 
-원칙적으로는 슬라이스, map, 함수 값들을 비교할 수 없지만, 미리 선언된 식별자 nil와는 비교할 수 있다. 포인터, 채널, 그리고 인터페이스 값을 `nil`과 비교하는 것도 허용되며 위에 명시된 일반적인 규칙을 따른다.
+원칙적으로는 슬라이스, map, 함수 값들을 비교할 수 없지만, 미리 선언된 식별자 nil과는 비교할 수 있다. 포인터, 채널, 그리고 인터페이스 값을 `nil`과 비교하는 것도 허용되며 위에 명시된 일반적인 규칙을 따른다.
 
 ```
 const c = 3 < 4            // c is the untyped boolean constant true
