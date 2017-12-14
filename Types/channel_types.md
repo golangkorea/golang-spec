@@ -65,5 +65,5 @@ A channel may be closed with the built-in function [`close`](/Built-in%20functio
 
 A single channel may be used in [send statements](/Statements/send_statements.html), [receive operations](/Expressions/receive_operator.html), and calls to the built-in functions [cap](/Built-in%20functions/length_and_capacity.html) and [len](/Built-in%20functions/length_and_capacity.html) by any number of goroutines without further synchronization. Channels act as first-in-first-out queues. For example, if one goroutine sends values on a channel and a second goroutine receives them, the values are received in the order sent.
 
-[송신 구문](/Statements/send_statements.html), [수신 연산](/Expressions/receive_operator.html), 그리고 내장 함수인 [`cap`](/Built-in%20functions/length_and_capacity.html) 과 [`len`](/Built-in%20functions/length_and_capacity.html)의 호출시 특별한 동기화 없이도 여러 고루틴에서 하나의 채널을 공유할 수 있다. 채널들은 선착순 큐(first-in-first-out queues)처럼 동작한다. 예를 들어, 한 고루틴에서 어떤 채널에 값들을 송신하고 다른 고루틴에서 수신하면, 값들은 송신한 순서대로 수신된다.
+[송신 구문](/Statements/send_statements.html), [수신 연산](/Expressions/receive_operator.html), 그리고 내장 함수인 [`cap`](/Built-in%20functions/length_and_capacity.html) 과 [`len`](/Built-in%20functions/length_and_capacity.html)의 호출시 특별한 동기화 없이도 여러 고루틴에서 하나의 채널을 공유할 수 있다. 채널들은 선입-선출 큐(first-in-first-out queues)처럼 동작한다. 예를 들어, 한 고루틴에서 어떤 채널에 값들을 송신하고 다른 고루틴에서 수신하면, 값들은 송신한 순서대로 수신된다.
 
