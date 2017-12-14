@@ -29,7 +29,7 @@ components have identical types. In detail:
  * 두개의 구조체(struct) 타입은 만약 같은 순서로 필드들이 배치되고, 상응하는 필드의 명칭들이 동일하며, 동일한 타입과 동일한 태그들을 가지고 있다면 동일하다. 서로 다른 패키지내에 [엑스포트 되지않은(Non-exported)](/Declarations%20and%20scope/exported_identifiers.html) 필드의 이름들은 항상 다르다.
  * 두개의 포인터 타입은 만약 동일한 기본 타입(base types)를 가지고 있으면 동일하다.
  * 두개의 함수 타입은 가변성인자 함수(variadic)이든 아니든 만약 같은 수의 인자와 반환값, 상응하는 인자의 타입과 반환값의 타입이 같으면 동일하다. 인자와 반환 값의 명칭들은 똑같을 필요가 없다.
- * 두개의 인터페이스 타입은 만약 동일한 명칭과 함수 타입의 메소드로 구성된 동일한 메소드의 집합을 가지고 있다면 동일하다. 서로 다른 패키지내에 [엑스포트 되지않은(Non-exported)](/Declarations%20and%20scope/exported_identifiers.html) 메소드의 이름들은 항상 다르다.
+ * 두개의 인터페이스 타입은 만약 동일한 명칭과 함수 타입의 메서드로 구성된 동일한 메서드의 집합을 가지고 있다면 동일하다. 서로 다른 패키지내에 [엑스포트 되지않은(Non-exported)](/Declarations%20and%20scope/exported_identifiers.html) 메서드의 이름들은 항상 다르다.
  * 두개의 맵(map) 타입은 만약 동일한 타입의 키(key)와 값을 갖고 있다면 동일하다.
  * 두개의 채널(channel) 타입은 만약 동일한 타입의 값과 동일한 방향성을 갖고 있다면 동일하다.
 
