@@ -29,12 +29,12 @@ Dependency analysis does not rely on the actual values of the variables, only on
 의존성에 대한 분석은 변수들의 실제값들에 의지하지 않고, 단지 소스내 변수들을 언급하는 어휘적 *레퍼런스*(lexical *references*)에 의해 전이적으로 (transitively) 분석된다. 예를 들어, 만약에 변수 x의 초기화 표현식이 함수를 언급하고 함수의 몸통이 변수 y를 언급한다면, x는 y에 의존하는 것이다. 구체적으로:
 
  * 변수나 함수에 대한 레퍼런스는 변수나 함수를 표시하는 식별자이다.
- * 메소드 `m`에 대한 레퍼런스는 [메소드 값](/Expressions/method_values.html)이거나 `t.m` 형태의 [메소드 표현](/Expressions/method_expressions.html)으로, `t`의 (정적) 타입은 인터페이스 타입이 아니고, 메소드 `m`은 `t`의 [메소드 집합](/Types/method_sets.html)에 존재한다. 결과적인 함수 값 `t.m`이 호출되었는지 여부는 중요하지 않다.
- * 변수, 함수, 혹은 메소드 `x`가 변수 `y`에 의존적이라 함은 `x`의 초기화 표현식이나 (함수들이나 메소드들의) 몸통이 `y`에 대해 레퍼런스를 가지고 있던지 `y`에 의존적인 함수나 메소드에 레퍼런스를 가지고 있는 경우다.
+ * 메서드 `m`에 대한 레퍼런스는 [메서드 값](/Expressions/method_values.html)이거나 `t.m` 형태의 [메서드 표현](/Expressions/method_expressions.html)으로, `t`의 (정적) 타입은 인터페이스 타입이 아니고, 메서드 `m`은 `t`의 [메서드 집합](/Types/method_sets.html)에 존재한다. 결과적인 함수 값 `t.m`이 호출되었는지 여부는 중요하지 않다.
+ * 변수, 함수, 혹은 메서드 `x`가 변수 `y`에 의존적이라 함은 `x`의 초기화 표현식이나 (함수들이나 메서드들의) 몸통이 `y`에 대해 레퍼런스를 가지고 있던지 `y`에 의존적인 함수나 메서드에 레퍼런스를 가지고 있는 경우다.
 
 Dependency analysis is performed per package; only references referring to variables, functions, and methods declared in the current package are considered.
 
-의존성 분석은 패키지 단위로 이행되며; 현재의 패키지내 선언되어 있는 변수들, 함수들, 그리고 메소드들을 언급하는 레퍼런스들만 고려된다.
+의존성 분석은 패키지 단위로 이행되며; 현재의 패키지내 선언되어 있는 변수들, 함수들, 그리고 메서드들을 언급하는 레퍼런스들만 고려된다.
 
 For example, given the declarations
 
