@@ -83,7 +83,7 @@ struct {
 
 A field or [method](/Declarations%20and%20scope/method_declarations.html) f of an embedded field in a struct x is called promoted if x.f is a legal [selector](/Expressions/selectors.html) that denotes that field or method f.
 
-`x.f`가 [selector](/Expressions/selectors.html)로서 유효한 표현이며 `f`가 구조체 `x`의 임베디드 필드 속 필드나 [메서드](/Declarations%20and%20scope/method_declarations.html)일 경우 필드(혹은 메서드)`f`가 승진(*promoted*)되었다고 한다.
+`x.f`가 [selector](/Expressions/selectors.html)로서 유효한 표현이며 `f`가 구조체 `x`의 임베디드 필드 속 필드나 [메서드](/Declarations%20and%20scope/method_declarations.html)일 경우 필드(혹은 메서드)`f`가 *승진(promoted)* 되었다고 한다.
 
 Promoted fields act like ordinary fields of a struct except that they cannot be used as field names in [composite literals](/Expressions/composite_literals.html) of the struct.
 
