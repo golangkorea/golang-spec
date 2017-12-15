@@ -23,6 +23,8 @@ A Pointer is a [pointer type](/Types/pointer_types.html) but a `Pointer` value m
 
 Pointer는 [포인터 타입(pointer type)](/Types/pointer_types.html)이며 `Pointer`값은 [디레퍼런스(dereferenced)](/Expressions/address_operators.html)될 수 없다. [내재 타입(underlying type)](/Types/)이 `uintptr`인 어떤 포인터나 값은 `Pointer` 타입으로 변환될 수 있고, 반대 방향의 변환도 가능하다. `Pointer`와 `uintptr`간 변환의 효과는 구현시 정의(implementation-defined)된다.
 
+Pointer는 [포인터 타입(pointer type)](/Types/pointer_types.html)이며 `Pointer`값은 [디레퍼런스(dereferenced)](/Expressions/address_operators.html)될 수 없다. [내재 타입(underlying type)](/Types/)이 `uintptr`인 어떤 포인터나 값은 `Pointer` 타입으로 변환될 수 있고, 반대 방향의 변환도 가능하다. `Pointer`와 `uintptr`간 변환의 효과는 구현시 정의(implementation-defined)된다.
+
 ```
 var f float64
 bits = *(*uint64)(unsafe.Pointer(&f))

@@ -20,4 +20,4 @@ A value x is assignable to a [variable](/Variables/) of type T ("x is assignable
  * T가 인터페이스 타입이고 x가 T를 [구현한다(implements)](/Types/interface_types.html).
  * x가 양방향 채널 값이고, T가 채널 타입일때, x의 타입 V와 T가 동일한 요소 타입을 가지고 있고, 적어도 V와 T중 하나는 정의된 타입이 아니다.
  * x가 미리 선언된 식별자인 nil이고 T가 포인터(pointer), 함수(function), 슬라이스(slice), 맵(map), 채널(channel), 그리고 인터페이스 타입이다.
- * x는 타입 T의 값으로 표현될 수 있는 타입없는 [상수(constant)](/Constants/) 값이다.
+ * x는 타입 T의 값으로 나타낼 수 있는 타입이 주어지지 않은 [상수(constant)](/Constants/) 값이다.
