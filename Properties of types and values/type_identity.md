@@ -77,4 +77,6 @@ func(x int, y float64) *[]string, func(int, float64) (result *[]string), and A5
 
 `B0` and `B1` are different because they are new types created by distinct <a href="#Type_definitions">type definitions</a>; `func(int, float64) *B0` and `func(x int, y float64) *[]string` are different because `B0` is different from `[]string`.
 
+
 `B0`와 `B1`이 서로 다른 이유는 별도의 [타입 정의(type definitions)](/Declarations%20and%20scope/type_declarations.html#type-definitions)를 이용해 생성한 새로운 타입들이기 때문이다; `B0`이 `[]string`과 다르기 때문에 `func(int, float64) *B0`과 `func(x int, y float64) *[]string`은 서로 다르다.
+
