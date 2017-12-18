@@ -45,7 +45,7 @@ struct {
 
 A field declared with a type but no explicit field name is an *embedded field*. An embedded field must be specified as a type name `T` or as a pointer to a non-interface type name `*T`, and `T` itself may not be a pointer type. The unqualified type name acts as the field name.
 
-명시적인 이름이 없이 타입만 선언된 필드를 *임베디드 필드(embedded field)* 라고 한다. 임베디드 필드는 타입 이름 `T`로 명시되거나 `*T`와 같이 포인터를 쓸때는 인터페이스 타입을 쓸 수 없다. 또한 `T` 자체는 포인터 타입이 아니어야 한다. unqualified 타입 이름은 필드 이름처럼 사용된다.
+명시적인 이름이 없이 타입만 선언된 필드를 *임베디드 필드(embedded field)* 라고 한다. 임베디드 필드는 타입 이름 `T` 또는 `*T`와 같은 포인터로 나타낼 수 있다. 단, `T`는 포인터 타입이 될 수 없고, `*T`에는 인터페이스 타입을 쓸 수 없다. unqualified 타입 이름은 필드 이름처럼 사용된다.
 
 ```
 // A struct with four embedded fields of types T1, *T2, P.T3 and *P.T4
@@ -71,19 +71,19 @@ struct {
 
 The following declaration is illegal because field names must be unique in a struct type:
 
-구조체의 필드 이름이 반드시 고유해야 하기 때문에 아래와 같은 선언문은 허용되지 않는다:
+구조체의 필드 이름은 고유해야 하기 때문에 아래와 같은 선언문은 허용되지 않는다:
 
 ```
 struct {
-	T     // 임베디드된 필드 *T, *P.T와 충돌
-	*T    // 임베디드된 필드 T, *P.T와 충돌
-	*P.T  // 임베디드된 필드 T, *T와 충돌
+	T     // 임베디드 필드 *T, *P.T와 충돌
+	*T    // 임베디드 필드 T, *P.T와 충돌
+	*P.T  // 임베디드 필드 T, *T와 충돌
 }
 ```
 
 A field or [method](/Declarations%20and%20scope/method_declarations.html) f of an embedded field in a struct x is called promoted if x.f is a legal [selector](/Expressions/selectors.html) that denotes that field or method f.
 
-`x.f`가 [selector](/Expressions/selectors.html)로서 유효한 표현이며 `f`가 구조체 `x`의 임베디드 필드 속 필드나 [메서드](/Declarations%20and%20scope/method_declarations.html)일 경우 필드(혹은 메서드)`f`가 *승진(promoted)* 되었다고 한다.
+`x.f`가 [selector](/Expressions/selectors.html)로서 유효한 표현이며 `f`가 구조체 `x`의 임베디드 필드 속 필드나 [메서드](/Declarations%20and%20scope/method_declarations.html)일 경우 필드(혹은 메서드)`f`가 *승진(promoted)* 되었다고 말한다.
 
 Promoted fields act like ordinary fields of a struct except that they cannot be used as field names in [composite literals](/Expressions/composite_literals.html) of the struct.
 
@@ -94,10 +94,10 @@ Given a struct type `S` and a type named `T`, promoted methods are included in t
   * If `S` contains an embedded field T, the [method sets](/Types/method_sets.html) of S and `*S` both include promoted methods with receiver T. The method set of `*S` also includes promoted methods with receiver `*T`.
   * If `S` contains an embedded field `*T`, the method sets of S and `*S` both include promoted methods with receiver T or `*T`.
 
-struct 타입이 `S`이고 `T`라는 이름의 한 타입이 주어졌을때, 그 구조체의 메서드 집합(method set)에 메서드가 승진되는(promoted) 경우는 다음과 같다:
+struct 타입이 `S`이고 `T`라는 이름의 한 타입이 주어졌을때, 그 구조체의 메서드 집합(method set)에 promoted 메서드가 포함되는 경우는 다음과 같다:
 
-  * `S`가 임베디드 필드 `T`를 포함하면, `S`와 `*S`의 두 경우 모두 [메서드 집합](/Types/method_sets.html)은 receiver를 `T`로 하는 promoted 메서드를 포함한다. 또한, `*S`의 메서드 집합은 receiver를 `*T`로 하는 promoted 메서드를 포함한다.
-  * `S`가 임베디드 필드 `*T`를 포함하면, `S`와 `*S`의 두 경우 모두 메서드 집합은 receiver를 `T`나`*T`로 하는 promoted 메서드를 포함한다.
+  * `S`가 임베디드 필드 `T`를 포함하면, `S`와 `*S`의 [메서드 집합](/Types/method_sets.html)은 receiver를 `T`로 하는 promoted 메서드를 포함한다. 또한, `*S`의 메서드 집합은 receiver를 `*T`로 하는 promoted 메서드를 포함한다.
+  * `S`가 임베디드 필드 `*T`를 포함하면, `S`와 `*S`의 메서드 집합은 receiver를 `T`나`*T`로 하는 promoted 메서드를 포함한다.
 
 A field declaration may be followed by an optional string literal tag, which becomes an attribute for all the fields in the corresponding field declaration. An empty tag string is equivalent to an absent tag. The tags are made visible through a [reflection interface](https://golang.org/pkg/reflect/#StructTag) and take part in [type identity](/Properties%20of%20types%20and%20values/type_identity.html) for structs but are otherwise ignored.
 
