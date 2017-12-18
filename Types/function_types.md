@@ -25,8 +25,6 @@ The final incoming parameter in a function signature may have a type prefixed wi
 
 함수 시그니처의 마지막 매개변수는 타입 정보 앞에 `...`를 함께 사용할 수 있다. 이런 매개 변수를 갖고 있는 함수를 *variadic*이라고 부르고, 함수 호출시 이 매개변수에 전달되는 인자가 여러 개일 수도 있고, 하나도 없을 수도 있다.
 
-함수 시그니처의 마지막 매개변수는 타입 정보 앞에 `...`를 함께 사용할 수 있다. 이런 매개 변수를 갖고 있는 함수를 variadic이라고 부르고, 함수 호출시 이 매개변수에 전달되는 인자가 여러 개일 수도 있고, 하나도 없을 수도 있다.
-
 ```
 func()
 func(x int) int
