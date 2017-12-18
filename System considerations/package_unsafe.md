@@ -41,7 +41,7 @@ The functions `Alignof` and `Sizeof` take an expression x of any type and return
 
 The function `Offsetof` takes a (possibly parenthesized) [selector](/Expressions/selectors.html) `s.f`, denoting a field `f` of the struct denoted by `s` or `*s`, and returns the field offset in bytes relative to the struct's address. If `f` is an [embedded field](/Types/struct_types.html), it must be reachable without pointer indirections through fields of the struct. For a struct `s` with field `f`:
 
-`Offsetof` 함수는 구조체인 `s`나 `*s`의 필드를 의미하는 `f`를 (괄호가 사용되었을 가능성이 있는) [선택자 표현(selector)](/Expressions/selectors.html)인 `s.f`로 받아서 구조체 주소에 상대적인 필드의 오프셋(offset)을 바이트 단위로 돌려준다. 만약 `f`가 [임베드된 필드(embedded field)](/Types/struct_types.html)일 경우, 구조체의 필드들을 통한 포인터 인디렉션(pointer indirection) 없이 접근할 수 있어야 한다. 구조체 `s`의 필드 `f`에 대해:
+`Offsetof` 함수는 구조체인 `s`나 `*s`의 필드를 의미하는 `f`를 (괄호가 사용되었을 가능성이 있는) [선택자 표현(selector)](/Expressions/selectors.html)인 `s.f`로 받아서 구조체 주소에 상대적인 필드의 오프셋(offset)을 바이트 단위로 돌려준다. 만약 `f`가 [임베디드 필드(embedded field)](/Types/struct_types.html)일 경우, 구조체의 필드들을 통한 포인터 인디렉션(pointer indirection) 없이 접근할 수 있어야 한다. 구조체 `s`의 필드 `f`에 대해:
 
 ```
 uintptr(unsafe.Pointer(&s)) + unsafe.Offsetof(s.f) == uintptr(unsafe.Pointer(&s.f))
