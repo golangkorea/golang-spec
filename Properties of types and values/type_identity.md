@@ -6,7 +6,7 @@
 
 Two types are either identical or different.
 
-두개의 타입은 동일하거나 다르다.
+2개의 타입은 같거나(identical) 다르다.
 
 A <a href="#Type_definitions">defined type</a> is always different from any other type.
 Otherwise, two types are identical if their <a href="#Types">underlying</a> type literals are
@@ -22,20 +22,20 @@ components have identical types. In detail:
   * Two map types are identical if they have identical key and value types.
   * Two channel types are identical if they have identical value types and the same direction.
 
-[정의된 타입(defined type)](/Declarations%20and%20scope/type_declarations.html#type-definitions)은 항상 다른 타입들과 다르다. 그렇지 않을 경우, 만약 타입 사이에서 [내재하는(underlying)](/Types/) 타입 리터럴이 구조적으로 동일하다면; 즉, 동일한 리터럴 구조와 상응하는 구성요소가 동일한 타입을 가지고 있다면 그 타입들은 동일하다. 자세하게 설명하자면:
+[타입 정의를 이용해 만든 타입(defined type)](/Declarations%20and%20scope/type_declarations.html#type-definitions)은 항상 다른 타입과 다르다. 그 밖의 타입은 [내재(underlying)](/Types/) 타입 리터럴이 구조적으로 동일하다면 두 개의 타입이 서로 같다고 말할 수 있다; 즉, 리터럴 구조와 상응하는 구성요소가 같다면 같은 타입이라고 할 수 있다. 자세하게 설명하자면:
 
- * 두개의 정렬(array) 타입은 만약 동일한 요소 타입과 동일한 길이를 가지고 있다면 동일한다.
- * 두개의 슬라이스(slice) 타입은 만약 동일한 요소 타입을 가지고 있다면 동일하다.
- * 두개의 구조체(struct) 타입은 만약 같은 순서로 필드들이 배치되고, 상응하는 필드의 명칭들이 동일하며, 동일한 타입과 동일한 태그들을 가지고 있다면 동일하다. 서로 다른 패키지내에 [엑스포트 되지않은(Non-exported)](/Declarations%20and%20scope/exported_identifiers.html) 필드의 이름들은 항상 다르다.
- * 두개의 포인터 타입은 만약 동일한 기본 타입(base types)를 가지고 있으면 동일하다.
- * 두개의 함수 타입은 가변성인자 함수(variadic)이든 아니든 만약 같은 수의 인자와 반환값, 상응하는 인자의 타입과 반환값의 타입이 같으면 동일하다. 인자와 반환 값의 명칭들은 똑같을 필요가 없다.
- * 두개의 인터페이스 타입은 만약 동일한 명칭과 함수 타입의 메서드로 구성된 동일한 메서드의 집합을 가지고 있다면 동일하다. 서로 다른 패키지내에 [엑스포트 되지않은(Non-exported)](/Declarations%20and%20scope/exported_identifiers.html) 메서드의 이름들은 항상 다르다.
- * 두개의 맵(map) 타입은 만약 동일한 타입의 키(key)와 값을 갖고 있다면 동일하다.
- * 두개의 채널(channel) 타입은 만약 동일한 타입의 값과 동일한 방향성을 갖고 있다면 동일하다.
+ * 2개의 array 타입은 요소 타입과 배열 길이가 같으면 서로 같다.
+ * 2개의 슬라이스 타입은 요소 타입이 같다면 서로 같다. 
+ * 2개의 struct 타입은 필드 순서가 같고, 상응하는 필드의 이름, 타입, 태그가 같으면 서로 같다. 서로 다른 패키지의 [엑스포트 되지 않은(Non-exported)](/Declarations%20and%20scope/exported_identifiers.html) 필드 이름들은 항상 다르다.
+ * 2개의 포인터 타입은 기본 타입(base types)이 같으면 서로 같다.
+ * 2개의 함수 타입은 매개변수 갯수, 반환 값 갯수, 상응하는 매개변수의 타입과 반환 값의 타입이 같으면 서로 같다. 2개의 함수는 모두 variadic 함수거나 둘 다 variadic 함수가 아니여도 된다. 매개변수와 반환 값의 이름들은 달라도 된다.
+ * 2개의 interface 타입은 같은 이름과 같은 함수 타입으로 구성된 메서드의 집합이 같으면 서로 같다. 서로 다른 패키지내에 [엑스포트 되지 않은(Non-exported)](/Declarations%20and%20scope/exported_identifiers.html) 메서드의 이름들은 항상 다르다. 메서드의 순서는 상관없다.
+ * 2개의 map 타입은 키(key) 타입과 값 타입이 같으면 서로 같다.
+ * 2개의 channel 타입은 값 타입과 방향성(direction)이 같으면 서로 같다.
 
 Given the declarations
 
-아래 주어진 선언문에서
+아래 선언문에서
 
 ```
 type (
@@ -77,4 +77,6 @@ func(x int, y float64) *[]string, func(int, float64) (result *[]string), and A5
 
 `B0` and `B1` are different because they are new types created by distinct <a href="#Type_definitions">type definitions</a>; `func(int, float64) *B0` and `func(x int, y float64) *[]string` are different because `B0` is different from `[]string`.
 
-`B0`와 `B1`은 서로 다른 이유는 독특한 [타입 정의(type definitions)](/Declarations%20and%20scope/type_declarations.html#type-definitions)들로 만들어지 새로운 타입들이기 때문이다; `B0`이 `[]string`과 다르기 때문에 `func(int, float64) *B0`과 `func(x int, y float64) *[]string`은 서로 다르다.
+
+`B0`와 `B1`이 서로 다른 이유는 별도의 [타입 정의(type definitions)](/Declarations%20and%20scope/type_declarations.html#type-definitions)를 이용해 생성한 새로운 타입들이기 때문이다; `B0`이 `[]string`과 다르기 때문에 `func(int, float64) *B0`과 `func(x int, y float64) *[]string`은 서로 다르다.
+

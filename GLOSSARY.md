@@ -88,6 +88,9 @@ blank 식별자.
 ## static type
 정적 타입.
 
+## terminating statement
+종결문. 함수 실행시 마지막에 실행되는 구문이다. [Go 1.1 release note](https://golang.org/doc/go1.1#return)
+
 ## token
 토큰.
 
