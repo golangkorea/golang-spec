@@ -37,6 +37,9 @@ blank 식별자.
 ## equality operators
 동등 연산자.
 
+## expression
+식. 예를 들어, index expression의 번역은 인덱스 식
+
 ## function body
 함수 본문.
 
@@ -45,9 +48,6 @@ blank 식별자.
 
 ## illegal
 허용안됨. 문장에서 사용될 경우 “Go 문법에서는 … 허용하지 않는다 ” 로 번역 
-
-## index expressions
-인덱스 표현.
 
 ## key type
 키 타입.
