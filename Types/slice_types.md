@@ -22,7 +22,7 @@ A slice, once initialized, is always associated with an underlying array that ho
 
 The array underlying a slice may extend past the end of the slice. The *capacity* is a measure of that extent: it is the sum of the length of the slice and the length of the array beyond the slice; a slice of length up to that capacity can be created by [slicing](/Expressions/slice_expressions.html) a new one from the original slice. The capacity of a slice a can be discovered using the built-in function [cap(a)](/Built-in%20functions/length_and_capacity.html).
 
-내재하는 array는 슬라이스의 끝을 넘어서도 계속될 수 있다. *수용력(capapcity)*은 그러한 범위에 대한 계량이다: 슬라이스의 길이와 슬라이스의 경계를 넘어서 있는 구역의 길이의 합이다; 수용력(capacity)과 같은 길이의 슬라이스는 원래의 슬라이스로 부터 [슬라이스 표현(slicing)](/Expressions/slice_expressions.html)을 사용해 새로운 슬라이스로 만들 수 있다. 슬라이스의 수용력(capacity)는 내장 함수 [cap(a)](/Built-in%20functions/length_and_capacity.html)를 가지고 산출할 수 있다.
+내재하는 array는 슬라이스의 끝을 넘어서도 계속될 수 있다. *수용력(capapcity)*은 그러한 범위에 대한 계량이다: 슬라이스의 길이와 슬라이스의 경계를 넘어서 있는 구역의 길이의 합이다; 수용력(capacity)과 같은 길이의 슬라이스는 원래의 슬라이스로 부터 [슬라이싱(slicing)](/Expressions/slice_expressions.html)을 사용해 새로운 슬라이스로 만들 수 있다. 슬라이스의 수용력(capacity)는 내장 함수 [cap(a)](/Built-in%20functions/length_and_capacity.html)를 가지고 산출할 수 있다.
 
 A new, initialized slice value for a given element type T is made using the built-in function [make](/Built-in%20functions/making_slices,_maps_and_channels.html), which takes a slice type and parameters specifying the length and optionally the capacity. A slice created with make always allocates a new, hidden array to which the returned slice value refers. That is, executing
 
@@ -34,7 +34,7 @@ make([]T, length, capacity)
 
 produces the same slice as allocating an array and [slicing](/Expressions/slice_expressions.html) it, so these two expressions are equivalent:
 
-array를 할당하고 [슬라이스 표현(slicing)](/Expressions/slice_expressions.html)으로 슬라이스를 만든 것과 같은 슬라이스를 생산하게 되어서, 다음의 두 표현식은 동일하다:
+array를 할당하고 [슬라이싱(slicing)](/Expressions/slice_expressions.html)으로 슬라이스를 만든 것과 같은 슬라이스를 생산하게 되어서, 다음의 두 표현식은 동일하다:
 
 ```
 make([]int, 50, 100)

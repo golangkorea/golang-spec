@@ -41,7 +41,7 @@ The functions `Alignof` and `Sizeof` take an expression x of any type and return
 
 The function `Offsetof` takes a (possibly parenthesized) [selector](/Expressions/selectors.html) `s.f`, denoting a field `f` of the struct denoted by `s` or `*s`, and returns the field offset in bytes relative to the struct's address. If `f` is an [embedded field](/Types/struct_types.html), it must be reachable without pointer indirections through fields of the struct. For a struct `s` with field `f`:
 
-`Offsetof` 함수는 구조체인 `s`나 `*s`의 필드를 의미하는 `f`를 (괄호가 사용되었을 가능성이 있는) [선택자 표현(selector)](/Expressions/selectors.html)인 `s.f`로 받아서 구조체 주소에 상대적인 필드의 오프셋(offset)을 바이트 단위로 돌려준다. 만약 `f`가 [임베디드 필드(embedded field)](/Types/struct_types.html)일 경우, 구조체의 필드들을 통한 포인터 인디렉션(pointer indirection) 없이 접근할 수 있어야 한다. 구조체 `s`의 필드 `f`에 대해:
+`Offsetof` 함수는 구조체인 `s`나 `*s`의 필드를 의미하는 `f`를 (괄호가 사용되었을 가능성이 있는) [선택자(selector)](/Expressions/selectors.html)인 `s.f`로 받아서 구조체 주소에 상대적인 필드의 오프셋(offset)을 바이트 단위로 돌려준다. 만약 `f`가 [임베디드 필드(embedded field)](/Types/struct_types.html)일 경우, 구조체의 필드들을 통한 포인터 인디렉션(pointer indirection) 없이 접근할 수 있어야 한다. 구조체 `s`의 필드 `f`에 대해:
 
 ```
 uintptr(unsafe.Pointer(&s)) + unsafe.Offsetof(s.f) == uintptr(unsafe.Pointer(&s.f))
@@ -49,7 +49,7 @@ uintptr(unsafe.Pointer(&s)) + unsafe.Offsetof(s.f) == uintptr(unsafe.Pointer(&s.
 
 Computer architectures may require memory addresses to be *aligned*; that is, for addresses of a variable to be a multiple of a factor, the variable's type's *alignment*. The function `Alignof` takes an expression denoting a variable of any type and returns the alignment of the (type of the) variable in bytes. For a variable `x`:
 
-어떤 컴퓨터 아키텍쳐들은 메모리 주소의 *정렬(aligned)*을 요구할 수도 있다; 즉, 변수의 주소들은 변수 타입의 *얼라인먼트(alignment)*라는 인자의 배수이어야 한다. `Alignof` 함수는 어떤 타입의 변수를 의미하는 표현식을 받아서 (그 타입의) 변수의 얼라인먼트를 바이트 단위로 돌려준다. 변수 `x`의 예를 들자면:
+어떤 컴퓨터 아키텍쳐들은 메모리 주소의 *정렬(aligned)*을 요구할 수도 있다; 즉, 변수의 주소들은 변수 타입의 *얼라인먼트(alignment)*라는 인자의 배수이어야 한다. `Alignof` 함수는 어떤 타입의 변수를 의미하는 식을 받아서 (그 타입의) 변수의 얼라인먼트를 바이트 단위로 돌려준다. 변수 `x`의 예를 들자면:
 
 
 ```
@@ -58,4 +58,4 @@ uintptr(unsafe.Pointer(&x)) % unsafe.Alignof(x) == 0
 
 Calls to `Alignof`, `Offsetof`, and `Sizeof` are compile-time constant expressions of type `uintptr`.
 
-`Alignof`, `Offsetof`, 그리고 `Sizeof` 함수들에 대한 호출은 `uintptr` 타입의 컴파일 타임(compile-time) 상수 표현들이다.
+`Alignof`, `Offsetof`, 그리고 `Sizeof` 함수들에 대한 호출은 `uintptr` 타입의 컴파일 타임(compile-time) 상수 식이다.

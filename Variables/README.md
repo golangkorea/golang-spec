@@ -36,4 +36,4 @@ x = v              // x는 (*T)(nil)를 *T형 동적 타입으로 가진다
 
 A variable's value is retrieved by referring to the variable in an [expression](/Expressions/); it is the most recent value [assigned](/Statements/assignments.html) to the variable. If a variable has not yet been assigned a value, its value is the [zero value](/Program%20initialization%20and%20execution/the_zero_value.html) for its type.
 
-변수의 값은 [표현식](/Expressions/)에 있는 변수를 참조함으로서 검색된다. 이것은 가장 최근에 해당 변수에 [할당된](/Statements/assignments.html) 값이다. 만약 아직 값이 변수에 할당되어지지 않았다면 변수의 값은 해당 변수의 타입을 위해 [zero값](/Program%20initialization%20and%20execution/the_zero_value.html)이 된다.
+변수의 값은 [식](/Expressions/)에 있는 변수를 참조함으로서 검색된다. 이것은 가장 최근에 해당 변수에 [할당된](/Statements/assignments.html) 값이다. 만약 아직 값이 변수에 할당되어지지 않았다면 변수의 값은 해당 변수의 타입을 위해 [zero값](/Program%20initialization%20and%20execution/the_zero_value.html)이 된다.
