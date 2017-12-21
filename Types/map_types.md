@@ -26,7 +26,7 @@ map[string]interface{}
 
 The number of map elements is called its length. For a map m, it can be discovered using the built-in function [len](/Built-in%20functions/length_and_capacity.html) and may change during execution. Elements may be added during execution using [assignments](/Statements/assignments.html) and retrieved with [index expressions](/Expressions/index_expressions.html); they may be removed with the [delete](/Built-in%20functions/deletion_of_map_elements.html) built-in function.
 
-map `m`에 대한 길이는 내장 함수인 [len](/Built-in%20functions/length_and_capacity.html)을 이용해 구할 수 있으며, 이 길이는 프로그램 실행 중 변경될 수 있다. 프로그램 실행 중 [할당(assignments)](/Statements/assignments.html)을 이용해 새로운 요소를 추가할 수 있으며, [인덱스 표현(index expressions)](/Expressions/index_expressions.html)을 이용해 요소에 접근할 수 있다; 내장 함수인 [`delete`](/Built-in%20functions/deletion_of_map_elements.html)를 사용해 요소를 삭제할 수도 있다.
+map `m`에 대한 길이는 내장 함수인 [len](/Built-in%20functions/length_and_capacity.html)을 이용해 구할 수 있으며, 이 길이는 프로그램 실행 중 변경될 수 있다. 프로그램 실행 중 [할당(assignments)](/Statements/assignments.html)을 이용해 새로운 요소를 추가할 수 있으며, [인덱스 식(index expressions)](/Expressions/index_expressions.html)을 이용해 요소에 접근할 수 있다; 내장 함수인 [`delete`](/Built-in%20functions/deletion_of_map_elements.html)를 사용해 요소를 삭제할 수도 있다.
 
 A new, empty map value is made using the built-in function [make](/Built-in%20functions/making_slices,_maps_and_channels.html), which takes the map type and an optional capacity hint as arguments:
 

@@ -10,7 +10,7 @@ Within a package, package-level variables are initialized in *declaration order*
 
 More precisely, a package-level variable is considered *ready for initialization* if it is not yet initialized and either has no [initialization expression](/Declarations and scope/variable_declarations.html) or its initialization expression has no dependencies on uninitialized variables. Initialization proceeds by repeatedly initializing the next package-level variable that is earliest in declaration order and ready for initialization, until there are no variables ready for initialization.
 
-더 정확하게 설명하자면, 패키지 레벨의 변수는 아직 초기화가 되지 않은 상태에서 만약 [초기화 표현식](/Declarations and scope/variable_declarations.html)이 없거나, 있다해도 다른 초기화되지 않은 변수에 대한 의존도가 없다면 *초기화 준비가 된 상태*로 간주한다. 패키지 레벨 변수의 초기화는 더이상 초기화할 준비가 된 변수가 존재하지 않을 때까지, 선언문에 먼저 나타나는 순서대로 반복해서 진행된다.
+더 정확하게 설명하자면, 패키지 레벨의 변수는 아직 초기화가 되지 않은 상태에서 만약 [초기화 식](/Declarations and scope/variable_declarations.html)이 없거나, 있다해도 다른 초기화되지 않은 변수에 대한 의존도가 없다면 *초기화 준비가 된 상태*로 간주한다. 패키지 레벨 변수의 초기화는 더이상 초기화할 준비가 된 변수가 존재하지 않을 때까지, 선언문에 먼저 나타나는 순서대로 반복해서 진행된다.
 
 If any variables are still uninitialized when this process ends, those variables are part of one or more initialization cycles, and the program is not valid.
 
@@ -26,11 +26,11 @@ Dependency analysis does not rely on the actual values of the variables, only on
   * A reference to a method `m` is a [method value](/Expressions/method_values.html) or [method expression](/Expressions/method_expressions.html) of the form `t.m`, where the (static) type of `t` is not an interface type, and the method `m` is in the [method set](/Types/method_sets.html) of `t`. It is immaterial whether the resulting function value `t.m` is invoked.
   * A variable, function, or method `x` depends on a variable `y` if `x`'s initialization expression or body (for functions and methods) contains a reference to `y` or to a function or method that depends on `y`.
 
-의존성에 대한 분석은 변수들의 실제값들에 의지하지 않고, 단지 소스내 변수들을 언급하는 어휘적 *레퍼런스*(lexical *references*)에 의해 전이적으로 (transitively) 분석된다. 예를 들어, 만약에 변수 x의 초기화 표현식이 함수를 언급하고 함수의 몸통이 변수 y를 언급한다면, x는 y에 의존하는 것이다. 구체적으로:
+의존성에 대한 분석은 변수들의 실제값들에 의지하지 않고, 단지 소스내 변수들을 언급하는 어휘적 *레퍼런스*(lexical *references*)에 의해 전이적으로 (transitively) 분석된다. 예를 들어, 만약에 변수 x의 초기화 식이 함수를 언급하고 함수의 몸통이 변수 y를 언급한다면, x는 y에 의존하는 것이다. 구체적으로:
 
  * 변수나 함수에 대한 레퍼런스는 변수나 함수를 표시하는 식별자이다.
- * 메서드 `m`에 대한 레퍼런스는 [메서드 값](/Expressions/method_values.html)이거나 `t.m` 형태의 [메서드 표현](/Expressions/method_expressions.html)으로, `t`의 (정적) 타입은 인터페이스 타입이 아니고, 메서드 `m`은 `t`의 [메서드 집합](/Types/method_sets.html)에 존재한다. 결과적인 함수 값 `t.m`이 호출되었는지 여부는 중요하지 않다.
- * 변수, 함수, 혹은 메서드 `x`가 변수 `y`에 의존적이라 함은 `x`의 초기화 표현식이나 (함수들이나 메서드들의) 몸통이 `y`에 대해 레퍼런스를 가지고 있던지 `y`에 의존적인 함수나 메서드에 레퍼런스를 가지고 있는 경우다.
+ * 메서드 `m`에 대한 레퍼런스는 [메서드 값](/Expressions/method_values.html)이거나 `t.m` 형태의 [메서드 식](/Expressions/method_expressions.html)으로, `t`의 (정적) 타입은 인터페이스 타입이 아니고, 메서드 `m`은 `t`의 [메서드 집합](/Types/method_sets.html)에 존재한다. 결과적인 함수 값 `t.m`이 호출되었는지 여부는 중요하지 않다.
+ * 변수, 함수, 혹은 메서드 `x`가 변수 `y`에 의존적이라 함은 `x`의 초기화 식이나 (함수들이나 메서드들의) 몸통이 `y`에 대해 레퍼런스를 가지고 있던지 `y`에 의존적인 함수나 메서드에 레퍼런스를 가지고 있는 경우다.
 
 Dependency analysis is performed per package; only references referring to variables, functions, and methods declared in the current package are considered.
 
