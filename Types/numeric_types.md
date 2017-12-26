@@ -6,7 +6,7 @@
 
 A *numeric type* represents sets of integer or floating-point values. The predeclared architecture-independent numeric types are:
 
-*숫자 타입*은 정수 또는 부동 소수점 값 세트를 나타낸다. 미리 선언된 숫자 타입 중 아키텍처 독립적인 숫자 타입은 다음과 같다:
+*숫자 타입*은 정수 또는 부동 소수점 값 집합을 나타낸다. 미리 선언된 숫자 타입 중 아키텍처 독립적인 숫자 타입은 다음과 같다:
 
 ```
 uint8       the set of all unsigned  8-bit integers (0 to 255)
@@ -52,7 +52,7 @@ rune        int32의 별칭(alias)
 
 The value of an *n*-bit integer is *n* bits wide and represented using [two's complement arithmetic](http://en.wikipedia.org/wiki/Two's_complement).
 
-*n*-비트의 정수 값은 *n*비트의 폭을 가지며 [2의 보수 산술](http://en.wikipedia.org/wiki/Two's_complement)을 사용하여 표시된다.
+*n*-비트의 정수 값은 *n* 비트의 폭을 가지며 [2의 보수 산술](http://en.wikipedia.org/wiki/Two's_complement)을 사용하여 표시된다.
 
 There is also a set of predeclared numeric types with implementation-specific sizes:
 
