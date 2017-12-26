@@ -14,7 +14,7 @@ Untyped boolean, numeric, and string constants may be used as operands wherever 
 
 A constant [comparison](/Expressions/comparison_operators.html) always yields an untyped boolean constant. If the left operand of a constant [shift expression](/Expressions/operators.html) is an untyped constant, the result is an integer constant; otherwise it is a constant of the same type as the left operand, which must be of [integer type](/Types/numeric_types.html). Applying all other operators to untyped constants results in an untyped constant of the same kind (that is, a boolean, integer, floating-point, complex, or string constant).
 
-상수들 간의 [비교](/Expressions/comparison_operators.html) 결과는 항상 미지정 타입의 불리언 상수다. 왼쪽 피연산자가 미지정 타입의 상수인 상수 [시프트 식](/Expressions/operators.html)의 결과는 정수 상수다; 왼쪽 피연산자가 미지정 타입의 상수가 아닌 경우도 결과는 [정수](/Types/numeric_types.html) 상수다. 이외의 연산자들을 미지정 타입의 상수와 함께 사용하면, 그 결과는 같은 종류의 미지정 상수다. (즉, 불리언, 정수, 부동 소수점, 복소수, 문자열 상수)
+상수들 간의 [비교](/Expressions/comparison_operators.html) 결과는 항상 미지정 타입의 불리언 상수다. 상수 [시프트 식](/Expressions/operators.html)의 왼쪽 피연산자가 미지정 타입의 상수이면 그 연산 결과는 정수 상수다; 그밖에 왼쪽 피연산자가 정수 상수인 경우가 있는데 연산 결과는 [정수](/Types/numeric_types.html) 상수다. 이외의 연산자들을 미지정 타입의 상수와 함께 사용하면, 그 결과는 같은 종류의 미지정 상수다. (즉, 불리언, 정수, 부동 소수점, 복소수, 문자열 상수)
 
 ```
 const a = 2 + 3.0          // a == 5.0   (untyped floating-point constant)
@@ -113,7 +113,7 @@ Four * 100   // Four의 타입인 int8로는 곱셈의 결과인 400을 표현�
 
 The mask used by the unary bitwise complement operator ^ matches the rule for non-constants: the mask is all 1s for unsigned constants and -1 for signed and untyped constants.
 
-단항 비트 보수 연산자 `^`에서 사용하는 마스크(mask)는 산술(arithmetic) 연산 규칙을 따른다: 부호 없는 상수에 대해서는 마스크가 1이 적용되고, 부호 있는 미지정 타입의 상수에 대해서는 -1이 적용된다.
+단항 비트 보수 연산자 `^`에서 사용하는 마스크(mask)는 일반적인 산술(arithmetic) 연산 규칙을 따른다: 부호 없는 상수에 대해서는 마스크가 1이 적용되고, 부호 있는 미지정 타입의 상수에 대해서는 -1이 적용된다.
 
 ```
 ^1         // untyped integer constant, equal to -2
@@ -133,4 +133,4 @@ int8(^1)   // int8(-2)와 같다
 
 Implementation restriction: A compiler may use rounding while computing untyped floating-point or complex constant expressions; see the implementation restriction in the section on [constants](/Constants/). This rounding may cause a floating-point constant expression to be invalid in an integer context, even if it would be integral when calculated using infinite precision, and vice versa.
 
-구현 제한: 컴파일러가 미지정 타입의 부동 소수점 또는 복소수 상수 식을 계산할 때 라운딩(rounding)을 사용하기도 한다; [상수](/Constants/) 섹션의 구현 제한을 참조하라. 무한 정밀도를 사용해 계산할 때 통합하더라도, 라운딩으로 인해 정수 타입을 처리하는 곳에서는 부동 소수점 상수 식이 제대로 동작하지 않을 수도 있다. 반대의 경우도 마찬가지다.
+구현 제한: 컴파일러가 미지정 타입의 부동 소수점 또는 복소수 상수 식을 계산할 때 반올림(rounding)을 사용하기도 한다; [상수](/Constants/) 섹션의 구현 제한을 참조하라. 정수 결과가 나올 것으로 기대되는 곳에서 부동 소수점 상수 식의 결과가 반올림으로 인해 예상했던 값과 다를 수 있다. 무한 정밀도(infinite precision)로 계산해서 정수가 나오는 경우에도 이런 현상이 발생할 수 있으며, 그 반대의 경우도 마찬가지다.
