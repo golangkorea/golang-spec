@@ -1,4 +1,4 @@
-# [Blocks](#blocks)
+# [블록](#blocks)
 
 A *block* is a possibly empty sequence of declarations and statements within matching brace brackets.
 
