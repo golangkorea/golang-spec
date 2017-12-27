@@ -23,9 +23,9 @@ cap(s)    [n]T, *[n]T      array length (== n)
 ```
 
 ```golang
-호출      인자 형식         결과
+호출      인자 타입         결과
 
-len(s)    string 형식      문자열 길이 (바이트 단위)
+len(s)    string 타입      문자열 길이 (바이트 단위)
           [n]T, *[n]T      배열의 길이 (== n)
           []T              슬라이스의 길이
           map[K]T          맵의 길이 (정의된 키의 개수)
