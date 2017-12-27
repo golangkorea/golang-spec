@@ -1,17 +1,8 @@
-# [할당 가능한 값의 조건들(Assignability)](#assignability)
+# [할당 가능한 값의 조건들](#assignability)
 
 * Go 버전: 1.9
 * 원문: [Assignability](https://golang.org/ref/spec#Assignability)
 * 번역자: Jhonghee Park (@jhonghee)
-
-A value x is assignable to a [variable](/Variables/) of type T ("x is assignable to T") in any of these cases:
-
-  * x's type is identical to T.
-  * x's type V and T have identical [underlying types](/Types/) and at least one of V or T is not a [defined](/Type_definitions/) type.
-  * T is an interface type and x [implements](/Types/interface_types.html) T.
-  * x is a bidirectional channel value, T is a channel type, x's type V and T have identical element types, and at least one of V or T is not a defined type.
-  * x is the predeclared identifier nil and T is a pointer, function, slice, map, channel, or interface type.
-  * x is an untyped [constant](/Constants/) representable by a value of type T.
 
 어떤 값 x는 타입 T의 [변수](/Variables/)에 다음과 같은 조건일 경우 할당 가능하다(x는 T에 할당할 수 있다):
 

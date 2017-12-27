@@ -1,26 +1,10 @@
-# [타입 아이덴티티(Type identity)](#type-identity)
+# [타입 아이덴티티](#type-identity)
 
 * Go 버전: 1.9
 * 원문: [Type identity](https://golang.org/ref/spec#Type_identity)
 * 번역자: Jhonghee Park (@jhonghee)
 
-Two types are either identical or different.
-
 2개의 타입은 같거나(identical) 다르다.
-
-A <a href="#Type_definitions">defined type</a> is always different from any other type.
-Otherwise, two types are identical if their <a href="#Types">underlying</a> type literals are
-structurally equivalent; that is, they have the same literal structure and corresponding
-components have identical types. In detail:
-
-  * Two array types are identical if they have identical element types and the same array length.
-  * Two slice types are identical if they have identical element types.
-  * Two struct types are identical if they have the same sequence of fields, and if corresponding fields have the same names, and identical types, and identical tags. [Non-exported](/Declarations%20and%20scope/exported_identifiers.html) field names from different packages are always different.
-  * Two pointer types are identical if they have identical base types.
-  * Two function types are identical if they have the same number of parameters and result values, corresponding parameter and result types are identical, and either both functions are variadic or neither is. Parameter and result names are not required to match.
-  * Two interface types are identical if they have the same set of methods with the same names and identical function types. [Non-exported](/Declarations%20and%20scope/exported_identifiers.html) method names from different packages are always different. The order of the methods is irrelevant.
-  * Two map types are identical if they have identical key and value types.
-  * Two channel types are identical if they have identical value types and the same direction.
 
 [타입 정의를 이용해 만든 타입(defined type)](/Declarations%20and%20scope/type_declarations.html#type-definitions)은 항상 다른 타입과 다르다. 그 밖의 타입은 [내재(underlying)](/Types/) 타입 리터럴이 구조적으로 동일하다면 두 개의 타입이 서로 같다고 말할 수 있다; 즉, 리터럴 구조와 상응하는 구성요소가 같다면 같은 타입이라고 할 수 있다. 자세하게 설명하자면:
 
@@ -32,8 +16,6 @@ components have identical types. In detail:
  * 2개의 interface 타입은 같은 이름과 같은 함수 타입으로 구성된 메서드의 집합이 같으면 서로 같다. 서로 다른 패키지내에 [엑스포트 되지 않은(Non-exported)](/Declarations%20and%20scope/exported_identifiers.html) 메서드의 이름들은 항상 다르다. 메서드의 순서는 상관없다.
  * 2개의 map 타입은 키(key) 타입과 값 타입이 같으면 서로 같다.
  * 2개의 channel 타입은 값 타입과 방향성(direction)이 같으면 서로 같다.
-
-Given the declarations
 
 아래 선언문에서
 
@@ -59,8 +41,6 @@ type (
 type	C0 = B0
 ```
 
-these types are identical:
-
 다음의 타입들은 동일하다.
 
 ```
@@ -75,8 +55,4 @@ struct{ a, b *T5 } and struct{ a, b *T5 }
 func(x int, y float64) *[]string, func(int, float64) (result *[]string), and A5
 ```
 
-`B0` and `B1` are different because they are new types created by distinct <a href="#Type_definitions">type definitions</a>; `func(int, float64) *B0` and `func(x int, y float64) *[]string` are different because `B0` is different from `[]string`.
-
-
 `B0`와 `B1`이 서로 다른 이유는 별도의 [타입 정의(type definitions)](/Declarations%20and%20scope/type_declarations.html#type-definitions)를 이용해 생성한 새로운 타입들이기 때문이다; `B0`이 `[]string`과 다르기 때문에 `func(int, float64) *B0`과 `func(x int, y float64) *[]string`은 서로 다르다.
-
