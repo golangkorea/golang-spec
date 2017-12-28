@@ -1,9 +1,0 @@
-{
-    "plugins": ["disqus"],
-    "pluginsConfig": {
-        "disqus": {
-            "shortName": "go-language-specification-in-korean"
-        }
-    },
-    "language": "ko"
-}
