@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[go-specification.introduction_readmemd]
+file_filter = <lang>/Introduction/README.md
+source_file = en/Introduction/README.md
+source_lang = en
+
