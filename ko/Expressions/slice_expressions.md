@@ -6,28 +6,32 @@ Slice expressions construct a substring or slice from a string, array, pointer t
 
 For a string, array, pointer to array, or slice a, the primary expression
 
-    a[low : high]
-    
+```
+a[low : high]
+```
 
 constructs a substring or slice. The *indices* low and high select which elements of operand a appear in the result. The result has indices starting at 0 and length equal to `high - low`. After slicing the array a
 
-    a := [5]int{1, 2, 3, 4, 5}
-    s := a[1:4]
-    
+```
+a := [5]int{1, 2, 3, 4, 5}
+s := a[1:4]
+```
 
 the slice s has type []int, length 3, capacity 4, and elements
 
-    s[0] == 2
-    s[1] == 3
-    s[2] == 4
-    
+```
+s[0] == 2
+s[1] == 3
+s[2] == 4
+```
 
 For convenience, any of the indices may be omitted. A missing low index defaults to zero; a missing high index defaults to the length of the sliced operand:
 
-    a[2:]  // same as a[2 : len(a)]
-    a[:3]  // same as a[0 : 3]
-    a[:]   // same as a[0 : len(a)]
-    
+```
+a[2:]  // same as a[2 : len(a)]
+a[:3]  // same as a[0 : 3]
+a[:]   // same as a[0 : len(a)]
+```
 
 If a is a pointer to an array, a[low : high] is shorthand for (*a)[low : high].
 
@@ -41,20 +45,23 @@ If the sliced operand of a valid slice expression is a `nil` slice, the result i
 
 For an array, pointer to array, or slice a (but not a string), the primary expression
 
-    a[low : high : max]
-    
+```
+a[low : high : max]
+```
 
 constructs a slice of the same type, and with the same length and elements as the simple slice expression a[low : high]. Additionally, it controls the resulting slice's capacity by setting it to max - low. Only the first index may be omitted; it defaults to 0. After slicing the array a
 
-    a := [5]int{1, 2, 3, 4, 5}
-    t := a[1:3:5]
-    
+```
+a := [5]int{1, 2, 3, 4, 5}
+t := a[1:3:5]
+```
 
 the slice t has type []int, length 2, capacity 4, and elements
 
-    t[0] == 2
-    t[1] == 3
-    
+```
+t[0] == 2
+t[1] == 3
+```
 
 As for simple slice expressions, if a is a pointer to an array, a[low : high : max] is shorthand for (*a)[low : high : max]. If the sliced operand is an array, it must be [addressable](/Expressions/address_operators.html).
 

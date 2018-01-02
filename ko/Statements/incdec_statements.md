@@ -8,6 +8,8 @@ The "++" and "--" statements increment or decrement their operands by the untype
 
 The following [assignment statements](/Statements/assignments.html) are semantically equivalent:
 
-    IncDec statement    Assignment
-    x++                 x += 1
-    x--                 x -= 1
+```
+IncDec statement    Assignment
+x++                 x += 1
+x--                 x -= 1
+```

@@ -4,12 +4,14 @@ For an operand x of type T, the address operation &x generates a pointer of type
 
 For an operand x of pointer type *T, the pointer indirection *x denotes the [variable](/Variables/) of type T pointed to by x. If x is nil, an attempt to evaluate *x will cause a [run-time panic](/Run-time%20panics/).
 
-    &x
-    &a[f(2)]
-    &Point{2, 3}
-    *p
-    *pf(x)
-    
-    var x *int = nil
-    *x   // causes a run-time panic
-    &*x  // causes a run-time panic
+```
+&x
+&a[f(2)]
+&Point{2, 3}
+*p
+*pf(x)
+
+var x *int = nil
+*x   // causes a run-time panic
+&*x  // causes a run-time panic
+```

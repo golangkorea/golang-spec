@@ -9,7 +9,8 @@ A package clause begins each source file and defines the package to which the fi
 
 The PackageName must not be the [blank identifier](/Declarations and scope/blank_identifier.html).
 
-    package math
-    
+```
+package math
+```
 
 A set of files sharing the same PackageName form the implementation of a package. An implementation may require that all source files for a package inhabit the same directory.
