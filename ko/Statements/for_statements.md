@@ -13,7 +13,7 @@ In its simplest form, a "for" statement specifies the repeated execution of a bl
 
 ```
 for a < b {
-	a *= 2
+    a *= 2
 }
 ```
 
@@ -29,7 +29,7 @@ A "for" statement with a ForClause is also controlled by its condition, but addi
 
 ```
 for i := 0; i < 10; i++ {
-	f(i)
+    f(i)
 }
 ```
 
@@ -74,34 +74,34 @@ The iteration variables may be declared by the "range" clause using a form of [s
 
 ```
 var testdata *struct {
-	a *[7]int
+    a *[7]int
 }
 for i, _ := range testdata.a {
-	// testdata.a is never evaluated; len(testdata.a) is constant
-	// i ranges from 0 to 6
-	f(i)
+    // testdata.a is never evaluated; len(testdata.a) is constant
+    // i ranges from 0 to 6
+    f(i)
 }
 
 var a [10]string
 for i, s := range a {
-	// type of i is int
-	// type of s is string
-	// s == a[i]
-	g(i, s)
+    // type of i is int
+    // type of s is string
+    // s == a[i]
+    g(i, s)
 }
 
 var key string
 var val interface {}  // value type of m is assignable to val
 m := map[string]int{"mon":0, "tue":1, "wed":2, "thu":3, "fri":4, "sat":5, "sun":6}
 for key, val = range m {
-	h(key, val)
+    h(key, val)
 }
 // key == last map key encountered in iteration
 // val == map[key]
 
 var ch chan Work = producer()
 for w := range ch {
-	doWork(w)
+    doWork(w)
 }
 
 // empty a channel

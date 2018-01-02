@@ -1,9 +1,5 @@
 # [function 타입](#function-types)
 
-* Go 버전: 1.9
-* 원문: [Function types](https://golang.org/ref/spec#Function_types)
-* 번역자: Jhonghee Park (@jhonghee)
-
 function 타입은 같은 매개변수와 반환 타입을 지닌 모든 함수의 집합을 의미한다. 초기화되지 않은 function 타입의 변수는 `nil` 값을 갖는다.
 
 <pre>

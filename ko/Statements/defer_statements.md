@@ -18,14 +18,14 @@ defer unlock(l)  // unlocking happens before surrounding function returns
 
 // prints 3 2 1 0 before surrounding function returns
 for i := 0; i <= 3; i++ {
-	defer fmt.Print(i)
+    defer fmt.Print(i)
 }
 
 // f returns 1
 func f() (result int) {
-	defer func() {
-		result++
-	}()
-	return 0
+    defer func() {
+        result++
+    }()
+    return 0
 }
 ```

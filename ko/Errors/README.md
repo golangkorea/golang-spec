@@ -1,14 +1,10 @@
 # [에러](#errors)
 
-* Go 버전: 1.9
-* 원문: [Errors](https://golang.org/ref/spec#Errors)
-* 번역자: Jhonghee Park (@jhonghee)
-
 미리 선언된 타입 `error`은 다음과 같이 정의된다.
 
 ```
 type error interface {
-	Error() string
+    Error() string
 }
 ```
 

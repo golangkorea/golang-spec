@@ -1,9 +1,5 @@
 # [허수 리터럴](#imaginary-literals)
 
-* Go 버전: 1.9
-* 원문 : [Imaginary literals](https://golang.org/ref/spec#Imaginary_literals)
-* 번역자 : [조석규](@ezaurum)
-
 허수 리터럴은 [복소 상수](/Constants/)에서 허수부를 십진수로 나타낸 것이다. 소문자 `i` 뒤에 [부동소수점 리터럴](/Lexical elements/floating-point_literals.html)이나 십진 정수가 붙은 형태이다.
 
 <pre>

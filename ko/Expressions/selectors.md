@@ -23,21 +23,21 @@ For example, given the declarations:
 
 ```
 type T0 struct {
-	x int
+    x int
 }
 
 func (*T0) M0()
 
 type T1 struct {
-	y int
+    y int
 }
 
 func (T1) M1()
 
 type T2 struct {
-	z int
-	T1
-	*T0
+    z int
+    T1
+    *T0
 }
 
 func (*T2) M2()

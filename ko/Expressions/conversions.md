@@ -56,19 +56,19 @@ A non-constant value x can be converted to type T in any of these cases:
 
 ```
 type Person struct {
-	Name    string
-	Address *struct {
-		Street string
-		City   string
-	}
+    Name    string
+    Address *struct {
+        Street string
+        City   string
+    }
 }
 
 var data *struct {
-	Name    string `json:"name"`
-	Address *struct {
-		Street string `json:"street"`
-		City   string `json:"city"`
-	} `json:"address"`
+    Name    string `json:"name"`
+    Address *struct {
+        Street string `json:"street"`
+        City   string `json:"city"`
+    } `json:"address"`
 }
 
 var person = (*Person)(data)  // ignoring tags, the underlying types are identical

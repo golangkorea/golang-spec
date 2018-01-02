@@ -1,9 +1,5 @@
 # [배열 타입](#array-types)
 
-* Go 버전: 1.9
-* 원문 : [Array types](https://golang.org/ref/spec#Array_types)
-* 번역자 : [연규민](@voidsatisfaction)
-
 배열(array)은 순서가 있는 단일 타입 요소들의 연속이다. 요소의 타입은 요소 타입(element type)이라고 부른다. 요소들의 개수는 길이(length) 라고 불리며 절대로 음수가 될 수 없다.
 
 <pre>

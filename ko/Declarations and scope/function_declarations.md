@@ -13,12 +13,12 @@ If the function's [signature](/Types/function_types.html) declares result parame
 
 ```
 func IndexRune(s string, r rune) int {
-	for i, c := range s {
-		if c == r {
-			return i
-		}
-	}
-	// invalid: missing return statement
+    for i, c := range s {
+        if c == r {
+            return i
+        }
+    }
+    // invalid: missing return statement
 }
 ```
 
@@ -26,10 +26,10 @@ A function declaration may omit the body. Such a declaration provides the signat
 
 ```
 func min(x int, y int) int {
-	if x < y {
-		return x
-	}
-	return y
+    if x < y {
+        return x
+    }
+    return y
 }
 
 func flushICache(begin, end uintptr)  // implemented externally

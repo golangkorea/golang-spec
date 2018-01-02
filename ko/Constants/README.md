@@ -1,9 +1,5 @@
 # [상수](#constants)
 
-* Go 버전: 1.9
-* 원문: [Constants](https://golang.org/ref/spec#Constants)
-* 번역자: Dong-Woo, Jeon(@a2600riz)
-
 상수 타입으로는 *boolean 상수*, *룬 문자 상수*, *정수형 상수*, *부동소수점 상수*, *복소수 상수*, *문자열 상수*들이 있다. 룬 문자, 정수, 부동소수점, 복소수 상수들을 통칭해서 *수치 상수*라 칭한다.
 
 상수 값은 [룬 문자](/Lexical%20elements/rune_literals.html), [정수](/Lexical%20elements/integer_literals.html), [부동소수점]((/Lexical%20elements/floating-point_literals.html)), [허수](/Lexical%20elements/imaginary_literals.html), [문자열 리터럴](/Lexical%20elements/string_literals.html), 상수 식별자, [상수 식](/Expressions/constant_expressions.html), [변환된 상수](/Expressions/conversions.html) 결과값 또는 `unsafe.Sizeof` 같은 몇몇 내장 함수들의 결과값이 적용된 값, `cap` 또는 `len`이 적용된 [몇 가지 식](/Built-in%20functions/length_and_capacity.html), `real`와 `imag`가 적용된 복소수 상수와 `complex`가 적용된 수치 상수로 표현된다. boolean 값은 미리 선언되어 있는 `true` 와 `false` 값으로 표현된다. 미리 선언된 식별자 [iota](/Declarations%20and%20scope/iota.html)는 정수형 상수값을 의미한다.

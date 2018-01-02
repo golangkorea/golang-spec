@@ -19,9 +19,9 @@ i := x.(int)                   // i has type int and value 7
 type I interface { m() }
 
 func f(y I) {
-	s := y.(string)        // illegal: string does not implement I (missing method m)
-	r := y.(io.Reader)     // r has type io.Reader and the dynamic type of y must implement both I and io.Reader
-	…
+    s := y.(string)        // illegal: string does not implement I (missing method m)
+    r := y.(io.Reader)     // r has type io.Reader and the dynamic type of y must implement both I and io.Reader
+    …
 }
 ```
 

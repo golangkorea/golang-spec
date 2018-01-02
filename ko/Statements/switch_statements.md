@@ -78,17 +78,17 @@ Given an expression x of type interface{}, the following type switch:
 ```
 switch i := x.(type) {
 case nil:
-	printString("x is nil")                // type of i is type of x (interface{})
+    printString("x is nil")                // type of i is type of x (interface{})
 case int:
-	printInt(i)                            // type of i is int
+    printInt(i)                            // type of i is int
 case float64:
-	printFloat64(i)                        // type of i is float64
+    printFloat64(i)                        // type of i is float64
 case func(int) float64:
-	printFunction(i)                       // type of i is func(int) float64
+    printFunction(i)                       // type of i is func(int) float64
 case bool, string:
-	printString("type is bool or string")  // type of i is type of x (interface{})
+    printString("type is bool or string")  // type of i is type of x (interface{})
 default:
-	printString("don't know the type")     // type of i is type of x (interface{})
+    printString("don't know the type")     // type of i is type of x (interface{})
 }
 ```
 
@@ -97,24 +97,24 @@ could be rewritten:
 ```
 v := x  // x is evaluated exactly once
 if v == nil {
-	i := v                                 // type of i is type of x (interface{})
-	printString("x is nil")
+    i := v                                 // type of i is type of x (interface{})
+    printString("x is nil")
 } else if i, isInt := v.(int); isInt {
-	printInt(i)                            // type of i is int
+    printInt(i)                            // type of i is int
 } else if i, isFloat64 := v.(float64); isFloat64 {
-	printFloat64(i)                        // type of i is float64
+    printFloat64(i)                        // type of i is float64
 } else if i, isFunc := v.(func(int) float64); isFunc {
-	printFunction(i)                       // type of i is func(int) float64
+    printFunction(i)                       // type of i is func(int) float64
 } else {
-	_, isBool := v.(bool)
-	_, isString := v.(string)
-	if isBool || isString {
-		i := v                         // type of i is type of x (interface{})
-		printString("type is bool or string")
-	} else {
-		i := v                         // type of i is type of x (interface{})
-		printString("don't know the type")
-	}
+    _, isBool := v.(bool)
+    _, isString := v.(string)
+    if isBool || isString {
+        i := v                         // type of i is type of x (interface{})
+        printString("type is bool or string")
+    } else {
+        i := v                         // type of i is type of x (interface{})
+        printString("don't know the type")
+    }
 }
 ```
 

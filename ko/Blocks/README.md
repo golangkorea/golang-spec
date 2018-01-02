@@ -1,9 +1,5 @@
 # [블록](#blocks)
 
-* Go 버전: 1.9
-* 원문: [Blocks](https://golang.org/ref/spec#Blocks)
-* 번역자: Jhonghee Park (@jhonghee)
-
 *블록*은 서로 짝이 맞는 브래이스 브래킷(brace brackets) 범위내의 순차적인 선언문들과 실행문들로 공백의 블록도 가능하다.
 
 <pre>

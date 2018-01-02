@@ -11,7 +11,7 @@ Consider a struct type T with two methods, Mv, whose receiver is of type T, and 
 
 ```
 type T struct {
-	a int
+    a int
 }
 func (tv  T) Mv(a int) int         { return 0 }  // value receiver
 func (tp *T) Mp(f float32) float32 { return 1 }  // pointer receiver

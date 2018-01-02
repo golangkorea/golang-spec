@@ -13,8 +13,8 @@ goto Error
 Executing the "goto" statement must not cause any variables to come into [scope](/Declarations%20and%20scope/) that were not already in scope at the point of the goto. For instance, this example:
 
 ```
-	goto L  // BAD
-	v := 3
+    goto L  // BAD
+    v := 3
 L:
 ```
 
@@ -24,14 +24,14 @@ A "goto" statement outside a [block](/Blocks/) cannot jump to a label inside tha
 
 ```
 if n%2 == 1 {
-	goto L1
+    goto L1
 }
 for n > 0 {
-	f()
-	n--
+    f()
+    n--
 L1:
-	f()
-	n--
+    f()
+    n--
 }
 ```
 

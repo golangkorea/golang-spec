@@ -10,12 +10,12 @@ If there is a label, it must be that of an enclosing "for" statement, and that i
 
 ```
 RowLoop:
-	for y, row := range rows {
-		for x, data := range row {
-			if data == endOfRow {
-				continue RowLoop
-			}
-			row[x] = data + bias(x, y)
-		}
-	}
+    for y, row := range rows {
+        for x, data := range row {
+            if data == endOfRow {
+                continue RowLoop
+            }
+            row[x] = data + bias(x, y)
+        }
+    }
 ```

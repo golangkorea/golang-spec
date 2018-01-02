@@ -1,9 +1,5 @@
 # [타입](#types)
 
-* Go 버전: 1.9
-* 원문: [Types](https://golang.org/ref/spec#Types)
-* 번역자: Jhonghee Park (@jhonghee), 허성연 (@hursungyun)
-
 타입은 어떠한 값들의 집합과 그 값들에 대한 연산과 메서드로 이루어져 있다. 타입은 (타입 이름이 있다면)*타입 이름* 또는 이미 존재하는 타입들로 구성된 *타입 리터럴*을 사용하여 나타낼 수 있다.
 
 <pre>

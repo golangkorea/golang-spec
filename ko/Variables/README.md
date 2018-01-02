@@ -1,9 +1,5 @@
 # [변수](#variables)
 
-* Go 버전: 1.9
-* 원문: [Variables](https://golang.org/ref/spec#Variables)
-* 번역자: Dong-Woo, Jeon(@a2600riz)
-
 변수는 어떤 값을 저장해 놓을 수 있는 저장소다. 값이 저장가능한 지의 여부는 변수의 *[타입](/Types/)* 에 의해 결정된다.
 
 [변수의 선언](/Declarations%20and%20scope/variable_declarations.html) 및 함수 인자들과 함수의 결과 값들, [함수 선언](/Declarations%20and%20scope/function_declarations.html)의 시그니처 또는 [함수 리터럴](/Expressions/function_literals.html)은 명명된 변수를 위해 저장소에 자리를 잡아둔다. built-in 함수인 [new](/Built-in%20functions/allocation.html)를 부르거나 [합성 리터럴(composite literal)](/Expressions/composite_literals.html)의 주소를 가져오는 것으로 변수를 실행 시간에 저장소에 할당할 수 있다. 이러한 익명의 변수는 (암묵적으로) [포인터](/Expressions/address_operators.html) 를 통해 참조된다.

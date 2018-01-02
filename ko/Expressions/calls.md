@@ -22,15 +22,15 @@ As a special case, if the return values of a function or method g are equal in n
 
 ```
 func Split(s string, pos int) (string, string) {
-	return s[0:pos], s[pos:]
+    return s[0:pos], s[pos:]
 }
 
 func Join(s, t string) string {
-	return s + t
+    return s + t
 }
 
 if Join(Split(value, len(value)/2)) != value {
-	log.Panic("test fails")
+    log.Panic("test fails")
 }
 ```
 

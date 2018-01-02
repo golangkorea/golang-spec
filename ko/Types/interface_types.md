@@ -1,9 +1,5 @@
 # [interface 타입](#interface-types)
 
-* Go 버전: 1.9
-* 원문: [Interface types](https://golang.org/ref/spec#Interface_types)
-* 번역자: Jhonghee Park (@jhonghee)
-
 interface 타입은 *인터페이스*라고 불리는 [메서드 집합(method set)](/Types/method_sets.html)을 명시한다. 주어진 인터페이스의 확대집합(superset)에 해당하는 메서드 집합을 갖고 있는 어떠한 타입의 값이든 interface 타입의 변수에 저장할 수 있다. 그러한 타입에 대해서는 *인터페이스를 구현*했다라고 말한다. 초기화되지 않은 interface 타입의 변수는 nil 값을 갖는다.
 
 <pre>
@@ -18,9 +14,9 @@ interface 타입은 *인터페이스*라고 불리는 [메서드 집합(method s
 ```
 // A simple File interface
 interface {
-	Read(b Buffer) bool
-	Write(b Buffer) bool
-	Close()
+    Read(b Buffer) bool
+    Write(b Buffer) bool
+    Close()
 }
 ```
 
@@ -44,8 +40,8 @@ interface{}
 
 ```
 type Locker interface {
-	Lock()
-	Unlock()
+    Lock()
+    Unlock()
 }
 ```
 
@@ -62,20 +58,20 @@ func (p T) Unlock() { … }
 
 ```
 type ReadWriter interface {
-	Read(b Buffer) bool
-	Write(b Buffer) bool
+    Read(b Buffer) bool
+    Write(b Buffer) bool
 }
 
 type File interface {
-	ReadWriter  // ReadWriter의 메서드를 추가한 것과 같음
-	Locker      // Locker의 메서드를 추가한 것과 같음
-	Close()
+    ReadWriter  // ReadWriter의 메서드를 추가한 것과 같음
+    Locker      // Locker의 메서드를 추가한 것과 같음
+    Close()
 }
 
 type LockedFile interface {
-	Locker
-	File        // 허용안됨: Lock, Unlock이 고유하지 않음
-	Lock()      // 허용안됨: Lock이 고유하지 않음
+    Locker
+    File        // 허용안됨: Lock, Unlock이 고유하지 않음
+    Lock()      // 허용안됨: Lock이 고유하지 않음
 }
 ```
 
@@ -84,14 +80,14 @@ type LockedFile interface {
 ```
 // 허용안됨: Bad는 자신을 임베딩할 수 없음
 type Bad interface {
-	Bad
+    Bad
 }
 
 // 허용안됨: Bad1은 Bad2를 이용해 임베딩할 수 없음
 type Bad1 interface {
-	Bad2
+    Bad2
 }
 type Bad2 interface {
-	Bad1
+    Bad1
 }
 ```

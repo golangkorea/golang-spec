@@ -1,9 +1,5 @@
 # [slice 타입](#slice-types)
 
- * Go 버전: 1.9
- * 원문: [Slice types](https://golang.org/ref/spec#Slice_types)
- * 번역자: Jhonghee Park (@jhonghee)
-
 슬라이즈는 *내재하는* array의 연속된 한 조각에 대해 서술한 것이며 그 array로 부터 숫자가 매겨진 연속된 요소들에 접근을 하게 해 준다. 슬라이스 타입은 그 요소 타입으로 구성된 array들의 모든 슬라이스를 포함하는 집합을 의미한다. 초기화 되지 않은 슬라이스의 값은 `nil`이다.
 
 <pre>

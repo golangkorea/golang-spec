@@ -16,8 +16,8 @@ If the type is present, all constants take the type specified, and the expressio
 const Pi float64 = 3.14159265358979323846
 const zero = 0.0         // untyped floating-point constant
 const (
-	size int64 = 1024
-	eof        = -1  // untyped integer constant
+    size int64 = 1024
+    eof        = -1  // untyped integer constant
 )
 const a, b, c = 3, 4, "foo"  // a = 3, b = 4, c = "foo", untyped integer and string constants
 const u, v float32 = 0, 3    // u = 0.0, v = 3.0
@@ -27,13 +27,13 @@ Within a parenthesized const declaration list the expression list may be omitted
 
 ```
 const (
-	Sunday = iota
-	Monday
-	Tuesday
-	Wednesday
-	Thursday
-	Friday
-	Partyday
-	numberOfDays  // this constant is not exported
+    Sunday = iota
+    Monday
+    Tuesday
+    Wednesday
+    Thursday
+    Friday
+    Partyday
+    numberOfDays  // this constant is not exported
 )
 ```

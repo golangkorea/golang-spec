@@ -1,9 +1,5 @@
 # [숫자 타입](#numeric-types)
 
-* Go 버전: 1.9
-* 원문: [Numeric types](https://golang.org/ref/spec#Numeric_types)
-* 번역자: JungSoo Ahn (@findstar)
-
 *숫자 타입*은 정수 또는 부동 소수점 값 집합을 나타낸다. 미리 선언된 숫자 타입 중 아키텍처 독립적인 숫자 타입은 다음과 같다:
 
 ```

@@ -1,9 +1,5 @@
 # [채널 타입](#channel-types)
 
-* Go 버전: 1.9
-* 원문: [Channel types](https://golang.org/ref/spec#Channel_types)
-* 번역자: Jhonghee Park (@jhonghee)
-
 채널은 [동시에 실행중인 함수들](/Statements/go_statements.html)이 명시된 요소 타입의 값들을 [주고]((/Statements/send_statements.html)) [받으며](/Expressions/receive_operator.html) 통신할 수 있는 매커니즘을 제공한다. 초기화 되지 않은 채널의 값은 `nil`이다.
 
 <pre>

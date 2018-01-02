@@ -1,9 +1,5 @@
 # [unsafe 패키지](#package-unsafe)
 
-* Go 버전: 1.9
-* 원문: [Package unsafe](https://golang.org/ref/spec#Package_unsafe)
-* 번역자: Jhonghee Park(@jhonghee)
-
 Go 컴파일러에 숙지된 바와 같이, `unsafe` 내장 패키지는 타입 시스템을 위반하는 연산을 포함한 낮은 레벨(low-level)의 프로그래밍을 수월하게 하는 기능을 제공한다. `unsafe`를 사용하는 패키지는 타입 안전성에 대해 프로그래머가 직접 면밀히 조사해야 하며 코드가 포터블(portable)하지 않다. 패키지는 다음과 같은 인터페이스를 제공한다:
 
 ```

@@ -8,7 +8,7 @@
 
 ```
 if x > max {
-	x = max
+    x = max
 }
 ```
 
@@ -16,10 +16,10 @@ The expression may be preceded by a simple statement, which executes before the 
 
 ```
 if x := f(); x < y {
-	return x
+    return x
 } else if x > z {
-	return z
+    return z
 } else {
-	return y
+    return y
 }
 ```

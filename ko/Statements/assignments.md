@@ -64,7 +64,7 @@ x[2], p.x = 6, 7  // set x[2] = 6, then panic setting p.x = 7
 i = 2
 x = []int{3, 5, 7}
 for i, x[i] = range x {  // set i, x[2] = 0, x[0]
-	break
+    break
 }
 // after this loop, i == 0 and x == []int{3, 5, 3}
 ```

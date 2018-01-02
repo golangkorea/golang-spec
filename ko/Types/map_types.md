@@ -1,9 +1,5 @@
 # [map 타입](#map-types)
 
-* Go 버전: 1.9
-* 원문: [Map types](https://golang.org/ref/spec#Map_types)
-* 번역자: Jhonghee Park (@jhonghee)
-
 map은 순서없이 구성된 단일 타입 요소들의 그룹이며, 요소의 타입은 요소 타입(element type)이라고 부른다. map에서는 키 타입(key type)의 고유한 *키*를 이용해 요소에 접근할 수 있다. 초기화되지 않은 map의 값은 `nil`이다.
 
 <pre>

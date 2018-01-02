@@ -106,7 +106,7 @@ filter := [10]float32{-1, 4: -0.1, -0.1, 9: -1}
 
 // frequencies in Hz for equal-tempered scale (A4 = 440Hz)
 noteFrequency := map[string]float32{
-	"C0": 16.35, "D0": 18.35, "E0": 20.60, "F0": 21.83,
-	"G0": 24.50, "A0": 27.50, "B0": 30.87,
+    "C0": 16.35, "D0": 18.35, "E0": 20.60, "F0": 21.83,
+    "G0": 24.50, "A0": 27.50, "B0": 30.87,
 }
 ```

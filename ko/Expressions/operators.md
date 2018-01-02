@@ -1,9 +1,5 @@
 # [연산자](#operators)
 
-* Go 버전: 1.9
-* 원문: [Operators](https://golang.org/ref/spec#Operators)
-* 번역자: Jhonghee Park (@jhonghee)
-
 연산자는 피연산자들을 조합해서 식(expression)으로 만든다.
 
 <pre>
