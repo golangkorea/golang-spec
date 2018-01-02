@@ -28,23 +28,24 @@ In a case or default clause, the last non-empty statement may be a (possibly [la
 
 The switch expression may be preceded by a simple statement, which executes before the expression is evaluated.
 
-    switch tag {
-    default: s3()
-    case 0, 1, 2, 3: s1()
-    case 4, 5, 6, 7: s2()
-    }
-    
-    switch x := f(); {  // missing switch expression means "true"
-    case x < 0: return -x
-    default: return x
-    }
-    
-    switch {
-    case x < y: f1()
-    case x < z: f2()
-    case x == 4: f3()
-    }
-    
+```
+switch tag {
+default: s3()
+case 0, 1, 2, 3: s1()
+case 4, 5, 6, 7: s2()
+}
+
+switch x := f(); {  // missing switch expression means "true"
+case x < 0: return -x
+default: return x
+}
+
+switch {
+case x < y: f1()
+case x < z: f2()
+case x == 4: f3()
+}
+```
 
 Implementation restriction: A compiler may disallow multiple case expressions evaluating to the same constant. For instance, the current compilers disallow duplicate integer, floating point, or string constants in case expressions.
 
@@ -52,10 +53,11 @@ Implementation restriction: A compiler may disallow multiple case expressions ev
 
 A type switch compares types rather than values. It is otherwise similar to an expression switch. It is marked by a special switch expression that has the form of a [type assertion](/Expressions/type_assertions.html) using the reserved word type rather than an actual type:
 
-    switch x.(type) {
-    // cases
-    }
-    
+```
+switch x.(type) {
+// cases
+}
+```
 
 Cases then match actual types T against the dynamic type of the expression x. As with type assertions, x must be of [interface type](/Types/interface_types.html), and each non-interface type T listed in a case must implement the type of x. The types listed in the cases of a type switch must all be [different](/Properties%20of%20types%20and%20values/type_identity.html).
 
@@ -73,46 +75,48 @@ The type in a case may be [nil](/Declarations%20and%20scope/predeclared_identifi
 
 Given an expression x of type interface{}, the following type switch:
 
-    switch i := x.(type) {
-    case nil:
-        printString("x is nil")                // type of i is type of x (interface{})
-    case int:
-        printInt(i)                            // type of i is int
-    case float64:
-        printFloat64(i)                        // type of i is float64
-    case func(int) float64:
-        printFunction(i)                       // type of i is func(int) float64
-    case bool, string:
-        printString("type is bool or string")  // type of i is type of x (interface{})
-    default:
-        printString("don't know the type")     // type of i is type of x (interface{})
-    }
-    
+```
+switch i := x.(type) {
+case nil:
+	printString("x is nil")                // type of i is type of x (interface{})
+case int:
+	printInt(i)                            // type of i is int
+case float64:
+	printFloat64(i)                        // type of i is float64
+case func(int) float64:
+	printFunction(i)                       // type of i is func(int) float64
+case bool, string:
+	printString("type is bool or string")  // type of i is type of x (interface{})
+default:
+	printString("don't know the type")     // type of i is type of x (interface{})
+}
+```
 
 could be rewritten:
 
-    v := x  // x is evaluated exactly once
-    if v == nil {
-        i := v                                 // type of i is type of x (interface{})
-        printString("x is nil")
-    } else if i, isInt := v.(int); isInt {
-        printInt(i)                            // type of i is int
-    } else if i, isFloat64 := v.(float64); isFloat64 {
-        printFloat64(i)                        // type of i is float64
-    } else if i, isFunc := v.(func(int) float64); isFunc {
-        printFunction(i)                       // type of i is func(int) float64
-    } else {
-        _, isBool := v.(bool)
-        _, isString := v.(string)
-        if isBool || isString {
-            i := v                         // type of i is type of x (interface{})
-            printString("type is bool or string")
-        } else {
-            i := v                         // type of i is type of x (interface{})
-            printString("don't know the type")
-        }
-    }
-    
+```
+v := x  // x is evaluated exactly once
+if v == nil {
+	i := v                                 // type of i is type of x (interface{})
+	printString("x is nil")
+} else if i, isInt := v.(int); isInt {
+	printInt(i)                            // type of i is int
+} else if i, isFloat64 := v.(float64); isFloat64 {
+	printFloat64(i)                        // type of i is float64
+} else if i, isFunc := v.(func(int) float64); isFunc {
+	printFunction(i)                       // type of i is func(int) float64
+} else {
+	_, isBool := v.(bool)
+	_, isString := v.(string)
+	if isBool || isString {
+		i := v                         // type of i is type of x (interface{})
+		printString("type is bool or string")
+	} else {
+		i := v                         // type of i is type of x (interface{})
+		printString("don't know the type")
+	}
+}
+```
 
 The type switch guard may be preceded by a simple statement, which executes before the guard is evaluated.
 

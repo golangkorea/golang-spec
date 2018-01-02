@@ -16,13 +16,16 @@ Implementation restriction: A compiler may restrict ImportPaths to non-empty str
 
 Assume we have compiled a package containing the package clause package math, which exports function Sin, and installed the compiled package in the file identified by `"lib/math"`. This table illustrates how Sin is accessed in files that import the package after the various types of import declaration.
 
-    Import declaration          Local name of Sin
-    
-    import   "lib/math"         math.Sin
-    import m "lib/math"         m.Sin
-    import . "lib/math"         Sin
-    
+```
+Import declaration          Local name of Sin
+
+import   "lib/math"         math.Sin
+import m "lib/math"         m.Sin
+import . "lib/math"         Sin
+```
 
 An import declaration declares a dependency relation between the importing and imported package. It is illegal for a package to import itself, directly or indirectly, or to directly import a package without referring to any of its exported identifiers. To import a package solely for its side-effects (initialization), use the [blank](/Declarations and scope/blank_identifier.html) identifier as explicit package name:
 
-    import _ "lib/math"
+```
+import _ "lib/math"
+```

@@ -13,12 +13,12 @@ The *scope* of a declared identifier is the extent of source text in which the i
 
 Go is lexically scoped using [blocks](/Blocks/):
 
-1. The scope of a [predeclared identifier](/Declarations%20and%20scope/predeclared_identifiers.html) is the universe block.
-2. The scope of an identifier denoting a constant, type, variable, or function (but not method) declared at top level (outside any function) is the package block.
-3. The scope of the package name of an imported package is the file block of the file containing the import declaration.
-4. The scope of an identifier denoting a method receiver, function parameter, or result variable is the function body.
-5. The scope of a constant or variable identifier declared inside a function begins at the end of the ConstSpec or VarSpec (ShortVarDecl for short variable declarations) and ends at the end of the innermost containing block.
-6. The scope of a type identifier declared inside a function begins at the identifier in the TypeSpec and ends at the end of the innermost containing block.
+  1. The scope of a [predeclared identifier](/Declarations%20and%20scope/predeclared_identifiers.html) is the universe block.
+  2. The scope of an identifier denoting a constant, type, variable, or function (but not method) declared at top level (outside any function) is the package block.
+  3. The scope of the package name of an imported package is the file block of the file containing the import declaration.
+  4. The scope of an identifier denoting a method receiver, function parameter, or result variable is the function body.
+  5. The scope of a constant or variable identifier declared inside a function begins at the end of the ConstSpec or VarSpec (ShortVarDecl for short variable declarations) and ends at the end of the innermost containing block.
+  6. The scope of a type identifier declared inside a function begins at the identifier in the TypeSpec and ends at the end of the innermost containing block.
 
 An identifier declared in a block may be redeclared in an inner block. While the identifier of the inner declaration is in scope, it denotes the entity declared by the inner declaration.
 

@@ -1,6 +1,0 @@
-files:
-  - source: /en/**/*.md
-    ignore:
-      - /en/README.md
-      - /en/GLOSSARY.md
-    translation: /%two_letters_code%/**/%original_file_name%

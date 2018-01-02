@@ -8,12 +8,15 @@ With the exception of specific built-in functions, function and method [calls](/
 
 The following built-in functions are not permitted in statement context:
 
-    append cap complex imag len make new real
-    unsafe.Alignof unsafe.Offsetof unsafe.Sizeof
-    
+```
+append cap complex imag len make new real
+unsafe.Alignof unsafe.Offsetof unsafe.Sizeof
+```
 
-    h(x+y)
-    f.Close()
-    <-ch
-    (<-ch)
-    len("foo")  // illegal if len is the built-in function
+```
+h(x+y)
+f.Close()
+<-ch
+(<-ch)
+len("foo")  // illegal if len is the built-in function
+```
