@@ -81,12 +81,14 @@ Within a composite literal of array, slice, or map type T, elements or map keys 
 
 A parsing ambiguity arises when a composite literal using the TypeName form of the LiteralType appears as an operand between the [keyword](/Lexical%20elements/keywords.html) and the opening brace of the block of an "if", "for", or "switch" statement, and the composite literal is not enclosed in parentheses, square brackets, or curly braces. In this rare case, the opening brace of the literal is erroneously parsed as the one introducing the block of statements. To resolve the ambiguity, the composite literal must appear within parentheses.
 
+```
     if x == (T{a,b,c}[i]) { … }
     if (x == T{a,b,c}[i]) { … }
-    
+```    
 
 Examples of valid array, slice, and map literals:
 
+```
     // list of prime numbers
     primes := []int{2, 3, 5, 7, 9, 2147483647}
     
@@ -101,3 +103,4 @@ Examples of valid array, slice, and map literals:
         "C0": 16.35, "D0": 18.35, "E0": 20.60, "F0": 21.83,
         "G0": 24.50, "A0": 27.50, "B0": 30.87,
     }
+```
