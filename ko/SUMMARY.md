@@ -112,7 +112,7 @@
    * [패키지 초기화](Program initialization and execution/package_initialization.md)
    * [프로그램 실행](Program initialization and execution/program_execution.md)
 * [에러](Errors/README.md)
-* [런타임 패닉](Run-time panics/README.md)
+* [런타임 panic](Run-time panics/README.md)
 * [시스템 관련 고려사항들](System considerations/README.md)
    * [unsafe 패키지](System considerations/package_unsafe.md)
    * [크기와 얼라인먼트 보증](System considerations/size_and_alignment_guarantees.md)
