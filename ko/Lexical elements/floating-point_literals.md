@@ -8,3 +8,15 @@ A floating-point literal is a decimal representation of a [floating-point consta
 <a id="decimals">decimals</a>  = <a href="/Source%20code%20representation/letters_and_digits.html#decimal_digit">decimal_digit</a> { <a href="/Source%20code%20representation/letters_and_digits.html#decimal_digit">decimal_digit</a> } .
 <a id="exponent">exponent</a>  = ( "e" | "E" ) [ "+" | "-" ] <a href="#decimals">decimals</a> .
 </pre>
+
+```
+0.
+72.40
+072.40  // == 72.40
+2.71828
+1.e+0
+6.67428e-11
+1E6
+.25
+.12345E+5
+```
