@@ -28,8 +28,6 @@ const Φ = iota*1i - 1/1i   //            (untyped complex constant)
 
 Applying the built-in function complex to untyped integer, rune, or floating-point constants yields an untyped complex constant.
 
-미지정 타입의 정수 상수, 룬 상수, 부동 소수점 상수에 내장 함수 `complex`를 적용한 결과는 미지정 타입의 복소수 상수다.
-
 ```
 const ic = complex(0, c)   // ic == 3.75i  (untyped complex constant)
 const iΘ = complex(0, Θ)   // iΘ == 1i     (type complex128)
