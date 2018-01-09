@@ -67,6 +67,7 @@ and is shorthand for a slice operation applied to an array:
 
 Within a composite literal of array, slice, or map type T, elements or map keys that are themselves composite literals may elide the respective literal type if it is identical to the element or key type of T. Similarly, elements or keys that are addresses of composite literals may elide the &T when the element or key type is *T.
 
+```
     [...]Point{{1.5, -3.5}, {0, 0}}     // same as [...]Point{Point{1.5, -3.5}, Point{0, 0}}
     [][]int{{1, 2, 3}, {4, 5}}          // same as [][]int{[]int{1, 2, 3}, []int{4, 5}}
     [][]Point{{{0, 1}, {1, 2}}}         // same as [][]Point{[]Point{Point{0, 1}, Point{1, 2}}}
@@ -76,16 +77,18 @@ Within a composite literal of array, slice, or map type T, elements or map keys 
     type PPoint *Point
     [2]*Point{{1.5, -3.5}, {}}          // same as [2]*Point{&Point{1.5, -3.5}, &Point{}}
     [2]PPoint{{1.5, -3.5}, {}}          // same as [2]PPoint{PPoint(&Point{1.5, -3.5}), PPoint(&Point{})}
-    
+```    
 
 A parsing ambiguity arises when a composite literal using the TypeName form of the LiteralType appears as an operand between the [keyword](/Lexical%20elements/keywords.html) and the opening brace of the block of an "if", "for", or "switch" statement, and the composite literal is not enclosed in parentheses, square brackets, or curly braces. In this rare case, the opening brace of the literal is erroneously parsed as the one introducing the block of statements. To resolve the ambiguity, the composite literal must appear within parentheses.
 
+```
     if x == (T{a,b,c}[i]) { … }
     if (x == T{a,b,c}[i]) { … }
-    
+```    
 
 Examples of valid array, slice, and map literals:
 
+```
     // list of prime numbers
     primes := []int{2, 3, 5, 7, 9, 2147483647}
     
@@ -100,3 +103,4 @@ Examples of valid array, slice, and map literals:
         "C0": 16.35, "D0": 18.35, "E0": 20.60, "F0": 21.83,
         "G0": 24.50, "A0": 27.50, "B0": 30.87,
     }
+```
