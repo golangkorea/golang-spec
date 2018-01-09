@@ -15,7 +15,7 @@ Within a list of parameters or results, the names (IdentifierList) must either a
 
 The final incoming parameter in a function signature may have a type prefixed with `...`. A function with such a parameter is called *variadic* and may be invoked with zero or more arguments for that parameter.
 
-```
+```go
 func()
 func(x int) int
 func(a, _ int, z float32) bool

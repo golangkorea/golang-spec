@@ -10,7 +10,7 @@ Although these representations all result in an integer, they have different val
 
 After a backslash, certain single-character escapes represent special values:
 
-```
+```go
 \a   U+0007 alert or bell
 \b   U+0008 backspace
 \f   U+000C form feed
@@ -37,7 +37,7 @@ All other sequences starting with a backslash are illegal inside rune literals.
 <a id="escaped_char">escaped_char</a>     = `\` ( "a" | "b" | "f" | "n" | "r" | "t" | "v" | `\` | "'" | `"` ) .
 </pre>
 
-```
+```go
 'a'
 'ä'
 '本'

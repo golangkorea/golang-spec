@@ -15,7 +15,7 @@ For a base type, the non-blank names of methods bound to it must be unique. If t
 
 Given type Point, the declarations
 
-```
+```go
 func (p *Point) Length() float64 {
 	return math.Sqrt(p.x * p.x + p.y * p.y)
 }
@@ -30,7 +30,7 @@ bind the methods `Length` and `Scale`, with receiver type `*Point`, to the base 
 
 The type of a method is the type of a function with the receiver as first argument. For instance, the method Scale has type
 
-```
+```go
 func(p *Point, factor float64)
 ```
 
