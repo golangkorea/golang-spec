@@ -26,14 +26,14 @@ For struct literals the following rules apply:
 
 Given the declarations
 
-```
+```go
 type Point3D struct { x, y, z float64 }
 type Line struct { p, q Point3D }
 ```
 
 one may write
 
-```
+```golang
 origin := Point3D{}                            // zero value for Point3D
 line := Line{origin, Point3D{y: -4, z: 12.3}}  // zero value for line.q.x
 ```
