@@ -1,3 +1,0 @@
-# [Label scopes](#label-scopes)
-
-Labels are declared by [labeled statements](https://golang.org/ref/spec#Labeled_statements) and are used in the "[break](https://golang.org/ref/spec#Break_statements)", "[continue](https://golang.org/ref/spec#Continue_statements)", and "[goto](https://golang.org/ref/spec#Goto_statements)" statements. It is illegal to define a label that is never used. In contrast to other identifiers, labels are not block scoped and do not conflict with identifiers that are not labels. The scope of a label is the body of the function in which it is declared and excludes the body of any nested function.

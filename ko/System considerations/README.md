@@ -1,1 +1,0 @@
-# [System considerations](#system-considerations)
