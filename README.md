@@ -17,9 +17,9 @@ https://github.com/golangkorea/golang-spec)를 fork하시고 번역하신 다음
 [Gitter 방](https://gitter.im/golang-korean-community/go-spec-in-korean?utm_source=share-link&utm_medium=link&utm_campaign=share-link)도 마련되어 있으니 많은 참여바랍니다.
 
 # 번역 플랫폼 연동 테스트 공지
-효율적인 번역 프로젝트 관리를 위해 번역 플랫폼 Crowdin, Transifex 와 GitHub 연동 테스트를 진행 중입니다.
+효율적인 번역 프로젝트 관리를 위해 번역 플랫폼 Crowdin, Transifex 와 GitHub 연동 테스트를 진행 중입니다. XLIFF 변환 테스트를 위해 번역 플랫폼 연동 테스트 종료기간이 2018년 1월 15일에서 22일로 1주일 연기되었습니다. 참고 바랍니다.  
 
-* 기간: ~ 2018년 1월 15일 월요일까지
+* 기간: ~ 2018년 1월 22일 월요일까지
 * 테스트 완료 후 Go spec 프로젝트와 연동할 메인 번역 플랫폼을 결정할 예정입니다.
 * 따라서, 번역한 콘텐츠에 대한 PR 요청은 테스트 기간이 끝날 때까지 잠시 대기해주시기 바랍니다.
 
