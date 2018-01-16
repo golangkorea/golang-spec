@@ -2,7 +2,7 @@
 
 아래는 예약어이므로 식별자가 될 수 없다.
 
-```
+```go
 break        default      func         interface    select
 case         defer        go           map          struct
 chan         else         goto         package      switch

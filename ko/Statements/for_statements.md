@@ -11,7 +11,7 @@ A "for" statement specifies repeated execution of a block. There are three forms
 
 In its simplest form, a "for" statement specifies the repeated execution of a block as long as a boolean condition evaluates to true. The condition is evaluated before each iteration. If the condition is absent, it is equivalent to the boolean value true.
 
-```
+```go
 for a < b {
     a *= 2
 }
@@ -27,7 +27,7 @@ A "for" statement with a ForClause is also controlled by its condition, but addi
 <a id="PostStmt">PostStmt</a> = <a href="/Statements/#SimpleStmt">SimpleStmt</a> .
 </pre>
 
-```
+```go
 for i := 0; i < 10; i++ {
     f(i)
 }
@@ -35,7 +35,7 @@ for i := 0; i < 10; i++ {
 
 If non-empty, the init statement is executed once before evaluating the condition for the first iteration; the post statement is executed after each execution of the block (and only if the block was executed). Any element of the ForClause may be empty but the [semicolons](/Lexical%20elements/semicolons.html) are required unless there is only a condition. If the condition is absent, it is equivalent to the boolean value true.
 
-```
+```go
 for cond { S() }    is the same as    for ; cond ; { S() }
 for      { S() }    is the same as    for true     { S() }
 ```
@@ -72,7 +72,7 @@ The iteration values are assigned to the respective iteration variables as in an
 
 The iteration variables may be declared by the "range" clause using a form of [short variable declaration](/Declarations%20and%20scope/short_variable_declarations.html) (:=). In this case their types are set to the types of the respective iteration values and their [scope](/Declarations%20and%20scope/) is the block of the "for" statement; they are re-used in each iteration. If the iteration variables are declared outside the "for" statement, after execution their values will be those of the last iteration.
 
-```
+```go
 var testdata *struct {
     a *[7]int
 }

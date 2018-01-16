@@ -4,21 +4,21 @@
 
 다음의 간단한 두 선언문은 동일하다.
 
-```
+```go
 var i int
 var i int = 0
 ```
 
 아래의 코드가 실행되면
 
-```
+```go
 type T struct { i int; f float64; next *T }
 t := new(T)
 ```
 
 다음과 같은 결과가 나타난다.
 
-```
+```go
 t.i == 0
 t.f == 0.0
 t.next == nil
@@ -26,6 +26,6 @@ t.next == nil
 
 아래와 같이 실행해도 같은 결과가 나온다.
 
-```
+```go
 var t T
 ```

@@ -7,7 +7,7 @@ A pointer type denotes the set of all pointers to [variables](/Variables/) of a 
 <a id="BaseType">BaseType</a>    = <a href="/Types/#Type">Type</a> .
 </pre>
 
-```
+```go
 *Point
 *[4]int
 ```

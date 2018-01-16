@@ -7,7 +7,7 @@
 <a id="BaseType">BaseType</a>    = <a href="/Types/#Type">Type</a> .
 </pre>
 
-```
+```go
 *Point
 *[4]int
 ```

@@ -9,7 +9,7 @@
 <a id="hex_lit">hex_lit</a>     = "0" ( "x" | "X" ) <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a> { <a href="/Source%20code%20representation/letters_and_digits.html#hex_digit">hex_digit</a> } .
 </pre> 
 
-```
+```go
 42
 0600
 0xBadFace

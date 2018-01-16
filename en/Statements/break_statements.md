@@ -8,7 +8,7 @@ A "break" statement terminates execution of the innermost "[for](/Statements/for
 
 If there is a label, it must be that of an enclosing "for", "switch", or "select" statement, and that is the one whose execution terminates.
 
-```
+```go
 OuterLoop:
 	for i = 0; i < n; i++ {
 		for j = 0; j < m; j++ {

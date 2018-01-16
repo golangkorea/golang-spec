@@ -8,7 +8,7 @@ A [variable declaration](/Declarations%20and%20scope/variable_declarations.html)
 
 The *static type* (or just *type*) of a variable is the type given in its declaration, the type provided in the `new` call or composite literal, or the type of an element of a structured variable. Variables of interface type also have a distinct *dynamic type*, which is the concrete type of the value assigned to the variable at run time (unless the value is the predeclared identifier `nil`, which has no type). The dynamic type may vary during execution but values stored in interface variables are always [assignable](/Properties%20of%20types%20and%20values/assignability.html) to the static type of the variable.
 
-```
+```go
 var x interface{}  // x is nil and has static type interface{}
 var v *T           // v has value nil, static type *T
 x = 42             // x has value 42 and dynamic type int

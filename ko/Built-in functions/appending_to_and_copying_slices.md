@@ -4,13 +4,13 @@ The built-in functions append and copy assist in common slice operations. For bo
 
 The [variadic](/Types/function_types.html) function append appends zero or more values x to s of type S, which must be a slice type, and returns the resulting slice, also of type S. The values x are passed to a parameter of type ...T where T is the [element type](/Types/slice_types.html) of S and the respective [parameter passing rules](/Expressions/passing_arguments_to__parameters.html) apply. As a special case, append also accepts a first argument assignable to type []byte with a second argument of string type followed by .... This form appends the bytes of the string.
 
-```
+```go
 append(s S, x ...T) S  // T is the element type of S
 ```
 
 If the capacity of s is not large enough to fit the additional values, append allocates a new, sufficiently large underlying array that fits both the existing slice elements and the additional values. Otherwise, append re-uses the underlying array.
 
-```
+```go
 s0 := []int{0, 0}
 s1 := append(s0, 2)                // append a single element     s1 == []int{0, 0, 2}
 s2 := append(s1, 3, 5, 7)          // append multiple elements    s2 == []int{0, 0, 2, 3, 5, 7}
@@ -26,14 +26,14 @@ b = append(b, "bar"...)            // append string contents      b == []byte{'b
 
 The function copy copies slice elements from a source src to a destination dst and returns the number of elements copied. Both arguments must have [identical](/Properties of types and values/type_identity.html) element type T and must be [assignable](/Properties of types and values/assignability.html) to a slice of type []T. The number of elements copied is the minimum of len(src) and len(dst). As a special case, copy also accepts a destination argument assignable to type []byte with a source argument of a string type. This form copies the bytes from the string into the byte slice.
 
-```
+```go
 copy(dst, src []T) int
 copy(dst []byte, src string) int
 ```
 
 Examples:
 
-```
+```go
 var a = [...]int{0, 1, 2, 3, 4, 5, 6, 7}
 var s = make([]int, 6)
 var b = make([]byte, 5)

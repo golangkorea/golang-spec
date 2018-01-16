@@ -14,13 +14,13 @@ array와 마찬가지로, 슬라이스도 인덱스로 접근할 수 있고 길�
 
 주어진 요소 타입 T의 새롭게 초기화된 슬라이스는 내장 함수 [make](/Built-in%20functions/making_slices,_maps_and_channels.html)를 사용해 만들 수 있는데, make는 슬라이스 타입과 길이, 그리고 선택적으로 수용력(capacity)을 인자로 받는다. make로 만든 슬라이스는 항상 새로운 array를 은밀히 할당하고 반환된 슬라이스가 가리키도록 한다. 즉, 다음을 실행하면
 
-```
+```go
 make([]T, length, capacity)
 ```
 
 array를 할당하고 [슬라이싱(slicing)](/Expressions/slice_expressions.html)으로 슬라이스를 만든 것과 같은 슬라이스를 생산하게 되어서, 다음의 두 표현식은 동일하다:
 
-```
+```go
 make([]int, 50, 100)
 new([100]int)[0:50]
 ```

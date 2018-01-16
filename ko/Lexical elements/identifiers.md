@@ -6,7 +6,7 @@
 <a id="identifier">identifier</a> = <a href="/Source code representation/letters_and_digits.html#letter">letter</a> { <a href="/Source code representation/letters_and_digits.html#letter">letter</a> | <a href="/Source code representation/characters.html#unicode_digit">unicode_digit</a> } .
 </pre>
 
-```
+```go
 a
 _x9
 ThisVariableIsExported

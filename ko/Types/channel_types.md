@@ -8,7 +8,7 @@
 
 채널에 추가로 붙이는 `<-` 연산자는 *송신*과 *수신*의 *방향*을 나타낸다. 방향이 주어지지 않은 경우, 채널은 *양방향*이다. [타입변환](/Expressions/conversions.html) 혹은 [할당](/Statements/assignments.html)을 통해서 채널은 송신과 수신중 한 방향으로 제한될 수 있다.
 
-```
+```go
 chan T          // 타입 T의 값을 보낼 수도 있고 받을 수도 있다.
 chan<- float64  // float64 값들만 보낼 수 있다.
 <-chan int      // int 값들만 받을 수 있다.
@@ -16,7 +16,7 @@ chan<- float64  // float64 값들만 보낼 수 있다.
 
 `<-` 연산자는 최대한 가장 왼쪽 채널과 연계된다:
 
-```
+```go
 chan<- chan int    // chan<- (chan int) 과 같다
 chan<- <-chan int  // chan<- (<-chan int) 과 같다
 <-chan <-chan int  // <-chan (<-chan int) 과 같다
@@ -25,7 +25,7 @@ chan (<-chan int)
 
 새로 초기화 된 채널값은 내장 함수인 [`make`](/Built-in%20functions/making_slices,_maps_and_channels.html)에 채널 타입과 추가로 *용량*을 인자로 전달해서 만들어 진다.
 
-```
+```go
 make(chan int, 100)
 ```
 

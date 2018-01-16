@@ -6,7 +6,7 @@ func panic(interface{})
 func recover() interface{}
 While executing a function F, an explicit call to panic or a [run-time panic](/Run-time panics/) terminates the execution of F. Any functions [deferred](/Statements/defer_statements.html) by F are then executed as usual. Next, any deferred functions run by F's caller are run, and so on up to any deferred by the top-level function in the executing goroutine. At that point, the program is terminated and the error condition is reported, including the value of the argument to `panic`. This termination sequence is called *panicking*.
 
-```
+```go
 panic(42)
 panic("unreachable")
 panic(Error("cannot parse"))
@@ -21,7 +21,7 @@ The return value of recover is nil if any of the following conditions holds:
 
 The protect function in the example below invokes the function argument g and protects callers from run-time panics raised by g.
 
-```
+```go
 func protect(g func()) {
     defer func() {
         log.Println("done")  // Println executes normally even if there is a panic

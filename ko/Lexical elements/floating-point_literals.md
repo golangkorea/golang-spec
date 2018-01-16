@@ -10,7 +10,7 @@
 <a id="exponent">exponent</a>  = ( "e" | "E" ) [ "+" | "-" ] <a href="#decimals">decimals</a> .
 </pre>
 
-```
+```go
 0.
 72.40
 072.40  // == 72.40

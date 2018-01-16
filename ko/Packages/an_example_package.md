@@ -2,7 +2,7 @@
 
 Here is a complete Go package that implements a concurrent prime sieve.
 
-```
+```go
 package main
 
 import "fmt"

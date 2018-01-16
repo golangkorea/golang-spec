@@ -4,7 +4,7 @@
 
 `Greeting` 함수를 다음과 같이 호출했을 때,
 
-```
+```go
 func Greeting(prefix string, who ...string)
 Greeting("nobody")
 Greeting("hello:", "Joe", "Anna", "Eileen")
@@ -16,7 +16,7 @@ Greeting("hello:", "Joe", "Anna", "Eileen")
 
 슬라이스 `s`에 대해 다음과 같이 호출했을 때,
 
-```
+```go
 s := []string{"James", "Jasmine"}
 Greeting("goodbye:", s...)
 ```

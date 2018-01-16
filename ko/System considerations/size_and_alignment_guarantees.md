@@ -2,7 +2,7 @@
 
 [숫자 타입들(numeric types)](/Types/numeric_types.html)에 대해서, 다음과 같은 크기가 보증된다:
 
-```
+```go
 type                                  바이트수
 
 byte, uint8, int8                     1

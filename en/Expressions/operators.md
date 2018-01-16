@@ -18,7 +18,7 @@ Except for shift operations, if one operand is an untyped [constant](/Constants/
 
 The right operand in a shift expression must have unsigned integer type or be an untyped constant representable by a value of type `unit`. If the left operand of a non-constant shift expression is an untyped constant, it is first converted to the type it would assume if the shift expression were replaced by its left operand alone.
 
-```
+```go
 var s uint = 33
 var i = 1<<s           // 1 has type int
 var j int32 = 1<<s     // 1 has type int32; j == 0
@@ -40,7 +40,7 @@ Unary operators have the highest precedence. As the ++ and -- operators form sta
 
 There are five precedence levels for binary operators. Multiplication operators bind strongest, followed by addition operators, comparison operators, && (logical AND), and finally || (logical OR):
 
-```
+```go
 Precedence    Operator
     5             *  /  %  <<  >>  &  &^
     4             +  -  |  ^
@@ -51,7 +51,7 @@ Precedence    Operator
 
 Binary operators of the same precedence associate from left to right. For instance, x / y * z is the same as (x / y) * z.
 
-```
+```go
 +x
 23 + 3*x[i]
 x <= f()

@@ -4,21 +4,21 @@ When storage is allocated for a [variable](/Variables/), either through a declar
 
 These two simple declarations are equivalent:
 
-```
+```go
 var i int
 var i int = 0
 ```
 
 After
 
-```
+```go
 type T struct { i int; f float64; next *T }
 t := new(T)
 ```
 
 the following holds:
 
-```
+```go
 t.i == 0
 t.f == 0.0
 t.next == nil
@@ -26,6 +26,6 @@ t.next == nil
 
 The same would also be true after
 
-```
+```go
 var t T
 ```

@@ -2,7 +2,7 @@
 
 Three functions assemble and disassemble complex numbers. The built-in function complex constructs a complex value from a floating-point real and imaginary part, while real and imag extract the real and imaginary parts of a complex value.
 
-```
+```go
 complex(realPart, imaginaryPart floatT) complexT
 real(complexT) floatT
 imag(complexT) floatT
@@ -16,7 +16,7 @@ The real and imag functions together form the inverse of complex, so for a value
 
 If the operands of these functions are all constants, the return value is a constant.
 
-```
+```go
 var a = complex(2, -2)             // complex128
 const b = complex(1.0, -1.4)       // untyped complex constant 1 - 1.4i
 x := float32(math.Cos(math.Pi/2))  // float32

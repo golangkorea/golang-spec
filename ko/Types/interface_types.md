@@ -11,7 +11,7 @@ interface 타입은 *인터페이스*라고 불리는 [메서드 집합(method s
 
 모든 메서드 집합에서 그런 것 처럼, interface 타입내, 각 메서드는 [blank 식별자(blank identifier)](/Declarations%20and%20scope/blank_identifier.html)가 아닌 [고유](/Declarations%20and%20scope/uniqueness_of_identifiers.html)한 명칭을 가져야 한다.
 
-```
+```go
 // A simple File interface
 interface {
     Read(b Buffer) bool
@@ -22,7 +22,7 @@ interface {
 
 한 인터페이스는 여러 타입으로 구현될 수도 있다. 예를 들어, 만약 타입 `S1`와 `S2`가 다음과 같은 메서드 집합을 가지고 있다면
 
-```
+```go
 func (p T) Read(b Buffer) bool { return … }
 func (p T) Write(b Buffer) bool { return … }
 func (p T) Close() { … }
@@ -32,13 +32,13 @@ func (p T) Close() { … }
 
 타입은 자신의 메서드에 인터페이스의 메서드를 포함시키는 방법을 통해 어떠한 인터페이스든지 구현할 수 있기 때문에 여러 인터페이스를 함께 구현하는 것도 가능하다. 예를 들어, 모든 타입은 empty interface를 구현하고 있다:
 
-```
+```go
 interface{}
 ```
 
 추가로, `Locker`라는 인터페이스를 정의한 [타입 선언문](/Declarations%20and%20scope/type_declarations.html)내 열거되어 있는 인터페이스 사양을 보자. 
 
-```
+```go
 type Locker interface {
     Lock()
     Unlock()
@@ -47,7 +47,7 @@ type Locker interface {
 
 만약 `S1`과 `S2`가 아래의 메서드도 구현했다면
 
-```
+```go
 func (p T) Lock() { … }
 func (p T) Unlock() { … }
 ```
@@ -56,7 +56,7 @@ func (p T) Unlock() { … }
 
 인터페이스 `T`는 메서드의 사양이 있어야 할 자리에 (경우에 따라서는 패키지 이름을 동반한) interface 타입 이름 `E`를 사용할 수도 있다. 이것을 `T`안에 인터페이스 `E`를 *임베딩*했다고 부른다; 임베딩은 (엑스포트 여부에 상관없이) `E`의 모든 메서드를 인터페이스 `T`에 추가한다. 
 
-```
+```go
 type ReadWriter interface {
     Read(b Buffer) bool
     Write(b Buffer) bool
@@ -77,7 +77,7 @@ type LockedFile interface {
 
 인터페이스 `T`는 자신을 임베딩할 수 없고 `T`를 임베딩한 다른 어떤 인터페이스 타입도 재귀적으로 임베딩할 수 없다.
 
-```
+```go
 // 허용안됨: Bad는 자신을 임베딩할 수 없음
 type Bad interface {
     Bad

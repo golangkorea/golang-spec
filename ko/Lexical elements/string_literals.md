@@ -12,7 +12,7 @@
 <a id="interpreted_string_lit">interpreted_string_lit</a> = `"` { <a href="/Lexical%20elements/rune_literals.html#unicode_value">unicode_value</a> | <a href="/Lexical%20elements/rune_literals.html#byte_value">byte_value</a> } `"` .
 </pre>
 
-```
+```go
 `abc`                // "abc"와 동일
 `\n
 \n`                  // "\\n\n\\n" 와 동일
@@ -28,7 +28,7 @@
 
 아래 예는 모두 같은 문자열을 표현한 것이다.
 
-```
+```go
 "日本語"                                 // UTF-8 입력 문자열
 `日本語`                                 // UTF-8 비가공 문자열 리터럴
 "\u65e5\u672c\u8a9e"                    // 명시적인 유니코드 코드 포인트

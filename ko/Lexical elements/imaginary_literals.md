@@ -6,7 +6,7 @@
 <a id="imaginary_lit">imaginary_lit</a> = (<a href="/Lexical%20elements/floating-point_literals.html#decimals">decimals</a> | <a href="/Lexical%20elements/floating-point_literals.html#float_lit">float_lit</a>) "i" .
 </pre>
 
-```
+```go
 0i
 011i  // == 11i
 0.i

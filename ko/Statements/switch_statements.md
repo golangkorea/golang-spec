@@ -28,7 +28,7 @@ In a case or default clause, the last non-empty statement may be a (possibly [la
 
 The switch expression may be preceded by a simple statement, which executes before the expression is evaluated.
 
-```
+```go
 switch tag {
 default: s3()
 case 0, 1, 2, 3: s1()
@@ -53,7 +53,7 @@ Implementation restriction: A compiler may disallow multiple case expressions ev
 
 A type switch compares types rather than values. It is otherwise similar to an expression switch. It is marked by a special switch expression that has the form of a [type assertion](/Expressions/type_assertions.html) using the reserved word type rather than an actual type:
 
-```
+```go
 switch x.(type) {
 // cases
 }
@@ -75,7 +75,7 @@ The type in a case may be [nil](/Declarations%20and%20scope/predeclared_identifi
 
 Given an expression x of type interface{}, the following type switch:
 
-```
+```go
 switch i := x.(type) {
 case nil:
     printString("x is nil")                // type of i is type of x (interface{})
@@ -94,7 +94,7 @@ default:
 
 could be rewritten:
 
-```
+```go
 v := x  // x is evaluated exactly once
 if v == nil {
     i := v                                 // type of i is type of x (interface{})

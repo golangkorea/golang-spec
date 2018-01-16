@@ -15,7 +15,7 @@
 
 아래 선언문에서
 
-```
+```go
 type (
     A0 []string
     A1 = A0
@@ -39,7 +39,7 @@ type    C0 = B0
 
 다음의 타입들은 동일하다.
 
-```
+```go
 A0, A1, and []string
 A2 and struct{ a, b int }
 A3 and int

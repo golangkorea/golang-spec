@@ -8,7 +8,7 @@
 
 어떤 변수의 *static 타입* (또는 그냥 *타입*)은 `new` 호출 또는 composite literal에서 제공받은 타입이거나 구조화된 변수 요소의 타입이 해당 변수의 선언중에 할당된 것이다. interface 타입의 변수들은 또한 분명한 *동적 타입*, 즉, 런타임에(미리 선언된 식별자 `nil` 같은 타입이 없는 값만 아니면) 변수에 할당된 값의 콘크리트 타입을 가지고 있다. 동적 타입은 실행 되는 동안 달라지겠지만 interface 변수들에 저장된 값들은 항상 해당 변수의 static 타입에 [할당될 수(assignable)](/Properties%20of%20types%20and%20values/assignability.html) 있다.
 
-```
+```go
 var x interface{}  // x는 nil 이면서 interface{}형 static 타입을 가진다
 var v *T           // v는 nil 값을 *T형 static 타입으로 가진다
 x = 42             // x는 값 42를 int형 동적 타입으로 가진다

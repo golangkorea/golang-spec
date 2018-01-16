@@ -8,7 +8,7 @@ A "return" statement in a function F terminates the execution of F, and optional
 
 In a function without a result type, a "return" statement must not specify any result values.
 
-```
+```go
 func noResult() {
     return
 }
@@ -50,7 +50,7 @@ Regardless of how they are declared, all the result values are initialized to th
 
 Implementation restriction: A compiler may disallow an empty expression list in a "return" statement if a different entity (constant, type, or variable) with the same name as a result parameter is in [scope](/Declarations%20and%20scope/) at the place of the return.
 
-```
+```go
 func f(n int) (res int, err error) {
     if _, err := f(n-1); err != nil {
         return  // invalid return statement: err is shadowed

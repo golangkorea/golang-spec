@@ -12,7 +12,7 @@
 
 각각의 타입 `T`는 *내재 타입(underlying type)*을 가지고 있다: 만약 `T`가 사전에 선언(predeclared)된 불리언, 숫자, string 타입 중 하나거나 타입 리터럴이라면 내재 타입은 `T` 이다. 그 외의 경우, `T`의 내재 타입은 [타입 선언(type declarations)](/Declarations%20and%20scope/type_declarations.html)에서 `T`가 참조하는 타입의 내재 타입이다.
 
-```
+```go
 type (
     A1 = string
     A2 = A1

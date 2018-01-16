@@ -2,7 +2,7 @@
 
 A *numeric type* represents sets of integer or floating-point values. The predeclared architecture-independent numeric types are:
 
-```
+```go
 uint8       the set of all unsigned  8-bit integers (0 to 255)
 uint16      the set of all unsigned 16-bit integers (0 to 65535)
 uint32      the set of all unsigned 32-bit integers (0 to 4294967295)
