@@ -28,7 +28,7 @@ Go 언어 스펙 번역 프로젝트는 효율적인 번역 프로젝트 관리�
 
 - [Transifex](https://www.transifex.com/golang-korea/go-specification/)에서 `Help Translate Go Specification` 버튼을 이용해 프로젝트 번역자로 등록한 다음, 번역하고 싶은 파일을 찾아 번역을 시작하세요.
 - [Transifex](https://www.transifex.com/golang-korea/go-specification/)에서 특정 파일에 대한 번역 작업이 완료되면 관리자/리뷰어들에 의해 번역물에 대한 리뷰가 진행됩니다.
-- 원활한 리뷰 진행을 위해 특정 챕터에 대한 번역 완료시 [Gitter 방](https://gitter.im/golang-korean-community/go-spec-in-korean?utm_source=share-link&utm_medium=link&utm_campaign=share-link)에 번역완료 사실을 알려주시길 바랍니다.
+- 원활한 리뷰 진행을 위해 번역 참가자들은 특정 챕터에 대한 번역 완료시 [Gitter 방](https://gitter.im/golang-korean-community/go-spec-in-korean?utm_source=share-link&utm_medium=link&utm_campaign=share-link)에 번역완료 사실을 알려주시길 바랍니다.
 - 리뷰 과정에서 논의된 수정사항들을 반영하여 PR을 생성하면 최종적으로 transifex branch에 merge됩니다.
 - GitHub에서 transifex branch에 merge되면 자동으로 [GitBook](https://www.gitbook.com/book/gosudaweb/go-language-specification-in-korean/details)에 포스팅됩니다. 
 - [GitBook](https://www.gitbook.com/book/gosudaweb/go-language-specification-in-korean/details)에 포스팅된 이후에 발생하는 번역문 관련 모든 이슈는 [GitHub issue](https://github.com/golangkorea/golang-spec/issues/)로 보고해주시기 바랍니다.
