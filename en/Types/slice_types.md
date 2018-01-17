@@ -10,7 +10,7 @@ Like arrays, slices are indexable and have a length. The length of a slice s can
 
 A slice, once initialized, is always associated with an underlying array that holds its elements. A slice therefore shares storage with its array and with other slices of the same array; by contrast, distinct arrays always represent distinct storage.
 
-The array underlying a slice may extend past the end of the slice. The *capacity* is a measure of that extent: it is the sum of the length of the slice and the length of the array beyond the slice; a slice of length up to that capacity can be created by [slicing](/Expressions/slice_expressions.html) a new one from the original slice. The capacity of a slice a can be discovered using the built-in function [cap(a)](/Built-in%20functions/length_and_capacity.html).
+The array underlying a slice may extend past the end of the slice. The *capacity* is a measure of that extent: it is the sum of the length of the slice and the length of the array beyond the slice; a slice of length up to that capacity can be created by [*slicing*](/Expressions/slice_expressions.html) a new one from the original slice. The capacity of a slice a can be discovered using the built-in function [cap(a)](/Built-in%20functions/length_and_capacity.html).
 
 A new, initialized slice value for a given element type T is made using the built-in function [make](/Built-in%20functions/making_slices,_maps_and_channels.html), which takes a slice type and parameters specifying the length and optionally the capacity. A slice created with make always allocates a new, hidden array to which the returned slice value refers. That is, executing
 

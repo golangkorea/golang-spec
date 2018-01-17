@@ -1,8 +1,8 @@
-# Address operators
+# [주소 연산자](#address-operators)
 
-For an operand x of type T, the address operation &x generates a pointer of type *T to x. The operand must be addressable, that is, either a variable, pointer indirection, or slice indexing operation; or a field selector of an addressable struct operand; or an array indexing operation of an addressable array. As an exception to the addressability requirement, x may also be a (possibly parenthesized) [composite literal](/Expressions/composite_literals.html). If the evaluation of x would cause a [run-time panic](/Run-time%20panics/), then the evaluation of &x does too.
+`T` 타입의 피연산자 `x`에 대해, 주소 연산 `&x`는 `x`에 대한 포인터 타입 `*T`를 생성한다. 이때 피연산자는 변수, 포인터 간접참조, 슬라이스의 인덱싱 연산, 주소로 지정할 수 있는 구조체 피연산자의 필드 선택자, 주소로 지정 가능한 배열의 인덱싱 연산 등과 같이 주소로 지정할 수 있는 것이어야 한다. `x`가 (괄호안에 있을지도 모른는) [합성 리터럴](/Expressions/composite_literals.html)일 때는 주소 지정 가능 조건이 적용되지 않는다. `x`에 대한 평가가 [런타임 패닉](/Run-time%20panics/)을 일으킨다면 `&x`의 평가 역시 같은 결과를 낳는다.
 
-For an operand x of pointer type *T, the pointer indirection *x denotes the [variable](/Variables/) of type T pointed to by x. If x is nil, an attempt to evaluate *x will cause a [run-time panic](/Run-time%20panics/).
+포인터 타입 `*T`의 피연산자 `x`에 대해, 포인터 간접 참조 `*x`는 `x`가 가리키는 `T` 타입의 [변수] (/Variables/)를 나타낸다. `x`가 `nil`이면, `*x` 평가시 [런타임 패닉](/Run-time%20panics/)이 발생할 것이다.
 
 ```go
 &x
@@ -12,6 +12,6 @@ For an operand x of pointer type *T, the pointer indirection *x denotes the [var
 *pf(x)
 
 var x *int = nil
-*x   // causes a run-time panic
-&*x  // causes a run-time panic
+*x   // 런타임 패닉 발생
+&*x  // 런타임 패닉 발생
 ```
