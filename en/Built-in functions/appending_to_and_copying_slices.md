@@ -24,7 +24,7 @@ var b []byte
 b = append(b, "bar"...)            // append string contents      b == []byte{'b', 'a', 'r' }
 ```
 
-The function copy copies slice elements from a source src to a destination dst and returns the number of elements copied. Both arguments must have [identical](/Properties of types and values/type_identity.html) element type T and must be [assignable](/Properties of types and values/assignability.html) to a slice of type []T. The number of elements copied is the minimum of len(src) and len(dst). As a special case, copy also accepts a destination argument assignable to type []byte with a source argument of a string type. This form copies the bytes from the string into the byte slice.
+The function copy copies slice elements from a source src to a destination dst and returns the number of elements copied. Both arguments must have [identical](/Properties%20of%20types%20and%20values/type_identity.html) element type T and must be [assignable](/Properties%20of%20types%20and%20values/assignability.html) to a slice of type []T. The number of elements copied is the minimum of len(src) and len(dst). As a special case, copy also accepts a destination argument assignable to type []byte with a source argument of a string type. This form copies the bytes from the string into the byte slice.
 
 ```go
 copy(dst, src []T) int
