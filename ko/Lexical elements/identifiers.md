@@ -13,4 +13,4 @@ ThisVariableIsExported
 αβ
 ```
 
-식별자는 [미리 선언](/Declarations and scope/predeclared_identifiers.html) 될 수 있다.
+식별자는 [미리 선언](/Declarations%20and%20scope/predeclared_identifiers.html) 될 수 있다.

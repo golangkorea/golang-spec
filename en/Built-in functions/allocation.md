@@ -1,6 +1,6 @@
 # [Allocation](#allocation)
 
-The built-in function `new` takes a type `T`, allocates storage for a [variable](/Variables/) of that type at run time, and returns a value of type `*T` [pointing](/Types/pointer_types.html) to it. The variable is initialized as described in the section on [initial values](/Program initialization and execution/the_zero_value.html).
+The built-in function `new` takes a type `T`, allocates storage for a [variable](/Variables/) of that type at run time, and returns a value of type `*T` [pointing](/Types/pointer_types.html) to it. The variable is initialized as described in the section on [initial values](/Program%20initialization%20and%20execution/the_zero_value.html).
 
 ```go
 new(T)

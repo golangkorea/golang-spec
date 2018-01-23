@@ -13,4 +13,4 @@ ThisVariableIsExported
 αβ
 ```
 
-Some identifiers are [predeclared](/Declarations and scope/predeclared_identifiers.html).
+Some identifiers are [predeclared](/Declarations%20and%20scope/predeclared_identifiers.html).
