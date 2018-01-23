@@ -2,7 +2,7 @@
 
 For a [primary expression](/Expressions/primary_expressions.html) x that is not a [package name](/Packages/package_clause.html), the *selector expression*
 
-```
+```go
 x.f
 ```
 
@@ -21,7 +21,7 @@ The following rules apply to selectors:
 
 For example, given the declarations:
 
-```
+```go
 type T0 struct {
 	x int
 }
@@ -51,7 +51,7 @@ var q Q = p
 
 one may write:
 
-```
+```go
 t.z          // t.z
 t.y          // t.T1.y
 t.x          // (*t.T0).x
@@ -70,6 +70,6 @@ t.M2()       // (&t).M2()           M2 expects *T2 receiver, see section on Call
 
 but the following is invalid:
 
-```
+```go
 q.M0()       // (*q).M0 is valid but not a field selector
 ```

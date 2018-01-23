@@ -2,7 +2,7 @@
 
 Arithmetic operators apply to numeric values and yield a result of the same type as the first operand. The four standard arithmetic operators (`+`, `-`, `*`, `/`) apply to integer, floating-point, and complex types; `+` also applies to strings. The bitwise logical and shift operators apply to integers only.
 
-```
+```go
 +    sum                    integers, floats, complex values, strings
 -    difference             integers, floats, complex values
 *    product                integers, floats, complex values
@@ -22,13 +22,13 @@ Arithmetic operators apply to numeric values and yield a result of the same type
 
 For two integer values `x` and `y`, the integer quotient `q = x / y` and remainder `r = x % y` satisfy the following relationships:
 
-```
+```go
 x = q*y + r  and  |r| < |y|
 ```
 
 with `x / y` truncated towards zero ("truncated division").
 
-```
+```go
  x     y     x / y     x % y
  5     3       1         2
 -5     3      -1        -2
@@ -38,7 +38,7 @@ with `x / y` truncated towards zero ("truncated division").
 
 As an exception to this rule, if the dividend `x` is the most negative value for the int type of `x`, the quotient `q = x / -1` is equal to `x` (and `r = 0`).
 
-```
+```go
 			 x, q
 int8                     -128
 int16                  -32768
@@ -48,7 +48,7 @@ int64    -9223372036854775808
 
 If the divisor is a constant, it must not be zero. If the divisor is zero at run time, a run-time panic occurs. If the dividend is non-negative and the divisor is a constant power of 2, the division may be replaced by a right shift, and computing the remainder may be replaced by a bitwise AND operation:
 
-```
+```go
  x     x / 4     x % 4     x >> 2     x & 3
  11      2         3         2          3
 -11     -2        -3        -3          1
@@ -58,7 +58,7 @@ The shift operators shift the left operand by the shift count specified by the r
 
 For integer operands, the unary operators `+`, `-`, and `^` are defined as follows:
 
-```
+```go
 +x                          is 0 + x
 -x    negation              is 0 - x
 ^x    bitwise complement    is m ^ x  with m = "all bits set to 1" for unsigned x
@@ -79,7 +79,7 @@ For floating-point and complex numbers, `+x` is the same as `x`, while `-x` is t
 
 Strings can be concatenated using the `+` operator or the `+=` assignment operator:
 
-```
+```go
 s := "hi" + string(c)
 s += " and good bye"
 ```

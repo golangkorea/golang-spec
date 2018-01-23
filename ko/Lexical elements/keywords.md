@@ -1,12 +1,8 @@
 # [예약어](#keywords)
 
-* Go 버전: 1.9
-* 원문 : [Keywords](https://golang.org/ref/spec#Keywords)
-* 번역자 : [조석규](@ezaurum)
-
 아래는 예약어이므로 식별자가 될 수 없다.
 
-```
+```go
 break        default      func         interface    select
 case         defer        go           map          struct
 chan         else         goto         package      switch

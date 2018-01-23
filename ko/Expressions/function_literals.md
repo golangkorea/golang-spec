@@ -6,13 +6,13 @@ A function literal represents an anonymous [function](/Declarations%20and%20scop
 <a id="FunctionLit">FunctionLit</a> = "func" <a href="/Declarations%20and%20scope/function_declarations.html#Function">Function</a> .
 </pre>
 
-```
+```go
 func(a, b int, z float64) bool { return a*b < int(z) }
 ```
 
 A function literal can be assigned to a variable or invoked directly.
 
-```
+```go
 f := func(x, y int) int { return x + y }
 func(ch chan int) { ch <- ACK }(replyChan)
 ```

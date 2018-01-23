@@ -9,7 +9,7 @@ A map is an unordered group of elements of one type, called the element type, in
 
 The [comparison operators](/Expressions/comparison_operators.html) == and != must be fully defined for operands of the key type; thus the key type must not be a function, map, or slice. If the key type is an interface type, these comparison operators must be defined for the dynamic key values; failure will cause a [run-time panic](/Run-time%20panics/).
 
-```
+```go
 map[string]int
 map[*T]struct{ x, y float64 }
 map[string]interface{}
@@ -19,7 +19,7 @@ The number of map elements is called its length. For a map m, it can be discover
 
 A new, empty map value is made using the built-in function [make](/Built-in%20functions/making_slices,_maps_and_channels.html), which takes the map type and an optional capacity hint as arguments:
 
-```
+```go
 make(map[string]int)
 make(map[string]int, 100)
 ```

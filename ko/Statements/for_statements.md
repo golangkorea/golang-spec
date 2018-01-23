@@ -11,9 +11,9 @@ A "for" statement specifies repeated execution of a block. There are three forms
 
 In its simplest form, a "for" statement specifies the repeated execution of a block as long as a boolean condition evaluates to true. The condition is evaluated before each iteration. If the condition is absent, it is equivalent to the boolean value true.
 
-```
+```go
 for a < b {
-	a *= 2
+    a *= 2
 }
 ```
 
@@ -27,15 +27,15 @@ A "for" statement with a ForClause is also controlled by its condition, but addi
 <a id="PostStmt">PostStmt</a> = <a href="/Statements/#SimpleStmt">SimpleStmt</a> .
 </pre>
 
-```
+```go
 for i := 0; i < 10; i++ {
-	f(i)
+    f(i)
 }
 ```
 
 If non-empty, the init statement is executed once before evaluating the condition for the first iteration; the post statement is executed after each execution of the block (and only if the block was executed). Any element of the ForClause may be empty but the [semicolons](/Lexical%20elements/semicolons.html) are required unless there is only a condition. If the condition is absent, it is equivalent to the boolean value true.
 
-```
+```go
 for cond { S() }    is the same as    for ; cond ; { S() }
 for      { S() }    is the same as    for true     { S() }
 ```
@@ -72,36 +72,36 @@ The iteration values are assigned to the respective iteration variables as in an
 
 The iteration variables may be declared by the "range" clause using a form of [short variable declaration](/Declarations%20and%20scope/short_variable_declarations.html) (:=). In this case their types are set to the types of the respective iteration values and their [scope](/Declarations%20and%20scope/) is the block of the "for" statement; they are re-used in each iteration. If the iteration variables are declared outside the "for" statement, after execution their values will be those of the last iteration.
 
-```
+```go
 var testdata *struct {
-	a *[7]int
+    a *[7]int
 }
 for i, _ := range testdata.a {
-	// testdata.a is never evaluated; len(testdata.a) is constant
-	// i ranges from 0 to 6
-	f(i)
+    // testdata.a is never evaluated; len(testdata.a) is constant
+    // i ranges from 0 to 6
+    f(i)
 }
 
 var a [10]string
 for i, s := range a {
-	// type of i is int
-	// type of s is string
-	// s == a[i]
-	g(i, s)
+    // type of i is int
+    // type of s is string
+    // s == a[i]
+    g(i, s)
 }
 
 var key string
 var val interface {}  // value type of m is assignable to val
 m := map[string]int{"mon":0, "tue":1, "wed":2, "thu":3, "fri":4, "sat":5, "sun":6}
 for key, val = range m {
-	h(key, val)
+    h(key, val)
 }
 // key == last map key encountered in iteration
 // val == map[key]
 
 var ch chan Work = producer()
 for w := range ch {
-	doWork(w)
+    doWork(w)
 }
 
 // empty a channel

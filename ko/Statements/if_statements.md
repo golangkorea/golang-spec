@@ -6,20 +6,20 @@
 <a id="IfStmt">IfStmt</a> = "if" [ <a href="/Statements/#SimpleStmt">SimpleStmt</a> ";" ] <a href="/Expressions/operators.html#Expression">Expression</a> <a href="/Blocks/#Block">Block</a> [ "else" ( <a href="#IfStmt">IfStmt</a> | <a href="/Blocks/#Block">Block</a> ) ] .
 </pre>
 
-```
+```go
 if x > max {
-	x = max
+    x = max
 }
 ```
 
 The expression may be preceded by a simple statement, which executes before the expression is evaluated.
 
-```
+```go
 if x := f(); x < y {
-	return x
+    return x
 } else if x > z {
-	return z
+    return z
 } else {
-	return y
+    return y
 }
 ```

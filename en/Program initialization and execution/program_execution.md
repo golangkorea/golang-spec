@@ -2,7 +2,7 @@
 
 A complete program is created by linking a single, unimported package called the *main package* with all the packages it imports, transitively. The main package must have package name `main` and declare a function `main` that takes no arguments and returns no value.
 
-```
+```go
 func main() { … }
 ```
 

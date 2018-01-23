@@ -1,9 +1,5 @@
 # [문자열 리터럴](#string-literals)
 
- * Go 버전: 1.9
- * 원문 : [String literals](https://golang.org/ref/spec#String_literals)
- * 번역자 : [조석규](@ezaurum)
-
 문자열 리터럴은 연속한 캐릭터를 서로 이어서 만든 [문자열 상수](/Constants/)이다. 비가공 문자열 리터럴과 가공 문자열 리터럴의 두 가지가 있다.
 
 비가공 문자열 리터럴은 `foo`처럼 강세표 사이에 있는 연속된 캐릭터이다. 강세표 사이에는 강세표를 제외하고 어떤 캐릭터든 올 수 있다. 비가공 문자열 리터럴은 암시적으로 UTF-8으로 부호화된, 번역되지 않은 캐릭터로 구성된 문자열이다. 백슬래시는 아무 의미가 없고, 새 줄 문자도 들어갈 수 있다. 캐리지 리턴 캐릭터('\r')는 버려진다.
@@ -16,7 +12,7 @@
 <a id="interpreted_string_lit">interpreted_string_lit</a> = `"` { <a href="/Lexical%20elements/rune_literals.html#unicode_value">unicode_value</a> | <a href="/Lexical%20elements/rune_literals.html#byte_value">byte_value</a> } `"` .
 </pre>
 
-```
+```go
 `abc`                // "abc"와 동일
 `\n
 \n`                  // "\\n\n\\n" 와 동일
@@ -32,7 +28,7 @@
 
 아래 예는 모두 같은 문자열을 표현한 것이다.
 
-```
+```go
 "日本語"                                 // UTF-8 입력 문자열
 `日本語`                                 // UTF-8 비가공 문자열 리터럴
 "\u65e5\u672c\u8a9e"                    // 명시적인 유니코드 코드 포인트

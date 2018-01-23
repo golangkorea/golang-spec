@@ -6,7 +6,7 @@ The type T may be an interface or non-interface type.
 
 As in the discussion of [method expressions](/Expressions/method_expressions.html) above, consider a struct type T with two methods, Mv, whose receiver is of type T, and Mp, whose receiver is of type *T.
 
-```
+```go
 type T struct {
 	a int
 }
@@ -20,32 +20,32 @@ func makeT() T
 
 The expression
 
-```
+```go
 t.Mv
 ```
 
 yields a function value of type
 
-```
+```go
 func(int) int
 ```
 
 These two invocations are equivalent:
 
-```
+```go
 t.Mv(7)
 f := t.Mv; f(7)
 ```
 
 Similarly, the expression
 
-```
+```go
 pt.Mp
 ```
 
 yields a function value of type
 
-```
+```go
 func(float32) float32
 ```
 
@@ -53,7 +53,7 @@ As with [selectors](/Expressions/selectors.html), a reference to a non-interface
 
 As with [method calls](/Expressions/calls.html), a reference to a non-interface method with a pointer receiver using an addressable value will automatically take the address of that value: t.Mp is equivalent to (&t).Mp.
 
-```
+```go
 f := t.Mv; f(7)   // like t.Mv(7)
 f := pt.Mp; f(7)  // like pt.Mp(7)
 f := pt.Mv; f(7)  // like (*pt).Mv(7)
@@ -63,7 +63,7 @@ f := makeT().Mp   // invalid: result of makeT() is not addressable
 
 Although the examples above use non-interface types, it is also legal to create a method value from a value of interface type.
 
-```
+```go
 var i interface { M(int) } = myVal
 f := i.M; f(7)  // like i.M(7)
 ```

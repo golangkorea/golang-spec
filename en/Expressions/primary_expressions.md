@@ -20,7 +20,7 @@ Primary expressions are the operands for unary and binary expressions.
 <a id="Arguments">Arguments</a>      = "(" [ ( <a href="/Declarations%20and%20scope/constant_declarations.html#ExpressionList">ExpressionList</a> | <a href="/Types/#Type">Type</a> [ "," <a href="/Declarations%20and%20scope/constant_declarations.html#ExpressionList">ExpressionList</a> ] ) [ "..." ] [ "," ] ] ")" .
 </pre>
 
-```
+```go
 x
 2
 (s + ".txt")

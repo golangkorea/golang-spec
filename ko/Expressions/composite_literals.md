@@ -26,14 +26,14 @@ For struct literals the following rules apply:
 
 Given the declarations
 
-```
+```go
 type Point3D struct { x, y, z float64 }
 type Line struct { p, q Point3D }
 ```
 
 one may write
 
-```
+```go
 origin := Point3D{}                            // zero value for Point3D
 line := Line{origin, Point3D{y: -4, z: 12.3}}  // zero value for line.q.x
 ```
@@ -46,13 +46,13 @@ For array and slice literals the following rules apply:
 
 [Taking the address](/Expressions/address_operators.html) of a composite literal generates a pointer to a unique [variable](/Variables/) initialized with the literal's value.
 
-```
+```go
 var pointer *Point3D = &Point3D{y: 1000}
 ```
 
 The length of an array literal is the length specified in the literal type. If fewer elements than the length are provided in the literal, the missing elements are set to the zero value for the array element type. It is an error to provide elements with index values outside the index range of the array. The notation ... specifies an array length equal to the maximum element index plus one.
 
-```
+```go
 buffer := [10]string{}             // len(buffer) == 10
 intSet := [6]int{1, 2, 3, 5}       // len(intSet) == 6
 days := [...]string{"Sat", "Sun"}  // len(days) == 2
@@ -60,20 +60,20 @@ days := [...]string{"Sat", "Sun"}  // len(days) == 2
 
 A slice literal describes the entire underlying array literal. Thus, the length and capacity of a slice literal are the maximum element index plus one. A slice literal has the form
 
-```
+```go
 []T{x1, x2, … xn}
 ```
 
 and is shorthand for a slice operation applied to an array:
 
-```
+```go
 tmp := [n]T{x1, x2, … xn}
 tmp[0 : n]
 ```
 
 Within a composite literal of array, slice, or map type T, elements or map keys that are themselves composite literals may elide the respective literal type if it is identical to the element or key type of T. Similarly, elements or keys that are addresses of composite literals may elide the &T when the element or key type is *T.
 
-```
+```go
 [...]Point{{1.5, -3.5}, {0, 0}}     // same as [...]Point{Point{1.5, -3.5}, Point{0, 0}}
 [][]int{{1, 2, 3}, {4, 5}}          // same as [][]int{[]int{1, 2, 3}, []int{4, 5}}
 [][]Point{{{0, 1}, {1, 2}}}         // same as [][]Point{[]Point{Point{0, 1}, Point{1, 2}}}
@@ -87,14 +87,14 @@ type PPoint *Point
 
 A parsing ambiguity arises when a composite literal using the TypeName form of the LiteralType appears as an operand between the [keyword](/Lexical%20elements/keywords.html) and the opening brace of the block of an "if", "for", or "switch" statement, and the composite literal is not enclosed in parentheses, square brackets, or curly braces. In this rare case, the opening brace of the literal is erroneously parsed as the one introducing the block of statements. To resolve the ambiguity, the composite literal must appear within parentheses.
 
-```
+```go
 if x == (T{a,b,c}[i]) { … }
 if (x == T{a,b,c}[i]) { … }
 ```
 
 Examples of valid array, slice, and map literals:
 
-```
+```go
 // list of prime numbers
 primes := []int{2, 3, 5, 7, 9, 2147483647}
 
@@ -106,7 +106,7 @@ filter := [10]float32{-1, 4: -0.1, -0.1, 9: -1}
 
 // frequencies in Hz for equal-tempered scale (A4 = 440Hz)
 noteFrequency := map[string]float32{
-	"C0": 16.35, "D0": 18.35, "E0": 20.60, "F0": 21.83,
-	"G0": 24.50, "A0": 27.50, "B0": 30.87,
+    "C0": 16.35, "D0": 18.35, "E0": 20.60, "F0": 21.83,
+    "G0": 24.50, "A0": 27.50, "B0": 30.87,
 }
 ```

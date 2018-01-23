@@ -18,7 +18,7 @@ Dependency analysis is performed per package; only references referring to varia
 
 For example, given the declarations
 
-```
+```go
 var (
 	a = c + b
 	b = f()
@@ -36,7 +36,7 @@ the initialization order is d, b, c, a.
 
 Variables may also be initialized using functions named init declared in the package block, with no arguments and no result parameters.
 
-```
+```go
 func init() { … }
 ```
 

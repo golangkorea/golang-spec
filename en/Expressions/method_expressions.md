@@ -9,7 +9,7 @@ If M is in the [method set](/Types/method_sets.html) of type T, T.M is a functio
 
 Consider a struct type T with two methods, Mv, whose receiver is of type T, and Mp, whose receiver is of type *T.
 
-```
+```go
 type T struct {
 	a int
 }
@@ -21,19 +21,19 @@ var t T
 
 The expression
 
-```
+```go
 T.Mv
 ```
 
 yields a function equivalent to Mv but with an explicit receiver as its first argument; it has signature
 
-```
+```go
 func(tv T, a int) int
 ```
 
 That function may be called normally with an explicit receiver, so these five invocations are equivalent:
 
-```
+```go
 t.Mv(7)
 T.Mv(t, 7)
 (T).Mv(t, 7)
@@ -49,13 +49,13 @@ yields a function value representing Mp with signature
 func(tp *T, f float32) float32
 For a method with a value receiver, one can derive a function with an explicit pointer receiver, so
 
-```
+```go
 (*T).Mv
 ```
 
 yields a function value representing Mv with signature
 
-```
+```go
 func(tv *T, a int) int
 ```
 

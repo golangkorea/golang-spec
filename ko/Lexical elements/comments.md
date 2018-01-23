@@ -1,9 +1,5 @@
 # [주석](#comments)
 
-* Go 버전: 1.9
-* 원문: [Comments](https://golang.org/ref/spec#Comments)
-* 번역자: Sang-joon, Moon(@dakeshi)
-
 주석을 이용해 프로그램 문서화를 할 수 있다. 주석은 2가지 형태가 있다:
 
 1. *라인 주석*은 //로 시작하며 라인 끝에서 끝난다.

@@ -9,7 +9,7 @@ A package clause begins each source file and defines the package to which the fi
 
 The PackageName must not be the [blank identifier](/Declarations and scope/blank_identifier.html).
 
-```
+```go
 package math
 ```
 

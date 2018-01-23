@@ -15,7 +15,7 @@ Other named types are introduced with [type declarations](/Declarations%20and%20
 
 Each type T has an *underlying type*: If T is one of the predeclared boolean, numeric, or string types, or a type literal, the corresponding underlying type is T itself. Otherwise, T's underlying type is the underlying type of the type to which T refers in its [type declaration](/Declarations%20and%20scope/type_declarations.html).
 
-```
+```go
 type (
     A1 = string
     A2 = A1

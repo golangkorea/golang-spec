@@ -1,0 +1,585 @@
+[main]
+host = https://www.transifex.com
+
+[go-specification.summarymd]
+file_filter = <lang>/SUMMARY.md
+source_file = en/SUMMARY.md
+source_lang = en
+
+[go-specification.blocks_readmemd]
+file_filter = <lang>/Blocks/README.md
+source_file = en/Blocks/README.md
+source_lang = en
+
+[go-specification.built-in_functions_readmemd]
+file_filter = <lang>/Built-in functions/README.md
+source_file = en/Built-in functions/README.md
+source_lang = en
+
+[go-specification.built-in_functions_allocationmd]
+file_filter = <lang>/Built-in functions/allocation.md
+source_file = en/Built-in functions/allocation.md
+source_lang = en
+
+[go-specification.built-in_functions_appending_to_and_copying_slicesmd]
+file_filter = <lang>/Built-in functions/appending_to_and_copying_slices.md
+source_file = en/Built-in functions/appending_to_and_copying_slices.md
+source_lang = en
+
+[go-specification.built-in_functions_bootstrappingmd]
+file_filter = <lang>/Built-in functions/bootstrapping.md
+source_file = en/Built-in functions/bootstrapping.md
+source_lang = en
+
+[go-specification.built-in_functions_closemd]
+file_filter = <lang>/Built-in functions/close.md
+source_file = en/Built-in functions/close.md
+source_lang = en
+
+[go-specification.built-in_functions_deletion_of_map_elementsmd]
+file_filter = <lang>/Built-in functions/deletion_of_map_elements.md
+source_file = en/Built-in functions/deletion_of_map_elements.md
+source_lang = en
+
+[go-specification.built-in_functions_handling_panicsmd]
+file_filter = <lang>/Built-in functions/handling_panics.md
+source_file = en/Built-in functions/handling_panics.md
+source_lang = en
+
+[go-specification.built-in_functions_length_and_capacitymd]
+file_filter = <lang>/Built-in functions/length_and_capacity.md
+source_file = en/Built-in functions/length_and_capacity.md
+source_lang = en
+
+[go-specification.built-in_functions_making_slices_maps_and_channelsmd]
+file_filter = <lang>/Built-in functions/making_slices,_maps_and_channels.md
+source_file = en/Built-in functions/making_slices,_maps_and_channels.md
+source_lang = en
+
+[go-specification.built-in_functions_manipulating_complex_numbersmd]
+file_filter = <lang>/Built-in functions/manipulating_complex_numbers.md
+source_file = en/Built-in functions/manipulating_complex_numbers.md
+source_lang = en
+
+[go-specification.constants_readmemd]
+file_filter = <lang>/Constants/README.md
+source_file = en/Constants/README.md
+source_lang = en
+
+[go-specification.declarations_and_scope_readmemd]
+file_filter = <lang>/Declarations and scope/README.md
+source_file = en/Declarations and scope/README.md
+source_lang = en
+
+[go-specification.declarations_and_scope_blank_identifiermd]
+file_filter = <lang>/Declarations and scope/blank_identifier.md
+source_file = en/Declarations and scope/blank_identifier.md
+source_lang = en
+
+[go-specification.declarations_and_scope_constant_declarationsmd]
+file_filter = <lang>/Declarations and scope/constant_declarations.md
+source_file = en/Declarations and scope/constant_declarations.md
+source_lang = en
+
+[go-specification.declarations_and_scope_exported_identifiersmd]
+file_filter = <lang>/Declarations and scope/exported_identifiers.md
+source_file = en/Declarations and scope/exported_identifiers.md
+source_lang = en
+
+[go-specification.declarations_and_scope_function_declarationsmd]
+file_filter = <lang>/Declarations and scope/function_declarations.md
+source_file = en/Declarations and scope/function_declarations.md
+source_lang = en
+
+[go-specification.declarations_and_scope_iotamd]
+file_filter = <lang>/Declarations and scope/iota.md
+source_file = en/Declarations and scope/iota.md
+source_lang = en
+
+[go-specification.declarations_and_scope_label_scopesmd]
+file_filter = <lang>/Declarations and scope/label_scopes.md
+source_file = en/Declarations and scope/label_scopes.md
+source_lang = en
+
+[go-specification.declarations_and_scope_method_declarationsmd]
+file_filter = <lang>/Declarations and scope/method_declarations.md
+source_file = en/Declarations and scope/method_declarations.md
+source_lang = en
+
+[go-specification.declarations_and_scope_predeclared_identifiersmd]
+file_filter = <lang>/Declarations and scope/predeclared_identifiers.md
+source_file = en/Declarations and scope/predeclared_identifiers.md
+source_lang = en
+
+[go-specification.declarations_and_scope_short_variable_declarationsmd]
+file_filter = <lang>/Declarations and scope/short_variable_declarations.md
+source_file = en/Declarations and scope/short_variable_declarations.md
+source_lang = en
+
+[go-specification.declarations_and_scope_type_declarationsmd]
+file_filter = <lang>/Declarations and scope/type_declarations.md
+source_file = en/Declarations and scope/type_declarations.md
+source_lang = en
+
+[go-specification.declarations_and_scope_uniqueness_of_identifiersmd]
+file_filter = <lang>/Declarations and scope/uniqueness_of_identifiers.md
+source_file = en/Declarations and scope/uniqueness_of_identifiers.md
+source_lang = en
+
+[go-specification.declarations_and_scope_variable_declarationsmd]
+file_filter = <lang>/Declarations and scope/variable_declarations.md
+source_file = en/Declarations and scope/variable_declarations.md
+source_lang = en
+
+[go-specification.errors_readmemd]
+file_filter = <lang>/Errors/README.md
+source_file = en/Errors/README.md
+source_lang = en
+
+[go-specification.expressions_readmemd]
+file_filter = <lang>/Expressions/README.md
+source_file = en/Expressions/README.md
+source_lang = en
+
+[go-specification.expressions_address_operatorsmd]
+file_filter = <lang>/Expressions/address_operators.md
+source_file = en/Expressions/address_operators.md
+source_lang = en
+
+[go-specification.expressions_arithmetic_operatorsmd]
+file_filter = <lang>/Expressions/arithmetic_operators.md
+source_file = en/Expressions/arithmetic_operators.md
+source_lang = en
+
+[go-specification.expressions_callsmd]
+file_filter = <lang>/Expressions/calls.md
+source_file = en/Expressions/calls.md
+source_lang = en
+
+[go-specification.expressions_comparison_operatorsmd]
+file_filter = <lang>/Expressions/comparison_operators.md
+source_file = en/Expressions/comparison_operators.md
+source_lang = en
+
+[go-specification.expressions_composite_literalsmd]
+file_filter = <lang>/Expressions/composite_literals.md
+source_file = en/Expressions/composite_literals.md
+source_lang = en
+
+[go-specification.expressions_constant_expressionsmd]
+file_filter = <lang>/Expressions/constant_expressions.md
+source_file = en/Expressions/constant_expressions.md
+source_lang = en
+
+[go-specification.expressions_conversionsmd]
+file_filter = <lang>/Expressions/conversions.md
+source_file = en/Expressions/conversions.md
+source_lang = en
+
+[go-specification.expressions_function_literalsmd]
+file_filter = <lang>/Expressions/function_literals.md
+source_file = en/Expressions/function_literals.md
+source_lang = en
+
+[go-specification.expressions_index_expressionsmd]
+file_filter = <lang>/Expressions/index_expressions.md
+source_file = en/Expressions/index_expressions.md
+source_lang = en
+
+[go-specification.expressions_logical_operatorsmd]
+file_filter = <lang>/Expressions/logical_operators.md
+source_file = en/Expressions/logical_operators.md
+source_lang = en
+
+[go-specification.expressions_method_expressionsmd]
+file_filter = <lang>/Expressions/method_expressions.md
+source_file = en/Expressions/method_expressions.md
+source_lang = en
+
+[go-specification.expressions_method_valuesmd]
+file_filter = <lang>/Expressions/method_values.md
+source_file = en/Expressions/method_values.md
+source_lang = en
+
+[go-specification.expressions_operandsmd]
+file_filter = <lang>/Expressions/operands.md
+source_file = en/Expressions/operands.md
+source_lang = en
+
+[go-specification.expressions_operatorsmd]
+file_filter = <lang>/Expressions/operators.md
+source_file = en/Expressions/operators.md
+source_lang = en
+
+[go-specification.expressions_order_of_evaluationmd]
+file_filter = <lang>/Expressions/order_of_evaluation.md
+source_file = en/Expressions/order_of_evaluation.md
+source_lang = en
+
+[go-specification.expressions_passing_arguments_to__parametersmd]
+file_filter = <lang>/Expressions/passing_arguments_to__parameters.md
+source_file = en/Expressions/passing_arguments_to__parameters.md
+source_lang = en
+
+[go-specification.expressions_primary_expressionsmd]
+file_filter = <lang>/Expressions/primary_expressions.md
+source_file = en/Expressions/primary_expressions.md
+source_lang = en
+
+[go-specification.expressions_qualified_identifiersmd]
+file_filter = <lang>/Expressions/qualified_identifiers.md
+source_file = en/Expressions/qualified_identifiers.md
+source_lang = en
+
+[go-specification.expressions_receive_operatormd]
+file_filter = <lang>/Expressions/receive_operator.md
+source_file = en/Expressions/receive_operator.md
+source_lang = en
+
+[go-specification.expressions_selectorsmd]
+file_filter = <lang>/Expressions/selectors.md
+source_file = en/Expressions/selectors.md
+source_lang = en
+
+[go-specification.expressions_slice_expressionsmd]
+file_filter = <lang>/Expressions/slice_expressions.md
+source_file = en/Expressions/slice_expressions.md
+source_lang = en
+
+[go-specification.expressions_type_assertionsmd]
+file_filter = <lang>/Expressions/type_assertions.md
+source_file = en/Expressions/type_assertions.md
+source_lang = en
+
+[go-specification.introduction_readmemd]
+file_filter = <lang>/Introduction/README.md
+source_file = en/Introduction/README.md
+source_lang = en
+
+[go-specification.lexical_elements_readmemd]
+file_filter = <lang>/Lexical elements/README.md
+source_file = en/Lexical elements/README.md
+source_lang = en
+
+[go-specification.lexical_elements_commentsmd]
+file_filter = <lang>/Lexical elements/comments.md
+source_file = en/Lexical elements/comments.md
+source_lang = en
+
+[go-specification.lexical_elements_floating-point_literalsmd]
+file_filter = <lang>/Lexical elements/floating-point_literals.md
+source_file = en/Lexical elements/floating-point_literals.md
+source_lang = en
+
+[go-specification.lexical_elements_identifiersmd]
+file_filter = <lang>/Lexical elements/identifiers.md
+source_file = en/Lexical elements/identifiers.md
+source_lang = en
+
+[go-specification.lexical_elements_imaginary_literalsmd]
+file_filter = <lang>/Lexical elements/imaginary_literals.md
+source_file = en/Lexical elements/imaginary_literals.md
+source_lang = en
+
+[go-specification.lexical_elements_integer_literalsmd]
+file_filter = <lang>/Lexical elements/integer_literals.md
+source_file = en/Lexical elements/integer_literals.md
+source_lang = en
+
+[go-specification.lexical_elements_keywordsmd]
+file_filter = <lang>/Lexical elements/keywords.md
+source_file = en/Lexical elements/keywords.md
+source_lang = en
+
+[go-specification.lexical_elements_operators_and_punctuationmd]
+file_filter = <lang>/Lexical elements/operators_and_punctuation.md
+source_file = en/Lexical elements/operators_and_punctuation.md
+source_lang = en
+
+[go-specification.lexical_elements_rune_literalsmd]
+file_filter = <lang>/Lexical elements/rune_literals.md
+source_file = en/Lexical elements/rune_literals.md
+source_lang = en
+
+[go-specification.lexical_elements_semicolonsmd]
+file_filter = <lang>/Lexical elements/semicolons.md
+source_file = en/Lexical elements/semicolons.md
+source_lang = en
+
+[go-specification.lexical_elements_string_literalsmd]
+file_filter = <lang>/Lexical elements/string_literals.md
+source_file = en/Lexical elements/string_literals.md
+source_lang = en
+
+[go-specification.lexical_elements_tokensmd]
+file_filter = <lang>/Lexical elements/tokens.md
+source_file = en/Lexical elements/tokens.md
+source_lang = en
+
+[go-specification.notation_readmemd]
+file_filter = <lang>/Notation/README.md
+source_file = en/Notation/README.md
+source_lang = en
+
+[go-specification.packages_readmemd]
+file_filter = <lang>/Packages/README.md
+source_file = en/Packages/README.md
+source_lang = en
+
+[go-specification.packages_an_example_packagemd]
+file_filter = <lang>/Packages/an_example_package.md
+source_file = en/Packages/an_example_package.md
+source_lang = en
+
+[go-specification.packages_import_declarationsmd]
+file_filter = <lang>/Packages/import_declarations.md
+source_file = en/Packages/import_declarations.md
+source_lang = en
+
+[go-specification.packages_package_clausemd]
+file_filter = <lang>/Packages/package_clause.md
+source_file = en/Packages/package_clause.md
+source_lang = en
+
+[go-specification.packages_source_file_organizationmd]
+file_filter = <lang>/Packages/source_file_organization.md
+source_file = en/Packages/source_file_organization.md
+source_lang = en
+
+[go-specification.program_initialization_and_execution_readmemd]
+file_filter = <lang>/Program initialization and execution/README.md
+source_file = en/Program initialization and execution/README.md
+source_lang = en
+
+[go-specification.program_initialization_and_execution_package_initializationmd]
+file_filter = <lang>/Program initialization and execution/package_initialization.md
+source_file = en/Program initialization and execution/package_initialization.md
+source_lang = en
+
+[go-specification.program_initialization_and_execution_program_executionmd]
+file_filter = <lang>/Program initialization and execution/program_execution.md
+source_file = en/Program initialization and execution/program_execution.md
+source_lang = en
+
+[go-specification.program_initialization_and_execution_the_zero_valuemd]
+file_filter = <lang>/Program initialization and execution/the_zero_value.md
+source_file = en/Program initialization and execution/the_zero_value.md
+source_lang = en
+
+[go-specification.properties_of_types_and_values_readmemd]
+file_filter = <lang>/Properties of types and values/README.md
+source_file = en/Properties of types and values/README.md
+source_lang = en
+
+[go-specification.properties_of_types_and_values_assignabilitymd]
+file_filter = <lang>/Properties of types and values/assignability.md
+source_file = en/Properties of types and values/assignability.md
+source_lang = en
+
+[go-specification.properties_of_types_and_values_type_identitymd]
+file_filter = <lang>/Properties of types and values/type_identity.md
+source_file = en/Properties of types and values/type_identity.md
+source_lang = en
+
+[go-specification.run-time_panics_readmemd]
+file_filter = <lang>/Run-time panics/README.md
+source_file = en/Run-time panics/README.md
+source_lang = en
+
+[go-specification.source_code_representation_readmemd]
+file_filter = <lang>/Source code representation/README.md
+source_file = en/Source code representation/README.md
+source_lang = en
+
+[go-specification.source_code_representation_charactersmd]
+file_filter = <lang>/Source code representation/characters.md
+source_file = en/Source code representation/characters.md
+source_lang = en
+
+[go-specification.source_code_representation_letters_and_digitsmd]
+file_filter = <lang>/Source code representation/letters_and_digits.md
+source_file = en/Source code representation/letters_and_digits.md
+source_lang = en
+
+[go-specification.statements_readmemd]
+file_filter = <lang>/Statements/README.md
+source_file = en/Statements/README.md
+source_lang = en
+
+[go-specification.statements_assignmentsmd]
+file_filter = <lang>/Statements/assignments.md
+source_file = en/Statements/assignments.md
+source_lang = en
+
+[go-specification.statements_break_statementsmd]
+file_filter = <lang>/Statements/break_statements.md
+source_file = en/Statements/break_statements.md
+source_lang = en
+
+[go-specification.statements_continue_statementsmd]
+file_filter = <lang>/Statements/continue_statements.md
+source_file = en/Statements/continue_statements.md
+source_lang = en
+
+[go-specification.statements_defer_statementsmd]
+file_filter = <lang>/Statements/defer_statements.md
+source_file = en/Statements/defer_statements.md
+source_lang = en
+
+[go-specification.statements_empty_statementsmd]
+file_filter = <lang>/Statements/empty_statements.md
+source_file = en/Statements/empty_statements.md
+source_lang = en
+
+[go-specification.statements_expression_statementsmd]
+file_filter = <lang>/Statements/expression_statements.md
+source_file = en/Statements/expression_statements.md
+source_lang = en
+
+[go-specification.statements_fallthrough_statementsmd]
+file_filter = <lang>/Statements/fallthrough_statements.md
+source_file = en/Statements/fallthrough_statements.md
+source_lang = en
+
+[go-specification.statements_for_statementsmd]
+file_filter = <lang>/Statements/for_statements.md
+source_file = en/Statements/for_statements.md
+source_lang = en
+
+[go-specification.statements_go_statementsmd]
+file_filter = <lang>/Statements/go_statements.md
+source_file = en/Statements/go_statements.md
+source_lang = en
+
+[go-specification.statements_goto_statementsmd]
+file_filter = <lang>/Statements/goto_statements.md
+source_file = en/Statements/goto_statements.md
+source_lang = en
+
+[go-specification.statements_if_statementsmd]
+file_filter = <lang>/Statements/if_statements.md
+source_file = en/Statements/if_statements.md
+source_lang = en
+
+[go-specification.statements_incdec_statementsmd]
+file_filter = <lang>/Statements/incdec_statements.md
+source_file = en/Statements/incdec_statements.md
+source_lang = en
+
+[go-specification.statements_labeled_statementsmd]
+file_filter = <lang>/Statements/labeled_statements.md
+source_file = en/Statements/labeled_statements.md
+source_lang = en
+
+[go-specification.statements_return_statementsmd]
+file_filter = <lang>/Statements/return_statements.md
+source_file = en/Statements/return_statements.md
+source_lang = en
+
+[go-specification.statements_select_statementsmd]
+file_filter = <lang>/Statements/select_statements.md
+source_file = en/Statements/select_statements.md
+source_lang = en
+
+[go-specification.statements_send_statementsmd]
+file_filter = <lang>/Statements/send_statements.md
+source_file = en/Statements/send_statements.md
+source_lang = en
+
+[go-specification.statements_switch_statementsmd]
+file_filter = <lang>/Statements/switch_statements.md
+source_file = en/Statements/switch_statements.md
+source_lang = en
+
+[go-specification.statements_terminating_statementsmd]
+file_filter = <lang>/Statements/terminating_statements.md
+source_file = en/Statements/terminating_statements.md
+source_lang = en
+
+[go-specification.system_considerations_readmemd]
+file_filter = <lang>/System considerations/README.md
+source_file = en/System considerations/README.md
+source_lang = en
+
+[go-specification.system_considerations_package_unsafemd]
+file_filter = <lang>/System considerations/package_unsafe.md
+source_file = en/System considerations/package_unsafe.md
+source_lang = en
+
+[go-specification.system_considerations_size_and_alignment_guaranteesmd]
+file_filter = <lang>/System considerations/size_and_alignment_guarantees.md
+source_file = en/System considerations/size_and_alignment_guarantees.md
+source_lang = en
+
+[go-specification.types_readmemd]
+file_filter = <lang>/Types/README.md
+source_file = en/Types/README.md
+source_lang = en
+
+[go-specification.types_array_typesmd]
+file_filter = <lang>/Types/array_types.md
+source_file = en/Types/array_types.md
+source_lang = en
+
+[go-specification.types_boolean_typesmd]
+file_filter = <lang>/Types/boolean_types.md
+source_file = en/Types/boolean_types.md
+source_lang = en
+
+[go-specification.types_channel_typesmd]
+file_filter = <lang>/Types/channel_types.md
+source_file = en/Types/channel_types.md
+source_lang = en
+
+[go-specification.types_function_typesmd]
+file_filter = <lang>/Types/function_types.md
+source_file = en/Types/function_types.md
+source_lang = en
+
+[go-specification.types_interface_typesmd]
+file_filter = <lang>/Types/interface_types.md
+source_file = en/Types/interface_types.md
+source_lang = en
+
+[go-specification.types_map_typesmd]
+file_filter = <lang>/Types/map_types.md
+source_file = en/Types/map_types.md
+source_lang = en
+
+[go-specification.types_method_setsmd]
+file_filter = <lang>/Types/method_sets.md
+source_file = en/Types/method_sets.md
+source_lang = en
+
+[go-specification.types_numeric_typesmd]
+file_filter = <lang>/Types/numeric_types.md
+source_file = en/Types/numeric_types.md
+source_lang = en
+
+[go-specification.types_pointer_typesmd]
+file_filter = <lang>/Types/pointer_types.md
+source_file = en/Types/pointer_types.md
+source_lang = en
+
+[go-specification.types_slice_typesmd]
+file_filter = <lang>/Types/slice_types.md
+source_file = en/Types/slice_types.md
+source_lang = en
+
+[go-specification.types_string_typesmd]
+file_filter = <lang>/Types/string_types.md
+source_file = en/Types/string_types.md
+source_lang = en
+
+[go-specification.types_struct_typesmd]
+file_filter = <lang>/Types/struct_types.md
+source_file = en/Types/struct_types.md
+source_lang = en
+
+[go-specification.variables_readmemd]
+file_filter = <lang>/Variables/README.md
+source_file = en/Variables/README.md
+source_lang = en
+
+
+
