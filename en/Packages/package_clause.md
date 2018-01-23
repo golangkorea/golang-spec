@@ -7,7 +7,7 @@ A package clause begins each source file and defines the package to which the fi
 <a id="PackageName">PackageName</a>    = <a href="/Lexical elements/identifiers.html#identifier">identifier</a> .
 </pre>
 
-The PackageName must not be the [blank identifier](/Declarations and scope/blank_identifier.html).
+The PackageName must not be the [blank identifier](/Declarations%20and%20scope/blank_identifier.html).
 
 ```go
 package math

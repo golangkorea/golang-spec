@@ -1,13 +1,13 @@
 # Handling panics
 
-Two built-in functions, `panic` and `recover`, assist in reporting and handling [run-time panics](/Run-time panics/) and program-defined error conditions.
+Two built-in functions, `panic` and `recover`, assist in reporting and handling [run-time panics](/Run-time%20panics/) and program-defined error conditions.
 
 ```go
 func panic(interface{})
 func recover() interface{}
 ```
 
-While executing a function `F`, an explicit call to `panic` or a [run-time panic](/Run-time panics/) terminates the execution of `F`. Any functions [deferred](/Statements/defer_statements.html) by `F` are then executed as usual. Next, any deferred functions run by `F'`s caller are run, and so on up to any deferred by the top-level function in the executing goroutine. At that point, the program is terminated and the error condition is reported, including the value of the argument to `panic`. This termination sequence is called *panicking*.
+While executing a function `F`, an explicit call to `panic` or a [run-time panic](/Run-time%20panics/) terminates the execution of `F`. Any functions [deferred](/Statements/defer_statements.html) by `F` are then executed as usual. Next, any deferred functions run by `F'`s caller are run, and so on up to any deferred by the top-level function in the executing goroutine. At that point, the program is terminated and the error condition is reported, including the value of the argument to `panic`. This termination sequence is called *panicking*.
 
 ```go
 panic(42)
