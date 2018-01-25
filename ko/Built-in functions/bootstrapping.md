@@ -1,12 +1,12 @@
-# Bootstrapping
+# [초기 구현 단계(부트스트랩핑)](#bootstrapping)
 
-Current implementations provide several built-in functions useful during bootstrapping. These functions are documented for completeness but are not guaranteed to stay in the language. They do not return a result.
+현시점의 구현에서는 프로그램 초기 구현 단계에서 유용하게 사용할 수 있는 몇 가지 내장 함수를 제공한다. 이 함수들은 스펙의 완성도를 높이기 위해 추가된 것이며 이후 버전의 내장 함수에서 제외될 가능성이 있다. 이 함수들은 결과를 반환하지 않는다.
 
 ```go
-Function   Behavior
+함수명   동작
 
-print      prints all arguments; formatting of arguments is implementation-specific
-println    like print but prints spaces between arguments and a newline at the end
+print      모든 인자들을 출력한다; 인자들의 포맷팅은 구현에 따라 다르다
+println    print와 유사하지만 출력되는 인자들 사이에 공백이 추가되며 끝에 뉴라인(newline)을 추가해서 출력한다
 ```
 
-Implementation restriction: `print` and `println` need not accept arbitrary argument types, but printing of boolean, numeric, and string [types](/Types) must be supported.
+구현 제한: `print`와 `println`은 모든 타입을 인자로 허용할 필요는 없지만, 불리언, 숫자, 문자열 [타입](/Types)의 출력은 반드시 지원해야 한다.

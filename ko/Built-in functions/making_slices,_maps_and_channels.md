@@ -1,29 +1,29 @@
-# Making slices, maps and channels
+# [슬라이스, 맵과 채널 생성](#making_slices,_maps_and_channels)
 
-The built-in function make takes a type T, which must be a slice, map or channel type, optionally followed by a type-specific list of expressions. It returns a value of type T (not *T). The memory is initialized as described in the section on [initial values](/Program%20initialization%20and%20execution/the_zero_value.html).
-
-```go
-Call             Type T     Result
-
-make(T, n)       slice      slice of type T with length n and capacity n
-make(T, n, m)    slice      slice of type T with length n and capacity m
-
-make(T)          map        map of type T
-make(T, n)       map        map of type T with initial space for approximately n elements
-
-make(T)          channel    unbuffered channel of type T
-make(T, n)       channel    buffered channel of type T, buffer size n
-```
-
-The size arguments n and m must be of integer type or untyped. A [constant](/Constants/) size argument must be non-negative and representable by a value of type int. If both n and m are provided and are constant, then n must be no larger than m. If n is negative or larger than m at run time, a [run-time panic](/Run-time%20panics/) occurs.
+내장 함수 `make`는 슬라이스, 맵 또는 채널 타입이어야 하는 `T` 타입을 매개로 하며, 선택적으로  타입-한정 표현식 목록이 그 뒤에 올 수 있다. 이 함수는 `T` 타입(*T가 아니라)의 값을 반환한다. 이 메모리는 [초기 값](/Program%20initialization%20and%20execution/the_zero_value.html) 장에서 설명하는 바와 같이 초기화 된다.
 
 ```go
-s := make([]int, 10, 100)       // slice with len(s) == 10, cap(s) == 100
-s := make([]int, 1e3)           // slice with len(s) == cap(s) == 1000
-s := make([]int, 1<<63)         // illegal: len(s) is not representable by a value of type int
-s := make([]int, 10, 0)         // illegal: len(s) > cap(s)
-c := make(chan int, 10)         // channel with a buffer size of 10
-m := make(map[string]int, 100)  // map with initial space for approximately 100 elements
+호출             타입 T     결과
+
+make(T, n)       슬라이스      길이 n과 용량 n을 갖는 T 타입의 슬라이스
+make(T, n, m)    슬라이스      길이 n과 용량 m을 갖는 T 타입의 슬라이스
+
+make(T)          맵        T 타입의 맵
+make(T, n)       맵        약 n개의 요소를 위한 초기 공간을 갖는 T 타입의 맵
+
+make(T)          채널    버퍼되지 않는 T 타입의 채널
+make(T, n)       채널    n만큼의 버퍼 크기를 갖는 버퍼되는 T 타입의 채널
 ```
 
-Calling `make` with a map type and size hint `n` will create a map with initial space to hold `n` map elements. The precise behavior is implementation-dependent.
+크기 인자인 `n`과 `m`은 정수 타입이거나 미지정 타입이어야 한다. [상수](/Constants/) 크기 인자는 음수가 아니어야 하고, `int` 타입의 값으로 표현될 수 있어야 한다. `n`과 `m`이 모두 상수로 제공된다면, `n`은 `m`보다 커서는 안된다. 실행 시간 동안에 `n`이 음수이거나 `m`보다 크다면, [런타임 패닉](/Run-time%20panics/)이 발생한다.
+
+```go
+s := make([]int, 10, 100)       // len(s) == 10, cap(s) == 100의 슬라이스
+s := make([]int, 1e3)           // len(s) == cap(s) == 1000의 슬라이스
+s := make([]int, 1<<63)         // 허용안됨: len(s)이 int 타입의 값으로 표현될 수 없음
+s := make([]int, 10, 0)         // 허용안됨: len(s) > cap(s)
+c := make(chan int, 10)         // 버퍼 크기 10을 갖는 채널
+m := make(map[string]int, 100)  // 약 100여개의 요소에 대한 초기 공간이 있는 맵
+```
+
+맵 타입과 크기 정보 `n`을 취하는 `make` 호출은 `n`개의 맵 요소에 대한 초기 공간을 갖는 맵을 만든다. 이러한 생성의 정확한 동작은 구현에 의존한다.
