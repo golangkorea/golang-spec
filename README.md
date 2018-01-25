@@ -58,11 +58,5 @@ unicode_digit  = /* a Unicode code point classified as "Number, decimal digit" *
 
 Go 문법 표현은 원문 그대로 유지해 주시길 바라며, `/* the Unicode code point U+000A */`과 같은 주석은 한글로 번역하셔도 괜찮습니다.
 
-3. 맺음말은 "~하다"로 통일하겠습니다.
-4. [용어집](https://github.com/golangkorea/golang-spec/blob/master/GLOSSARY.md)에서는 자주 사용되는 용어, 번역하기 힘들거나 애매한 용어들에 대한 추천 번역 및 설명을 제공하고 있습니다. GitBook에서는 [용어집](https://github.com/golangkorea/golang-spec/blob/master/GLOSSARY.md)에 등록된 용어가 본문에 있을 경우, 아래처럼 밑줄, 하이라이트, 팝업창 등의 기능을 제공합니다.(예제에서는 *code point*가 해당됩니다.)
-
-![glossary](https://user-images.githubusercontent.com/8563047/33648108-b1b31814-da9b-11e7-9189-e42ba01c4137.png)
-
-[용어집](https://github.com/golangkorea/golang-spec/blob/master/GLOSSARY.md) 용어 추가 건의, 번역 용어에 대한 의견은 [용어집 이슈 게시판](https://github.com/golangkorea/golang-spec/issues/105)을 이용해주세요.
- 
-5. 번역작업도 중요하지만 함께 작업하시는 분들의 내용을 Proof reading하는데 동참해 주십시오.
+3. 맺음말은 "~하다"로 통일하겠습니다. 
+4. 번역작업도 중요하지만 함께 작업하시는 분들의 내용을 Proof reading하는데 동참해 주십시오.
