@@ -86,11 +86,11 @@ var person = (*Person)(data)  // 태그를 무시하면, 내재 타입은 같다
   2. 부동 소수점 숫자가 정수로 변환될 때, 소수점 이하는 버려진다 (제로 방향으로 잘라냄)
   3. 정수나 부동 소수점 숫자를 부동 소수점 타입으로 변환할 때, 혹은 복소수를 다른 복소수 타입으로 변환할 때, 결괏값은 대상 타입에 의해 지정된 정밀도에 따라 반올림된다. 예를 들어, 타입 `float32`의 변수 `x`의 값은 IEEE-754 32-비트를 초과하는 정밀도로 저장될 수 있지만, `float32(x)`는 `x`의 값이 32 비트 정밀도에 맞게 반올림한 결과를 나타낸다. 비슷하게, `x + 0.1`는 32 비트의 정밀도 이상을 사용할 수도 있지만, `float32(x + 0.1)`은 그렇지 않다.
 
-In all non-constant conversions involving floating-point or complex values, if the result type cannot represent the value the conversion succeeds but the result value is implementation-dependent.
+부동 소수점 값이나 복소수 값에 관련된 상수가 아닌 모든 변환에서, 결과의 타입이 값을 나타내지 못하는 경우라면 변환은 성공하지만 결괏값은 구현에 따라 달라진다.
 
-## Conversions to and from a string type
+## string 타입으로 변환, 그리고 string 타입으로 부터의 변환
 
-  1. Converting a signed or unsigned integer value to a string type yields a string containing the UTF-8 representation of the integer. Values outside the range of valid Unicode code points are converted to "\uFFFD".
+  1. 부호가 있건 없건 정수값을 string 타입으로 변환하면 정수의 UTF-8 표현을 포함하는 문자열을 산출한다. 유니코드 포인트들의 범위밖에 있는 값들은 "\uFFFD"로 변환된다.
 <pre>
 string('a')       // "a"
 string(-1)        // "\ufffd" == "\xef\xbf\xbd"
@@ -98,7 +98,7 @@ string(0xf8)      // "\u00f8" == "ø" == "\xc3\xb8"
 type MyString string
 MyString(0x65e5)  // "\u65e5" == "日" == "\xe6\x97\xa5"
 </pre>
-  2. Converting a slice of bytes to a string type yields a string whose successive bytes are the elements of the slice.
+  2. 바이트 슬라이스를 string 타입으로 변환해서 산출된 문자열의 연속적인 바이트들은 슬라이스의 요소들이다.
 <pre>
 string([]byte{'h', 'e', 'l', 'l', '\xc3', '\xb8'})   // "hellø"
 string([]byte{})                                     // ""
@@ -107,7 +107,7 @@ string([]byte(nil))                                  // ""
 type MyBytes []byte
 string(MyBytes{'h', 'e', 'l', 'l', '\xc3', '\xb8'})  // "hellø"
 </pre>
-  3. Converting a slice of runes to a string type yields a string that is the concatenation of the individual rune values converted to strings.
+  3. 룬 슬라이스를 string 타입으로 변환해서 산출된 문자열은 각각의 룬 값들의 연결을 문자열로 변환한 것이다.
 <pre>
 string([]rune{0x767d, 0x9d6c, 0x7fd4})   // "\u767d\u9d6c\u7fd4" == "白鵬翔"
 string([]rune{})                         // ""
@@ -116,14 +116,14 @@ string([]rune(nil))                      // ""
 type MyRunes []rune
 string(MyRunes{0x767d, 0x9d6c, 0x7fd4})  // "\u767d\u9d6c\u7fd4" == "白鵬翔"
 </pre>
-  4. Converting a value of a string type to a slice of bytes type yields a slice whose successive elements are the bytes of the string.
+  4. string 타입의 값을 바이트 타입의 슬라이스로 변환하여 산출된 슬라이스는 연속하는 요소들이 문자열의 바이트들이다.
 <pre>
 []byte("hellø")   // []byte{'h', 'e', 'l', 'l', '\xc3', '\xb8'}
 []byte("")        // []byte{}
 &nbsp;
 MyBytes("hellø")  // []byte{'h', 'e', 'l', 'l', '\xc3', '\xb8'}
 </pre>
-  5. Converting a value of a string type to a slice of runes type yields a slice containing the individual Unicode code points of the string.
+  5. string 타입의 값을 룬 타입의 슬라이스로 변환하여 산출된 슬라이스는 문자열의 개별 유니코드 포인트들을 포함하고 있다.
 <pre>
 []rune(MyString("白鵬翔"))  // []rune{0x767d, 0x9d6c, 0x7fd4}
 []rune("")                 // []rune{}

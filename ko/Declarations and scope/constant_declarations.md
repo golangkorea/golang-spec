@@ -1,4 +1,4 @@
-# Constant declarations
+# [상수 선언](#constant-declarations)
 
 A constant declaration binds a list of identifiers (the names of the constants) to the values of a list of [constant expressions](/Expressions/constant_expressions.html). The number of identifiers must be equal to the number of expressions, and the nth identifier on the left is bound to the value of the nth expression on the right.
 
