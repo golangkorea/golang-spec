@@ -1,7 +1,7 @@
 # 시작
 
-This is a reference manual for the Go programming language. For more information and other documents, see [golang.org](https://golang.org).
+이것은 Go 프로그래밍 언어의 참조 메뉴얼이다. 더 자세한 정보와 기타 문서들은 [golang.org](https://golang.org)에서 참조하라.
 
-Go is a general-purpose language designed with systems programming in mind. It is strongly typed and garbage-collected and has explicit support for concurrent programming. Programs are constructed from packages, whose properties allow efficient management of dependencies. The existing implementations use a traditional compile/link model to generate executable binaries.
+Go는 시스템 프로그래밍을 염두에 두고 고안된 범용 언어이다. 강타입(strongly typed)이며 쓰레기 수집이 되고(garbage-collected) 동시성 프로그래밍에 대해 명시적인 지원을 제공한다. 프로그램은 효율적인 의존성 관리가 가능한 특성을 지닌 패키지들로 부터 만들어 진다. 현존하는 구현들은 전통적인 컴파일/링크 모델을 사용해 실행 가능한 바이너리들을 생성시킨다.
 
-The grammar is compact and regular, allowing for easy analysis by automatic tools such as integrated development environments.
+문법은 작고(compact) 정규화(regular)되어 있어 통합 개발 환경내 자동 도구들에 의한 분석이 쉽도록 허용하고 있다.
