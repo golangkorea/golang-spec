@@ -9,7 +9,7 @@ A struct is a sequence of named elements, called fields, each of which has a nam
 <a id="Tag">Tag</a>            = <a href="/Lexical%20elements/string_literals.html#string_lit">string_lit</a> .
 </pre>
 
-```
+```go
 // An empty struct.
 struct {}
 
@@ -25,7 +25,7 @@ struct {
 
 A field declared with a type but no explicit field name is an *embedded field*. An embedded field must be specified as a type name `T` or as a pointer to a non-interface type name `*T`, and `T` itself may not be a pointer type. The unqualified type name acts as the field name.
 
-```
+```go
 // A struct with four embedded fields of types T1, *T2, P.T3 and *P.T4
 struct {
 	T1        // field name is T1
@@ -38,7 +38,7 @@ struct {
 
 The following declaration is illegal because field names must be unique in a struct type:
 
-```
+```go
 struct {
 	T     // conflicts with embedded field *T and *P.T
 	*T    // conflicts with embedded field T and *P.T
@@ -57,7 +57,7 @@ Given a struct type `S` and a type named `T`, promoted methods are included in t
 
 A field declaration may be followed by an optional string literal tag, which becomes an attribute for all the fields in the corresponding field declaration. An empty tag string is equivalent to an absent tag. The tags are made visible through a [reflection interface](https://golang.org/pkg/reflect/#StructTag) and take part in [type identity](/Properties%20of%20types%20and%20values/type_identity.html) for structs but are otherwise ignored.
 
-```
+```go
 struct {
 	x, y float64 ""  // an empty tag string is like an absent tag
 	name string  "any string is permitted as a tag"

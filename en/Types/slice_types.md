@@ -14,13 +14,13 @@ The array underlying a slice may extend past the end of the slice. The *capacity
 
 A new, initialized slice value for a given element type T is made using the built-in function [make](/Built-in%20functions/making_slices,_maps_and_channels.html), which takes a slice type and parameters specifying the length and optionally the capacity. A slice created with make always allocates a new, hidden array to which the returned slice value refers. That is, executing
 
-```
+```go
 make([]T, length, capacity)
 ```
 
 produces the same slice as allocating an array and [slicing](/Expressions/slice_expressions.html) it, so these two expressions are equivalent:
 
-```
+```go
 make([]int, 50, 100)
 new([100]int)[0:50]
 ```

@@ -8,7 +8,7 @@ A channel provides a mechanism for [concurrently executing functions](/Statement
 
 The optional <- operator specifies the channel *direction*, *send* or *receive*. If no direction is given, the channel is *bidirectional*. A channel may be constrained only to send or only to receive by [conversion](/Expressions/conversions.html) or [assignment](/Statements/assignments.html).
 
-```
+```go
 chan T          // can be used to send and receive values of type T
 chan<- float64  // can only be used to send float64s
 <-chan int      // can only be used to receive ints
@@ -16,7 +16,7 @@ chan<- float64  // can only be used to send float64s
 
 The <- operator associates with the leftmost chan possible:
 
-```
+```go
 chan<- chan int    // same as chan<- (chan int)
 chan<- <-chan int  // same as chan<- (<-chan int)
 <-chan <-chan int  // same as <-chan (<-chan int)
@@ -25,7 +25,7 @@ chan (<-chan int)
 
 A new, initialized channel value can be made using the built-in function [`make`](/Built-in%20functions/making_slices,_maps_and_channels.html), which takes the channel type and an optional *capacity* as arguments:
 
-```
+```go
 make(chan int, 100)
 ```
 

@@ -2,7 +2,7 @@
 
 Comparison operators compare two operands and yield an untyped boolean value.
 
-```
+```go
 ==    equal
 !=    not equal
 <     less
@@ -31,7 +31,7 @@ A comparison of two interface values with identical dynamic types causes a [run-
 
 Slice, map, and function values are not comparable. However, as a special case, a slice, map, or function value may be compared to the predeclared identifier nil. Comparison of pointer, channel, and interface values to nil is also allowed and follows from the general rules above.
 
-```
+```go
 const c = 3 < 4            // c is the untyped boolean constant true
 
 type MyBool bool

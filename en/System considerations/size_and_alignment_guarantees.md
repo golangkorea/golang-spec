@@ -2,7 +2,7 @@
 
 For the [numeric types](/Types/numeric_types.html), the following sizes are guaranteed:
 
-```
+```go
 type                                  size in bytes
 
 byte, uint8, int8                     1

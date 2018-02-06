@@ -7,7 +7,7 @@ A variable declaration creates one or more [variables](/Variables/), binds corre
 <a id="VarSpec">VarSpec</a>     = <a href="/Declarations%20and%20scope/constant_declarations.html#IdentifierList">IdentifierList</a> ( <a href="/Types/#Type">Type</a> [ "=" <a href="/Declarations%20and%20scope/constant_declarations.html#ExpressionList">ExpressionList</a> ] | "=" <a href="/Declarations%20and%20scope/constant_declarations.html#ExpressionList">ExpressionList</a> ) .
 </pre>
 
-```
+```go
 var i int
 var U, V, W float64
 var k = 0
@@ -24,7 +24,7 @@ If a list of expressions is given, the variables are initialized with the expres
 
 If a type is present, each variable is given that type. Otherwise, each variable is given the type of the corresponding initialization value in the assignment. If that value is an untyped constant, it is first [converted](/Expressions/conversions.html) to its [default type](/Constants/); if it is an untyped boolean value, it is first converted to type `bool`. The predeclared value `nil` cannot be used to initialize a variable with no explicit type.
 
-```
+```go
 var d = math.Sin(0.5)  // d is float64
 var i = 42             // i is int
 var t, ok = x.(T)      // t is T, ok is bool

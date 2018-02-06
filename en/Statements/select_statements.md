@@ -22,7 +22,7 @@ Execution of a "select" statement proceeds in several steps:
 
 Since communication on nil channels can never proceed, a select with only nil channels and no default case blocks forever.
 
-```
+```go
 var a []int
 var c, c1, c2, c3, c4 chan int
 var i1, i2 int

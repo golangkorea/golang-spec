@@ -12,7 +12,7 @@ Interpreted string literals are character sequences between double quotes, as in
 <a id="interpreted_string_lit">interpreted_string_lit</a> = `"` { <a href="/Lexical%20elements/rune_literals.html#unicode_value">unicode_value</a> | <a href="/Lexical%20elements/rune_literals.html#byte_value">byte_value</a> } `"` .
 </pre>
 
-```
+```go
 `abc`                // same as "abc"
 `\n
 \n`                  // same as "\\n\n\\n"
@@ -28,7 +28,7 @@ Interpreted string literals are character sequences between double quotes, as in
 
 These examples all represent the same string:
 
-```
+```go
 "日本語"                                 // UTF-8 input text
 `日本語`                                 // UTF-8 input text as a raw literal
 "\u65e5\u672c\u8a9e"                    // the explicit Unicode code points

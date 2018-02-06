@@ -4,7 +4,7 @@ If f is [variadic](/Types/function_types.html) with a final parameter p of type 
 
 Given the function and calls
 
-```
+```go
 func Greeting(prefix string, who ...string)
 Greeting("nobody")
 Greeting("hello:", "Joe", "Anna", "Eileen")
@@ -16,7 +16,7 @@ If the final argument is assignable to a slice type []T, it may be passed unchan
 
 Given the slice s and call
 
-```
+```go
 s := []string{"James", "Jasmine"}
 Greeting("goodbye:", s...)
 ```

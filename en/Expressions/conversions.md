@@ -8,7 +8,7 @@ Conversions are expressions of the form T(x) where T is a type and x is an expre
 
 If the type starts with the operator * or <-, or if the type starts with the keyword func and has no result list, it must be parenthesized when necessary to avoid ambiguity:
 
-```
+```go
 *Point(p)        // same as *(Point(p))
 (*Point)(p)      // p is converted to *Point
 <-chan int(c)    // same as <-(chan int(c))
@@ -27,7 +27,7 @@ A [constant](/Constants/) value x can be converted to type T in any of these cas
 
 Converting a constant yields a typed constant as result.
 
-```
+```go
 uint(iota)               // iota value of type uint
 float32(2.718281828)     // 2.718281828 of type float32
 complex128(1)            // 1.0 + 0.0i of type complex128
@@ -54,7 +54,7 @@ A non-constant value x can be converted to type T in any of these cases:
 
 [Struct tags](/Struct_types/) are ignored when comparing struct types for identity for the purpose of conversion:
 
-```
+```go
 type Person struct {
 	Name    string
 	Address *struct {

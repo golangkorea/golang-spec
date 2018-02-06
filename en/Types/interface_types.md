@@ -11,7 +11,7 @@ An interface type specifies a [method set](/Types/method_sets.html) called its *
 
 As with all method sets, in an interface type, each method must have a [unique](/Declarations%20and%20scope/uniqueness_of_identifiers.html) non-[blank](/Declarations%20and%20scope/blank_identifier.html) name.
 
-```
+```go
 // A simple File interface
 interface {
 	Read(b Buffer) bool
@@ -22,7 +22,7 @@ interface {
 
 More than one type may implement an interface. For instance, if two types `S1` and `S2` have the method set
 
-```
+```go
 func (p T) Read(b Buffer) bool { return … }
 func (p T) Write(b Buffer) bool { return … }
 func (p T) Close() { … }
@@ -32,13 +32,13 @@ func (p T) Close() { … }
 
 A type implements any interface comprising any subset of its methods and may therefore implement several distinct interfaces. For instance, all types implement the *empty interface*:
 
-```
+```go
 interface{}
 ```
 
 Similarly, consider this interface specification, which appears within a [type declaration](/Declarations%20and%20scope/type_declarations.html) to define an interface called `Locker`:
 
-```
+```go
 type Locker interface {
 	Lock()
 	Unlock()
@@ -47,7 +47,7 @@ type Locker interface {
 
 If `S1` and `S2` also implement
 
-```
+```go
 func (p T) Lock() { … }
 func (p T) Unlock() { … }
 ```
@@ -56,7 +56,7 @@ they implement the `Locker` interface as well as the `File` interface.
 
 An interface `T` may use a (possibly qualified) interface type name `E` in place of a method specification. This is called *embedding* interface `E` in `T`; it adds all (exported and non-exported) methods of `E` to the interface `T`.
 
-```
+```go
 type ReadWriter interface {
 	Read(b Buffer) bool
 	Write(b Buffer) bool
@@ -77,7 +77,7 @@ type LockedFile interface {
 
 An interface type `T` may not embed itself or any interface type that embeds `T`, recursively.
 
-```
+```go
 // illegal: Bad cannot embed itself
 type Bad interface {
 	Bad

@@ -18,7 +18,7 @@ components have identical types. In detail:
 
 Given the declarations
 
-```
+```go
 type (
 	A0 []string
 	A1 = A0
@@ -42,7 +42,7 @@ type	C0 = B0
 
 these types are identical:
 
-```
+```go
 A0, A1, and []string
 A2 and struct{ a, b int }
 A3 and int

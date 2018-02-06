@@ -4,13 +4,13 @@ At package level, [initialization dependencies](/Program%20initialization%20and%
 
 For example, in the (function-local) assignment
 
-```
+```go
 y[f()], ok = g(h(), i()+x[j()], <-c), k()
 ```
 
 the function calls and communication happen in the order f(), h(), i(), j(), <-c, g(), and k(). However, the order of those events compared to the evaluation and indexing of x and the evaluation of y is not specified.
 
-```
+```go
 a := 1
 f := func() int { a++; return a }
 x := []int{a, f()}            // x may be [1, 2] or [2, 2]: evaluation order between a and f() is not specified
@@ -20,7 +20,7 @@ n := map[int]int{a: f()}      // n may be {2: 3} or {3: 3}: evaluation order bet
 
 At package level, initialization dependencies override the left-to-right rule for individual initialization expressions, but not for operands within each expression:
 
-```
+```go
 var a, b, c = f() + v(), g(), sqr(u()) + v()
 
 func f() int        { return c }
