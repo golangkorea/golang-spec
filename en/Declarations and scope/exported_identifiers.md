@@ -1,4 +1,4 @@
-# Exported identifiers
+# [Exported identifiers](#exported-identifiers)
 
 An identifier may be *exported* to permit access to it from another package. An identifier is exported if both:
 

@@ -8,12 +8,12 @@ With the exception of specific built-in functions, function and method [calls](/
 
 The following built-in functions are not permitted in statement context:
 
-```
+```go
 append cap complex imag len make new real
 unsafe.Alignof unsafe.Offsetof unsafe.Sizeof
 ```
 
-```
+```go
 h(x+y)
 f.Close()
 <-ch

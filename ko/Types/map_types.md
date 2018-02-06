@@ -1,9 +1,5 @@
 # [map 타입](#map-types)
 
-* Go 버전: 1.9
-* 원문: [Map types](https://golang.org/ref/spec#Map_types)
-* 번역자: Jhonghee Park (@jhonghee)
-
 map은 순서없이 구성된 단일 타입 요소들의 그룹이며, 요소의 타입은 요소 타입(element type)이라고 부른다. map에서는 키 타입(key type)의 고유한 *키*를 이용해 요소에 접근할 수 있다. 초기화되지 않은 map의 값은 `nil`이다.
 
 <pre>
@@ -13,7 +9,7 @@ map은 순서없이 구성된 단일 타입 요소들의 그룹이며, 요소의
 
 피연산자인 키의 타입은 [비교 연산자](/Expressions/comparison_operators.html)인 `==`와 `!=`을 완전히 지원해야 한다; 때문에 키 타입으로 함수, map, 또는 슬라이스를 사용할 수 없다. 키가 인터페이스 타입인 경우는 동적으로 정해지는 값들에 대해 비교 연산자들을 사용할 수 있어야 한다; 그렇지 않을 경우 [런타임 패닉](/Run-time%20panics/)을 초래한다.
 
-```
+```go
 map[string]int
 map[*T]struct{ x, y float64 }
 map[string]interface{}
@@ -23,7 +19,7 @@ map `m`에 대한 길이는 내장 함수인 [len](/Built-in%20functions/length_
 
 내장 함수인 [`make`](/Built-in%20functions/making_slices,_maps_and_channels.html)를 이용해 새로운 empty map을 만들 수 있다. make 함수의 인자로는 map 타입을 전달하고, 추가인자로 용량(capacity)을 사용할 수 있다.
 
-```
+```go
 make(map[string]int)
 make(map[string]int, 100)
 ```

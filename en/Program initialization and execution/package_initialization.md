@@ -2,7 +2,7 @@
 
 Within a package, package-level variables are initialized in *declaration order* but after any of the variables they *depend* on.
 
-More precisely, a package-level variable is considered *ready for initialization* if it is not yet initialized and either has no [initialization expression](/Declarations and scope/variable_declarations.html) or its initialization expression has no dependencies on uninitialized variables. Initialization proceeds by repeatedly initializing the next package-level variable that is earliest in declaration order and ready for initialization, until there are no variables ready for initialization.
+More precisely, a package-level variable is considered *ready for initialization* if it is not yet initialized and either has no [initialization expression](/Declarations%20and%20scope/variable_declarations.html) or its initialization expression has no dependencies on uninitialized variables. Initialization proceeds by repeatedly initializing the next package-level variable that is earliest in declaration order and ready for initialization, until there are no variables ready for initialization.
 
 If any variables are still uninitialized when this process ends, those variables are part of one or more initialization cycles, and the program is not valid.
 
@@ -40,7 +40,7 @@ Variables may also be initialized using functions named init declared in the pac
 func init() { … }
 ```
 
-Multiple such functions may be defined, even within a single source file. The `init` identifier is not [declared](/Declarations and scope/) and thus `init` functions cannot be referred to from anywhere in a program.
+Multiple such functions may be defined, even within a single source file. The `init` identifier is not [declared](/Declarations%20and%20scope/) and thus `init` functions cannot be referred to from anywhere in a program.
 
 A package with no imports is initialized by assigning initial values to all its package-level variables followed by calling all `init` functions in the order they appear in the source, possibly in multiple files, as presented to the compiler. If a package has imports, the imported packages are initialized before initializing the package itself. If multiple packages import a package, the imported package will be initialized only once. The importing of packages, by construction, guarantees that there can be no cyclic initialization dependencies.
 

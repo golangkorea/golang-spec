@@ -1,32 +1,28 @@
 # [타입 아이덴티티](#type-identity)
 
-* Go 버전: 1.9
-* 원문: [Type identity](https://golang.org/ref/spec#Type_identity)
-* 번역자: Jhonghee Park (@jhonghee)
-
 2개의 타입은 같거나(identical) 다르다.
 
 [타입 정의를 이용해 만든 타입(defined type)](/Declarations%20and%20scope/type_declarations.html#type-definitions)은 항상 다른 타입과 다르다. 그 밖의 타입은 [내재(underlying)](/Types/) 타입 리터럴이 구조적으로 동일하다면 두 개의 타입이 서로 같다고 말할 수 있다; 즉, 리터럴 구조와 상응하는 구성요소가 같다면 같은 타입이라고 할 수 있다. 자세하게 설명하자면:
 
- * 2개의 array 타입은 요소 타입과 배열 길이가 같으면 서로 같다.
- * 2개의 슬라이스 타입은 요소 타입이 같다면 서로 같다. 
- * 2개의 struct 타입은 필드 순서가 같고, 상응하는 필드의 이름, 타입, 태그가 같으면 서로 같다. 서로 다른 패키지의 [엑스포트 되지 않은(Non-exported)](/Declarations%20and%20scope/exported_identifiers.html) 필드 이름들은 항상 다르다.
- * 2개의 포인터 타입은 기본 타입(base types)이 같으면 서로 같다.
- * 2개의 함수 타입은 매개변수 갯수, 반환 값 갯수, 상응하는 매개변수의 타입과 반환 값의 타입이 같으면 서로 같다. 2개의 함수는 모두 variadic 함수거나 둘 다 variadic 함수가 아니여도 된다. 매개변수와 반환 값의 이름들은 달라도 된다.
- * 2개의 interface 타입은 같은 이름과 같은 함수 타입으로 구성된 메서드의 집합이 같으면 서로 같다. 서로 다른 패키지내에 [엑스포트 되지 않은(Non-exported)](/Declarations%20and%20scope/exported_identifiers.html) 메서드의 이름들은 항상 다르다. 메서드의 순서는 상관없다.
- * 2개의 map 타입은 키(key) 타입과 값 타입이 같으면 서로 같다.
- * 2개의 channel 타입은 값 타입과 방향성(direction)이 같으면 서로 같다.
+  * 2개의 array 타입은 요소 타입과 배열 길이가 같으면 서로 같다.
+  * 2개의 슬라이스 타입은 요소 타입이 같다면 서로 같다. 
+  * 2개의 struct 타입은 필드 순서가 같고, 상응하는 필드의 이름, 타입, 태그가 같으면 서로 같다. 서로 다른 패키지의 [엑스포트 되지 않은(Non-exported)](/Declarations%20and%20scope/exported_identifiers.html) 필드 이름들은 항상 다르다.
+  * 2개의 포인터 타입은 기본 타입(base types)이 같으면 서로 같다.
+  * 2개의 함수 타입은 매개변수 갯수, 반환 값 갯수, 상응하는 매개변수의 타입과 반환 값의 타입이 같으면 서로 같다. 2개의 함수는 모두 variadic 함수거나 둘 다 variadic 함수가 아니여도 된다. 매개변수와 반환 값의 이름들은 달라도 된다.
+  * 2개의 interface 타입은 같은 이름과 같은 함수 타입으로 구성된 메서드의 집합이 같으면 서로 같다. 서로 다른 패키지내에 [엑스포트 되지 않은(Non-exported)](/Declarations%20and%20scope/exported_identifiers.html) 메서드의 이름들은 항상 다르다. 메서드의 순서는 상관없다.
+  * 2개의 map 타입은 키(key) 타입과 값 타입이 같으면 서로 같다.
+  * 2개의 channel 타입은 값 타입과 방향성(direction)이 같으면 서로 같다.
 
 아래 선언문에서
 
-```
+```go
 type (
-	A0 []string
-	A1 = A0
-	A2 = struct{ a, b int }
-	A3 = int
-	A4 = func(A3, float64) *A0
-	A5 = func(x int, _ float64) *[]string
+    A0 []string
+    A1 = A0
+    A2 = struct{ a, b int }
+    A3 = int
+    A4 = func(A3, float64) *A0
+    A5 = func(x int, _ float64) *[]string
 )
 
 type (
@@ -38,12 +34,12 @@ type (
   B5 func(x int, y float64) *A1
 )
 
-type	C0 = B0
+type    C0 = B0
 ```
 
 다음의 타입들은 동일하다.
 
-```
+```go
 A0, A1, and []string
 A2 and struct{ a, b int }
 A3 and int

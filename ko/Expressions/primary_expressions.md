@@ -4,13 +4,13 @@ Primary expressions are the operands for unary and binary expressions.
 
 <pre>
 <a id="PrimaryExpr">PrimaryExpr</a> =
-	<a href="/Expressions/operands.html#Operand">Operand</a> |
-	<a href="/Expressions/conversions.html#Conversion">Conversion</a> |
-	<a href="#PrimaryExpr">PrimaryExpr</a> <a href="#Selector">Selector</a> |
-	<a href="#PrimaryExpr">PrimaryExpr</a> <a href="#Index">Index</a> |
-	<a href="#PrimaryExpr">PrimaryExpr</a> <a href="#Slice">Slice</a> |
-	<a href="#PrimaryExpr">PrimaryExpr</a> <a href="#TypeAssertion">TypeAssertion</a> |
-	<a href="#PrimaryExpr">PrimaryExpr</a> <a href="#Arguments">Arguments</a> .
+    <a href="/Expressions/operands.html#Operand">Operand</a> |
+    <a href="/Expressions/conversions.html#Conversion">Conversion</a> |
+    <a href="#PrimaryExpr">PrimaryExpr</a> <a href="#Selector">Selector</a> |
+    <a href="#PrimaryExpr">PrimaryExpr</a> <a href="#Index">Index</a> |
+    <a href="#PrimaryExpr">PrimaryExpr</a> <a href="#Slice">Slice</a> |
+    <a href="#PrimaryExpr">PrimaryExpr</a> <a href="#TypeAssertion">TypeAssertion</a> |
+    <a href="#PrimaryExpr">PrimaryExpr</a> <a href="#Arguments">Arguments</a> .
 
 <a id="Selector">Selector</a>       = "." <a href="/Lexical%20elements/identifiers.html#identifier">identifier</a> .
 <a id="Index">Index</a>          = "[" <a href="/Expressions/operators.html#Expression">Expression</a> "]" .
@@ -20,7 +20,7 @@ Primary expressions are the operands for unary and binary expressions.
 <a id="Arguments">Arguments</a>      = "(" [ ( <a href="/Declarations%20and%20scope/constant_declarations.html#ExpressionList">ExpressionList</a> | <a href="/Types/#Type">Type</a> [ "," <a href="/Declarations%20and%20scope/constant_declarations.html#ExpressionList">ExpressionList</a> ] ) [ "..." ] [ "," ] ] ")" .
 </pre>
 
-```
+```go
 x
 2
 (s + ".txt")

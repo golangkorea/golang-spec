@@ -2,7 +2,7 @@
 
 The syntax is specified using Extended Backus-Naur Form (EBNF):
 
-```ebnf
+```go
 Production  = production_name "=" [ Expression ] "." .
 Expression  = Alternative { "|" Alternative } .
 Alternative = Term { Term } .
@@ -14,7 +14,7 @@ Repetition  = "{" Expression "}" .
 
 Productions are expressions constructed from terms and the following operators, in increasing precedence:
 
-```
+```go
 |   alternation
 ()  grouping
 []  option (0 or 1 times)

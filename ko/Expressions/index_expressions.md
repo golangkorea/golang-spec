@@ -2,7 +2,7 @@
 
 A primary expression of the form
 
-```
+```go
 a[x]
 ```
 
@@ -45,7 +45,7 @@ Otherwise a[x] is illegal.
 
 An index expression on a map a of type map[K]V used in an [assignment](/Properties%20of%20types%20and%20values/assignability.html) or initialization of the special form
 
-```
+```go
 v, ok = a[x]
 v, ok := a[x]
 var v, ok = a[x]

@@ -1,6 +1,6 @@
 # Import declarations
 
-An import declaration states that the source file containing the declaration depends on functionality of the *imported* package ([§Program initialization and execution](/Program initialization and execution/)) and enables access to [exported](/Declarations and scope/exported_identifiers.html) identifiers of that package. The import names an identifier (PackageName) to be used for access and an ImportPath that specifies the package to be imported.
+An import declaration states that the source file containing the declaration depends on functionality of the *imported* package ([§Program initialization and execution](/Program%20initialization%20and%20execution/)) and enables access to [exported](/Declarations%20and%20scope/exported_identifiers.html) identifiers of that package. The import names an identifier (PackageName) to be used for access and an ImportPath that specifies the package to be imported.
 
 <pre>
 <a id="ImportDecl">ImportDecl</a>       = "import" ( <a href="#ImportSpec">ImportSpec</a> | "(" { <a href="#ImportSpec">ImportSpec</a> ";" } ")" ) .
@@ -16,7 +16,7 @@ Implementation restriction: A compiler may restrict ImportPaths to non-empty str
 
 Assume we have compiled a package containing the package clause package math, which exports function Sin, and installed the compiled package in the file identified by `"lib/math"`. This table illustrates how Sin is accessed in files that import the package after the various types of import declaration.
 
-```
+```go
 Import declaration          Local name of Sin
 
 import   "lib/math"         math.Sin
@@ -24,8 +24,8 @@ import m "lib/math"         m.Sin
 import . "lib/math"         Sin
 ```
 
-An import declaration declares a dependency relation between the importing and imported package. It is illegal for a package to import itself, directly or indirectly, or to directly import a package without referring to any of its exported identifiers. To import a package solely for its side-effects (initialization), use the [blank](/Declarations and scope/blank_identifier.html) identifier as explicit package name:
+An import declaration declares a dependency relation between the importing and imported package. It is illegal for a package to import itself, directly or indirectly, or to directly import a package without referring to any of its exported identifiers. To import a package solely for its side-effects (initialization), use the [blank](/Declarations%20and%20scope/blank_identifier.html) identifier as explicit package name:
 
-```
+```go
 import _ "lib/math"
 ```

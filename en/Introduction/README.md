@@ -1,4 +1,4 @@
-# Introduction
+# [Introduction](#introduction)
 
 This is a reference manual for the Go programming language. For more information and other documents, see [golang.org](https://golang.org).
 

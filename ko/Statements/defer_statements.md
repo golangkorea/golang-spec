@@ -12,20 +12,20 @@ Each time a "defer" statement executes, the function value and parameters to the
 
 For instance, if the deferred function is a [function literal](/Expressions/function_literals.html) and the surrounding function has [named result parameters](/Types/function_types.html) that are in scope within the literal, the deferred function may access and modify the result parameters before they are returned. If the deferred function has any return values, they are discarded when the function completes. (See also the section on [handling panics](/Built-in%20functions/handling_panics.html).)
 
-```
+```go
 lock(l)
 defer unlock(l)  // unlocking happens before surrounding function returns
 
 // prints 3 2 1 0 before surrounding function returns
 for i := 0; i <= 3; i++ {
-	defer fmt.Print(i)
+    defer fmt.Print(i)
 }
 
 // f returns 1
 func f() (result int) {
-	defer func() {
-		result++
-	}()
-	return 0
+    defer func() {
+        result++
+    }()
+    return 0
 }
 ```

@@ -1,32 +1,28 @@
-# [slice 타입](#slice-types)
+# [슬라이스 타입](#slice-types)
 
- * Go 버전: 1.9
- * 원문: [Slice types](https://golang.org/ref/spec#Slice_types)
- * 번역자: Jhonghee Park (@jhonghee)
-
-슬라이즈는 *내재하는* array의 연속된 한 조각에 대해 서술한 것이며 그 array로 부터 숫자가 매겨진 연속된 요소들에 접근을 하게 해 준다. 슬라이스 타입은 그 요소 타입으로 구성된 array들의 모든 슬라이스를 포함하는 집합을 의미한다. 초기화 되지 않은 슬라이스의 값은 `nil`이다.
+슬라이스는 *내재* 배열의 연속된 부분(segment)에 대한 디스크립터(descriptor)이며 슬라이스를 이용해 순서대로 정렬된 배열 안의 요소에 접근할 수 있다. 슬라이스의 타입은 요소 타입으로 구성된 배열들의 모든 슬라이스 집합으로 나타낸다. 초기화되지 않은 슬라이스의 값은 `nil`이다.
 
 <pre>
 <a id="SliceType">SliceType</a> = "[" "]" <a href="/Types/array_types.html#ElementType">ElementType</a> .
 </pre>
 
-array와 마찬가지로, 슬라이스도 인덱스로 접근할 수 있고 길이도 가진다. 슬라이스 s의 길이는 내장함수 [len](/Built-in%20functions/length_and_capacity.html)를 통해 얻을 수 있다; array와는 다르게 실행 도중에도 바뀔 수 있다. 요소들은 0에서 len(s) - 1까지의 정수 [인덱스들](/Expressions/index_expressions.html)을 통해 방문할 수 있다. 주어진 요소에 대해 슬라이스의 인덱스는 내재하는 array의 동일한 요소의 인덱스보다 작을 수 있다.
+배열과 마찬가지로, 슬라이스도 인덱스로 접근할 수 있고 길이가 있다. 내장함수 [len](/Built-in%20functions/length_and_capacity.html)을 이용해 슬라이스 `s` 의 길이를 알 수 있다; 실행 도중에도 길이가 바뀔 수 있다는 점에서 배열의 길이와 차이가 있다.  `0`에서 `len(s) - 1` 까지의 정수 [인덱스](/Expressions/index_expressions.html)를 사용해 요소들에 접근할 수 있다. 특정 요소에 대한 슬라이스의 인덱스는 내재 배열의 같은 요소에 대한 인덱스보다 작을 수 있다.
 
-한번 초기화된 슬라이스는 그 요소들을 붙잡고 있는 내재된 array과 항상 결합되게 된다. 그러므로 슬라이스는 내재하는 array와 저장공간을 공유하며 같은 array의 다른 슬라이스와도 마찬가지이다; 대조적으로, 서로 다른 array들은 각각 특유의 저장공간을 가진다. 
+초기화된 슬라이스는 요소들이 저장된 내재 배열과 항상 연계해서 생각해야 한다. 슬라이스는 내재 배열 및 같은 배열의 다른 슬라이스들과 저장공간을 공유한다; 서로 다른 배열의 경우, 항상 각자의 고유 저장공간을 가진다.
 
-내재하는 array는 슬라이스의 끝을 넘어서도 계속될 수 있다. *수용력(capapcity)*은 그러한 범위에 대한 계량이다: 슬라이스의 길이와 슬라이스의 경계를 넘어서 있는 구역의 길이의 합이다; 수용력(capacity)과 같은 길이의 슬라이스는 원래의 슬라이스로 부터 [슬라이싱(slicing)](/Expressions/slice_expressions.html)을 사용해 새로운 슬라이스로 만들 수 있다. 슬라이스의 수용력(capacity)는 내장 함수 [cap(a)](/Built-in%20functions/length_and_capacity.html)를 가지고 산출할 수 있다.
+슬라이스의 내재 배열은 슬라이스의 끝을 넘어서는 범위까지도 확장할 수 있다. *용량* 은 이러한 범위를 측정하는 것이다: 용량은 슬라이스의 길이와 슬라이스 범위를 초과한 배열의 길이를 합친 것이다; [*슬라이싱(slicing)*](/Expressions/slice_expressions.html)을 사용해 원래의 슬라이스로부터 용량과 같은 길이만큼의 슬라이스를 만들어 낼 수 있다. 슬라이스 `a`의 용량은 내장 함수 [`cap(a)`](/Built-in%20functions/length_and_capacity.html)를 이용해 알 수 있다.
 
-주어진 요소 타입 T의 새롭게 초기화된 슬라이스는 내장 함수 [make](/Built-in%20functions/making_slices,_maps_and_channels.html)를 사용해 만들 수 있는데, make는 슬라이스 타입과 길이, 그리고 선택적으로 수용력(capacity)을 인자로 받는다. make로 만든 슬라이스는 항상 새로운 array를 은밀히 할당하고 반환된 슬라이스가 가리키도록 한다. 즉, 다음을 실행하면
+내장함수 [`make`](/Built-in%20functions/making_slices,_maps_and_channels.html)를 사용해요소 타입 `T`를 위한 새롭게 초기화된 슬라이스를 만들 수 있는데, `make` 의  매개 변수는 슬라이스 타입, 길이로 구성되며 용량 매개 변수는 선택사항이다. `make`로 만든 슬라이스는 항상 새로운 배열을 은밀히 할당하며 `make` 함수가 반환하는 슬라이스는 이 배열을 참조한다. 즉, 다음을 실행하면
 
-```
+```go
 make([]T, length, capacity)
 ```
 
-array를 할당하고 [슬라이싱(slicing)](/Expressions/slice_expressions.html)으로 슬라이스를 만든 것과 같은 슬라이스를 생산하게 되어서, 다음의 두 표현식은 동일하다:
+배열을 할당하고 이 배열에 대해 [슬라이싱(slicing)](/Expressions/slice_expressions.html)한 결과와 같은 슬라이스가 만들어 지기 때문에, 다음의 두 식은 같다:
 
-```
+```go
 make([]int, 50, 100)
 new([100]int)[0:50]
 ```
 
-array와 마찬가지로, 슬라이스도 항상 일차원이긴 하지만 고차원 객체들이 만들어 지도록 조립될 수 있다. array들의 array들인 경우, 내부의 array는 만들어 지는 과정에서, 항상 같은 길이다; 하지만 슬라이스의 슬라이스 (혹은 슬라이스의 array들)인 경우는, 내부 슬라이스의 길이가 역동적으로(dynamically) 다를 수 있다. 더우기, 내부의 슬라이스들은 반드시 개별적으로 초기화되어야 한다.
+배열과 마찬가지로, 슬라이스도 항상 일차원이지만 고차원 객체들로 만들 수도 있다. 배열의 배열인 경우, 생성과정에서 내부의 배열은 항상 같은 길이를 가진다; 하지만 슬라이스의 슬라이스 (혹은 슬라이스의 배열)의 경우, 내부 슬라이스의 길이가 매우 유동적일 수 있다. 또한, 내부의 슬라이스들은 반드시 개별적으로 초기화되어야 한다.

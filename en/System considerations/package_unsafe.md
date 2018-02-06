@@ -5,7 +5,7 @@ The built-in package `unsafe`, known to the compiler, provides facilities for lo
 ```go
 package unsafe
 
-type ArbitraryType int  // arbitrary Go type의 줄임말; 실제 타입이 아님.
+type ArbitraryType int  // shorthand for an arbitrary Go type; it is not a real type
 type Pointer *ArbitraryType
 
 func Alignof(variable ArbitraryType) uintptr

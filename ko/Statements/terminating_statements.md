@@ -1,9 +1,5 @@
 # [종결문](#terminating-statements)
 
-* Go 버전: 1.9
-* 원문: [Terminating statements](https://golang.org/ref/spec#Terminating_statements)
-* 번역자: [조석규](@ezaurum)
-
 종결문은 다음 중 하나이다.
 
   1. "[return](/Statements/return_statements.html)" 이나 "[goto](/Statements/goto_statements.html)" 문.

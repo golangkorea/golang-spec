@@ -10,7 +10,7 @@ The expression must be a function or method call; it cannot be parenthesized. Ca
 
 The function value and parameters are [evaluated as usual](/Expressions/calls.html) in the calling goroutine, but unlike with a regular call, program execution does not wait for the invoked function to complete. Instead, the function begins executing independently in a new goroutine. When the function terminates, its goroutine also terminates. If the function has any return values, they are discarded when the function completes.
 
-```
+```go
 go Server()
 go func(ch chan<- bool) { for { sleep(10); ch <- true }} (c)
 ```

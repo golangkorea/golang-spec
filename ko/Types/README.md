@@ -1,9 +1,5 @@
 # [타입](#types)
 
-* Go 버전: 1.9
-* 원문: [Types](https://golang.org/ref/spec#Types)
-* 번역자: Jhonghee Park (@jhonghee), 허성연 (@hursungyun)
-
 타입은 어떠한 값들의 집합과 그 값들에 대한 연산과 메서드로 이루어져 있다. 타입은 (타입 이름이 있다면)*타입 이름* 또는 이미 존재하는 타입들로 구성된 *타입 리터럴*을 사용하여 나타낼 수 있다.
 
 <pre>
@@ -16,7 +12,7 @@
 
 각각의 타입 `T`는 *내재 타입(underlying type)*을 가지고 있다: 만약 `T`가 사전에 선언(predeclared)된 불리언, 숫자, string 타입 중 하나거나 타입 리터럴이라면 내재 타입은 `T` 이다. 그 외의 경우, `T`의 내재 타입은 [타입 선언(type declarations)](/Declarations%20and%20scope/type_declarations.html)에서 `T`가 참조하는 타입의 내재 타입이다.
 
-```
+```go
 type (
     A1 = string
     A2 = A1
