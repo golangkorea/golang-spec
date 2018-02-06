@@ -1,4 +1,4 @@
-# Predeclared identifiers
+# [Predeclared identifiers](#predeclared-identifiers)
 
 The following identifiers are implicitly declared in the [universe block](/Blocks/):
 
