@@ -1,4 +1,4 @@
-# Characters
+# [Characters](#characters)
 
 The following terms are used to denote specific Unicode character classes:
 

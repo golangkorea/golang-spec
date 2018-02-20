@@ -1,6 +1,6 @@
-# Letters and digits
+# [알파벳 문자와 숫자](#letters-and-digits)
 
-The underscore character _ (U+005F) is considered a letter.
+밑줄 캐릭터 `_` (U+005F)는 문자로 간주된다.
 
 <pre>
 <a id="letter">letter</a>        = <a href="/Source code representation/characters.html#unicode_letter">unicode_letter</a> | "_" .
