@@ -1,4 +1,4 @@
-# Bootstrapping
+# [Bootstrapping](#bootstrapping)
 
 Current implementations provide several built-in functions useful during bootstrapping. These functions are documented for completeness but are not guaranteed to stay in the language. They do not return a result.
 

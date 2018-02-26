@@ -1,4 +1,4 @@
-# Function declarations
+# [Function declarations](#function-declarations)
 
 A function declaration binds an identifier, the function name, to a function.
 

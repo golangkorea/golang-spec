@@ -1,4 +1,4 @@
-# Operands
+# [Operands](#operands)
 
 Operands denote the elementary values in an expression. An operand may be a literal, a (possibly [qualified](/Expressions/qualified_identifiers.html)) non-[blank](/Declarations%20and%20scope/blank_identifier.html) identifier denoting a [constant](/Declarations%20and%20scope/constant_declarations.html), [variable](/Declarations%20and%20scope/variable_declarations.html), or [function](/Declarations%20and%20scope/function_declarations.html), a [method expression](/Expressions/method_expressions.html) yielding a function, or a parenthesized expression.
 

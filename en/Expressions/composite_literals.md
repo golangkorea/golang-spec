@@ -1,4 +1,4 @@
-# Composite literals
+# [Composite literals](#composite-literals)
 
 Composite literals construct values for structs, arrays, slices, and maps and create a new value each time they are evaluated. They consist of the type of the literal followed by a brace-bound list of elements. Each element may optionally be preceded by a corresponding key.
 
@@ -41,7 +41,7 @@ line := Line{origin, Point3D{y: -4, z: 12.3}}  // zero value for line.q.x
 For array and slice literals the following rules apply:
 
   * Each element has an associated integer index marking its position in the array.
-  * An element with a key uses the key as its index. The key must be a non-negative constant representable by a value of type <code>int</code>; and if it is typed it must be of integer type.
+  * An element with a key uses the key as its index. The key must be a non-negative constant representable by a value of type `int`; and if it is typed it must be of integer type.
   * An element without a key uses the previous element's index plus one. If the first element has no key, its index is zero.
 
 [Taking the address](/Expressions/address_operators.html) of a composite literal generates a pointer to a unique [variable](/Variables/) initialized with the literal's value.
@@ -50,7 +50,7 @@ For array and slice literals the following rules apply:
 var pointer *Point3D = &Point3D{y: 1000}
 ```
 
-The length of an array literal is the length specified in the literal type. If fewer elements than the length are provided in the literal, the missing elements are set to the zero value for the array element type. It is an error to provide elements with index values outside the index range of the array. The notation ... specifies an array length equal to the maximum element index plus one.
+The length of an array literal is the length specified in the literal type. If fewer elements than the length are provided in the literal, the missing elements are set to the zero value for the array element type. It is an error to provide elements with index values outside the index range of the array. The notation `...` specifies an array length equal to the maximum element index plus one.
 
 ```go
 buffer := [10]string{}             // len(buffer) == 10
@@ -71,7 +71,7 @@ tmp := [n]T{x1, x2, … xn}
 tmp[0 : n]
 ```
 
-Within a composite literal of array, slice, or map type T, elements or map keys that are themselves composite literals may elide the respective literal type if it is identical to the element or key type of T. Similarly, elements or keys that are addresses of composite literals may elide the &T when the element or key type is *T.
+Within a composite literal of array, slice, or map type `T`, elements or map keys that are themselves composite literals may elide the respective literal type if it is identical to the element or key type of `T`. Similarly, elements or keys that are addresses of composite literals may elide the `&T` when the element or key type is `*T`.
 
 ```go
 [...]Point{{1.5, -3.5}, {0, 0}}     // same as [...]Point{Point{1.5, -3.5}, Point{0, 0}}

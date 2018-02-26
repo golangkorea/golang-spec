@@ -1,4 +1,4 @@
-# Function literals
+# [Function literals](#function-literals)
 
 A function literal represents an anonymous [function](/Declarations%20and%20scope/function_declarations.html).
 

@@ -1,8 +1,8 @@
-# Operands
+# [피연산자](#operands)
 
-Operands denote the elementary values in an expression. An operand may be a literal, a (possibly [qualified](/Expressions/qualified_identifiers.html)) non-[blank](/Declarations%20and%20scope/blank_identifier.html) identifier denoting a [constant](/Declarations%20and%20scope/constant_declarations.html), [variable](/Declarations%20and%20scope/variable_declarations.html), or [function](/Declarations%20and%20scope/function_declarations.html), a [method expression](/Expressions/method_expressions.html) yielding a function, or a parenthesized expression.
+피연산자는 식에 있어서 기본적인 값을 나타낸다. 피연산자는 리터럴이거나, [상수](/Declarations%20and%20scope/constant_declarations.html)를 나타내는 [blank](/Declarations%20and%20scope/blank_identifier.html) 가 아닌 ([패키지 이름을 동반할 수도 있는](/Expressions/qualified_identifiers.html)) 식별자, [변수](/Declarations%20and%20scope/variable_declarations.html), 혹은 [함수](/Declarations%20and%20scope/function_declarations.html), 함수를 생산하는 [메서드 표현식](/Expressions/method_expressions.html), 혹은 괄호친 식일 수 있다. 
 
-The [blank identifier](/Declarations%20and%20scope/blank_identifier.html) may appear as an operand only on the left-hand side of an assignment.
+[blank 식별자](/Declarations%20and%20scope/blank_identifier.html)는 할당문의 좌측에서만 피연산자로 나타날 수 있다.
 
 <pre>
 <a id="Operand">Operand</a>     = <a href="#Literal">Literal</a> | <a href="#OperandName">OperandName</a> | <a href="/Expressions/method_expressions.html#MethodExpr">MethodExpr</a> | "(" <a href="/Expressions/operators.html#Expression">Expression</a> ")" .

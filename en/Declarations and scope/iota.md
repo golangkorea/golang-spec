@@ -1,6 +1,6 @@
-# Iota
+# [Iota](#iota)
 
-Within a [constant declaration](/Declarations%20and%20scope/constant_declarations.html), the predeclared identifier iota represents successive untyped integer [constants](/Constants/). It is reset to 0 whenever the reserved word const appears in the source and increments after each [ConstSpec](/Declarations%20and%20scope/constant_declarations.html#ConstSpec). It can be used to construct a set of related constants:
+Within a [constant declaration](/Declarations%20and%20scope/constant_declarations.html), the predeclared identifier `iota` represents successive untyped integer [constants](/Constants/). It is reset to 0 whenever the reserved word `const` appears in the source and increments after each [ConstSpec](/Declarations%20and%20scope/constant_declarations.html#ConstSpec). It can be used to construct a set of related constants:
 
 ```go
 const ( // iota is reset to 0
@@ -26,7 +26,7 @@ const x = iota  // x == 0  (iota has been reset)
 const y = iota  // y == 0  (iota has been reset)
 ```
 
-Within an ExpressionList, the value of each iota is the same because it is only incremented after each ConstSpec:
+Within an ExpressionList, the value of each `iota` is the same because it is only incremented after each ConstSpec:
 
 ```go
 const (

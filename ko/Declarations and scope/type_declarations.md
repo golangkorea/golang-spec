@@ -1,45 +1,43 @@
-# Type declarations
+# [타입 선언](#type-declarations)
 
-A type declaration binds an identifier, the *type name*, to a <a href="#Types">type</a>.
-Type declarations come in two forms: alias declarations and type definitions.
+타입 선언문은 식별자인, *타입 이름*을 <a href="#Types">타입</a>에 바인딩한다. 타입 선언문은 두 가지 형태가 있다: 별명 선언과 타입 정의.
 
 <pre>
 <a id="TypeDecl">TypeDecl</a> = "type" ( <a href="#TypeSpec">TypeSpec</a> | "(" { (<a href="#TypeSpec">TypeSpec</a> ";" } ")" ) .
 <a id="TypeSpec">TypeSpec</a> = <a href="#AliasDecl">AliasDecl</a> | <a href="#TypeDef">TypeDef</a> .
 </pre>
 
-## Alias declarations
+## [별명 선언](#alias-declarations)
 
-An alias declaration binds an identifier to the given type.
+별명 선언은 식별자를 주어진 타입에 바인딩한다.
 
 <pre>
 <a id="AliasDecl">AliasDecl</a> = <a href="/Lexical%20elements/identifiers.html#identifier">identifier</a> "=" <a href="#Type">Type</a> .
 </pre>
 
-Within the [scope](/Declarations%20and%20scope/) of the identifier, it serves as an *alias* for the type.
+식별자의 [범위](/Declarations%20and%20scope/) 내에서는, 그 타입의 *별명*으로 사용된다.
 
 ```go
 type (
-    nodeList = []*Node  // nodeList and []*Node are identical types
-    Polar    = polar    // Polar and polar denote identical types
+    nodeList = []*Node  // nodeList 와 []*Node 는 동일한 타입이다.
+    Polar    = polar    // Polar 와 polar 는 동일한 타입을 나타낸다.
 )
 ```
 
-## [Type definitions](#type-definitions)
+## [타입 정의](#type-definitions)
 
-A type definition creates a new, distinct type with the same [underlying type](/Types/) and operations as the given type, and binds an identifier to it.
+타입 정의는 주어진 타입과 같은 [내재 타입](/Types/)과 연산를 갖는 새롭고, 구별되는 타입을 만들고, 그 것에 식별자를 바인딩한다.
 
 <pre>
 <a id="TypeDef">TypeDef</a> = <a href="/Lexical%20elements/identifiers.html#identifier">identifier</a> <a href="/Types/#Type">Type</a> .
 </pre>
 
-The new type is called a *defined type*.
-It is [different](Properties%20of%20types%20and%20values/type_identity.html) from any other type, including the type it is created from.
+새로운 타입은 *타입 정의를 통해 만든 타입*이라고 부른다. 어느 다른 타입과도 [다른](Properties%20of%20types%20and%20values/type_identity.html) 것이며, 심지어 만들기 위해 사용했던 타입과도 다르다.
 
 ```go
 type (
-    Point struct{ x, y float64 }  // Point and struct{ x, y float64 } are different types
-    polar Point                   // polar and Point denote different types
+    Point struct{ x, y float64 }  // Point 와 struct{ x, y float64 } 은 다른 타입이다.
+    polar Point                   // polar 와 Point 는 다른 타입을 나타낸다.
 )
 
 type TreeNode struct {
@@ -53,33 +51,31 @@ type Block interface {
     Decrypt(src, dst []byte)
 }
 ```
-A defined type may have [methods](/Declarations%20and%20scope/method_declarations.html) associated with it.
-It does not inherit any methods bound to the given type, but the [method set](/Types/method_sets.html) of an interface type or of elements of a composite type remains unchanged:
+타입 정의를 이용해 만든 타입은 연관된 [메서드들](/Declarations%20and%20scope/method_declarations.html)이 있을 수 있다. 주어진 타입에 바인딩된 메서드는 상속하지 않지만, 인터페이스 타입의 [메서드 집합](/Types/method_sets.html) 이나 합성 타입의 요소들의 메서드들은 변동없이 남는다.
 
 ```go
 // A Mutex is a data type with two methods, Lock and Unlock.
-type Mutex struct         { /* Mutex fields */ }
-func (m *Mutex) Lock()    { /* Lock implementation */ }
-func (m *Mutex) Unlock()  { /* Unlock implementation */ }
+type Mutex struct         { /* Mutex 필드들 */ }
+func (m *Mutex) Lock()    { /* Lock 구현 */ }
+func (m *Mutex) Unlock()  { /* Unlock 구현 */ }
 
-// NewMutex has the same composition as Mutex but its method set is empty.
+// NewMutex는 Mutex와 같은 구성이지만 메서드 집합은 비어있다.
 type NewMutex Mutex
 
-// The method set of the base type of PtrMutex remains unchanged,
-// but the method set of PtrMutex is empty.
+// PtrMutex의 기본 타입의 메서드 집합은 변동없이 남는다,
+// 하지만 PtrMutex의 메서드 집합은 비어있다.
 type PtrMutex *Mutex
 
-// The method set of *PrintableMutex contains the methods
-// Lock and Unlock bound to its embedded field Mutex.
+// *PrintableMutex의 메서드 집합은 임베딩된 필드 Mutex에 바인딩된 Lock과 Unlock의 메서드들을 포함한다.
 type PrintableMutex struct {
     Mutex
 }
 
-// MyBlock is an interface type that has the same method set as Block.
+// MyBlock는 인터페이스 타입으로 Block과 같은 메서드 집합을 가지고 있다.
 type MyBlock Block
 ```
 
-Type definitions may be used to define different boolean, numeric, or string types and associate methods with them:
+타입 정의는 별개의 불리어, 숫자, 혹은 문자열 타입을 정의할 수 있고, 그 것들에 메서드도 연결시킬 수 있다.
 
 ```go
 type TimeZone int
