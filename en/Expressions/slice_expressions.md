@@ -1,8 +1,8 @@
-# Slice expressions
+# [Slice expressions](#slice-expressions)
 
 Slice expressions construct a substring or slice from a string, array, pointer to array, or slice. There are two variants: a simple form that specifies a low and high bound, and a full form that also specifies a bound on the capacity.
 
-## Simple slice expressions
+## [Simple slice expressions](#simple-slice-expressions)
 
 For a string, array, pointer to array, or slice a, the primary expression
 
@@ -41,7 +41,7 @@ Except for [untyped strings](/Constatns/), if the sliced operand is a string or 
 
 If the sliced operand of a valid slice expression is a `nil` slice, the result is a `nil` slice. Otherwise, the result shares its underlying array with the operand.
 
-## Full slice expressions
+## [Full slice expressions](#full-slice-expressions)
 
 For an array, pointer to array, or slice a (but not a string), the primary expression
 
