@@ -37,7 +37,7 @@ If `a` is a pointer to an array, `a[low : high]` is shorthand for `(*a)[low : hi
 
 For arrays or strings, the indices are *in range* if `0 <= low <= high <= len(a)`, otherwise they are *out of range*. For slices, the upper index bound is the slice capacity `cap(a)` rather than the length. A [constant](/Constants/) index must be non-negative and representable by a value of type `int`; for arrays or constant strings, constant indices must also be in range. If both indices are constant, they must satisfy `low <= high`. If the indices are out of range at run time, a [run-time panic](/Run-time%20panics/) occurs.
 
-Except for [untyped strings](/Constatns/), if the sliced operand is a string or slice, the result of the slice operation is a non-constant value of the same type as the operand. For untyped string operands the result is a non-constant value of type `string`. If the sliced operand is an array, it must be [addressable](/Expressions/address_operators.html) and the result of the slice operation is a slice with the same element type as the array.
+Except for [untyped strings](/Constants/), if the sliced operand is a string or slice, the result of the slice operation is a non-constant value of the same type as the operand. For untyped string operands the result is a non-constant value of type `string`. If the sliced operand is an array, it must be [addressable](/Expressions/address_operators.html) and the result of the slice operation is a slice with the same element type as the array.
 
 If the sliced operand of a valid slice expression is a `nil` slice, the result is a `nil` slice. Otherwise, the result shares its underlying array with the operand.
 
