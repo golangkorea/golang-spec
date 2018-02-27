@@ -1,6 +1,6 @@
-# Notation
+# [표기법](#notation)
 
-The syntax is specified using Extended Backus-Naur Form (EBNF):
+문법은 Extended Backus-Naur Form (EBNF)를 사용해 명시된다:
 
 ```go
 Production  = production_name "=" [ Expression ] "." .
@@ -12,15 +12,15 @@ Option      = "[" Expression "]" .
 Repetition  = "{" Expression "}" .
 ```
 
-Productions are expressions constructed from terms and the following operators, in increasing precedence:
+생성규칙은 용어들과 다음의 연산자들로 부터 우선 순위가 높은 순서대로 만들어진 표현식이다.
 
 ```go
 |   alternation
 ()  grouping
-[]  option (0 or 1 times)
-{}  repetition (0 to n times)
+[]  option (0이나 1번)
+{}  repetition (0이나 n번)
 ```
 
-Lower-case production names are used to identify lexical tokens. Non-terminals are in CamelCase. Lexical tokens are enclosed in double quotes "" or back quotes ``.
+어휘적인 토큰을 식별하기 위해 소문자로 구성된 생성규칙의 이름이 사용된다. 비말단기호는 케멀케이스로 표현된다. 어휘적인 토큰들은 큰 따옴표 `""`나 역 따옴표 <code>``</code>안에 묶는다.
 
-The form a … b represents the set of characters from a through b as alternatives. The horizontal ellipsis … is also used elsewhere in the spec to informally denote various enumerations or code snippets that are not further specified. The character … (as opposed to the three characters ...) is not a token of the Go language.
+`a … b`의 형식은 `a`에서 `b`까지의 문자 집합을 선택할 수 있는 대안 문자들로 나타낸다. 또 수평 줄임표 `…`는 스펙문서의 다른 곳들에서 다양한 열거나 생략하는 코드 조각들을 나타내는데 비 공식적으로 사용된다. `…` 문자는 (세 문자인 ... 에 반하여) Go 언어의 토큰이 아니다.
