@@ -1,25 +1,25 @@
-# [Selectors](#selectors)
+# [선택자](#selectors)
 
-For a [primary expression](/Expressions/primary_expressions.html) `x` that is not a [package name](/Packages/package_clause.html), the *selector expression*
+[패키지 이름](/Packages/package_clause.html)이 아닌 [기본 식](/Expressions/primary_expressions.html) `x`에 대하여, 다음과 같은 *선택자 표현식*은
 
 ```go
 x.f
 ```
 
-denotes the field or method `f` of the value `x` (or sometimes `*x`; see below). The identifier `f` is called the (field or method) *selector*; it must not be the [blank identifier](/Declarations%20and%20scope/blank_identifier.html). The type of the selector expression is the type of `f`. If `x` is a package name, see the section on [qualified identifiers](/Expressions/qualified_identifiers.html).
+`x` 값(때로는 `*x`; 아래 참조)의 필드 또는 메서드 `f`를 뜻한다. 식별자 `f`는 (필드 혹은 메서드) *선택자*라고 불린다; [blank 식별자](/Declarationsndcope/blank_identifier.html)가 아니여야 한다. 선택자 표현식의 타입은 `f`의 타입이다. `x`가 패키지 이름일 경우, [한정적 식별자](/Expressions/qualified_identifiers.html) 섹션을 참고하라.
 
-A selector `f` may denote a field or method `f` of a type `T`, or it may refer to a field or method `f` of a nested [embedded field](/Types/struct_types.html) of `T`. The number of embedded fields traversed to reach `f` is called its *depth* in`T`. The depth of a field or method `f` declared in `T` is zero. The depth of a field or method `f` declared in an embedded field `A` in `T` is the depth of `f` in `A` plus one.
+선택자 `f`는 타입 `T`의 필드나 메서드 `f`를 뜻할 수도 있고, `T`의 중첩된 [임베드된 필드](/Types/struct_types.html)의 필드나 메서드 `f`를 참조할 수도 있다. `f`까지 도달하는데 드는 임베드된 필드의 수를 `T`안의 *깊이*라고 부른다. `T`안에 선언된 필드나 메서드 `f`의 깊이는 0 이다. `T`안에 임베드된 필드 `A`속에 선언된 필드나 메서드 `f`의 깊이는 `A`안의 `f`의 깊이 더하기 1 이다.
 
-The following rules apply to selectors:
+선택자에는 다음의 규칙들이 적용된다:
 
-  * For a value `x` of type `T` or `*T` where `T` is not a pointer or interface type, `x.f` denotes the field or method at the shallowest depth in `T` where there is such an `f`. If there is not exactly [one `f`](/Declarations%20and%20scope/uniqueness_of_identifiers.html) with shallowest depth, the selector expression is illegal.
-  * For a value `x` of type `I` where `I` is an interface type, `x.f` denotes the actual method with name `f` of the dynamic value of `x`. If there is no method with name `f` in the [method set](/Types/method_sets.html) of `I`, the selector expression is illegal.
-  * As an exception, if the type of `x` is a named pointer type and `(*x).f` is a valid selector expression denoting a field (but not a method), `x.f` is shorthand for `(*x).f`.
-  * In all other cases, `x.f` is illegal.
-  * If `x` is of pointer type and has the value `nil` and `x.f` denotes a struct field, assigning to or evaluating `x.f` causes a [run-time panic](/Run-time%20panics/).
-  * If `x` is of interface type and has the value `nil`, [calling](/Expressions/calls.html) or [evaluating](/Expressions/method_values.html) the method `x.f` causes a [run-time panic](/Run-time%20panics/).
+  * `T`가 포인터도 아니고 인터페이스 타입도 아닌 경우의 타입 `T` 혹은 `*T`의 값 `x`에 대해, `f`가 존재하는 경우 `x.f`는 `T`내 가장 얕은 깊이에 위치한 필드나 메서드를 뜻한다. 만약 가장 얕은 깊이에 정확히 [단 하나의 `f`](/Declarations%20and%20scope/uniqueness_of_identifiers.html)만 존재하는 것이 아니라면, 그런 선택자 표현식은 허용되지 않는다.
+  * `I`가 인터페이스 타입인 경우 타입 `I`의 값 `x`에 대해, `x.f`는 `x`의 동적인 값의 `f`라는 이름을 갖는 실제 메서드를 뜻한다. 만약 `I`의 [메서드 집합](/Types/method_sets.html)내 `f`라는 이름의 메서드가 없다면, 그런 선택자 표현식은 허용되지 않는다.
+  * 한가지 예외로, 만약 `x`의 타입이 이름이 주어진 포인터 타입이고 `(*x).f`가 (메서드가 아닌) 필드를 뜻하는 유효한 선택자 표현식이라면, `x.f`는 `(*x).f`를 속기한 형태이다.
+  * 이 외 다른 모든 경우에, `x.f`는 허용되지 않는다.
+  * 만약 `x`가 포인터 타입이고 `nil` 값을 가지고 있으며 `x.f`가 구조체의 필드를 의미하는 경우에, `x.f`에 할당하거나 그것을 평가하는 일은 [런타입 패닉](/Run-time%20panics/)을 일으킨다.
+  * 만약 `x`가 인터페이스 타입이고 `nil` 값을 가지고 있다면, 메서드 `x.f`를 [호출하거나](/Expressions/calls.html) [평가하는 것](/Expressions/method_values.html)은 [런타입 패닉](/Run-time%20panics/)을 일으킨다.
 
-For example, given the declarations:
+예를 들어, 주어진 선언문들에서:
 
 ```go
 type T0 struct {
@@ -49,7 +49,7 @@ var p *T2    // with p != nil and (*p).T0 != nil
 var q Q = p
 ```
 
-one may write:
+다음과 같이 작성할 수 있다:
 
 ```go
 t.z          // t.z
@@ -60,16 +60,16 @@ p.z          // (*p).z
 p.y          // (*p).T1.y
 p.x          // (*(*p).T0).x
 
-q.x          // (*(*q).T0).x        (*q).x is a valid field selector
+q.x          // (*(*q).T0).x        (*q).x는 유효한 필드 선택자이다
 
-p.M0()       // ((*p).T0).M0()      M0 expects *T0 receiver
-p.M1()       // ((*p).T1).M1()      M1 expects T1 receiver
-p.M2()       // p.M2()              M2 expects *T2 receiver
-t.M2()       // (&t).M2()           M2 expects *T2 receiver, see section on Calls
+p.M0()       // ((*p).T0).M0()      M0는 *T0 리시버를 예상한다
+p.M1()       // ((*p).T1).M1()      M1은 T1 리시버를 예상한다
+p.M2()       // p.M2()              M2는 *T2 리시버를 예상한다
+t.M2()       // (&t).M2()           M2는 *T2 리시버를 예상한다, 호출에 대한 섹션을 참조.
 ```
 
-but the following is invalid:
+하지만 다음은 유효하지 않다:
 
 ```go
-q.M0()       // (*q).M0 is valid but not a field selector
+q.M0()       // (*q).M0는 유효하지만 필드 선택자는 아니다
 ```
