@@ -6,7 +6,7 @@ For an expression `x` of [interface type](/Types/interface_types.html) and a typ
 x.(T)
 ```
 
-asserts that `x` is not nil and that the value stored in `x` is of type `T`. The notation `x.(T)` is called a *type assertion*.
+asserts that `x` is not `nil` and that the value stored in `x` is of type `T`. The notation `x.(T)` is called a *type assertion*.
 
 More precisely, if `T` is not an interface type, `x.(T)` asserts that the dynamic type of `x` is [identical](/Properties%20of%20types%20and%20values/type_identity.html) to the type `T`. In this case, `T` must [implement](/Types/method_sets.html) the (interface) type of `x`; otherwise the type assertion is invalid since it is not possible for `x` to store a value of type `T`. If `T` is an interface type, `x.(T)` asserts that the dynamic type of `x` implements the interface `T`.
 
@@ -33,4 +33,4 @@ v, ok := x.(T)
 var v, ok = x.(T)
 ```
 
-yields an additional untyped boolean value. The value of `ok` is true if the assertion holds. Otherwise it is `false` and the value of `v` is the [zero value](/Program%20initialization%20and%20execution/the_zero_value.html) for type `T`. No run-time panic occurs in this case.
+yields an additional untyped boolean value. The value of `ok` is `true` if the assertion holds. Otherwise it is `false` and the value of `v` is the [zero value](/Program%20initialization%20and%20execution/the_zero_value.html) for type `T`. No run-time panic occurs in this case.
