@@ -14,7 +14,7 @@ The interpretation of the ImportPath is implementation-dependent but it is typic
 
 Implementation restriction: A compiler may restrict ImportPaths to non-empty strings using only characters belonging to [Unicode](http://www.unicode.org/versions/Unicode6.3.0/)'s L, M, N, P, and S general categories (the Graphic characters without spaces) and may also exclude the characters <code>!"#$%&'()*,:;<=>?[\]^`{|}</code> and the Unicode replacement character U+FFFD.
 
-Assume we have compiled a package containing the package clause package `math`, which exports function `Sin`, and installed the compiled package in the file identified by `"lib/math"`. This table illustrates how Sin is accessed in files that import the package after the various types of import declaration.
+Assume we have compiled a package containing the package clause `package math`, which exports function `Sin`, and installed the compiled package in the file identified by `"lib/math"`. This table illustrates how `Sin` is accessed in files that import the package after the various types of import declaration.
 
 ```go
 Import declaration          Local name of Sin

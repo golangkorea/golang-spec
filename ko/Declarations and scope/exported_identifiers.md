@@ -1,9 +1,8 @@
-# [내보내진(Exported) 식별자](#exported-identifiers]
+# [엑스포트 된(Exported) 식별자](#exported-identifiers]
 
-식별자는 다른 패키지에서 접근 할 수 있게 내보내질(*exported*)  수 있다.
-아래 두 경우에 식별자는 내보내 질 수 있다.
+식별자는 다른 패키지에서 접근할 수 있게 *엑스포트 될* 수 있다. 아래 두 가지 조건을 모두 만족한다면 식별자는 엑스포트 될 수 있다.
 
-  1. 식별자의 이름에 첫번째 글자가 Unicode 대문자(Unicode class "Lu"); 그리고
-  2. 식별자가 패키지 블록[package block](/Blocks/) 에서 선언 되거나, 필드 명[field name](/Types/struct_types.html) or 메소드 명[method name](/Types/interface_types.html#MethodName).
+  1. 식별자 이름의 첫 번째 캐릭터가 유니코드 중 알파벳 대문자(유니코드 클래스에서 "Lu" 에 해당함)이고;
+  2. 식별자가 [패키지 블록](/Blocks/) 안에 선언되어 있거나, [필드 이름](/Types/struct_types.html) 또는 [메서드 이름](/Types/interface_types.html#MethodName)인 경우
 
-다른 식별자들은 내보내질 수 없다.
+이외의 식별자들은 엑스포트 될 수 없다.

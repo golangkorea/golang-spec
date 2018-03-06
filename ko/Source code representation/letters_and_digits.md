@@ -1,6 +1,6 @@
-# [알파벳 문자와 숫자](#letters-and-digits)
+# [알파벳 문자와 digits](#letters-and-digits)
 
-밑줄 캐릭터 `_` (U+005F)는 문자로 간주된다.
+밑줄 캐릭터 `_` (U+005F)는 알파벳 문자로 간주된다.
 
 <pre>
 <a id="letter">letter</a>        = <a href="/Source code representation/characters.html#unicode_letter">unicode_letter</a> | "_" .
