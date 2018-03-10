@@ -1,6 +1,6 @@
 # [기본 식](#primary-expressions)
 
-기본 식은 단항 식과 이항 식의 피연산자들이다.
+기본 식은 단항 식과 이항 식의 피연산자다.
 
 <pre>
 <a id="PrimaryExpr">PrimaryExpr</a> =
