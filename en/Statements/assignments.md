@@ -6,7 +6,7 @@
 <a id="assign_op">assign_op</a> = [ <a href="/Expressions/operators.html#add_op">add_op</a> | <a href="/Expressions/operators.html#mul_op">mul_op</a> ] "=" .
 </pre>
 
-Each left-hand side operand must be [addressable](/Expressions/address_operators.html), a map index expression, or (for = assignments only) the [blank identifier](/Declarations%20and%20scope/blank_identifier.html). Operands may be parenthesized.
+Each left-hand side operand must be [addressable](/Expressions/address_operators.html), a map index expression, or (for `=` assignments only) the [blank identifier](/Declarations%20and%20scope/blank_identifier.html). Operands may be parenthesized.
 
 ```go
 x = 1
@@ -22,13 +22,13 @@ a[i] <<= 2
 i &^= 1<<n
 ```
 
-A tuple assignment assigns the individual elements of a multi-valued operation to a list of variables. There are two forms. In the first, the right hand operand is a single multi-valued expression such as a function call, a [channel](/Types/channel_types.html) or [map](/Types/map_types.html) operation, or a [type assertion](/Expressions/type_assertions.html). The number of operands on the left hand side must match the number of values. For instance, if f is a function returning two values,
+A tuple assignment assigns the individual elements of a multi-valued operation to a list of variables. There are two forms. In the first, the right hand operand is a single multi-valued expression such as a function call, a [channel](/Types/channel_types.html) or [map](/Types/map_types.html) operation, or a [type assertion](/Expressions/type_assertions.html). The number of operands on the left hand side must match the number of values. For instance, if `f` is a function returning two values,
 
 ```go
 x, y = f()
 ```
 
-assigns the first value to `x` and the second to `y`. In the second form, the number of operands on the left must equal the number of expressions on the right, each of which must be single-valued, and the nth expression on the right is assigned to the *n*th operand on the left:
+assigns the first value to `x` and the second to `y`. In the second form, the number of operands on the left must equal the number of expressions on the right, each of which must be single-valued, and the *n*th expression on the right is assigned to the *n*th operand on the left:
 
 ```go
 one, two, three = '一', '二', '三'

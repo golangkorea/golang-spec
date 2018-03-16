@@ -1,4 +1,4 @@
-# Break statements
+# [Break statements](#break-statements)
 
 A "break" statement terminates execution of the innermost "[for](/Statements/for_statements.html)", "[switch](/Statements/switch_statements.html)", or "[select](/Statements/select_statements.html)" statement within the same function.
 

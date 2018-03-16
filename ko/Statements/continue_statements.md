@@ -1,12 +1,12 @@
-# Continue statements
+# [continue 문](#continue-statements)
 
-A "continue" statement begins the next iteration of the innermost ["for" loop](/Statements/for_statements.html) at its post statement. The "for" loop must be within the same function.
+"continue" 문은 구문 바로 뒤의 위치에서 가장 깊숙한 ["for" 루프](/Statements/for_statements.html)의 다음 반복을 시작한다. "for" 루프는 동일한 함수내 있어야 한다.
 
 <pre>
 <a id="ContinueStmt">ContinueStmt</a> = "continue" [ <a href="/Statements/labeled_statements.html#Label">Label</a> ] .
 </pre>
 
-If there is a label, it must be that of an enclosing "for" statement, and that is the one whose execution advances.
+라벨이 있는 경우, 에워싸는 "for" 문에 속해야 하고, 그 구문의 실행이 전진하게 된다.
 
 ```go
 RowLoop:
