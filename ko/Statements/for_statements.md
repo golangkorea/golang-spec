@@ -1,19 +1,19 @@
-# [For statements](#for-statements)
+# [For 문](#for-statements)
 
-A "for" statement specifies repeated execution of a block. There are three forms: The iteration may be controlled by a single condition, a "for" clause, or a "range" clause.
+"for" 문은 블록의 반복적인 실행을 지정한다. 여기에는 단일 조건, "for" 문, 혹은 "range" 문을 통해 제어되는 세 가지의 형태가 있다.
 
 <pre>
 <a id="ForStmt">ForStmt</a> = "for" [ <a href="#Condition">Condition</a> | <a href="#ForClause">ForClause</a> | <a href="#RangeClause">RangeClause</a> ] <a href="/Blocks/#Block">Block</a> .
 <a id="Condition">Condition</a> = <a href="/Expressions/operators.html#Expression">Expression</a> .
 </pre>
 
-## [For statements with single condition](#for-statements-with-single-condition]
+## [단일 조건을 사용하는 For 문](#for-statements-with-single-condition]
 
 In its simplest form, a "for" statement specifies the repeated execution of a block as long as a boolean condition evaluates to `true`. The condition is evaluated before each iteration. If the condition is absent, it is equivalent to the boolean value `true`.
 
 ```go
 for a < b {
-	a *= 2
+    a *= 2
 }
 ```
 
@@ -29,7 +29,7 @@ A "for" statement with a ForClause is also controlled by its condition, but addi
 
 ```go
 for i := 0; i < 10; i++ {
-	f(i)
+    f(i)
 }
 ```
 
@@ -74,34 +74,34 @@ The iteration variables may be declared by the "range" clause using a form of [s
 
 ```go
 var testdata *struct {
-	a *[7]int
+    a *[7]int
 }
 for i, _ := range testdata.a {
-	// testdata.a is never evaluated; len(testdata.a) is constant
-	// i ranges from 0 to 6
-	f(i)
+    // testdata.a is never evaluated; len(testdata.a) is constant
+    // i ranges from 0 to 6
+    f(i)
 }
 
 var a [10]string
 for i, s := range a {
-	// type of i is int
-	// type of s is string
-	// s == a[i]
-	g(i, s)
+    // type of i is int
+    // type of s is string
+    // s == a[i]
+    g(i, s)
 }
 
 var key string
 var val interface {}  // value type of m is assignable to val
 m := map[string]int{"mon":0, "tue":1, "wed":2, "thu":3, "fri":4, "sat":5, "sun":6}
 for key, val = range m {
-	h(key, val)
+    h(key, val)
 }
 // key == last map key encountered in iteration
 // val == map[key]
 
 var ch chan Work = producer()
 for w := range ch {
-	doWork(w)
+    doWork(w)
 }
 
 // empty a channel

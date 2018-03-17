@@ -1,6 +1,6 @@
-# [Fallthrough statements](#fallthrough-statements)
+# [Fallthrough 문](#fallthrough-statements)
 
-A "fallthrough" statement transfers control to the first statement of the next case clause in an [expression "switch" statement](/Statements/switch_statements.html#expression-switches). It may be used only as the final non-empty statement in such a clause.
+"fallthrough" 문은 ["switch" 문](/Statements/switch_statements.html#expression-switches)안에서 다음 case 절 첫 구문으로 제어 순서를 바꾼다. 절 안에서 마지막 비지 않은 구문으로만 사용될 수 도 있다.
 
 <pre>
 <a id="FallthroughStmt">FallthroughStmt</a> = "fallthrough" .

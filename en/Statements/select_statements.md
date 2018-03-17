@@ -1,4 +1,4 @@
-# Select statements
+# [Select statements](#select-statements)
 
 A "select" statement chooses which of a set of possible [send](/Statements/send_statements.html) or [receive](/Expressions/receive_operator.html) operations will proceed. It looks similar to a "[switch](/Statements/switch_statements.html)" statement but with the cases all referring to communication operations.
 
@@ -20,7 +20,7 @@ Execution of a "select" statement proceeds in several steps:
   4. If the selected case is a RecvStmt with a short variable declaration or an assignment, the left-hand side expressions are evaluated and the received value (or values) are assigned.
   5. The statement list of the selected case is executed.
 
-Since communication on nil channels can never proceed, a select with only nil channels and no default case blocks forever.
+Since communication on `nil` channels can never proceed, a select with only `nil` channels and no default case blocks forever.
 
 ```go
 var a []int

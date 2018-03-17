@@ -1,4 +1,4 @@
-# Goto statements
+# [Goto statements](#goto-statements)
 
 A "goto" statement transfers control to the statement with the corresponding label within the same function.
 
@@ -18,7 +18,7 @@ Executing the "goto" statement must not cause any variables to come into [scope]
 L:
 ```
 
-is erroneous because the jump to label L skips the creation of v.
+is erroneous because the jump to label `L` skips the creation of `v`.
 
 A "goto" statement outside a [block](/Blocks/) cannot jump to a label inside that block. For instance, this example:
 
@@ -35,4 +35,4 @@ L1:
 }
 ```
 
-is erroneous because the label L1 is inside the "for" statement's block but the goto is not.
+is erroneous because the label `L1` is inside the "for" statement's block but the `goto` is not.
