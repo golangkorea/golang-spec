@@ -7,7 +7,7 @@
 <a id="Condition">Condition</a> = <a href="/Expressions/operators.html#Expression">Expression</a> .
 </pre>
 
-## [단일 조건을 사용하는 For 문](#for-statements-with-single-condition]
+## [단일 조건을 사용하는 For 문](#for-statements-with-single-condition)
 
 In its simplest form, a "for" statement specifies the repeated execution of a block as long as a boolean condition evaluates to `true`. The condition is evaluated before each iteration. If the condition is absent, it is equivalent to the boolean value `true`.
 
