@@ -1,3 +1,3 @@
 # [패키지](#packages)
 
-Go programs are constructed by linking together *packages*. A package in turn is constructed from one or more source files that together declare constants, types, variables and functions belonging to the package and which are accessible in all files of the same package. Those elements may be [exported](/Declarations%20and%20scope/exported_identifiers.html) and used in another package.
+Go 프로그램은 *패키지들*을 서로 링크해서 만들어 진다. 하나의 패키지는 하나 이상의 소스 파일들이 그 패키지에 속하는 상수, 타입, 변수 그리고 함수들을 함께 선언하면서 만들어지고, 이들은 같은 패키지의 모든 파일에서 접근 가능하다. 이러한 요소들은 [엑스포트](/Declarations%20and%20scope/exported_identifiers.html)될 수도 있으며 다른 패키지에서 사용될 수도 있다.

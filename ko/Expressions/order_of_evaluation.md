@@ -2,8 +2,6 @@
 
 패키지 레벨에서, [변수 선언문들](/Declarations%20and%20scope/variable_declarations.html)에 있는 개별 초기화 식의 평가 순서는 [초기화 종속성](/Program%20initialization%20and%20execution/package_initialization.html)이 결정한다. 그렇지 않은 경우, 식의 [피연산자](/Expressions/operands.html)를 평가할 때나 할당문, 혹은 [반환문](/Statements/return_statements.html), 모든 함수 호출, 메서드 호출, 그리고 통신 연산들은 어휘적으로 왼쪽에서 오른쪽으로 순차적으로 평가된다.
 
-
-
 예를 들어, (함수-로컬) 할당문에서
 
 ```go
