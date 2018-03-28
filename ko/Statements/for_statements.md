@@ -9,7 +9,7 @@
 
 ## [단일 조건을 사용하는 For 문](#for-statements-with-single-condition)
 
-In its simplest form, a "for" statement specifies the repeated execution of a block as long as a boolean condition evaluates to `true`. The condition is evaluated before each iteration. If the condition is absent, it is equivalent to the boolean value `true`.
+단순한 형태에서, "for" 구문은 불린 조건이 `true`로 평가되는 동안에 해당 블록의 반복적인 실행을 지정한다. 이 조건은 각 이터레이션 직전에 평가된다. 조건이 없다면 항상 불린 값 `true`로 평가된다.
 
 ```go
 for a < b {
@@ -17,9 +17,9 @@ for a < b {
 }
 ```
 
-## [For statements with `for` clause](#for-statements-with-for-clause)
+## [`for` 절을 사용하는 For 문](#for-statements-with-for-clause)
 
-A "for" statement with a ForClause is also controlled by its condition, but additionally it may specify an *init* and a *post* statement, such as an assignment, an increment or decrement statement. The init statement may be a [short variable declaration](/Declarations%20and%20scope/short_variable_declarations.html), but the post statement must not. Variables declared by the init statement are re-used in each iteration.
+ForClause를 사용하는 "for" 문 또한 주어진 조건에 의해 제어되지만, 추가적으로 할당, 증가, 감소 명령과 같은 *init*과 *post* 문을 지정할 수 있다. init 문은 [짧은 변수 선언](/Declarations%20and%20scope/short_variable_declarations.html)일 수 있지만, post 문은 그래선 안된다. init 문을 통해 선언되는 변수들은 각 반복에서 재사용될 수 있다.
 
 <pre>
 <a id="ForClause">ForClause</a> = [ <a href="#InitStmt">InitStmt</a> ] ";" [ <a href="#Condition">Condition</a> ] ";" [ <a href="#PostStmt">PostStmt</a> ] .
@@ -33,70 +33,71 @@ for i := 0; i < 10; i++ {
 }
 ```
 
-If non-empty, the init statement is executed once before evaluating the condition for the first iteration; the post statement is executed after each execution of the block (and only if the block was executed). Any element of the ForClause may be empty but the [semicolons](/Lexical%20elements/semicolons.html) are required unless there is only a condition. If the condition is absent, it is equivalent to the boolean value true.
+비어있지 않다면, init 문은 첫번째 반복에 대한 조건을 평가하기 전에 한번만 실행된다; post 문은 블록의 실행 뒤에(블록이 실행된 경우에만) 매번 실행된다. ForClause의 모든 요소들은 비어있을 수도 있지만 조건만 있는 경우가 아닌 한에는 [세미콜론들](/Lexical%20elements/semicolons.html)이 필요하다. 조건이 없다면, 불린 값 `true`와 동일하다.
 
 ```go
-for cond { S() }    is the same as    for ; cond ; { S() }
-for      { S() }    is the same as    for true     { S() }
+for cond { S() }    는 다음과 동일    for ; cond ; { S() }
+for      { S() }    는 다음과 동일    for true     { S() }
 ```
 
-## [For statements with `range` clause](#for-statements-with-range-clause)
+## [`range` 절을 사용하는 For 문](#for-statements-with-range-clause)
 
-A "for" statement with a "range" clause iterates through all entries of an array, slice, string or map, or values received on a channel. For each entry it assigns *iteration values* to corresponding *iteration variables* if present and then executes the block.
+"range" 절을 사용하는 "for" 문은 배열, 슬라이스, 문자열 혹은 맵, 혹은 채널을 통해서 넘겨 받은 값들의 모든 요소들을 순회한다. 이 구문에서는 각 요소들에 대해 *반복 값*들을 이에 대응되는 *반복 변수*들에 할당한 다음 해당되는 블록을 실행한다.
 
 <pre>
 <a id="RangeClause">RangeClause</a> = [ <a href="/Declarations%20and%20scope/constant_declarations.html#ExpressionList">ExpressionList</a> "=" | <a href="/Declarations%20and%20scope/constant_declarations.html#IdentifierList">IdentifierList</a> ":=" ] "range" <a href="/Expressions/operators.html#Expression">Expression</a> .
 </pre>
 
-The expression on the right in the "range" clause is called the *range expression*, which may be an array, pointer to an array, slice, string, map, or channel permitting [receive operations](/Expressions/receive_operator.html). As with an assignment, if present the operands on the left must be [addressable](/Expressions/address_operators.html) or map index expressions; they denote the iteration variables. If the range expression is a channel, at most one iteration variable is permitted, otherwise there may be up to two. If the last iteration variable is the [blank identifier](/Declarations%20and%20scope/blank_identifier.html), the range clause is equivalent to the same clause without that identifier.
+"range" 절의 우측에 있는 표현식은 *범위 표현식*이라고 불리며, 배열, 배열을 가리키는 포인터, 슬라이스, 문자열, 맵, 혹은 [수신 명령](/Expressions/receive_operator.html)을 허용하는 채널일 수 있다. 할당과 마찬가지로, 좌측에 피연산자가 있다면 이는 반드시 [주소 지정 가능](/Expressions/address_operators.html)하거나 맵 인덱스 표현식이어야 한다; 이러한 것들은  반복 변수들을 나타낸다. 범위 표현식이 채널이라면, 최대 하나의 반복 변수가 허용되며, 그렇지 않은 경우에는 둘 이상일 것이다. 마지막 반복 변수가 [공백 식별자](/Declarations%20and%20scope/blank_identifier.html)라면, range 절은 해당되는 식별자가 없는 것과 동일하다.
 
-The range expression `x` is evaluated once before beginning the loop, with one exception: if the range expression is an array or a pointer to an array and at most one iteration variable is present, only the range expression's length is evaluated; if that length is constant, [by definition](/Built-in%20functions/length_and_capacity.html) the range expression itself will not be evaluated.
+범위 표현식 `x`는 하나의 예외를 빼고는 이 루프가 시작되기 전에 한번만 평가된다: 범위 표현식이 배열이거나 배열을 가리키는 포인터이고, 최대 하나의 반복 변수가 존재한다면, 범위 표현식의 길이만이 평가된다; 이 길이가 상수라면, [그 정의에 의해](/Built-in%20functions/length_and_capacity.html) 범위 표현식 자신은 평가되지 않을 것이다.
 
-Function calls on the left are evaluated once per iteration. For each iteration, iteration values are produced as follows if the respective iteration variables are present:
+좌측에서의 함수 호출은 매 반복 때마다 평가된다. 각 반복에 대한 반복 값들은 각 반복 변수가 존재하는 경우에 대해 다음과 같이 생성된다. 
 
 <pre>
-Range expression                          1st value          2nd value
+범위 표현식                          첫번째 값        두번째 값
 &nbsp;
-array or slice  a  [n]E, *[n]E, or []E    index    i  int    a[i]       E
-string          s  string type            index    i  int    see below  rune
-map             m  map[K]V                key      k  K      m[k]       V
-channel         c  chan E, &lt;-chan E       element  e  E
+배열 혹은 슬라이스  a  [n]E, *[n]E, or []E    인덱스    i  int    a[i]       E
+문자열          s  string type            인덱스    i  int    아래를 참고  rune
+맵             m  map[K]V                키      k  K      m[k]       V
+채널         c  chan E, &lt;-chan E       요소  e  E
 </pre>
 
-  1. For an array, pointer to array, or slice value `a`, the index iteration values are produced in increasing order, starting at element index 0. If at most one iteration variable is present, the range loop produces iteration values from 0 up to `len(a)-1` and does not index into the array or slice itself. For a `nil` slice, the number of iterations is 0.
-  2. For a string value, the "range" clause iterates over the Unicode code points in the string starting at byte index 0. On successive iterations, the index value will be the index of the first byte of successive UTF-8-encoded code points in the string, and the second value, of type `rune`, will be the value of the corresponding code point. If the iteration encounters an invalid UTF-8 sequence, the second value will be `0xFFFD`, the Unicode replacement character, and the next iteration will advance a single byte in the string.
-  3. The iteration order over maps is not specified and is not guaranteed to be the same from one iteration to the next. If a map entry that has not yet been reached is removed during iteration, the corresponding iteration value will not be produced. If a map entry is created during iteration, that entry may be produced during the iteration or may be skipped. The choice may vary for each entry created and from one iteration to the next. If the map is `nil`, the number of iterations is 0.
-  4. For channels, the iteration values produced are the successive values sent on the channel until the channel is [closed](/Built-in%20functions/close.html). If the channel is `nil`, the range expression blocks forever.
+  1. 배열, 배열을 가리키는 포인터 혹은 슬라이스 값인 `a`에 대해, 인덱스 반복 값들은 요소 인덱스 0에서 시작하여 증가하는 순서로 생성된다. 최대 하나의 반복 변수가 존재한다면, range 루프는 0부터 `len(a)-1`까지 증가하는 반복 변수들을 생성하게 되고 배열이나 슬라이스 자체에 대한 색인을 생성하지 않는다. `nil` 슬라이스에 대한 반복 횟수는 0이다.
+  2. 문자열 값에 대해, "range" 절은 문자열의 바이트 인덱스 0에서부터 시작하여 유니코드 코드 포인트 단위로 반복한다. 연속적인 반복에서, 위 표에서 말하는 인덱스의 값은 문자열 내에서 UTF-8으로 인코딩된 연속적인 코드 포인트의 첫번째 바이트가 될 것이다. 그리고 `rune` 타입의 두번째 값은, 코드 포인트에 대응되는 값이 될 것이다. 반복이 유효하지 않은 UTF-8 스퀀스에 마주치면, 두번째 값은 유니코드 대체 문자인 `0xFFFD`가 될 것이고, 다음 반복은 문자열 내에서 단일 바이트만큼 이동할 것이다.
+  3. 맵에 대한 반복 순서는 무작위이며 한 반복이 다음 반복과 동일하다고 보장되지 않는다.
+반복 동안에 아직 순회하지 않은 맵 요소가 삭제되었다면, 이에 대응되는 반복 값은 생성되지 않을 것이다. 반복 동안에 맵 요소가 생성된다면, 이 요소는 반복 동안에 생성될 수도 있고, 그냥 지나칠 수도 있다. 생성된 각 요소에 대한 선택은 반복마다 다를 수 있다. `nil` 맵에 대한 반복 횟수는 0이다.
+  4. 채널에 대해 생성되는 반복 값들은 채널이 [닫히기](/Built-inunctions/close.html) 전까지 그 채널에서 보내진 연속적인 값들이다. `nil` 채널에 대한 범위 표현식은 영원히 블록된다.
 
-The iteration values are assigned to the respective iteration variables as in an [assignment statement](/Statements/assignments.html).
+반복 값들은 [할당문](/Statements/assignments.html)과 마찬가지로 각 반복 변수에 할당된다.
 
-The iteration variables may be declared by the "range" clause using a form of [short variable declaration](/Declarations%20and%20scope/short_variable_declarations.html) (`:=`). In this case their types are set to the types of the respective iteration values and their [scope](/Declarations%20and%20scope/) is the block of the "for" statement; they are re-used in each iteration. If the iteration variables are declared outside the "for" statement, after execution their values will be those of the last iteration.
+반복 변수들은 [짧은 변수 선언](/Declarations%20and%20scope/short_variable_declarations.html) (`:=`)의  형태를 사용하는 "range" 절을 통해 선언될 수도 있다. 이 경우, 반복 변수들의 타입은 각 반복 값들의 타입으로 정해지고 그 [스코프](/Declarationsndcope/)는 "for" 문의 블록이다; 반복 변수들은 각 반복 내에서 재사용될 수 있다. 반복 변수들이 "for"문의 바깥 쪽에서 선언되었다면, 이 변수들의 값은 마지막 반복이 실행된 후의 값이 될 것이다.
 
 ```go
 var testdata *struct {
     a *[7]int
 }
 for i, _ := range testdata.a {
-    // testdata.a is never evaluated; len(testdata.a) is constant
-    // i ranges from 0 to 6
+    // testdata.a는 절대 평가되지 않는다; len(testdata.a)는 상수
+    // i의 범위는 0부터 6까지
     f(i)
 }
 
 var a [10]string
 for i, s := range a {
-    // type of i is int
-    // type of s is string
+    // i의 타입은 int
+    // s의 타입은 string
     // s == a[i]
     g(i, s)
 }
 
 var key string
-var val interface {}  // value type of m is assignable to val
+var val interface {}  // m의 값 타입은 val에 할당 가능
 m := map[string]int{"mon":0, "tue":1, "wed":2, "thu":3, "fri":4, "sat":5, "sun":6}
 for key, val = range m {
     h(key, val)
 }
-// key == last map key encountered in iteration
+// key == 이터레이션 내에서 나타는 마지막 맵 키
 // val == map[key]
 
 var ch chan Work = producer()
@@ -104,6 +105,6 @@ for w := range ch {
     doWork(w)
 }
 
-// empty a channel
+// 빈 채널
 for range ch {}
 ```
