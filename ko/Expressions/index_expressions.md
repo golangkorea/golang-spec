@@ -1,49 +1,49 @@
-# Index expressions
+# [인덱스 식](#index-expressions)
 
-A primary expression of the form
+다음과 같은 형태의 기본 식은
 
 ```go
 a[x]
 ```
 
-denotes the element of the array, pointer to array, slice, string or map a indexed by x. The value x is called the *index* or *map key*, respectively. The following rules apply:
+`x`로 인덱스된 배열, 배열 포인터, 슬라이스, 문자열, 혹은 맵인 `a`의 요소를 의미한다. `x`의 값은 해당 데이터 구조의 *인덱스* 혹은 *맵의 키*라고 부른다. 다음과 같은 규칙을 따른다:
 
-If a is not a map:
+`a`가 맵이 아닌 경우:
 
-  * the index x must be of integer type or untyped; it is in range if 0 <= x < len(a), otherwise it is out of range
-  * a [constant](/Constants/) index must be non-negative and representable by a value of type int
+  * 인덱스 `x`는 정수 타입이거나 미지정 타입이어야 한다; `0 <= x < len(a)`이 성립하면 *범위 안*이라고 하고, 그렇지 않으면 *범위 밖*이라고 한다.
+  * [상수](/Constants/) 인덱스는 음수일 수 없고 타입 `int`의 값으로 나타낸다.
 
-For a of [array type](/Types/array_types.html) A:
+[배열 타입](/Types/array_types.html) `A`의 `a`에 대해서는:
 
-  * a [constant](/Constants/) index must be in range
-  * if x is out of range at run time, a [run-time panic](/Run-time%20panics/) occurs
-  * a[x] is the array element at index x and the type of a[x] is the element type of A
+  * [상수](/Constants/) 인덱스는 범위 안에 있어야 한다.
+  * 만약 런타임에 `x`가 범위 밖이면, [런타임 패닉](/Run-time%20panics/)이 발생한다.
+  * `a[x]`는 `x` 인덱스의 배열 요소이고 `a[x]`의 타입은 `A`의 요소 타입이다.
 
-For a of [pointer](/Types/pointer_types.html) to array type:
+배열 타입의 [포인터](/Types/pointer_types.html)인 `a`에 대해서는:
 
-  * a[x] is shorthand for (*a)[x]
+  * `a[x]`는 `(*a)[x]`를 속기한 것이다.
 
-For a of [slice type](/Types/slice_types.html) S:
+[슬라이스 타입](/Types/slice_types.html) `S`의 `a`에 대해서는:
 
-  * if x is out of range at run time, a [run-time panic](/Run-time%20panics/) occurs
-  * a[x] is the slice element at index x and the type of a[x] is the element type of S
+  * 런타임에서 `x`가 범위 밖일 경우 [런타임 패닉](/Run-timeanics/)이 발생한다.
+  * `a[x]`는 인덱스 `x`에 위치한 슬라이스 요소이고 `a[x]`의 타입은 `S`의 요소 타입이다.
 
-For a of [string type](/Types/string_types.html):
+[string 타입](/Types/string_types.html)의 `a`에 대해서는:
 
-  * a [constant]([constant](/Constants/) index must be in range if the string a is also constant
-  * if x is out of range at run time, a [run-time panic](/Run-time%20panics/) occurs
-  * a[x] is the non-constant byte value at index x and the type of a[x] is byte
-  * a[x] may not be assigned to
+  * 만약 문자열 `a`가 상수일 경우 [상수](/Constants/) 인덱스는 범위 안에 있어야 한다.
+  * 런타임에서 `x`가 범위 밖일 경우 [런타임 패닉](/Run-timeanics/)이 발생한다.
+  * `a[x]`는 인덱스 `x`에 위치한 비상수 바이트값이고 `a[x]`의 타입은 `byte`이다.
+  * `a[x]`는 새로운 값을 할당할 수 없다.
 
-For a of [map type](/Types/map_types.html) M:
+[map 타입](/Types/map_types.html) `M`의 `a`에 대해서는:
 
-  * x's type must be assignable to the key type of M
-  * if the map contains an entry with key x, a[x] is the map value with key x and the type of a[x] is the value type of M
-  * if the map is nil or does not contain such an entry, a[x] is the zero value for the value type of M
+  * `x`'의 타입은 `M`의 키 타입에 할당 가능해야 한다.
+  * map이 키 `x`로 입력된 값을 가지고 있으면, `a[x]`는 키 `x`에 대한 map 값이고 `a[x]`의 타입은 `M`의 값 타입이다.
+  * map이 `nil`이거나 해당하는 입력이 없을 때, `a[x]`는 `M`의 값 타입에 맞는 제로값이다.
 
-Otherwise a[x] is illegal.
+그 외 경우에 `a[x]`는 허용되지 않는다.
 
-An index expression on a map a of type map[K]V used in an [assignment](/Properties%20of%20types%20and%20values/assignability.html) or initialization of the special form
+타입 `map[K]V`의 map `a`에 대한 인덱스 식이 [할당문](/Propertiesf%20typesnd%20values/assignability.html)에 사용되거나 특별한 형식의 초기화에 사용될 경우
 
 ```go
 v, ok = a[x]
@@ -51,6 +51,6 @@ v, ok := a[x]
 var v, ok = a[x]
 ```
 
-yields an additional untyped boolean value. The value of ok is true if the key x is present in the map, and false otherwise.
+추가적으로 미지정 타입의 불리언 값이 생성된다. 키 `x`가 map안에 있으면 `ok`의 값은 `true`이고 그렇지 않으면 `false`이다.
 
-Assigning to an element of a nil map causes a [run-time panic](/Run-time%20panics/).
+`nil` map의 요소에 할당하면 [런타임 패닉](/Run-time%20panics/)이 발생한다.

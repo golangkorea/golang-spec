@@ -1,3 +1,3 @@
-# Expressions
+# [식](#expressions)
 
-An expression specifies the computation of a value by applying operators and functions to operands.
+식은 피연산자에 연산자와 함수를 적용하여서 값의 계산을 지정하는 것이다.

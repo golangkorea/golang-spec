@@ -1,4 +1,4 @@
-# Primary expressions
+# [Primary expressions](#primary-expressions)
 
 Primary expressions are the operands for unary and binary expressions.
 

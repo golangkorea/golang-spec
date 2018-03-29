@@ -1,13 +1,13 @@
-# Method expressions
+# [Method expressions](#method-expressions)
 
-If M is in the [method set](/Types/method_sets.html) of type T, T.M is a function that is callable as a regular function with the same arguments as M prefixed by an additional argument that is the receiver of the method.
+If `M` is in the [method set](/Types/method_sets.html) of type `T`, `T.M` is a function that is callable as a regular function with the same arguments as `M` prefixed by an additional argument that is the receiver of the method.
 
 <pre>
 <a id="MethodExpr">MethodExpr</a>    = <a href="#ReceiverType">ReceiverType</a> "." <a href="/Types/interface_types.html#MethodName">MethodName</a> .
 <a id="ReceiverType">ReceiverType</a>  = <a href="/Types/#TypeName">TypeName</a> | "(" "*" <a href="/Types/#TypeName">TypeName</a> ")" | "(" <a href="#ReceiverType">ReceiverType</a> ")" .
 </pre>
 
-Consider a struct type T with two methods, Mv, whose receiver is of type T, and Mp, whose receiver is of type *T.
+Consider a struct type `T` with two methods, `Mv`, whose receiver is of type `T`, and `Mp`, whose receiver is of type `*T`.
 
 ```go
 type T struct {
@@ -25,7 +25,7 @@ The expression
 T.Mv
 ```
 
-yields a function equivalent to Mv but with an explicit receiver as its first argument; it has signature
+yields a function equivalent to `Mv` but with an explicit receiver as its first argument; it has signature
 
 ```go
 func(tv T, a int) int
@@ -43,17 +43,23 @@ f2 := (T).Mv; f2(t, 7)
 
 Similarly, the expression
 
+```go
 (*T).Mp
-yields a function value representing Mp with signature
+```
 
+yields a function value representing `Mp` with signature
+
+```go
 func(tp *T, f float32) float32
+```
+
 For a method with a value receiver, one can derive a function with an explicit pointer receiver, so
 
 ```go
 (*T).Mv
 ```
 
-yields a function value representing Mv with signature
+yields a function value representing `Mv` with signature
 
 ```go
 func(tv *T, a int) int
@@ -63,6 +69,6 @@ Such a function indirects through the receiver to create a value to pass as the 
 
 The final case, a value-receiver function for a pointer-receiver method, is illegal because pointer-receiver methods are not in the method set of the value type.
 
-Function values derived from methods are called with function call syntax; the receiver is provided as the first argument to the call. That is, given f := T.Mv, f is invoked as f(t, 7) not t.f(7). To construct a function that binds the receiver, use a [function literal](/Expressions/function_literals.html) or [method value](/Expressions/method_values.html).
+Function values derived from methods are called with function call syntax; the receiver is provided as the first argument to the call. That is, given `f := T.Mv`, `f` is invoked as `f(t, 7)` not `t.f(7)`. To construct a function that binds the receiver, use a [function literal](/Expressions/function_literals.html) or [method value](/Expressions/method_values.html).
 
 It is legal to derive a function value from a method of an interface type. The resulting function takes an explicit receiver of that interface type.

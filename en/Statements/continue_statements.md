@@ -1,4 +1,4 @@
-# Continue statements
+# [Continue statements](#continue-statements)
 
 A "continue" statement begins the next iteration of the innermost ["for" loop](/Statements/for_statements.html) at its post statement. The "for" loop must be within the same function.
 

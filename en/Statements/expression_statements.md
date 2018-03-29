@@ -1,4 +1,4 @@
-# Expression statements
+# [Expression statements](#expression-statements)
 
 With the exception of specific built-in functions, function and method [calls](/Expressions/calls.html) and [receive operations](/Expressions/receive_operator.html) can appear in statement context. Such statements may be parenthesized.
 

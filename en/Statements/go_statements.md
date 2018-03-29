@@ -1,4 +1,4 @@
-# Go statements
+# [Go statements](#go-statements)
 
 A "go" statement starts the execution of a function call as an independent concurrent thread of control, or goroutine, within the same address space.
 

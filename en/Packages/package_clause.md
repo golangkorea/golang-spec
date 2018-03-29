@@ -1,4 +1,4 @@
-# Package clause
+# [Package clause](#package-clause)
 
 A package clause begins each source file and defines the package to which the file belongs.
 

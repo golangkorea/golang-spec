@@ -1,6 +1,6 @@
-# Function declarations
+# [함수 선언](#function-declarations)
 
-A function declaration binds an identifier, the function name, to a function.
+함수 선언은 식별자인 함수 이름을 함수에 바인딩합니다.
 
 <pre>
 <a id="FunctionDecl">FunctionDecl</a> = "func" <a href="#FunctionName">FunctionName</a> ( <a href="#Function">Function</a> | <a href="/Types/function_types.html#Signature">Signature</a> ) .
@@ -9,7 +9,7 @@ A function declaration binds an identifier, the function name, to a function.
 <a id="FunctionBody">FunctionBody</a> = <a href="/Blocks/#Block">Block</a> .
 </pre>
 
-If the function's [signature](/Types/function_types.html) declares result parameters, the function body's statement list must end in a [terminating statement](/Statements/terminating_statements.html).
+만약 함수의 [시그니처](/Types/function_types.html)가 결과 매개변수를 선언하고 있으면, 함수의 본문에 있는 구문 리스트는 반드시 [종결문](/Statements/terminating_statements.html)으로 끝나야 한다.
 
 ```go
 func IndexRune(s string, r rune) int {
@@ -18,11 +18,11 @@ func IndexRune(s string, r rune) int {
             return i
         }
     }
-    // invalid: missing return statement
+    // 무효함: 리턴 구문이 없음
 }
 ```
 
-A function declaration may omit the body. Such a declaration provides the signature for a function implemented outside Go, such as an assembly routine.
+함수 선언이 본문을 생략하는 경우도 있다. 그런 선언문은, 어셈블리 루틴과 같이, Go 외부에서 구현된 함수에 대한 시그니처를 제공한다.
 
 ```go
 func min(x int, y int) int {
@@ -32,5 +32,5 @@ func min(x int, y int) int {
     return y
 }
 
-func flushICache(begin, end uintptr)  // implemented externally
+func flushICache(begin, end uintptr)  // 외부적으로 구현됨
 ```

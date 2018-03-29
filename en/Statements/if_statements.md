@@ -1,4 +1,4 @@
-# If statements
+# [If statements](#if-statements)
 
 "If" statements specify the conditional execution of two branches according to the value of a boolean expression. If the expression evaluates to true, the "if" branch is executed, otherwise, if present, the "else" branch is executed.
 

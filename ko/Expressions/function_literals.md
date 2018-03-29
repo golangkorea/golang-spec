@@ -1,6 +1,6 @@
-# Function literals
+# [함수 리터럴](#function-literals)
 
-A function literal represents an anonymous [function](/Declarations%20and%20scope/function_declarations.html).
+함수 리터럴은 익명 [함수](/Declarationsndcope/function_declarations.html)를 나타낸다.
 
 <pre>
 <a id="FunctionLit">FunctionLit</a> = "func" <a href="/Declarations%20and%20scope/function_declarations.html#Function">Function</a> .
@@ -10,11 +10,11 @@ A function literal represents an anonymous [function](/Declarations%20and%20scop
 func(a, b int, z float64) bool { return a*b < int(z) }
 ```
 
-A function literal can be assigned to a variable or invoked directly.
+함수 리터럴은 변수에 할당될 수도 있고 직접 실행될 수도 있다.
 
 ```go
 f := func(x, y int) int { return x + y }
 func(ch chan int) { ch <- ACK }(replyChan)
 ```
 
-Function literals are *closures*: they may refer to variables defined in a surrounding function. Those variables are then shared between the surrounding function and the function literal, and they survive as long as they are accessible.
+함수 리터럴은 *클로저*이다: 함수 밖에 정의된 변수들을 참조할 수도 있다. 이 변수들은 밖에서 함수 리터럴과 그것을 감싸는 함수사이에서 공유되며, 접근할 수 있는 한 살아 남는다.

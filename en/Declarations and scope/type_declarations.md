@@ -1,4 +1,4 @@
-# Type declarations
+# [Type declarations](#type-declarations)
 
 A type declaration binds an identifier, the *type name*, to a <a href="#Types">type</a>.
 Type declarations come in two forms: alias declarations and type definitions.
@@ -8,7 +8,7 @@ Type declarations come in two forms: alias declarations and type definitions.
 <a id="TypeSpec">TypeSpec</a> = <a href="#AliasDecl">AliasDecl</a> | <a href="#TypeDef">TypeDef</a> .
 </pre>
 
-## Alias declarations
+## [Alias declarations](#alias-declarations)
 
 An alias declaration binds an identifier to the given type.
 

@@ -1,4 +1,4 @@
-# Qualified identifiers
+# [Qualified identifiers](#qualified-identifiers)
 
 A qualified identifier is an identifier qualified with a package name prefix. Both the package name and the identifier must not be [blank](/Declarations%20and%20scope/blank_identifier.html).
 

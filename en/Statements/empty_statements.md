@@ -1,4 +1,4 @@
-# Empty statements
+# [Empty statements](#empty-statements)
 
 The empty statement does nothing.
 

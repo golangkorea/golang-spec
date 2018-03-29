@@ -1,4 +1,4 @@
-# An example package
+# [An example package](#an-example-package)
 
 Here is a complete Go package that implements a concurrent prime sieve.
 

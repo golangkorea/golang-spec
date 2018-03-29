@@ -1,4 +1,4 @@
-# Import declarations
+# [Import declarations](#import-declarations)
 
 An import declaration states that the source file containing the declaration depends on functionality of the *imported* package ([§Program initialization and execution](/Program%20initialization%20and%20execution/)) and enables access to [exported](/Declarations%20and%20scope/exported_identifiers.html) identifiers of that package. The import names an identifier (PackageName) to be used for access and an ImportPath that specifies the package to be imported.
 
@@ -12,9 +12,9 @@ The PackageName is used in [qualified identifiers](/Expressions/qualified_identi
 
 The interpretation of the ImportPath is implementation-dependent but it is typically a substring of the full file name of the compiled package and may be relative to a repository of installed packages.
 
-Implementation restriction: A compiler may restrict ImportPaths to non-empty strings using only characters belonging to [Unicode](http://www.unicode.org/versions/Unicode6.3.0/)'s L, M, N, P, and S general categories (the Graphic characters without spaces) and may also exclude the characters !"#$%&'()*,:;<=>?[\]^`{|} and the Unicode replacement character U+FFFD.
+Implementation restriction: A compiler may restrict ImportPaths to non-empty strings using only characters belonging to [Unicode](http://www.unicode.org/versions/Unicode6.3.0/)'s L, M, N, P, and S general categories (the Graphic characters without spaces) and may also exclude the characters <code>!"#$%&'()*,:;<=>?[\]^`{|}</code> and the Unicode replacement character U+FFFD.
 
-Assume we have compiled a package containing the package clause package math, which exports function Sin, and installed the compiled package in the file identified by `"lib/math"`. This table illustrates how Sin is accessed in files that import the package after the various types of import declaration.
+Assume we have compiled a package containing the package clause `package math`, which exports function `Sin`, and installed the compiled package in the file identified by `"lib/math"`. This table illustrates how `Sin` is accessed in files that import the package after the various types of import declaration.
 
 ```go
 Import declaration          Local name of Sin

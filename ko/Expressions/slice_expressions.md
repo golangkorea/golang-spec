@@ -1,23 +1,23 @@
-# Slice expressions
+# [슬라이스 식](#slice-expressions)
 
-Slice expressions construct a substring or slice from a string, array, pointer to array, or slice. There are two variants: a simple form that specifies a low and high bound, and a full form that also specifies a bound on the capacity.
+슬라이스 식은 문자열, 배열, 배열을 가리키는 포인터나 슬라이스에서 부분 문자열 또는 슬라이스를 만들어 낸다. 슬라이스 식은 하한과 상한을 지정하는 간단한 형식과 용량에 대한 경계를 추가적으로 지정할 수 있는 완전한 형식으로 표현할 수 있다.
 
-## Simple slice expressions
+## [간단한 슬라이스 식](#simple-slice-expressions)
 
-For a string, array, pointer to array, or slice a, the primary expression
+문자열, 배열, 배열을 가리키는 포인터 또는 슬라이스 `a` 에 대한 기본 식(primary expression)
 
 ```go
 a[low : high]
 ```
 
-constructs a substring or slice. The *indices* low and high select which elements of operand a appear in the result. The result has indices starting at 0 and length equal to `high - low`. After slicing the array a
+은 부분 문자열 또는 슬라이스를 만든다. *인덱스* `low`와 `high`는 결과로 나타나는 피연산자 `a`의 요소들을 선택한다. 결과는 0에서 시작하는 인덱스와 `high - low`인 길이를 가진다. 배열 `a` 를 슬라이싱하면 
 
 ```go
 a := [5]int{1, 2, 3, 4, 5}
 s := a[1:4]
 ```
 
-the slice s has type []int, length 3, capacity 4, and elements
+슬라이스 `s`는 `[]int` 타입이고, 길이는 3, 용량은 4이다. 요소들은 다음과 같다.
 
 ```go
 s[0] == 2
@@ -25,44 +25,44 @@ s[1] == 3
 s[2] == 4
 ```
 
-For convenience, any of the indices may be omitted. A missing low index defaults to zero; a missing high index defaults to the length of the sliced operand:
+편의를 위해 인덱스를 생략할 수도 있다. `low` 인덱스를 생략하면 기본 값은 0이며; `high` 인덱스를 생략하면 슬라이스된 피연산자의 길이가 기본 값으로 설정된다.
 
 ```go
-a[2:]  // same as a[2 : len(a)]
-a[:3]  // same as a[0 : 3]
-a[:]   // same as a[0 : len(a)]
+a[2:]  // a[2 : len(a)]와 동일
+a[:3]  // a[0 : 3]와 동일
+a[:]   // a[0 : len(a)]와 동일
 ```
 
-If a is a pointer to an array, a[low : high] is shorthand for (*a)[low : high].
+`a`가 배열을 가리키는 포인터라면, `a[low : high]`는 `(*a)[low : high]`의 축약형이다.
 
-For arrays or strings, the indices are in range if 0 <= low <= high <= len(a), otherwise they are out of *range*. For slices, the upper index bound is the slice capacity cap(a) rather than the length. A [constant](/Constants/) index must be non-negative and representable by a value of type int; for arrays or constant strings, constant indices must also be in range. If both indices are constant, they must satisfy low <= high. If the indices are out of range at run time, a [run-time panic](/Run-time%20panics/) occurs.
+문자열의 배열에 대하여, `0 <= low <= high <= len(a)`라면 인덱스는 범위 내(*in range*)에 있고, 그렇지 않다면 범위를 벗어난(*out of range*) 것이다. 슬라이스에 대하여, 상위 인덱스 경계는 그 슬라이스의 길이가 아니라 용량인 `cap(a)`이다. [상수](/Constants) 인덱스는 음수가 아니고, `int` 타입의 값으로 표현이 가능해야 한다; 배열 혹은 상수 문자열에 대하여, 상수 인덱스들은 범위 내에 있어야만 한다. 두 인덱스들이 모두 상수라면, `low <= high`를 만족해야만 한다. 실행 시간에 인덱스들이 범위를 벗어나면, [런타임 패닉](/Run-time%20panics/)이 발생한다.
 
-Except for [untyped strings](/Constatns/), if the sliced operand is a string or slice, the result of the slice operation is a non-constant value of the same type as the operand. For untyped string operands the result is a non-constant value of type `string`. If the sliced operand is an array, it must be [addressable](/Expressions/address_operators.html) and the result of the slice operation is a slice with the same element type as the array.
+[미지정 타입의 문자열](/Constants/)를 제외하고, 슬라이스된 피연산자가 문자열 또는 슬라이스라면 슬라이스 연산의 결과는 피연산자와 같은 타입의 상수가 아닌 값이다. 미지정 타입의 문자열 피연산자의 경우에는 `string` 타입의 상수가 아닌 값이 결과가 된다. 슬라이스된 피연산자가 배열이라면, [할당 가능](/Expressions/address_operators.md)해야 하며, 슬라이스 연산의 결과는 그 배열과 같은 요소 타입을 가진 슬라이스다.
 
-If the sliced operand of a valid slice expression is a `nil` slice, the result is a `nil` slice. Otherwise, the result shares its underlying array with the operand.
+유효한 슬라이스 식의 슬라이스된 피연산자가 `nil` 슬라이스라면, 그 결과는 `nil` 슬라이스다. 그렇지 않다면, 그 결과는 피연산자의 내재 배열을 공유한다.
 
-## Full slice expressions
+## [완전한 슬라이스 식](#full-slice-expressions)
 
-For an array, pointer to array, or slice a (but not a string), the primary expression
+배열, 배열을 가리키는 포인터 또는 슬라이스 `a` (문자열은 아님)에 대한 기본 식은
 
 ```go
 a[low : high : max]
 ```
 
-constructs a slice of the same type, and with the same length and elements as the simple slice expression a[low : high]. Additionally, it controls the resulting slice's capacity by setting it to max - low. Only the first index may be omitted; it defaults to 0. After slicing the array a
+은 간단한 슬라이스 식 `a[low : high]` 와 같은 타입과 길이, 요소들을 갖는 슬라이스를 생성한다. 추가적으로, `max - low`를 설정하여 슬라이스의 용량을 제어한다. 첫 번째 인덱스만 생략할 수 있으며, 그 기본 값은 0이다. 배열 `a`를 슬라이싱하면
 
 ```go
 a := [5]int{1, 2, 3, 4, 5}
 t := a[1:3:5]
 ```
 
-the slice t has type []int, length 2, capacity 4, and elements
+슬라이스 `t`는 `[]int` 타입이며 길이는 2, 용량은 4이고, 요소들은 다음과 같다.
 
 ```go
 t[0] == 2
 t[1] == 3
 ```
 
-As for simple slice expressions, if a is a pointer to an array, a[low : high : max] is shorthand for (*a)[low : high : max]. If the sliced operand is an array, it must be [addressable](/Expressions/address_operators.html).
+간단한 슬라이스 식에서처럼,  `a`가 배열을 가리키는 포인터인 경우, `a[low : high : max]`는 `(*a)[low : high : max]`의 축약형이다. 슬라이스된 피연산자가 배열인 경우, [할당 가능](/Expressions/address_operators.html)해야 한다.
 
-The indices are in *range* if 0 <= low <= high <= max <= cap(a), otherwise they are out of range. A [constant](/Constants/) index must be non-negative and representable by a value of type int; for arrays, constant indices must also be in range. If multiple indices are constant, the constants that are present must be in range relative to each other. If the indices are out of range at run time, a [run-time panic](/Run-time%20panics/) occurs.
+`0 <= low <= high <= max <= cap(a)`라면 인덱스가 *범위 내* 에 있는 것이고, 그렇지 않다면 *범위를 벗어난* 것이다. [상수](/Constants/) 인덱스는 음수가 아니여야 하며, `int` 타입의 값으로 표현할 수 있어야 한다; 배열에서 상수 인덱스는 반드시 범위 내에 있어야만 한다. 두 개 이상의 인덱스가 상수라면 해당 상수들은 인덱스 범위 안에 있어야 한다. 런타임 시점에 인덱스가 범위를 벗어나면, [런타임 패닉](/Run-time%20panics/)이 발생한다.

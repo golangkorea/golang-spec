@@ -1,6 +1,6 @@
-# Letters and digits
+# [Letters and digits](#letters-and-digits)
 
-The underscore character _ (U+005F) is considered a letter.
+The underscore character `_` (U+005F) is considered a letter.
 
 <pre>
 <a id="letter">letter</a>        = <a href="/Source code representation/characters.html#unicode_letter">unicode_letter</a> | "_" .

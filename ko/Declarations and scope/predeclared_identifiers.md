@@ -1,6 +1,6 @@
-# [미리선언된 식별자](#predeclared-identifiers)
+# [미리 선언된 식별자](#predeclared-identifiers)
 
-아래 식별자들은 [유니버스 블록(universe block)](/Blocks/): 에서 함축적으로 선언 된다.
+[Go 소스 코드 전체](/Blocks/)에서 사용할 수 있는 미리 선언된 식별자 목록은 다음과 같다:
 
 ```go
 Types:

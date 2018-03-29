@@ -1,4 +1,4 @@
-# Declarations and scope
+# [Declarations and scope](#declarations_and_scope)
 
 A *declaration* binds a non-[blank](/Declarations%20and%20scope/blank_identifier.html) identifier to a [constant](/Declarations%20and%20scope/constant_declarations.html), [type](/Declarations%20and%20scope/type_declarations.html), [variable](/Declarations%20and%20scope/variable_declarations.html), [function](/Declarations%20and%20scope/function_declarations.html), [label](/Statements/labeled_statements.html), or [package](/Packages/import_declarations.html). Every identifier in a program must be declared. No identifier may be declared twice in the same block, and no identifier may be declared in both the file and package block.
 

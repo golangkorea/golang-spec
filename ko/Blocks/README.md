@@ -15,4 +15,4 @@
   4. 각 "[if](/Statements/if_statements.html)", "[for](/Statements/for_statements.html)", 그리고 "[switch](/Statements/switch_statements.html)" 실행문은 그 자체의 함축적인 블록속에 있다고 볼 수 있다.
   5. 하나의 "[switch](/Statements/switch_statements.html)" 혹은 "[select](/Statements/select_statements.html)" 실행문내 각각의 절(clause)은 함축적인 블록으로 동작한다.
 
-블록들은 네스팅을 하고 변수의 가시 범위를 결정하는데 영향을 미친다.
+Blocks nest and influence [scoping](/Declarations%20and%20scope/).

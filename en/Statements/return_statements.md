@@ -1,6 +1,6 @@
-# Return statements
+# [Return statements](#return-statements)
 
-A "return" statement in a function F terminates the execution of F, and optionally provides one or more result values. Any functions deferred by F are executed before F returns to its caller.
+A "return" statement in a function `F` terminates the execution of `F`, and optionally provides one or more result values. Any functions deferred by `F` are executed before `F` returns to its caller.
 
 <pre>
 <a id="ReturnStmt">ReturnStmt</a> = "return" [ <a href="/Declarations%20and%20scope/constant_declarations.html#ExpressionList">ExpressionList</a> ] .

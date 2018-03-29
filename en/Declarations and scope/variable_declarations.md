@@ -1,4 +1,4 @@
-# Variable declarations
+# [Variable declarations](#variable-declarations)
 
 A variable declaration creates one or more [variables](/Variables/), binds corresponding identifiers to them, and gives each a type and an initial value.
 

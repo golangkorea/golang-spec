@@ -1,12 +1,12 @@
-# Characters
+# [캐릭터](#characters)
 
-The following terms are used to denote specific Unicode character classes:
+다음의 용어들은 특정한 유니코드 캐릭터 클래스를 나타내기 위해 사용된다.
 
 <pre>
-<a id="newline">newline</a>        = /* the Unicode code point U+000A */ .
-<a id="unicode_char">unicode_char</a>   = /* an arbitrary Unicode code point except newline */ .
-<a id="unicode_letter">unicode_letter</a> = /* a Unicode code point classified as "Letter" */ .
-<a id="unicode_digit">unicode_digit</a>  = /* a Unicode code point classified as "Number, decimal digit" */ .
+<a id="newline">newline</a>        = /* 유니코드 코드 포인트 U+000A */ .
+<a id="unicode_char">unicode_char</a>   = /* newline을 제외한 임의의 유니코드 코드 포인트 */ .
+<a id="unicode_letter">unicode_letter</a> = /* "Letter"로 분류된 유니코드 코드 포인트 */ .
+<a id="unicode_digit">unicode_digit</a>  = /* "Number, decimal digit"로 분류된 유니코드 코드 포인트 */ .
 </pre>
 
-In [The Unicode Standard 8.0](http://www.unicode.org/versions/Unicode8.0.0/), Section 4.5 "General Category" defines a set of character categories. Go treats all characters in any of the Letter categories Lu, Ll, Lt, Lm, or Lo as Unicode letters, and those in the Number category Nd as Unicode digits.
+[유니코드 표준 8.0](http://www.unicode.org/versions/Unicode8.0.0/) 문서의 섹션 4.5 "일반 카테고리"는 캐릭터 카테고리의 집합을 정의한다. Go는 Letter 카테고리인 Lu, Ll, Lt, Lm, Lo에 속하는 모든 캐릭터를 유니코드 알파벳 문자로 취급하고 Number 카테고리인 Nd에 속한 것은 유니코드 digits으로 취급한다.

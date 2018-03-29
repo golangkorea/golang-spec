@@ -1,6 +1,6 @@
-# Labeled statements
+# [라벨이 붙은 구문](#labeled-statements)
 
-A labeled statement may be the target of a goto, break or continue statement.
+라벨이 붙은 구문은 `goto`, `break` 또는 `continue` 문의 표적이 된다.
 
 <pre>
 <a id="LabeledStmt">LabeledStmt</a> = <a href="#Label">Label</a> ":" <a href="/Statements/#Statement">Statement</a> .

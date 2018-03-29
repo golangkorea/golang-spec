@@ -1,14 +1,14 @@
-# Send statements
+# [send 문](#send-statements)
 
-A send statement sends a value on a channel. The channel expression must be of [channel type](/Types/channel_types.html), the channel direction must permit send operations, and the type of the value to be sent must be [assignable](/Properties%20of%20types%20and%20values/assignability.html) to the channel's element type.
+send 문은 채널에 한 값을 보낸다. 채널 식은 [채널 타입](/Types/channel_types.html)이어야 하고, 채널은 송신 연산을 허용하는 방향을 가져야 하며, 송신되는 값의 타입은 채널의 요소 타입에 [할당할 수 있는](/Properties%20of%20types%20and%20values/assignability.html) 타입이어야 한다.
 
 <pre>
 <a id="SendStmt">SendStmt</a> = <a href="#Channel">Channel</a> "&lt;-" <a href="/Expressions/operators.html#Expression">Expression</a> .
 <a id="Channel">Channel</a>  = <a href="/Expressions/operators.html#Expression">Expression</a> .
 </pre>
 
-Both the channel and the value expression are evaluated before communication begins. Communication blocks until the send can proceed. A send on an unbuffered channel can proceed if a receiver is ready. A send on a buffered channel can proceed if there is room in the buffer. A send on a closed channel proceeds by causing a [run-time panic](/Run-time%20panics/). A send on a nil channel blocks forever.
+통신이 시작되기 전에 채널과 값의 식 모두가 평가된다. 통신은 송신이 진행될 수 있을 때까지 블록도니다. 버퍼가 없는 채널에는 수신자가 준비가 되었다면 송신이 진행될 수 있다. 버퍼가 있는 채널에는 버퍼에 여유공간이 있다면 송신이 진행될 수 있다. 닫힌 채널에 송신하면 [런타입 패닉](/Run-time%20panics/)이 유발된다. `nil` 채널에 송신하면 영원히 블록된다.
 
 ```go
-ch <- 3  // send value 3 to channel ch
+ch <- 3  // 값 3을 채널 ch로 보낸다
 ```

@@ -1,6 +1,6 @@
 # [상수 선언](#constant-declarations)
 
-A constant declaration binds a list of identifiers (the names of the constants) to the values of a list of [constant expressions](/Expressions/constant_expressions.html). The number of identifiers must be equal to the number of expressions, and the nth identifier on the left is bound to the value of the nth expression on the right.
+상수 선언은 식별자들(상수들의 이름)의 리스트를 [상수 표현식]([Expressions/constant_expressions.html) 리스트의 값들과 결합한다. 식별자의 개수는 반드시 표현식의 개수와 일치해야 하며, 좌측에 있는 n번째 식별자는 우측에 있는 n번째 표현식의 값과 결합된다.
 
 <pre>
 <a id="ConstDecl">ConstDecl</a>      = "const" ( <a href="#ConstSpec">ConstSpec</a> | "(" { <a href="#ConstSpec">ConstSpec</a> ";" } ")" ) .
@@ -10,20 +10,20 @@ A constant declaration binds a list of identifiers (the names of the constants) 
 <a id="ExpressionList">ExpressionList</a> = <a href="/Expressions/operators.html#Expression">Expression</a> { "," <a href="/Expressions/operators.html#Expression">Expression</a> } .
 </pre>
 
-If the type is present, all constants take the type specified, and the expressions must be [assignable](/Properties%20of%20types%20and%20values/assignability.html) to that type. If the type is omitted, the constants take the individual types of the corresponding expressions. If the expression values are untyped [constants](/Constants/), the declared constants remain untyped and the constant identifiers denote the constant values. For instance, if the expression is a floating-point literal, the constant identifier denotes a floating-point constant, even if the literal's fractional part is zero.
+타입이 있는 경우, 모든 상수들은 타입이 지정되며, 그 표현식은 해당 타입에 반드시 [할당 가능](/Properties%20of%20types%20and%20values/assignability.html)해야 한다. 타입이 생략된다면, 상수는 해당하는 표현식의 타입을 개별적으로 갖는다. 만약 표현식 값들이 미지정 타입 [상수](/Constants/)라면, 선언된 상수들은 미지정 타입으로 남게 되고 상수 식별자들은 상수 값들로 표현된다. 예를 들어 표현식이 부동 소수점 리터럴인 경우, 상수 식별자는 이 리터럴의 실수부가 0이라고 하더라도 부동 소수점 상수로 표현된다.
 
 ```go
 const Pi float64 = 3.14159265358979323846
-const zero = 0.0         // untyped floating-point constant
+const zero = 0.0         // 미지정 타입의 부동 소수점 상수
 const (
     size int64 = 1024
-    eof        = -1  // untyped integer constant
+    eof        = -1  // 미지정 타입의 정수 상수
 )
-const a, b, c = 3, 4, "foo"  // a = 3, b = 4, c = "foo", untyped integer and string constants
+const a, b, c = 3, 4, "foo"  // a = 3, b = 4, c = "foo", 미지정 타입의 정수와 문자열 상수
 const u, v float32 = 0, 3    // u = 0.0, v = 3.0
 ```
 
-Within a parenthesized const declaration list the expression list may be omitted from any but the first declaration. Such an empty list is equivalent to the textual substitution of the first preceding non-empty expression list and its type if any. Omitting the list of expressions is therefore equivalent to repeating the previous list. The number of identifiers must be equal to the number of expressions in the previous list. Together with the [iota constant generator](/Declarations%20and%20scope/iota.html) this mechanism permits light-weight declaration of sequential values:
+괄호로 묶인 상수 선언 리스트 내에서의 표현식 리스트는 첫 번째 선언을 제외하고는 모두 생략될 수 있다. 이러한 빈 리스트는 앞에서 처음 나타나는 비어있지 않은 표현식 리스트가 있다면 그 타입의 텍스트 치환과 동일하다. 따라서 표현식의 리스트를 생략하는 것은 이전 리스트를 반복하는 것과 동일하다. 이 경우, 식별자들의 개수는 이전 리스트 내에서의 표현식의 개수와 동일해야 한다. 이 메커니즘은 [iota 상수 제너레이터](/Declarations%20and%20scope/iota.html)와 함께 사용되어 연속된 값들의 선언을 손쉽게 할 수 있도록 한다:
 
 ```go
 const (
@@ -34,6 +34,6 @@ const (
     Thursday
     Friday
     Partyday
-    numberOfDays  // this constant is not exported
+    numberOfDays  // 이 상수는 내보내지지 않는다.
 )
 ```

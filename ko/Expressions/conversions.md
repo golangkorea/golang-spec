@@ -1,12 +1,12 @@
 # [타입 변환](#conversions)
 
-타입 변환은 `T(x)`의 형태로 주어지는 식인데, 여기서 `T`는 타입이고 `x`는 타입 `T`로 변환될 수 있는 식이다.
+타입 변환은 `T(x)`의 형태로 구성된 식(expression)이며, `T`는 타입, `x`는 `T` 타입으로 변환될 수 있는 식을 의미한다.
 
 <pre>
 <a id="Conversion">Conversion</a> = <a href="/Types/#Type">Type</a> "(" <a href="/Expressions/operators.html#Expression">Expression</a> [ "," ] ")" .
 </pre>
 
-타입이 `*`나 `<-`로 시작하는 경우, 혹은 `func` 키워드로 시작하면서 반환 값 리스트가 부재한 경우는 모호함을 피하기 위해 반드시 괄호로 감싸주어야 한다:
+타입이 `*`나 `<-` 연산자로 시작하거나 반환 값 목록이 없는 `func` 키워드로 시작하면 괄호를 추가하여 의도를 명확하게 전달하는 것이 좋다. 
 
 ```go
 *Point(p)        // *(Point(p))와 같음
@@ -16,36 +16,36 @@
 func()(x)        // 함수 시그니처 func() x
 (func())(x)      // x가 func()로 변환된 경우
 (func() int)(x)  // x가 func() int로 변환된 경우
-func() int(x)    // x가 func() int로 변환된 경우 (모호하지 않게)
+func() int(x)    // x가 func() int로 변환된 경우 (의도가 명확하므로 괄호가 필요없음)
 ```
 
-[상수](/Constants)값 `x`는 다음과 같은 경우 타입 `T`로 변환될 수 있다:
+아래의 조건을 하나라도 만족하면 [상수](/Constants)값 `x`는 `T` 타입으로 변환될 수 있다:
 
-  * `x`는 타입 `T` 값으로 나타낼 수 있다.
-  * `x`가 부동 소수점 상수이고, `T`가 부동 소수점 타입일때, IEEE 754 round-to-even 규칙들과 -0.0이 부호없는 0.0으로 반올림되는 IEEE 규칙을 적용한 반올림을 통해 `x`를 타입 `T`의 값으로 나타낼 수 있다. 상수 `T(x)`는 반올림되 값이다.
-  * `x`는 정수 상수이고 `T`는 [string 타입](/Types/string_types.html)이다. `x`가 상수가 아닌 경우에도  [같은 규칙](#conversions-to-and-from-a-string-type)이 적용된다.
+  * `x`를 `T` 타입의 값으로 나타낼 수 있음.
+  * `x`가 부동 소수점 상수이고, `T`는 부동 소수점 타입이며, IEEE 754 가까운 짝수로 반올림하는 규칙과 -0.0을 부호없는 0.0으로 반올림하는 IEEE 규칙을 적용한 `x`는 `T` 타입의 값으로 나타낼 수 있는 경우. 이때, 상수 `T(x)`는 반올림된 값이다.
+  * `x`는 정수 상수이고 `T`는 [string 타입](/Types/string_types.html)일 때. 이때는 상수가 아닌 `x` 에 적용하는 [규칙](#conversions-to-and-from-a-string-type)이 사용된다.
 
-상수를 변환하면 그 결과로 타입이 주어진 상수가 만들어 진다.
+상수의 변환 결과는 타입 정보가 있는 상수다.
 
 ```go
-uint(iota)               // 타입 uint의 iota 값
-float32(2.718281828)     // 타입 float32의 2.718281828
-complex128(1)            // 타입 complex128의 1.0 + 0.0i
-float32(0.49999999)      // 타입 float32의 0.5
-float64(-1e-1000)        // 타입 float64의 0.0
-string('x')              // 타입 string의 "x"
-string(0x266c)           // 타입 string의 "♬"
-MyString("foo" + "bar")  // 타입 MyString의 "foobar"
-string([]byte{'a'})      // 상수가 아닌 경우: []byte{'a'}은 상수가 아님
-(*int)(nil)              // 상수가 아닌 경우: nil은 상수가 아님, *int는 불리언 타입도, 숫자 타입도, string 타입도 아님
+uint(iota)               // uint 타입의 iota 값
+float32(2.718281828)     // float32 타입의 2.718281828
+complex128(1)            // complex128 타입의 1.0 + 0.0i
+float32(0.49999999)      // float32 타입의 0.5
+float64(-1e-1000)        // float64 타입의 0.0
+string('x')              // string 타입의 "x"
+string(0x266c)           // string 타입의 "♬"
+MyString("foo" + "bar")  // MyString 타입의 "foobar"
+string([]byte{'a'})      // 상수가 아님: []byte{'a'}은 상수가 아님
+(*int)(nil)              // 상수가 아님: nil은 상수가 아님, *int는 불리언 타입, 숫자 타입, string 타입도 아님
 int(1.2)                 // 허용안됨: 1.2는 정수로 나타낼 수 없음
 string(65.0)             // 허용안됨: 65.0는 정수 상수가 아님
 ```
 
-상수가 아닌 값 `x`는 다음과 같은 경우에 타입 `T`로 변환될 수 있다:
+아래의 조건을 하나라도 만족하면 상수가 아닌 값 `x`는 `T` 타입으로 변환될 수 있다:
 
-  * `x`는`T`로 [할당 가능](/Properties%20of%20types%20and%20values/assignability.html)하다.
-  * struct 태그를 무시하면 (아래 참조), `x`의 타입과 `T`는 [같은](#Type_identity) [내재 타입](#Types)을 가지고 있다.
+  * `x`를 `T`에 [할당할 수](/Properties%20of%20types%20and%20values/assignability.html) 있음.
+  * `x`의 타입과 `T`가 [같은](#Type_identity) [내재 타입](#Types)을 가지고 있을 때. 이때, struct 태그는 무시한다 (아래 참조)
   * struct 태그를 무시하면 (아래 참조), `x`의 타입과 `T`는 [정의가 되지않은](/Declarations%20and%20scope/type_declarations.html#type-definitions) 포인터 타입으로, 같은 내재 타입을 포인터의 기본 타입으로 가진다.
   * `x`'의 타입과 `T`가 둘 다 정수 포인터 타입이거나 부동 소수점 포인터 타입이다.
   * `x`의 타입과 `T`는 둘 다 복소수 타입이다.
