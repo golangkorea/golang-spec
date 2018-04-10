@@ -1,12 +1,12 @@
 # [break 문](#break-statements)
 
-"break" 문은 같은 함수내 가장 깊은 속의 "[for](/Statements/for_statements.html)", "[switch](/Statements/switch_statements.html)", 혹은 "[select](/Statements/select_statements.html)" 문에 대한 실행을 종료한다.
+"break" 문은 같은 함수 안에서 break 문과 가장 가까이 있는 "[for](/Statements/for_statements.html)", "[switch](/Statements/switch_statements.html)", "[select](/Statements/select_statements.html)" 문에 대한 실행을 종료한다.
 
 <pre>
 <a id="BreakStmt">BreakStmt</a> = "break" [ <a href="/Statements/labeled_statements.html#Label">Label</a> ] .
 </pre>
 
-라벨이 있는 경우에는, 에워싸는 "for", "switch", 혹은 "select" 문에 속해야 하고, 해당 구문은 실행이 종료된다. 
+라벨이 있는 경우에는, "for", "switch", "select" 문 내부에 break 문이 있어야 하며, 라벨과 함께 사용된  break 구문은 실행을 종료시킨다.
 
 ```go
 OuterLoop:

@@ -1,6 +1,6 @@
-# [함수 선언](#function-declarations)
+# [함수 선언문](#function-declarations)
 
-함수 선언은 식별자인 함수 이름을 함수에 바인딩합니다.
+함수 선언문은 식별자인 *함수 이름* 을 함수와 연결한다.
 
 <pre>
 <a id="FunctionDecl">FunctionDecl</a> = "func" <a href="#FunctionName">FunctionName</a> ( <a href="#Function">Function</a> | <a href="/Types/function_types.html#Signature">Signature</a> ) .
@@ -9,7 +9,7 @@
 <a id="FunctionBody">FunctionBody</a> = <a href="/Blocks/#Block">Block</a> .
 </pre>
 
-만약 함수의 [시그니처](/Types/function_types.html)가 결과 매개변수를 선언하고 있으면, 함수의 본문에 있는 구문 리스트는 반드시 [종결문](/Statements/terminating_statements.html)으로 끝나야 한다.
+함수의 [시그니처](/Types/function_types.html)가 결과 매개 변수를 선언했다면, 함수 본문에 있는 구문 리스트는 반드시 [종결문](/Statements/terminating_statements.html)으로 끝나야 한다.
 
 ```go
 func IndexRune(s string, r rune) int {
@@ -18,11 +18,11 @@ func IndexRune(s string, r rune) int {
             return i
         }
     }
-    // 무효함: 리턴 구문이 없음
+    // 유효하지 않음: 리턴 구문이 없음
 }
 ```
 
-함수 선언이 본문을 생략하는 경우도 있다. 그런 선언문은, 어셈블리 루틴과 같이, Go 외부에서 구현된 함수에 대한 시그니처를 제공한다.
+함수 선언시 본문을 생략할 수도 있다. 이런 선언문은 어셈블리 루틴와 같은 Go 외부에서 구현된 함수에 대한 시그니처를 제공한다.
 
 ```go
 func min(x int, y int) int {
@@ -32,5 +32,5 @@ func min(x int, y int) int {
     return y
 }
 
-func flushICache(begin, end uintptr)  // 외부적으로 구현됨
+func flushICache(begin, end uintptr)  // 외부에서 구현됨
 ```

@@ -1,13 +1,13 @@
 # [예제 패키지](#an-example-package)
 
-다음은 프라임 시브(prime sieve) 알고리즘을 동시적으로 구현한 Go 패키지 전체이다..
+아래의 Go 패키지 예제는 소수를 찾는 알고리즘인 에라토스테네스의 체(prime sieve)를 동시적(concurrent)으로 구현한 것이다.
 
 ```go
 package main
 
 import "fmt"
 
-// 2, 3, 4, ... 숫자열을 채널 'ch'로 보낸다.
+// 2, 3, 4, ... 로 이어지는 연속된 숫자를 채널 'ch'로 보낸다.
 func generate(ch chan<- int) {
     for i := 2; ; i++ {
         ch <- i  // 'i'를 채널 'ch'에 보낸다.
@@ -24,10 +24,10 @@ func filter(src <-chan int, dst chan<- int, prime int) {
     }
 }
 
-// The prime sieve: 데이지-체인 필터가 함께 처리한다.
+// The prime sieve: 데이지-체인 필터가 함께 처리된다.
 func sieve() {
     ch := make(chan int)  // 새 채널을 만든다.
-    go generate(ch)       // generate()를 하위 프로세스로 시작한다.
+    go generate(ch)       // generate()를 서브 프로세스로 시작한다.
     for {
         prime := <-ch
         fmt.Print(prime, "\n")

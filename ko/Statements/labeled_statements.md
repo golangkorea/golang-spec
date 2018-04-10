@@ -1,6 +1,6 @@
 # [라벨이 붙은 구문](#labeled-statements)
 
-라벨이 붙은 구문은 `goto`, `break` 또는 `continue` 문의 표적이 된다.
+라벨이 붙은 구문은 `goto`, `break`, `continue` 문의 대상이 될 수 있다.
 
 <pre>
 <a id="LabeledStmt">LabeledStmt</a> = <a href="#Label">Label</a> ":" <a href="/Statements/#Statement">Statement</a> .
