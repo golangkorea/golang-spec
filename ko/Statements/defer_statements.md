@@ -6,7 +6,7 @@
 <a id="DeferStmt">DeferStmt</a> = "defer" <a href="/Expressions/operators.html#Expression">Expression</a> .
 </pre>
 
-식(expression)은 함수 또는 메서드 호출이어야 한다; 괄호는 허용되지 않는다. 일부 내장 함수는 식에 사용할 수 없으며, 이들의 목록은 [식 구문](/Statements/expression_statements.html) 챕터를 참고하라.
+식(expression)은 함수 또는 메서드 호출이어야 하고, 괄호로 전체를 감쌀 수 없다. 일부 내장 함수는 식에 사용할 수 없으며, 이들의 목록은 [식 구문](/Statements/expression_statements.html) 챕터를 참고하라.
 
 "defer" 문이 실행될 때마다, 호출에 대한 함수 값과 매개변수들은 [평소처럼 평가되고](/Expressions/calls.html) 새롭게 저장되지만, 실제 함수는 호출되지 않는다. 대신, 지연된 함수들은 지연된 순서의 역순으로 서라운딩 함수가 리턴되기 직전에 호출된다. 지연된 함수 값이 `nil` 로 평가되면 "defer" 문이 실행될 때가 아니라 함수가 호출될 때 실행이 [패닉](/Built-in%20functions/handling_panics.html)된다.
 
